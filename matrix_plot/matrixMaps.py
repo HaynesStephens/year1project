@@ -23,7 +23,7 @@ m.drawmeridians([-12.5, 12.5], ax = ax1)
 m.scatter(0,0,20,marker='o',color='k', latlon=True, ax = ax1)
 ax1.set_title("Full Disk Geostationary Projection (Day)")
 
-filedir='/Users/haynesstephens1/uchi/research/year1/pulled_data/pc_proxcenb_ssc5L_TL_500yr/'
+filedir='/project2/abbot/haynes/ROCKE3D_output/pc_proxcenb_ssc5L_TL_500yr/'
 filename=filedir+'D+J2440.aijpc_proxcenb_ssc5L_TL_500yr.nc'
 
 nc = ds(filename, 'r+', format='NETCDF4')
