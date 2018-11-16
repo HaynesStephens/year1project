@@ -4,18 +4,18 @@
 # User must specify runid and may need to modify the calendar settings. 
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'ExoOcn_STD_rs3'
-rundirectory = '/project2/abbot/stephanieolson/ROCKE3D_output/' + runid
+runid = 'pc_proxcenb_aqua5L_TL_500yr'
+rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
 
 
 ## ***DEFINE TIME INTERVAL***
 # NOTE: Change year_list for runs < 1 year. 
 
-startyear = 102 
-endyear = 136
+startyear = 1950
+endyear = 2440
 
 #year_list = [1960, 1999]
-year_list = range(startyear, endyear+1)
+year_list = range(startyear, endyear+1, 10)
 
 
 ## ***DEFINE THE CALENDAR***  
@@ -23,9 +23,9 @@ year_list = range(startyear, endyear+1)
 #        This is particularly likely for short orbital periods / tidally locked planets.
 #        The calendar for each experiment is reported in the .PRT file 
 
-#month_list = ['D+J']
-month_list = ['D+J', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV']
-month_per_year = 11
+month_list = ['D+J']
+# month_list = ['D+J', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV']
+month_per_year = 1
 
 # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
 import subprocess
@@ -33,14 +33,14 @@ import os
 
 os.chdir(rundirectory) #Switch on over to the run directory.  
 
-#for y in year_list:
-#    year = str(y)
+for y in year_list:
+   year = str(y)
     
-#    for m in month_list:
-#        month = str(m)
-#        accfilename = month + '0' + year +'.acc' + runid + '.nc'
-#        subprocess.call(["scaleacc", accfilename, 'aij']) #convert atmospheric output
-        #subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
+   for m in month_list:
+       month = str(m)
+       accfilename = month + year +'.acc' + runid + '.nc'
+       subprocess.call(["scaleacc", accfilename, 'aij']) #convert atmospheric output
+       # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
 
 # ALLOCATE ARRAYS, ETC. 
 import numpy as np
@@ -67,7 +67,7 @@ for y in year_list:
     
     for m in month_list:
         month = str(m)
-        aijfilename = month + '0' + year +'.aij' + runid + '.nc'
+        aijfilename = month + year +'.aij' + runid + '.nc'
         #oijfilename = month + year +'.oij' + runid + '.nc'
         
         # READ THE NETCDF FILES 
@@ -89,7 +89,7 @@ for y in year_list:
         surf_temp_aw = sum(sum((surf_temp*grid_cell_area)))/planet_area #Area weighted global average surface temp.
         global_ave_temp[i]=surf_temp_aw #Record the global average
         
-	# SNOW AND ICE COVERAGE 
+    # SNOW AND ICE COVERAGE
         snow_ice_cover = atm_data['snowicefr'][:] #Spatially resolved snow/ice coverage (%)
         snow_ice_area = sum(sum((snow_ice_cover*grid_cell_area))) #Snow and ice area (m2)
         global_snow_ice_cover[i] = snow_ice_area/planet_area #Global snow and ice coverage (%)
@@ -100,7 +100,7 @@ for y in year_list:
         ocean_area = planet_area - sum(grid_cell_area[land])
         sea_ice_thickness[land] = 0
         sea_ice_thickness_aw = sum(sum((sea_ice_thickness*grid_cell_area)))/ocean_area #Snow and ice area (m2)
-	global_ice_thickness[i] = sea_ice_thickness_aw
+    global_ice_thickness[i] = sea_ice_thickness_aw
         
         i=i+1 #advance the calendar counter.
 
@@ -110,8 +110,18 @@ for y in year_list:
 #print 'The global average temperature is: '+ global_ave_temp[-1]+ ' C'
 #print 'Snow and ice cover '+ glocal_snow_ice_cover[-1]+ '% of the globe'
 
+import pandas as pd
+
 # SAVE DATA TO FILE: 
 np.savetxt('radiation_ts.txt', global_rad)
 np.savetxt('temperature_ts.txt', global_ave_temp)
 np.savetxt('snow_ice_ts.txt', global_snow_ice_cover)
 np.savetxt('ice_thickness_ts.txt', global_ice_thickness)
+
+df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.reshape(total_decs),
+                   'temperature': global_ave_temp.reshape(total_decs),
+                   'snow_ice_cover': global_snow_ice_cover.reshape(total_decs),
+                   'ice_thickness': global_ice_thickness.reshape(total_decs)})
+df.to_csv('ts_data.csv')
+
+os.system('rm *aij*')
