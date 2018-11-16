@@ -30,8 +30,8 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2',
         y_lab = y_lab_list[num]
         makeSubPlot(x, y, x_lab, y_lab, i, j)
 
+    fig.suptitle(runid, y=1)
     fig.tight_layout()
-    fig.suptitle(runid, y = 1, fontsize = 18)
     plt.show()
     plt.savefig('ts_data.svg')
 
