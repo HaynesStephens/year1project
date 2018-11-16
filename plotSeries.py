@@ -18,8 +18,8 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2',
         axes[i, j].set_xlabel(x_lab)
         axes[i, j].set_ylabel(y_lab)
 
-    x = df['decade']
-    x_lab = 'Decade'
+    x = df['decade']*10
+    x_lab = 'Year'
     y_list = ['radiation', 'temperature', 'snow_ice_cover', 'ice_thickness']
     y_lab_list = ['Net Radiation (W/m^2)', 'Temperature (C)', 'Snow Ice Cover (%)', 'Ice Thickness (m?)']
 
