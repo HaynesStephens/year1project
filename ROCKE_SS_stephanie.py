@@ -39,6 +39,7 @@ for y in year_list:
    for m in month_list:
        month = str(m)
        accfilename = month + year +'.acc' + runid + '.nc'
+       print(accfilename)
        subprocess.call(["scaleacc", accfilename, 'aij']) #convert atmospheric output
        # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
 
@@ -117,10 +118,10 @@ np.savetxt('temperature_ts.txt', global_ave_temp)
 np.savetxt('snow_ice_ts.txt', global_snow_ice_cover)
 np.savetxt('ice_thickness_ts.txt', global_ice_thickness)
 
-df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.reshape(total_decs),
-                   'temperature': global_ave_temp.reshape(total_decs),
-                   'snow_ice_cover': global_snow_ice_cover.reshape(total_decs),
-                   'ice_thickness': global_ice_thickness.reshape(total_decs)})
+df = pd.DataFrame({'decade': np.arange(total_months), 'radiation': global_rad.reshape(total_months),
+                   'temperature': global_ave_temp.reshape(total_months),
+                   'snow_ice_cover': global_snow_ice_cover.reshape(total_months),
+                   'ice_thickness': global_ice_thickness.reshape(total_months)})
 df.to_csv('ts_data.csv')
 
 os.system('rm *aij*')
