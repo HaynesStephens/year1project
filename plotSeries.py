@@ -3,12 +3,12 @@ import seaborn as sns
 import pandas as pd
 import os
 
-def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
-                 runbase = '/Users/haynesstephens1/uchi/research/18fall/year_1_proj/pulled_data/',
+def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2',
+                 runbase = '/project2/abbot/haynes/ROCKE3D_output/',
                  data_file = 'ts_data.csv'):
-    rundirectory = runbase + runid
+    rundir = runbase + runid
 
-    os.chdir(rundirectory) # Switch on over to the run directory.
+    os.chdir(rundir) # Switch on over to the run directory.
 
     df = pd.read_csv(data_file)
 
