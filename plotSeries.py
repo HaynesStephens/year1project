@@ -12,7 +12,6 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2',
     df = pd.read_csv(data_file)
 
     fig, axes = plt.subplots(2, 2, figsize=(9,9))
-    fig.suptitle(runid)
 
     def makeSubPlot(x, y, x_lab, y_lab, i, j):
         axes[i, j].plot(x, y)
@@ -32,6 +31,7 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2',
         makeSubPlot(x, y, x_lab, y_lab, i, j)
 
     fig.tight_layout()
+    fig.suptitle(runid)
     plt.show()
     plt.savefig('ts_data.svg')
 
