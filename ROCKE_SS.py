@@ -32,6 +32,8 @@ def createVarsByMonth(runid = runid, rundirectory = rundirectory):
     import subprocess
     import os
 
+    os.system('loadmods')
+
     os.chdir(rundirectory)  # Switch on over to the run directory.
 
     for y in year_list:
@@ -73,6 +75,8 @@ def createVarsByDec(runid = runid, rundirectory = rundirectory):
     import subprocess
     import os
 
+    os.system('loadmods')
+
     os.chdir(rundirectory)  # Switch on over to the run directory.
 
     for y in year_list:
@@ -92,8 +96,8 @@ def createVarsByDec(runid = runid, rundirectory = rundirectory):
     total_decs = len(year_list)
 
     # Create time arrays
-    time_months = np.linspace(0, total_months, total_months, endpoint=False)
-    time_years = time_months / month_per_year  # convert to years. NOTE: this
+    # time_months = np.linspace(0, total_months, total_months, endpoint=False)
+    # time_years = time_months / month_per_year  # convert to years. NOTE: this
 
     # Create output arrays
     global_rad = np.zeros((total_decs, 1))  # net radiation
