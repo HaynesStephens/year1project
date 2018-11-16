@@ -64,32 +64,32 @@ from netCDF4 import Dataset
 i=0 #start the calendar counter
 for y in year_list:
     year = str(y)
-    
+
     for m in month_list:
         month = str(m)
         aijfilename = month + year +'.aij' + runid + '.nc'
         #oijfilename = month + year +'.oij' + runid + '.nc'
-        
-        # READ THE NETCDF FILES 
+
+        # READ THE NETCDF FILES
         atm_data=Dataset(aijfilename)
         #ocn_data=Dataset(oijfilename)
-        
-        # GET AREAS -- this could probably be moved outside of the for loop... but, is necessary for 
+
+        # GET AREAS -- this could probably be moved outside of the for loop... but, is necessary for
         grid_cell_area = atm_data['axyp'][:] #Area of each grid cell (m^2)
         planet_area = sum(sum(grid_cell_area)) #Surface area of planet (m^2)
-        
-        # NET RADIATION 
+
+        # NET RADIATION
         net_rad = atm_data['net_rad_planet'][:] #Spatially resolved net radiation (W/m^2) from netcdf
         tot_rad = sum(sum(net_rad*grid_cell_area)) #Total global radiation (W)
         tot_rad = tot_rad/planet_area #Spread across planet's surface
-        global_rad[i]=tot_rad #Record globally averaged net radiation 
-        
+        global_rad[i]=tot_rad #Record globally averaged net radiation
+
         # SURFACE TEMPERATURE
         surf_temp = atm_data['tsurf'][:] #Spatially resolved surface temperature (C)
         surf_temp_aw = sum(sum((surf_temp*grid_cell_area)))/planet_area #Area weighted global average surface temp.
         global_ave_temp[i]=surf_temp_aw #Record the global average
-        
-    # SNOW AND ICE COVERAGE
+
+        # SNOW AND ICE COVERAGE
         snow_ice_cover = atm_data['snowicefr'][:] #Spatially resolved snow/ice coverage (%)
         snow_ice_area = sum(sum((snow_ice_cover*grid_cell_area))) #Snow and ice area (m2)
         global_snow_ice_cover[i] = snow_ice_area/planet_area #Global snow and ice coverage (%)
@@ -100,8 +100,7 @@ for y in year_list:
         ocean_area = planet_area - sum(grid_cell_area[land])
         sea_ice_thickness[land] = 0
         sea_ice_thickness_aw = sum(sum((sea_ice_thickness*grid_cell_area)))/ocean_area #Snow and ice area (m2)
-    global_ice_thickness[i] = sea_ice_thickness_aw
-        
+        global_ice_thickness[i] = sea_ice_thickness_aw
         i=i+1 #advance the calendar counter.
 
 
