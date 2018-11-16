@@ -3,7 +3,22 @@
 # encoding: utf-8
 
 # SCRIPT TO GENERATE TIME SERIES OF GLOBALLY AVERAGED ROCKE-3D DATA
-# User must specify runid and may need to modify the calendar settings. 
+# User must specify runid and may need to modify the calendar settings.
+
+"""
+Example Script for Decadal Outputs
+year_list, global_rad, global_ave_temp, global_snow_ice_cover, global_ice_thickness = createVarsByDec()
+global_rad, global_ave_temp, global_snow_ice_cover, global_ice_thickness = getVarsByDec(year_list, global_rad,
+    global_ave_temp, global_snow_ice_cover, global_ice_thickness)
+def saveData(global_rad, global_ave_temp,
+             global_snow_ice_cover, global_ice_thickness)
+"""
+
+import numpy as np
+import os
+import subprocess
+from netCDF4 import Dataset
+import pandas as pd
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
 runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2'
@@ -29,8 +44,6 @@ def createVarsByMonth(runid = runid, rundirectory = rundirectory):
     month_per_year = 1
 
     # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
-    import subprocess
-    import os
 
     os.system('loadmods')
 
@@ -45,9 +58,6 @@ def createVarsByMonth(runid = runid, rundirectory = rundirectory):
             print(accfilename)
             subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
         # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
-
-    # ALLOCATE ARRAYS, ETC.
-    import numpy as np
 
     # First, determine array size
     total_months = len(month_list) * len(year_list)
@@ -72,8 +82,6 @@ def createVarsByDec(runid = runid, rundirectory = rundirectory):
     year_list = range(startyear+10, endyear + 1, 10)
 
     # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
-    import subprocess
-    import os
 
     os.system('loadmods')
 
@@ -89,8 +97,6 @@ def createVarsByDec(runid = runid, rundirectory = rundirectory):
         subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
         # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
 
-    # ALLOCATE ARRAYS, ETC.
-    import numpy as np
 
     # First, determine array size
     total_decs = len(year_list)
@@ -107,10 +113,8 @@ def createVarsByDec(runid = runid, rundirectory = rundirectory):
     return year_list, global_rad, global_ave_temp, global_snow_ice_cover, global_ice_thickness
 
 
-def getVarsByMonth(year_list, global_rad, global_ave_temp,
-                   global_snow_ice_cover, global_ice_thickness):
+def getVarsByMonth(year_list, global_rad, global_ave_temp, global_snow_ice_cover, global_ice_thickness):
     # IMPORT THE DATA!
-    from netCDF4 import Dataset
 
     i = 0  # start the calendar counter
     for y in year_list:
@@ -158,10 +162,8 @@ def getVarsByMonth(year_list, global_rad, global_ave_temp,
     return global_rad, global_ave_temp, global_snow_ice_cover, global_ice_thickness
 
 
-def getVarsByDec(year_list, global_rad, global_ave_temp,
-                 global_snow_ice_cover, global_ice_thickness):
+def getVarsByDec(year_list, global_rad, global_ave_temp, global_snow_ice_cover, global_ice_thickness):
     # IMPORT THE DATA!
-    from netCDF4 import Dataset
 
     i = 0  # start the calendar counter
     for y in year_list:
@@ -221,9 +223,6 @@ def saveData(global_rad, global_ave_temp,
     np.savetxt('temperature_ts.txt', global_ave_temp)
     np.savetxt('snow_ice_ts.txt', global_snow_ice_cover)
     np.savetxt('ice_thickness_ts.txt', global_ice_thickness)
-
-    import pandas as pd
-
 
     df = pd.DataFrame({'decade': np.arange(total_months), 'radiation': global_rad.reshape(total_months),
                        'temperature': global_ave_temp.reshape(total_months),
