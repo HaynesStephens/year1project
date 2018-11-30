@@ -12,7 +12,7 @@ from netCDF4 import Dataset
 import pandas as pd
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2'
+runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
 startyear = 2440
 endyear = 2950
@@ -84,7 +84,7 @@ for y in year_list:
     global_snow_ice_cover[i] = snow_ice_area / planet_area  # Global snow and ice coverage (%)
 
     # SEA ICE THICKNESS
-    sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved snow/ice coverage (%)
+    sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved sea ice thickness (m?)
     land = np.isnan(sea_ice_thickness)
     ocean_area = planet_area - sum(grid_cell_area[land])
     sea_ice_thickness[land] = 0
