@@ -13,7 +13,7 @@ row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiatio
 row2 = {'row_num':2, 'var':'tsurf',          'ylabel':'Surface \n Temperature'}
 row3 = {'row_num':3, 'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction'}
 row4 = {'row_num':4, 'var':'ZSI',            'ylabel':'Sea Ice \n Thickness'}
-row5 = {'row_num':5, 'var':'pcldt',            'ylabel':'Total Cloud \n Coverage'}
+row5 = {'row_num':5, 'var':'clrsky',            'ylabel':'Clear Sky \n Fraction'}
 row_list = [row0, row1, row2, row3, row4, row5]
 
 col0 = {'col_num':0, 'filename':filename1, 'parallels':[-45, -10, 10, 45],
@@ -24,7 +24,7 @@ col2 = {'col_num':2, 'filename':filename1, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col3 = {'col_num':3, 'filename':filename1, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
-col_list = [col0, col1, col2, col3]
+col_list = [col0, col1]
 
 
 def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
