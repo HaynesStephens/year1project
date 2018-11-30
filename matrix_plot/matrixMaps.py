@@ -6,6 +6,7 @@ from lat_lon_grid import lat_grid, lon_grid
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
 filename1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_ssc5L_TL_500yr_rs2.nc'
+filename2=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_aqua5L_TL_500yr_rs2.nc'
 
 row0 = {'row_num':0, 'var':'frac_land',      'ylabel':'Land \n Fraction'}
 row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation'}
