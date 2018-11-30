@@ -58,6 +58,6 @@ for col in col_list:
 
 
 fig.tight_layout()
-plt.savefig(filebase + 'matrix_basemap.svg')
-plt.savefig(filebase + 'matrix_basemap.pdf')
+plt.savefig('matrix_basemap.svg')
+plt.savefig('matrix_basemap.pdf')
 plt.show()
