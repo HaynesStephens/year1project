@@ -15,14 +15,14 @@ row3 = {'row_num':3, 'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction'}
 row4 = {'row_num':4, 'var':'ZSI',            'ylabel':'Sea Ice \n Thickness'}
 row_list = [row0, row1, row2, row3, row4]
 
-col0 = {'col_num':0, 'filename':filename1, 'parallels':[-10, 10],
-        'meridians':[-12.5, 12.5], 'title':'Dynamic Ocean, 1% SS Continent'}
-col1 = {'col_num':1, 'filename':filename1, 'parallels':[-10, 10],
-        'meridians':[-12.5, 12.5], 'title':'Dynamic Ocean, 1% SS Continent'}
+col0 = {'col_num':0, 'filename':filename1, 'parallels':[-45, -10, 10, 45],
+        'meridians':[-45, -12.5, 12.5, 45], 'title':'Dynamic (5L), 1% SS Cont'}
+col1 = {'col_num':1, 'filename':filename2, 'parallels':[-45, -10, 10, 45],
+        'meridians':[-45, -12.5, 12.5, 45], 'title':'Dynamic (5L), Aquaplanet'}
 col2 = {'col_num':2, 'filename':filename1, 'parallels':[-10, 10],
-        'meridians':[-12.5, 12.5], 'title':'Dynamic Ocean, 1% SS Continent'}
+        'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col3 = {'col_num':3, 'filename':filename1, 'parallels':[-10, 10],
-        'meridians':[-12.5, 12.5], 'title':'Dynamic Ocean, 1% SS Continent'}
+        'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_list = [col0, col1, col2, col3]
 
 
@@ -45,7 +45,7 @@ def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
         ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
 
 
-fig, axes = plt.subplots(5, 4, figsize = (8,7))
+fig, axes = plt.subplots(5, 4, figsize = (10,7))
 
 for col in col_list:
     for row in row_list:
