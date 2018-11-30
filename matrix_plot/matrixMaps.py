@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from lat_lon_grid import lat_grid, lon_grid
 
-filebase='/Users/haynesstephens1/uchi/research/year1/pulled_data/'
-filename1=filebase+'pc_proxcenb_ssc5L_TL_500yr/D+J2440.aijpc_proxcenb_ssc5L_TL_500yr.nc'
+filebase='/project2/abbot/haynes/ROCKE3D_output/'
+filename1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2/AN82941-2950.accpc_proxcenb_ssc5L_TL_500yr_rs2.nc'
 
 row0 = {'row_num':0, 'var':'frac_land',      'ylabel':'Land \n Fraction'}
 row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation'}
