@@ -10,5 +10,8 @@ def mergeData(csv1, csv2):
     result = df1.append(df2)
     return result
 
-def saveMergedData(result):
+def saveMergedData(result, new_csv):
     result.to_csv(new_csv)
+
+result = mergeData(csv1, csv2)
+saveMergedData(result, new_csv)
