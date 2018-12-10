@@ -29,6 +29,8 @@ col_list = [col0, col1]
 
 def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
     data = nc[var][:]
+    if title == 'Dynamic (5L), Aquaplanet':
+        data = np.roll(data, data.shape[1]/2, axis=1)
     m = Basemap(ax = ax)
     m.drawcoastlines()
     #m.fillcontinents(color='coral',lake_color='aqua')
