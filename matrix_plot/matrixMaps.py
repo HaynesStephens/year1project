@@ -42,7 +42,7 @@ def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     m.contourf(x,y,data, ax=ax)
-    m.colorbar(mappable=data, ax=ax)
+    m.colorbar(mappable=data)
     if row_num==0:
         ax.set_title(title, fontsize=7)
     if col_num==0:
