@@ -29,8 +29,6 @@ col_list = [col0, col1]
 
 def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
     data = nc[var][:]
-    if var == "frac_land":
-        print(np.min(data), np.max(data))
     if title == 'Dynamic (5L), Aquaplanet':
         data = np.roll(data, (data.shape[1])//2, axis=1)
     m = Basemap(ax = ax)
