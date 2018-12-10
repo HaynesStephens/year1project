@@ -41,8 +41,8 @@ def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
-    m.contourf(x,y,data, ax=ax)
-    m.colorbar(mappable=data)
+    cs = m.contourf(x,y,data, ax=ax)
+    m.colorbar(mappable=cs, ax=ax)
     if row_num==0:
         ax.set_title(title, fontsize=7)
     if col_num==0:
