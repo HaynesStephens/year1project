@@ -2,6 +2,7 @@ from mpl_toolkits.basemap import Basemap
 from netCDF4 import Dataset as ds
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 from lat_lon_grid import lat_grid, lon_grid
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
@@ -25,6 +26,18 @@ col2 = {'col_num':2, 'filename':filename1, 'parallels':[-10, 10],
 col3 = {'col_num':3, 'filename':filename1, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_list = [col0, col1]
+
+
+def avgDataFiles(filedir, var):
+    results = [each for each in os.listdir(filedir) if 'acc' in each][-10:]
+    arr_tot = np.zeros((46,72))
+    for filename in results:
+        nc_i = ds(filename, 'r+', format='NETCDF4')
+        arr = nc_i[var][:]
+        arr_tot = arr_tot + arr
+    arr_avg = arr_tot / 10
+    return arr_avg
+
 
 
 def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
