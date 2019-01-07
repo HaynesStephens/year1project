@@ -4,7 +4,7 @@ import os
 
 def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
-                 data_file = 'ts_data.csv'):
+                 data_file = 'ts_data_tot.csv'):
     rundir = runbase + runid
 
     os.chdir(rundir) # Switch on over to the run directory.
@@ -32,8 +32,8 @@ def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2',
 
     fig.suptitle(runid, y=1, fontsize=10)
     fig.tight_layout()
-    plt.savefig('ts_data.svg')
-    plt.savefig('ts_data.pdf')
+    plt.savefig(data_file.rstrip('.csv') + '.svg')
+    plt.savefig(data_file.rstrip('.csv') + '.pdf')
     plt.show()
 
     print('data saved.')
