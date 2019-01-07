@@ -10,7 +10,6 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
     os.chdir(rundir) # Switch on over to the run directory.
 
     df = pd.read_csv(data_file)
-    print(df)
 
     fig, axes = plt.subplots(2, 2, figsize=(9,9))
 
@@ -25,7 +24,6 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
     y_lab_list = ['Net Radiation (W/m^2)', 'Temperature (C)', 'Snow Ice Cover (%)', 'Ice Thickness (m?)']
 
     for num in range(4):
-        print(num)
         i = num // 2
         j = num % 2
         y = df[y_list[num]]
@@ -40,5 +38,7 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
 
     print('data saved.')
     return
+
+makeSubPlots()
 
 
