@@ -8,7 +8,7 @@ def mergeData(csv1, csv2):
     df1 = pd.read_csv(csv1)
     df2 = pd.read_csv(csv2)
     result = df1.append(df2)
-    result = result.index
+    result['decade'] = result.index
     return result
 
 def saveMergedData(result, new_csv):
