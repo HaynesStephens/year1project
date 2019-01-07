@@ -32,8 +32,8 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
 
     fig.suptitle(runid, y=1, fontsize=10)
     fig.tight_layout()
-    plt.savefig('ts_data_tot.svg')
-    plt.savefig('ts_data_tot.pdf')
+    # plt.savefig('ts_data_tot.svg')
+    # plt.savefig('ts_data_tot.pdf')
     plt.show()
 
     print('data saved.')
