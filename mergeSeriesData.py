@@ -1,7 +1,7 @@
 import pandas as pd
 
 csv1 = '/project2/abbot/haynes/ROCKE3D_output/pc_proxcenb_aqua5L_TL_500yr/ts_data.csv'
-csv2 = '/project2/abbot/haynes/ROCKE3D_output/pc_proxcenb_aqua5L_TL_500yr_rs1/ts_data.csv'
+csv2 = '/project2/abbot/haynes/ROCKE3D_output/pc_proxcenb_aqua5L_TL_500yr_rs2/ts_data.csv'
 new_csv = '/project2/abbot/haynes/ROCKE3D_output/pc_proxcenb_aqua5L_TL_500yr/ts_data_tot.csv'
 
 def mergeData(csv1, csv2):
