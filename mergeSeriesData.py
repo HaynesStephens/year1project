@@ -11,6 +11,7 @@ def mergeData(csv1, csv2):
     return result
 
 def saveMergedData(result, new_csv):
+    result['decade'] = result.index
     result.to_csv(new_csv)
 
 result = mergeData(csv1, csv2)
