@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yre',
+def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
                  data_file = 'ts_data_tot.csv'):
     rundir = runbase + runid
