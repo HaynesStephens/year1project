@@ -107,9 +107,6 @@ def alterTOPO_OC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi):
 
 fdir = '4p'
 fbase_name = '.ssc.latpn14.lonpn27_5.4p.nc'
-oic_name = 'OIC' + fbase_name
-topo_name = 'Z' + fbase_name
-topo_oc_name = 'OZ' + fbase_name
 
 lat = 16 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
          # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
@@ -125,7 +122,7 @@ lon = 30 # lat given from spreadsheet that outlines ACTUAL continent, NOT from G
 lon_lo = (lon - 2.5) * (-1)
 lon_hi = (lon - 2.5)
 
-alterOIC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi)
-alterTOPO(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi)
-alterTOPO_OC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi)
+alterOIC(fdir, 'OIC' + fbase_name, lat_lo, lat_hi, lon_lo, lon_hi)
+alterTOPO(fdir, 'Z' + fbase_name, lat_lo, lat_hi, lon_lo, lon_hi)
+alterTOPO_OC(fdir, 'OZ' + fbase_name, lat_lo, lat_hi, lon_lo, lon_hi)
 
