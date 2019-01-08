@@ -105,17 +105,17 @@ def alterTOPO_OC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi):
     return
 
 
-fdir = '34p'
-fbase_name = '.ssc.latpn42.lonpn87_5.34p.nc'
+fdir = '39p'
+fbase_name = '.ssc.latpn46.lonpn92_5.39p.nc'
 
-lat = 44 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
+lat = 48 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
          # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
          # you can see in the fbase_name that the GRID coordinates are given there, and they are
          # different from the ACTUAL coordinates
 lat_lo = (lat - 2) * (-1)
 lat_hi = lat - 2
 
-lon = 90 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
+lon = 95 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
          # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
          # you can see in the fbase_name that the GRID coordinates are given there, and they are
          # different from the ACTUAL coordinates
