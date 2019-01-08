@@ -64,3 +64,63 @@ def changeVar(var, new_map, nc):
     """
     nc[var][:] = new_map
     return nc
+
+
+def alterOIC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi):
+    var_list = ['mo', 'g', 'gz', 's', 'sz']
+    nc = openNC(fdir, fname)
+    for var_i in var_list:
+        new_map = changeMap(nc, nc[var_i][:], lat_lo, lat_hi, lon_lo, lon_hi, val=0, n_dim=3, ocean=True)
+        nc = changeVar(var_i, new_map, nc)
+    return
+
+
+def alterTOPO(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi):
+    var_list = ['focean', 'fgrnd']
+    nc = openNC(fdir, fname)
+    for var_i in var_list:
+
+        if var_i == 'focean':
+            val = 0
+        else:
+            val = 1
+
+        new_map = changeMap(nc, nc[var_i][:], lat_lo, lat_hi, lon_lo, lon_hi, val=val, n_dim=2, ocean=False)
+        nc = changeVar(var_i, new_map, nc)
+    return
+
+
+def alterTOPO_OC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi):
+    var_list = ['focean', 'zocean']
+    nc = openNC(fdir, fname)
+    for var_i in var_list:
+
+        if var_i == 'focean':
+            val = 0
+        else:
+            val = 30
+
+        new_map = changeMap(nc, nc[var_i][:], lat_lo, lat_hi, lon_lo, lon_hi, val=val, n_dim=2, ocean=True)
+        nc = changeVar(var_i, new_map, nc)
+    return
+
+
+fdir = '4p'
+oic_name = ''
+topo_name = ''
+topo_oc_name = ''
+
+lat = 24 # lat given from spreadsheet that outlines actual continent, NOT from grid coords (see spreadsheet)
+         # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
+lat_lo = (lat - 2) * (-1)
+lat_hi = lat - 2
+
+lon = 50 # long given from spreadsheet that outlines actual continent, NOT from grid coords (see spreadsheet)
+         # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
+lon_lo = (lon - 2.5) * (-1)
+lon_hi = (lon - 2.5)
+
+alterOIC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi)
+alterTOPO(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi)
+alterTOPO_OC(fdir, fname, lat_lo, lat_hi, lon_lo, lon_hi)
+

@@ -19,11 +19,11 @@ row5 = {'row_num':5, 'var':'pcldt',            'ylabel':'Total Cloud \n Coverage
 row_list = [row0, row1, row2, row3, row4, row5]
 
 col0 = {'col_num':0, 'filename':filename0, 'parallels':[-45, 45],
-        'meridians':[-45, 45], 'title':'Dynamic (5L), Aquaplanet'}
+        'meridians':[-90, 90], 'title':'Dynamic (5L), Aquaplanet'}
 col1 = {'col_num':1, 'filename':filename1, 'parallels':[-45, -10, 10, 45],
-        'meridians':[-45, -12.5, 12.5, 45], 'title':'Dynamic (5L), 1% SS Cont'}
-col2 = {'col_num':2, 'filename':filename2, 'parallels':[-45, -14, 14, 45],
-        'meridians':[-45, -27.5, 27.5, 45], 'title':'Dynamic (5L), 11% SS Cont'}
+        'meridians':[-90, -12.5, 12.5, 90], 'title':'Dynamic (5L), 1% SS Cont'}
+col2 = {'col_num':2, 'filename':filename2, 'parallels':[-45, -22, 22, 45],
+        'meridians':[-90, -47.5, 47.5, 90], 'title':'Dynamic (5L), 11% SS Cont'}
 # col3 = {'col_num':3, 'filename':filename3, 'parallels':[-10, 10],
 #         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_list = [col0, col1, col2]
