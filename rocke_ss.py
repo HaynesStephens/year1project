@@ -32,7 +32,7 @@ for y in year_list:
     beg_dec = str(y - 9)
     end_dec = str(y)
 
-    accfilename = 'AN8' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
+    accfilename = 'ANM' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
 
     print(accfilename)
     subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
@@ -55,7 +55,7 @@ for y in year_list:
     beg_dec = str(y - 9)
     end_dec = str(y)
 
-    aijfilename = 'AN8' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
+    aijfilename = 'ANM' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
     # oijfilename = month + year +'.oij' + runid + '.nc'
 
     # READ THE NETCDF FILES
