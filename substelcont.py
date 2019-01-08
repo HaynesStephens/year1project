@@ -111,14 +111,14 @@ oic_name = 'OIC' + fbase_name
 topo_name = 'Z' + fbase_name
 topo_oc_name = 'OZ' + fbase_name
 
-lat = 24 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
+lat = 16 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
          # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
          # you can see in the fbase_name that the GRID coordinates are given there, and they are
          # different from the ACTUAL coordinates
 lat_lo = (lat - 2) * (-1)
 lat_hi = lat - 2
 
-lon = 50 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
+lon = 30 # lat given from spreadsheet that outlines ACTUAL continent, NOT from GRID coords (see spreadsheet)
          # https://docs.google.com/spreadsheets/d/1Cp85DWFq9kVjZ96rZPasCS9Nhny64671wVQjHS_XUNI/edit#gid=0
          # you can see in the fbase_name that the GRID coordinates are given there, and they are
          # different from the ACTUAL coordinates
