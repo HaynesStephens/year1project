@@ -6,9 +6,9 @@ import os
 from lat_lon_grid import lat_grid, lon_grid
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
-filename1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_ssc5L_TL_500yr_rs2.nc'
-filename2=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_aqua5L_TL_500yr_rs2.nc'
-filename3=filebase+'pc_proxcenb_ssc5L_TL_11p/ANM3040-3049.accpc_proxcenb_ssc5L_TL_11p.nc'
+filename0=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_ssc5L_TL_500yr_rs2.nc'
+filename1=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_aqua5L_TL_500yr_rs2.nc'
+filename2=filebase+'pc_proxcenb_ssc5L_TL_11p/ANM3040-3049.accpc_proxcenb_ssc5L_TL_11p.nc'
 
 row0 = {'row_num':0, 'var':'frac_land',      'ylabel':'Land \n Fraction'}
 row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation'}
@@ -18,14 +18,14 @@ row4 = {'row_num':4, 'var':'ZSI',            'ylabel':'Sea Ice \n Thickness'}
 row5 = {'row_num':5, 'var':'pcldt',            'ylabel':'Total Cloud \n Coverage'}
 row_list = [row0, row1, row2, row3, row4, row5]
 
-col0 = {'col_num':0, 'filename':filename1, 'parallels':[-45, -10, 10, 45],
+col0 = {'col_num':0, 'filename':filename0, 'parallels':[-45, -10, 10, 45],
         'meridians':[-45, -12.5, 12.5, 45], 'title':'Dynamic (5L), 1% SS Cont'}
-col1 = {'col_num':1, 'filename':filename2, 'parallels':[-45, -10, 10, 45],
+col1 = {'col_num':1, 'filename':filename1, 'parallels':[-45, -10, 10, 45],
         'meridians':[-45, -12.5, 12.5, 45], 'title':'Dynamic (5L), Aquaplanet'}
-col2 = {'col_num':2, 'filename':filename3, 'parallels':[-10, 10],
+col2 = {'col_num':2, 'filename':filename2, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
-col3 = {'col_num':3, 'filename':filename4, 'parallels':[-10, 10],
-        'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
+# col3 = {'col_num':3, 'filename':filename3, 'parallels':[-10, 10],
+#         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_list = [col0, col1, col2]
 
 
