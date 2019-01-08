@@ -12,10 +12,10 @@ from netCDF4 import Dataset
 import pandas as pd
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
+runid = 'pc_proxcenb_ssc5L_TL_11p'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 2440
-endyear = 2950
+startyear = 1949
+endyear = 3049
 
 
 ## ***DEFINE TIME INTERVAL***
