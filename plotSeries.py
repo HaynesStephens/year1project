@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 
-def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
+def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
-                 data_file = 'ts_data_tot.csv'):
+                 data_file = 'ts_data'):
     rundir = runbase + runid
 
     os.chdir(rundir) # Switch on over to the run directory.
 
-    df = pd.read_csv(data_file)
+    df = pd.read_csv(data_file + '.csv')
 
     fig, axes = plt.subplots(2, 2, figsize=(9,9))
 
@@ -32,8 +32,8 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr',
 
     fig.suptitle(runid, y=1, fontsize=10)
     fig.tight_layout()
-    plt.savefig('ts_data_tot.svg')
-    plt.savefig('ts_data_tot.pdf')
+    plt.savefig(data_file + '.svg')
+    plt.savefig(data_file + '.pdf')
     plt.show()
 
     print('data saved.')
