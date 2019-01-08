@@ -26,7 +26,7 @@ col2 = {'col_num':2, 'filename':filename2, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 # col3 = {'col_num':3, 'filename':filename3, 'parallels':[-10, 10],
 #         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
-col_list = [col0, col1, col2]
+col_list = [col0, col1]
 
 
 def avgDataFiles(filedir, var):
