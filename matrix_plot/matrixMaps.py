@@ -2,8 +2,8 @@ from mpl_toolkits.basemap import Basemap
 from netCDF4 import Dataset as ds
 import numpy as np
 import matplotlib.pyplot as plt
-import os
-from lat_lon_grid import lat_grid, lon_grid
+from glob import glob
+# from lat_lon_grid import lat_grid, lon_grid
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
 filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
