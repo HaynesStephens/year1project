@@ -6,9 +6,9 @@ import os
 from lat_lon_grid import lat_grid, lon_grid
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
-filename0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_aqua5L_TL_500yr_rs2.nc'
-filename1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2/AN82941-2950.aijpc_proxcenb_ssc5L_TL_500yr_rs2.nc'
-filename2=filebase+'pc_proxcenb_ssc5L_TL_11p/ANM3040-3049.aijpc_proxcenb_ssc5L_TL_11p.nc'
+filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
+filedir1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2'
+filedir2=filebase+'pc_proxcenb_ssc5L_TL_11p'
 
 row0 = {'row_num':0, 'var':'frac_land',      'ylabel':'Land \n Fraction'}
 row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation'}
@@ -29,25 +29,24 @@ col2 = {'col_num':2, 'filename':filename2, 'parallels':[-45, -22, 22, 45],
 col_list = [col0, col1, col2]
 
 
-def avgDataFiles(filedir, var):
-    results = [each for each in os.listdir(filedir) if 'acc' in each][-10:]
+def avgDataFiles(filedir, var, num_files = 10):
+    results = glob('{0}/*aij*'.format(filedir))
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
         arr = nc_i[var][:]
         arr_tot = arr_tot + arr
-    arr_avg = arr_tot / 10
+    arr_avg = arr_tot / num_files
     return arr_avg
 
 
-
-def makeSubplot(ax, row_num, col_num, var, ylabel, parallels, meridians, title):
-    data = nc[var][:]
+def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title):
+    # data = nc[var][:]
     if title == 'Dynamic (5L), Aquaplanet':
         data = np.roll(data, (data.shape[1])//2, axis=1)
     m = Basemap(ax = ax)
-    m.drawcoastlines()
-    #m.fillcontinents(color='coral',lake_color='aqua')
+    # m.drawcoastlines()
+    # m.fillcontinents(color='coral',lake_color='aqua')
     # draw parallels and meridians.
     m.drawparallels(parallels, labels=[1,0,0,0], ax = ax, fontsize=4)
     merdians_drawn = m.drawmeridians(meridians, labels=[0,0,0,1], ax = ax, rotation=45, fontsize=4)
@@ -68,12 +67,12 @@ fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 for col in col_list:
     for row in row_list:
         filename = col['filename']
-        nc = ds(filename, 'r+', format='NETCDF4')
         row_num = row['row_num']
         col_num = col['col_num']
-        makeSubplot(ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, var=row['var'],
-                    ylabel=row['ylabel'], parallels=col['parallels'], meridians=col['meridians'],
-                    title=col['title'])
+        var = row['var']
+        data = avgDataFiles(filedir, var, num_files = 10)
+        makeSubplot(data, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
+                    parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 
 fig.tight_layout()
