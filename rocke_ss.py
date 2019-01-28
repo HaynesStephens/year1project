@@ -13,27 +13,27 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
+runid = 'pc_proxcenb_ssc5L_TL_4p'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 2440
-endyear = 2950
+startyear = 1950
+endyear = 2520
 
 
 ## ***DEFINE TIME INTERVAL***
 # NOTE: Change year_list for runs < 1 year.
 
 # year_list = [1960, 1999]
-year_list = range(startyear+10, endyear + 1, 10)
+year_list = range(startyear, endyear, 10)
 
 # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
 
 os.chdir(rundirectory)  # Switch on over to the run directory.
 
 for y in year_list:
-    beg_dec = str(y - 9)
-    end_dec = str(y)
+    beg_dec = str(y)
+    end_dec = str(y + 9)
 
-    accfilename = 'AN8' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
+    accfilename = 'ANM' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
 
     print(accfilename)
     subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
@@ -53,10 +53,10 @@ global_ice_thickness = np.zeros((total_decs, 1))
 
 i = 0  # start the calendar counter
 for y in year_list:
-    beg_dec = str(y - 9)
-    end_dec = str(y)
+    beg_dec = str(y)
+    end_dec = str(y + 9)
 
-    aijfilename = 'AN8' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
+    aijfilename = 'ANM' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
     # oijfilename = month + year +'.oij' + runid + '.nc'
 
     # READ THE NETCDF FILES
