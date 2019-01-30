@@ -23,7 +23,7 @@ col0 = {'col_num':0, 'filedir':filedir0, 'parallels':[-45, 45],
 col1 = {'col_num':1, 'filedir':filedir1, 'parallels':[-45, -10, 10, 45],
         'meridians':[-90, -12.5, 12.5, 90], 'title':'Dynamic (5L), 1% SS Cont'}
 col2 = {'col_num':2, 'filedir':filedir2, 'parallels':[-45, -22, 22, 45],
-        'meridians':[-90, -47.5, 47.5, 90], 'title':'Dynamic (5L), 11% SS Cont'}
+        'meridians':[-90, -47.5, 47.5, 90], 'title':'Dynamic (5L), 4% SS Cont'}
 # col3 = {'col_num':3, 'filename':filename3, 'parallels':[-10, 10],
 #         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_list = [col0, col1, col2]
