@@ -8,7 +8,13 @@ from glob import glob
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
 filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
 filedir1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2'
-filedir2=filebase+'pc_proxcenb_ssc5L_TL_4p'
+filedir4=filebase+'pc_proxcenb_ssc5L_TL_4p'
+filedir6=filebase+'pc_proxcenb_ssc5L_TL_6p'
+filedir11=filebase+'pc_proxcenb_ssc5L_TL_11p'
+filedir22=filebase+'pc_proxcenb_ssc5L_TL_22p'
+filedir26=filebase+'pc_proxcenb_ssc5L_TL_26p'
+filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
+filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 
 row0 = {'row_num':0, 'var':'frac_land',      'ylabel':'Land \n Fraction'}
 row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation'}
@@ -22,11 +28,22 @@ col0 = {'col_num':0, 'filedir':filedir0, 'parallels':[-45, 45],
         'meridians':[-90, 90], 'title':'Dynamic (5L), Aquaplanet'}
 col1 = {'col_num':1, 'filedir':filedir1, 'parallels':[-45, -10, 10, 45],
         'meridians':[-90, -12.5, 12.5, 90], 'title':'Dynamic (5L), 1% SS Cont'}
-col2 = {'col_num':2, 'filedir':filedir2, 'parallels':[-45, -14, 14, 45],
+col4 = {'col_num':2, 'filedir':filedir4, 'parallels':[-45, -14, 14, 45],
         'meridians':[-90, -27.5, 27.5, 90], 'title':'Dynamic (5L), 4% SS Cont'}
-# col3 = {'col_num':3, 'filename':filename3, 'parallels':[-10, 10],
-#         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
-col_list = [col0, col1, col2]
+col6 = {'col_num':2, 'filedir':filedir6, 'parallels':[-45, -18, 18, 45],
+        'meridians':[-90, -32.5, 32.5, 90], 'title':'Dynamic (5L), 6% SS Cont'}
+col11 = {'col_num':2, 'filedir':filedir11, 'parallels':[-45, -22, 22, 45],
+        'meridians':[-90, -47.5, 47.5, 90], 'title':'Dynamic (5L), 11% SS Cont'}
+col22 = {'col_num':2, 'filedir':filedir22, 'parallels':[-45, -34, 34, 45],
+        'meridians':[-90, -67.5, 67.5, 90], 'title':'Dynamic (5L), 22% SS Cont'}
+col26 = {'col_num':2, 'filedir':filedir26, 'parallels':[-45, -38, 38, 45],
+        'meridians':[-90, -72.5, 72.5, 90], 'title':'Dynamic (5L), 26% SS Cont'}
+col34 = {'col_num':2, 'filedir':filedir34, 'parallels':[-45, -42, 42, 45],
+        'meridians':[-90, -87.5, 87.5, 90], 'title':'Dynamic (5L), 34% SS Cont'}
+col39 = {'col_num':2, 'filedir':filedir39, 'parallels':[-45, -46, 46, 45],
+        'meridians':[-90, -92.5, 92.5, 90], 'title':'Dynamic (5L), 39% SS Cont'}
+
+col_list = [col6, col11, col22, col26]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
@@ -76,6 +93,6 @@ for col in col_list:
 
 
 fig.tight_layout()
-plt.savefig('matrix_basemap_small.svg')
-plt.savefig('matrix_basemap_small.pdf')
+plt.savefig('matrix_basemap_big.svg')
+plt.savefig('matrix_basemap_big.pdf')
 plt.show()
