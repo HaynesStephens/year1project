@@ -30,13 +30,13 @@ col1 = {'col_num':1, 'filedir':filedir1, 'parallels':[-45, -10, 10, 45],
         'meridians':[-90, -12.5, 12.5, 90], 'title':'Dynamic (5L), 1% SS Cont'}
 col4 = {'col_num':2, 'filedir':filedir4, 'parallels':[-45, -14, 14, 45],
         'meridians':[-90, -27.5, 27.5, 90], 'title':'Dynamic (5L), 4% SS Cont'}
-col6 = {'col_num':2, 'filedir':filedir6, 'parallels':[-45, -18, 18, 45],
+col6 = {'col_num':0, 'filedir':filedir6, 'parallels':[-45, -18, 18, 45],
         'meridians':[-90, -32.5, 32.5, 90], 'title':'Dynamic (5L), 6% SS Cont'}
-col11 = {'col_num':2, 'filedir':filedir11, 'parallels':[-45, -22, 22, 45],
+col11 = {'col_num':1, 'filedir':filedir11, 'parallels':[-45, -22, 22, 45],
         'meridians':[-90, -47.5, 47.5, 90], 'title':'Dynamic (5L), 11% SS Cont'}
 col22 = {'col_num':2, 'filedir':filedir22, 'parallels':[-45, -34, 34, 45],
         'meridians':[-90, -67.5, 67.5, 90], 'title':'Dynamic (5L), 22% SS Cont'}
-col26 = {'col_num':2, 'filedir':filedir26, 'parallels':[-45, -38, 38, 45],
+col26 = {'col_num':3, 'filedir':filedir26, 'parallels':[-45, -38, 38, 45],
         'meridians':[-90, -72.5, 72.5, 90], 'title':'Dynamic (5L), 26% SS Cont'}
 col34 = {'col_num':2, 'filedir':filedir34, 'parallels':[-45, -42, 42, 45],
         'meridians':[-90, -87.5, 87.5, 90], 'title':'Dynamic (5L), 34% SS Cont'}
