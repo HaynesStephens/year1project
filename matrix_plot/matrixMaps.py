@@ -8,7 +8,7 @@ from glob import glob
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
 filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
 filedir1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2'
-filedir2=filebase+'pc_proxcenb_ssc5L_TL_11p'
+filedir2=filebase+'pc_proxcenb_ssc5L_TL_4p'
 
 row0 = {'row_num':0, 'var':'frac_land',      'ylabel':'Land \n Fraction'}
 row1 = {'row_num':1, 'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation'}
@@ -76,6 +76,6 @@ for col in col_list:
 
 
 fig.tight_layout()
-plt.savefig('matrix_basemap.svg')
-plt.savefig('matrix_basemap.pdf')
+plt.savefig('matrix_basemap_small.svg')
+plt.savefig('matrix_basemap_small.pdf')
 plt.show()
