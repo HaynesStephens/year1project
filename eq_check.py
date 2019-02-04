@@ -9,6 +9,6 @@ df = pd.read_csv(filename)
 
 print(df['radiation'][-10:])
 
-print(df['radiation'][-10:] / 10)
+print(np.mean(df['radiation'][-10:]))
 
 
