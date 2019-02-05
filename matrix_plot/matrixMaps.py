@@ -81,11 +81,11 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
-for col in col_list:
-    for row in row_list:
+for col_num in range(col_list):
+    for row_num in range(row_list):
+        col = col_list[col_num]
+        row = row_list[row_num]
         filedir = col['filedir']
-        row_num = row['row_num']
-        col_num = col['col_num']
         var = row['var']
         data = avgDataFiles(filedir, var, num_files = 10)
         makeSubplot(data, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
