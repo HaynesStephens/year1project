@@ -21,8 +21,15 @@ row_net_rad_planet =    {'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radi
 row_tsurf=              {'var':'tsurf',          'ylabel':'Surface \n Temperature'}
 row_snowicefr =         {'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction'}
 row_ZSI =               {'var':'ZSI',            'ylabel':'Sea Ice \n Thickness'}
-row_pcldt =             {'var':'pcldt',            'ylabel':'Total Cloud \n Coverage'}
-row_list = [row_frac_land, row_net_rad_planet, row_tsurf, row_snowicefr, row_ZSI, row_pcldt]
+row_lwp =               {'var':'lwp',            'ylabel':'Liquid Water \n Path'}
+row_swcrf_toa =         {'var':'swcrf_toa'       'ylabel':'SW Cloud \n Rad Forcing'}
+row_lwcrf_toa =         {'var':'lwcrf_toa'       'ylabel':'LW Cloud \n Rad Forcing'}
+row_pcldt =             {'var':'pcldt',          'ylabel':'Total Cloud \n Coverage'}
+row_pscld =             {'var':'pscld'           'ylabel':'Shallow Convective \n Cloud Cover'}
+row_pdcld =             {'var':'pdcld'           'ylabel':'Deep Convective \n Cloud Cover'}
+row_wtrcld =             {'var':'wtrcld'           'ylabel':'Water \n Cloud Cover'}
+row_icecld =             {'var':'icecld'           'ylabel':'Ice \n Cloud Cover'}
+row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_lwcrf_toa, row_pscld, row_pdcld]
 
 col_0 = {'filedir':filedir0, 'parallels':[-45, 45],
         'meridians':[-90, 90], 'title':'Dynamic (5L), Aquaplanet'}
@@ -93,6 +100,6 @@ for col_num in range(len(col_list)):
 
 
 fig.tight_layout()
-plt.savefig('matrix_basemap_big.svg')
-plt.savefig('matrix_basemap_big.pdf')
+plt.savefig('matrix_basemap_big_clouds.svg')
+plt.savefig('matrix_basemap_big_clouds.pdf')
 plt.show()
