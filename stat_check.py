@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from netCDF4 import Dataset
+from netCDF4 import Dataset as ds
 
 def showAvgNetRad(filename):
     df = pd.read_csv(filename)
