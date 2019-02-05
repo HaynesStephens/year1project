@@ -81,8 +81,8 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
-for col_num in range(col_list):
-    for row_num in range(row_list):
+for col_num in range(len(col_list)):
+    for row_num in range(len(row_list)):
         col = col_list[col_num]
         row = row_list[row_num]
         filedir = col['filedir']
