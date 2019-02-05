@@ -15,7 +15,9 @@ def oceanPotTemp(filename):
     avg_pot_temp = np.array([])
     for o_layer in pot_temp:
         avg_pot_temp = np.append(avg_pot_temp, np.mean(o_layer))
-    return avg_pot_temp
+    print('Avg Pot Temp (Celsius)')
+    print(avg_pot_temp)
+    return
 
 
     # def avgDataFiles(filedir, var, num_files=10):
