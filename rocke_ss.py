@@ -15,7 +15,7 @@ from glob import glob
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
 runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 1941
+startyear = 2441
 endyear = 3041
 
 
