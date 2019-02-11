@@ -5,7 +5,7 @@ from netCDF4 import Dataset as ds
 def showAvgNetRad(filename):
     df = pd.read_csv(filename)
     print(df['radiation'][-10:])
-    print(np.mean(df['radiation'][-10:]))
+    print(np.mean(np.absolute(df['radiation'][-10:])))
     return
 
 
