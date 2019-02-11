@@ -13,10 +13,10 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
+runid = 'pc_proxcenb_ssc5L_TL_6p'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 2441
-endyear = 3540
+startyear = 1950
+endyear = 3349
 
 
 ## ***DEFINE TIME INTERVAL***
@@ -33,7 +33,7 @@ for y in year_list:
     beg_dec = str(y)
     end_dec = str(y + 9)
 
-    accfilename = 'AN8' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
+    accfilename = 'ANM' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
 
     print(accfilename)
     subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
@@ -56,7 +56,7 @@ for y in year_list:
     beg_dec = str(y)
     end_dec = str(y + 9)
 
-    aijfilename = 'AN8' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
+    aijfilename = 'ANM' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
     # oijfilename = month + year +'.oij' + runid + '.nc'
 
     # READ THE NETCDF FILES
