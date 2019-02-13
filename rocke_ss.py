@@ -85,24 +85,22 @@ for y in year_list:
     global_snow_ice_cover[i] = snow_ice_area / planet_area  # Global snow and ice coverage (%)
 
     # SEA ICE THICKNESS
-    """
     sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved sea ice thickness (m)
-    total_thickness = 0
-    ice_area = 0
-    ocnfr = atm_data['ocnfr'][:]
-    for i in range(46):
-        for j in range(72):
-            if ocnfr[i, j] == 100:
-                total_thickness += sea_ice_thickness[i, j]*grid_cell_area[i, j]
-                ice_area += grid_cell_area[i, j]
-    sea_ice_thickness_aw = total_thickness / ice_area
-    """
+    # total_thickness = 0
+    # ice_area = 0
+    # ocnfr = atm_data['ocnfr'][:]
+    # for i in range(46):
+    #     for j in range(72):
+    #         if ocnfr[i, j] == 100:
+    #             total_thickness += sea_ice_thickness[i, j]*grid_cell_area[i, j]
+    #             ice_area += grid_cell_area[i, j]
+    # sea_ice_thickness_aw = total_thickness / ice_area
 
-    # sea_land = np.isnan(sea_ice_thickness)
-    # ocean_area = planet_area - sum(grid_cell_area[land])
-    # sea_ice_thickness[land] = 0
-    # sea_ice_thickness_aw = sum(sum((sea_ice_thickness * grid_cell_area))) / ocean_area  # Snow and ice area (m2)
-    # global_ice_thickness[i] = sea_ice_thickness_aw
+    land = np.isnan(sea_ice_thickness)
+    ocean_area = planet_area - sum(grid_cell_area[land])
+    sea_ice_thickness[land] = 0
+    sea_ice_thickness_aw = sum(sum((sea_ice_thickness * grid_cell_area))) / ocean_area  # Snow and ice area (m2)
+    global_ice_thickness[i] = sea_ice_thickness_aw
 
     i = i + 1  # advance the calendar counter.
 
@@ -122,8 +120,8 @@ np.savetxt('ice_thickness_ts.txt', global_ice_thickness)
 
 df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.reshape(total_decs),
                    'temperature': global_ave_temp.reshape(total_decs),
-                   'snow_ice_cover': global_snow_ice_cover.reshape(total_decs)})#,
-                   # 'ice_thickness': global_ice_thickness.reshape(total_decs)})
+                   'snow_ice_cover': global_snow_ice_cover.reshape(total_decs),
+                   'ice_thickness': global_ice_thickness.reshape(total_decs)})
 df.to_csv('ts_data.csv')
 
 ## Delete all but the last 10 aij files to use in the matrix map plots.
