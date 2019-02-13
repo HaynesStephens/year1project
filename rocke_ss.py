@@ -114,9 +114,8 @@ for y in year_list:
 np.savetxt('radiation_ts.txt', global_rad)
 np.savetxt('temperature_ts.txt', global_ave_temp)
 np.savetxt('snow_ice_ts.txt', global_snow_ice_cover)
-'''
 np.savetxt('ice_thickness_ts.txt', global_ice_thickness)
-'''
+
 
 df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.reshape(total_decs),
                    'temperature': global_ave_temp.reshape(total_decs),
