@@ -16,7 +16,7 @@ from glob import glob
 runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
 startyear = 2441
-endyear = 3840
+endyear = 4140
 
 
 ## ***DEFINE TIME INTERVAL***
@@ -85,11 +85,21 @@ for y in year_list:
     global_snow_ice_cover[i] = snow_ice_area / planet_area  # Global snow and ice coverage (%)
 
     # SEA ICE THICKNESS
-    sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved sea ice thickness (m?)
-    land = np.isnan(sea_ice_thickness)
-    ocean_area = planet_area - sum(grid_cell_area[land])
-    sea_ice_thickness[land] = 0
-    sea_ice_thickness_aw = sum(sum((sea_ice_thickness * grid_cell_area))) / ocean_area  # Snow and ice area (m2)
+    sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved sea ice thickness (m)
+    total_thickness = 0
+    ice_area = 0
+    ocnfr = atm_data['ocnfr'][:]
+    for i in range(46):
+        for j in range(72):
+            if ocnfr[i, j] == 100:
+                total_thickness += sea_ice_thickness[i, j]*grid_cell_area[i, j]
+                ice_area += grid_cell_area[i, j]
+    sea_ice_thickness_aw = total_thickness / ice_area
+
+    # sea_land = np.isnan(sea_ice_thickness)
+    # ocean_area = planet_area - sum(grid_cell_area[land])
+    # sea_ice_thickness[land] = 0
+    # sea_ice_thickness_aw = sum(sum((sea_ice_thickness * grid_cell_area))) / ocean_area  # Snow and ice area (m2)
     global_ice_thickness[i] = sea_ice_thickness_aw
 
     i = i + 1  # advance the calendar counter.
