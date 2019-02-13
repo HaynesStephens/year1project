@@ -89,18 +89,18 @@ for y in year_list:
     total_thickness = 0
     ice_area = 0
     ocnfr = atm_data['ocnfr'][:]
-    for i in range(46):
-        for j in range(72):
-            if ocnfr[i, j] == 100:
-                total_thickness += sea_ice_thickness[i, j]*grid_cell_area[i, j]
-                ice_area += grid_cell_area[i, j]
+    for x in range(46):
+        for y in range(72):
+            if ocnfr[x, y] == 100:
+                total_thickness += sea_ice_thickness[x, y]*grid_cell_area[x, y]
+                ice_area += grid_cell_area[x, y]
     sea_ice_thickness_aw = total_thickness / ice_area
 
     # land = np.isnan(sea_ice_thickness)
     # ocean_area = planet_area - sum(grid_cell_area[land])
     # sea_ice_thickness[land] = 0
     # sea_ice_thickness_aw = sum(sum((sea_ice_thickness * grid_cell_area))) / ocean_area  # Snow and ice area (m2)
-    global_ice_thickness[i] = sea_ice_thickness_aw
+    # global_ice_thickness[i] = sea_ice_thickness_aw
 
     i = i + 1  # advance the calendar counter.
 
