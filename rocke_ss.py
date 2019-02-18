@@ -93,9 +93,9 @@ for y in year_list:
         for y in range(72):
             if ocnfr[x, y] == 100:
                 total_thickness += sea_ice_thickness[x, y]*grid_cell_area[x, y]
+                print("TT:", total_thickness)
                 ice_area += grid_cell_area[x, y]
     sea_ice_thickness_aw = total_thickness / ice_area
-    print(sea_ice_thickness_aw)
 
     # land = np.isnan(sea_ice_thickness)
     # ocean_area = planet_area - sum(grid_cell_area[land])
