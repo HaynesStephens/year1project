@@ -87,16 +87,16 @@ for y in year_list:
 
     # SEA ICE THICKNESS
     sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved sea ice thickness (m)
-    total_thickness = 0
-    ice_area = 0
+    sea_ice_thickness[sea_ice_thickness.mask] = 0
+    # total_thickness = 0
+    # ice_area = 0
     ocnfr = atm_data['ocnfr'][:]
+    '''
     for x in range(46):
         for y in range(72):
             if ocnfr[x, y] == 100:
                 cell_thickness = sea_ice_thickness[x, y]
                 cell_area = grid_cell_area[x, y]
-                # print("CT: ", type(cell_thickness))
-                # print("AREA: ", cell_area)
                 if isinstance(cell_thickness, np.float32):
                     total_thickness += cell_thickness*cell_area
                 else:
@@ -104,6 +104,10 @@ for y in year_list:
                 ice_area += cell_area
     print("TT:", total_thickness)
     sea_ice_thickness_aw = total_thickness / ice_area
+    '''
+    total_thickness = np.sum(sea_ice_thickness * (ocnfr / 100) * grid_cell_area)
+    sea_ice_thickness_aw = total_thickness / np.sum((ocnfr / 100) * grid_cell_area)
+    print(sea_ice_thickness_aw)
 
     # land = np.isnan(sea_ice_thickness)
     # ocean_area = planet_area - sum(grid_cell_area[land])
