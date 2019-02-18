@@ -95,9 +95,9 @@ for y in year_list:
             if ocnfr[x, y] == 100:
                 cell_thickness = sea_ice_thickness[x, y]
                 cell_area = grid_cell_area[x, y]
-                print("CT: ", cell_thickness)
+                print("CT: ", type(cell_thickness))
                 print("AREA: ", cell_area)
-                if cell_thickness < 0:
+                if cell_thickness == 0:
                     total_thickness += 0
                 else:
                     total_thickness += cell_thickness*cell_area
