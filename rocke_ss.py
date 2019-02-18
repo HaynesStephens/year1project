@@ -95,12 +95,14 @@ for y in year_list:
             if ocnfr[x, y] == 100:
                 cell_thickness = sea_ice_thickness[x, y]
                 cell_area = grid_cell_area[x, y]
+                print("CT: ", cell_thickness)
+                print("AREA: ", cell_area)
                 if cell_thickness < 0:
                     total_thickness += 0
                 else:
                     total_thickness += cell_thickness*cell_area
                 ice_area += cell_area
-    print("TT:", total_thickness)
+    # print("TT:", total_thickness)
     sea_ice_thickness_aw = total_thickness / ice_area
 
     # land = np.isnan(sea_ice_thickness)
