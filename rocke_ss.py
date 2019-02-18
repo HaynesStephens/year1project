@@ -29,7 +29,7 @@ year_list = range(startyear, endyear, 10)
 
 os.chdir(rundirectory)  # Switch on over to the run directory.
 
-'''
+
 for y in year_list:
     beg_dec = str(y)
     end_dec = str(y + 9)
@@ -39,7 +39,6 @@ for y in year_list:
     print(accfilename)
     subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
     # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
-'''
 
 # First, determine array size
 total_decs = len(year_list)
@@ -88,32 +87,13 @@ for y in year_list:
     # SEA ICE THICKNESS
     sea_ice_thickness = atm_data['ZSI'][:]  # Spatially resolved sea ice thickness (m)
     sea_ice_thickness[sea_ice_thickness.mask] = 0
-    # total_thickness = 0
-    # ice_area = 0
+
     ocnfr = atm_data['ocnfr'][:]
-    '''
-    for x in range(46):
-        for y in range(72):
-            if ocnfr[x, y] == 100:
-                cell_thickness = sea_ice_thickness[x, y]
-                cell_area = grid_cell_area[x, y]
-                if isinstance(cell_thickness, np.float32):
-                    total_thickness += cell_thickness*cell_area
-                else:
-                    total_thickness += 0
-                ice_area += cell_area
-    print("TT:", total_thickness)
-    sea_ice_thickness_aw = total_thickness / ice_area
-    '''
     ocean_area = (ocnfr / 100) * grid_cell_area
+
     total_thickness = np.sum(sea_ice_thickness * ocean_area)
     sea_ice_thickness_aw = total_thickness / np.sum(ocean_area)
-    print(sea_ice_thickness_aw)
 
-    # land = np.isnan(sea_ice_thickness)
-    # ocean_area = planet_area - sum(grid_cell_area[land])
-    # sea_ice_thickness[land] = 0
-    # sea_ice_thickness_aw = sum(sum((sea_ice_thickness * grid_cell_area))) / ocean_area  # Snow and ice area (m2)
     global_ice_thickness[i] = sea_ice_thickness_aw
 
     i = i + 1  # advance the calendar counter.
@@ -138,9 +118,7 @@ df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.resh
                    'ice_thickness': global_ice_thickness.reshape(total_decs)})
 df.to_csv('ts_data.csv')
 
-'''
 ## Delete all but the last 10 aij files to use in the matrix map plots.
 aij_list = sorted(glob('*aij*')) # Get a list of all the aij files made.
 for aij_file in aij_list[:-10]: # Cycle through a list of all but the last 10 aij files.
     os.system('rm {0}'.format(aij_file)) # Delete the aij file.
-'''
