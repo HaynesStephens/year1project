@@ -92,6 +92,7 @@ for y in year_list:
     for x in range(46):
         for y in range(72):
             if ocnfr[x, y] == 100:
+                print(sea_ice_thickness)
                 total_thickness += sea_ice_thickness[x, y]*grid_cell_area[x, y]
                 ice_area += grid_cell_area[x, y]
     sea_ice_thickness_aw = total_thickness / ice_area
