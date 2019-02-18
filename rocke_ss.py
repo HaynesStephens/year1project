@@ -99,8 +99,8 @@ for y in year_list:
                     total_thickness += 0
                 else:
                     total_thickness += cell_thickness*cell_area
-                print("TT:", total_thickness)
                 ice_area += cell_area
+    print("TT:", total_thickness)
     sea_ice_thickness_aw = total_thickness / ice_area
 
     # land = np.isnan(sea_ice_thickness)
