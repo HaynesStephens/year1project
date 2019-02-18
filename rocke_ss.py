@@ -97,7 +97,7 @@ for y in year_list:
                 cell_area = grid_cell_area[x, y]
                 # print("CT: ", type(cell_thickness))
                 # print("AREA: ", cell_area)
-                if isinstance(cell_thickness, numpy.float32):
+                if isinstance(cell_thickness, np.float32):
                     total_thickness += cell_thickness*cell_area
                 else:
                     total_thickness += 0
