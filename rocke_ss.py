@@ -29,7 +29,7 @@ year_list = range(startyear, endyear, 10)
 
 os.chdir(rundirectory)  # Switch on over to the run directory.
 
-
+'''
 for y in year_list:
     beg_dec = str(y)
     end_dec = str(y + 9)
@@ -39,7 +39,7 @@ for y in year_list:
     print(accfilename)
     subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
     # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
-
+'''
 
 # First, determine array size
 total_decs = len(year_list)
@@ -93,9 +93,14 @@ for y in year_list:
     for x in range(46):
         for y in range(72):
             if ocnfr[x, y] == 100:
-                total_thickness += sea_ice_thickness[x, y]*grid_cell_area[x, y]
+                cell_thickness = sea_ice_thickness[x, y]
+                cell_area = grid_cell_area[x, y]
+                if cell_thickness < 0:
+                    total_thickness += 0
+                else:
+                    total_thickness += cell_thickness*cell_area
                 print("TT:", total_thickness)
-                ice_area += grid_cell_area[x, y]
+                ice_area += cell_area
     sea_ice_thickness_aw = total_thickness / ice_area
 
     # land = np.isnan(sea_ice_thickness)
