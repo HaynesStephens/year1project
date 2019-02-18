@@ -123,7 +123,7 @@ df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.resh
                    'ice_thickness': global_ice_thickness.reshape(total_decs)})
 df.to_csv('ts_data.csv')
 
-## Delete all but the last 10 aij files to use in the matrix late map plots.
+## Delete all but the last 10 aij files to use in the matrix map plots.
 aij_list = sorted(glob('*aij*')) # Get a list of all the aij files made.
 for aij_file in aij_list[:-10]: # Cycle through a list of all but the last 10 aij files.
     os.system('rm {0}'.format(aij_file)) # Delete the aij file.
