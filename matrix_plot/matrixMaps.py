@@ -88,13 +88,14 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
 
     def make_cmap(var):
         if var == 'frac_land':
-            levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
-            colors = ('#0000FF', '#D2B48C')  # any hex codes
-            cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
+            # levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
+            # colors = ('#0000FF', '#D2B48C')  # any hex codes
+            # cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
+            cmap = 'RdBu'
         elif var == 'pscld' or var == 'pdcld':
-            cmap = 'gray'
+            cmap = 'Blues_r'
         else:
-            cmap = 'Blues'
+            cmap = 'PuOr'
         return cmap
 
     cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(var))
