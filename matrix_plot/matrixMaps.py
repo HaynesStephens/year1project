@@ -97,7 +97,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
             cmap = 'Blues'
         return cmap
 
-    cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(ylabel))
+    cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(var))
     m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
