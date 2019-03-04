@@ -3,6 +3,7 @@ from netCDF4 import Dataset as ds
 import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
+from matplotlib.patches import Polygon
 # from lat_lon_grid import lat_grid, lon_grid
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
@@ -81,10 +82,19 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     cs = m.contourf(x,y,data, ax=ax)
     if ylabel != 'Land \n Fraction':
         m.colorbar(mappable=cs, ax=ax)
+
     if row_num==0:
         ax.set_title(title, fontsize=7)
+
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
+
+    x1, y1 = m(-25, -25)
+    x2, y2 = m(-25, 25)
+    x3, y3 = m(25, 25)
+    x4, y4 = m(25, -25)
+    poly = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='red', edgecolor='green', linewidth=3)
+    plt.gca().add_patch(poly)
 
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
