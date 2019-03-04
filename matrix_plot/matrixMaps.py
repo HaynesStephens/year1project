@@ -79,10 +79,8 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     cs = m.contourf(x,y,data, ax=ax)
-
-    print(np.max(data), np.min(data))
-
-    m.colorbar(mappable=cs, ax=ax)
+    if ylabel != 'Land \n Fraction':
+        m.colorbar(mappable=cs, ax=ax)
     if row_num==0:
         ax.set_title(title, fontsize=7)
     if col_num==0:
