@@ -22,12 +22,12 @@ row_net_rad_planet =    {'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radi
 row_tsurf=              {'var':'tsurf',          'ylabel':'Surface \n Temperature'}
 row_snowicefr =         {'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction'}
 row_ZSI =               {'var':'ZSI',            'ylabel':'Sea Ice \n Thickness'}
-row_lwp =               {'var':'lwp',            'ylabel':'Liquid Water \n Path'}
-row_swcrf_toa =         {'var':'swcrf_toa',      'ylabel':'SW Cloud \n Rad Forcing'}
-row_lwcrf_toa =         {'var':'lwcrf_toa',      'ylabel':'LW Cloud \n Rad Forcing'}
+row_lwp =               {'var':'lwp',            'ylabel':'Liquid \n Water \n Path'}
+row_swcrf_toa =         {'var':'swcrf_toa',      'ylabel':'SW \n Cloud \n Rad \n Forcing'}
+row_lwcrf_toa =         {'var':'lwcrf_toa',      'ylabel':'LW \n Cloud \n Rad \n Forcing'}
 row_pcldt =             {'var':'pcldt',          'ylabel':'Total Cloud \n Coverage'}
-row_pscld =             {'var':'pscld',          'ylabel':'Shallow Convective \n Cloud Cover'}
-row_pdcld =             {'var':'pdcld',          'ylabel':'Deep Convective \n Cloud Cover'}
+row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective \n Cloud \n Cover'}
+row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover'}
 row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_pscld]
@@ -44,8 +44,8 @@ col_11 = {'filedir':filedir11, 'parallels':[-22, 22],
         'meridians':[-47.5, 47.5], 'title':'Dynamic (5L), 11% SS Cont'}
 col_22 = {'filedir':filedir22, 'parallels':[-34, 34],
         'meridians':[-67.5, 67.5], 'title':'Dynamic (5L), 22% SS Cont'}
-col_26 = {'filedir':filedir26, 'parallels':[-38, 38],
-        'meridians':[-72.5, 72.5], 'title':'Dynamic (5L), 26% SS Cont'}
+col_26 = {'filedir':filedir26, 'parallels':[-40, 40],
+        'meridians':[-75, 75], 'title':'Dynamic (5L), 26% SS Cont'}
 col_34 = {'filedir':filedir34, 'parallels':[-42, 42],
         'meridians':[-87.5, 87.5], 'title':'Dynamic (5L), 34% SS Cont'}
 col_39 = {'filedir':filedir39, 'parallels':[-46, 46],
