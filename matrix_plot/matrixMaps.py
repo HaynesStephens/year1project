@@ -80,19 +80,19 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     print(parallels)
     print(meridians)
 
-    x1, y1 = m(meridians[0], parallels[0])
-    x2, y2 = m(meridians[0], parallels[1])
-    x3, y3 = m(meridians[1], parallels[1])
-    x4, y4 = m(meridians[1], parallels[0])
-    poly = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
-    plt.gca().add_patch(poly)
-
     ny=data.shape[0]
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     cs = m.contourf(x,y,data, ax=ax)
     m.colorbar(mappable=cs, ax=ax)
+
+    x1, y1 = m(meridians[0], parallels[0])
+    x2, y2 = m(meridians[0], parallels[1])
+    x3, y3 = m(meridians[1], parallels[1])
+    x4, y4 = m(meridians[1], parallels[0])
+    cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
+    plt.gca().add_patch(cont_boundary)
 
     if row_num==0:
         ax.set_title(title, fontsize=7)
