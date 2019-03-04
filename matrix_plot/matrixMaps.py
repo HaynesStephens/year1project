@@ -38,8 +38,8 @@ col_1 = {'filedir':filedir1, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_4 = {'filedir':filedir4, 'parallels':[-14, 14],
         'meridians':[-27.5, 27.5], 'title':'Dynamic (5L), 4% SS Cont'}
-col_6 = {'filedir':filedir6, 'parallels':[-18, 18],
-        'meridians':[-32.5, 32.5], 'title':'Dynamic (5L), 6% SS Cont'}
+col_6 = {'filedir':filedir6, 'parallels':[-20, 20],
+        'meridians':[-35, 35], 'title':'Dynamic (5L), 6% SS Cont'}
 col_11 = {'filedir':filedir11, 'parallels':[-22, 22],
         'meridians':[-47.5, 47.5], 'title':'Dynamic (5L), 11% SS Cont'}
 col_22 = {'filedir':filedir22, 'parallels':[-34, 34],
@@ -103,10 +103,10 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
 for col_num in range(len(col_list)):
+    col = col_list[col_num]
+    filedir = col['filedir']
     for row_num in range(len(row_list)):
-        col = col_list[col_num]
         row = row_list[row_num]
-        filedir = col['filedir']
         var = row['var']
         data = avgDataFiles(filedir, var, num_files = 10)
         makeSubplot(data, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
