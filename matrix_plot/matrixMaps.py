@@ -29,7 +29,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow Convective \n
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep Convective \n Cloud Cover'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover'}
-row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_lwcrf_toa, row_pscld, row_pdcld]
+row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_pscld]
 
 col_0 = {'filedir':filedir0, 'parallels':[-45, 45],
         'meridians':[-90, 90], 'title':'Dynamic (5L), Aquaplanet'}
@@ -50,7 +50,7 @@ col_34 = {'filedir':filedir34, 'parallels':[-45, -42, 42, 45],
 col_39 = {'filedir':filedir39, 'parallels':[-45, -46, 46, 45],
         'meridians':[-90, -92.5, 92.5, 90], 'title':'Dynamic (5L), 39% SS Cont'}
 
-col_list = [col_6, col_11, col_22, col_26]
+col_list = [col_6, col_26]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
