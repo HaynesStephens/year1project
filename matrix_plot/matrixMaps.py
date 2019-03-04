@@ -92,7 +92,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
             colors = ('#0000FF', '#D2B48C')  # any hex codes
             cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
         elif var == 'pscld' or var == 'pdcld':
-            cmap = 'Blues_r'
+            cmap = 'gray'
         else:
             cmap = 'Blues'
         return cmap
