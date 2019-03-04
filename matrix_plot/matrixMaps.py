@@ -89,10 +89,10 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
 
-    x1, y1 = m(meridians[0], parallels[0])
-    x2, y2 = m(meridians[0], parallels[1])
-    x3, y3 = m(meridians[1], parallels[1])
-    x4, y4 = m(meridians[0], parallels[0])
+    x1, y1 = m(meridians[0], -18)
+    x2, y2 = m(meridians[0], 18)
+    x3, y3 = m(meridians[1], 18)
+    x4, y4 = m(meridians[1], -18)
     poly = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
     plt.gca().add_patch(poly)
 
