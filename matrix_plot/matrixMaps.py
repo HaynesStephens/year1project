@@ -76,11 +76,6 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     m.drawparallels(parallels, labels=[1,0,0,0], ax = ax, fontsize=8)
     m.drawmeridians(meridians, labels=[0,0,0,1], ax = ax, rotation=30, fontsize=8)
 
-    print(row_num)
-    print(col_num)
-    print(parallels)
-    print(meridians)
-
     ny=data.shape[0]
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
