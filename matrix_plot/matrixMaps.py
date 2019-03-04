@@ -86,7 +86,7 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     if ylabel == 'Land \n Fraction':
-        levels = [-100, 0, 100]  # whatever levels you want, have to pick the right number for the number of colors you put in
+        levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
         colors = ('#0000FF', '#D2B48C')  # any hex codes
         cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
         cs = m.contourf(x, y, data, ax=ax, cmap=cmap)
