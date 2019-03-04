@@ -74,20 +74,12 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     # m.fillcontinents(color='coral',lake_color='aqua')
     # draw parallels and meridians.
     m.drawparallels(parallels, labels=[1,0,0,0], ax = ax, fontsize=4)
-    merdians_drawn = m.drawmeridians(meridians, labels=[0,0,0,1], ax = ax, rotation=45, fontsize=4)
+    m.drawmeridians(meridians, labels=[0,0,0,1], ax = ax, rotation=45, fontsize=4)
     ny=data.shape[0]
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     cs = m.contourf(x,y,data, ax=ax)
-    if ylabel != 'Land \n Fraction':
-        m.colorbar(mappable=cs, ax=ax)
-
-    if row_num==0:
-        ax.set_title(title, fontsize=7)
-
-    if col_num==0:
-        ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
 
     x1, y1 = m(meridians[0], parallels[0])
     x2, y2 = m(meridians[0], parallels[1])
@@ -96,6 +88,14 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     poly = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
     plt.gca().add_patch(poly)
 
+    if ylabel != 'Land \n Fraction':
+        m.colorbar(mappable=cs, ax=ax)
+
+    if row_num==0:
+        ax.set_title(title, fontsize=7)
+
+    if col_num==0:
+        ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
