@@ -32,24 +32,24 @@ row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover'
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover'}
 row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_pscld]
 
-col_0 = {'filedir':filedir0, 'parallels':[-45, 45],
-        'meridians':[-90, 90], 'title':'Dynamic (5L), Aquaplanet'}
-col_1 = {'filedir':filedir1, 'parallels':[-45, -10, 10, 45],
-        'meridians':[-90, -12.5, 12.5, 90], 'title':'Dynamic (5L), 1% SS Cont'}
-col_4 = {'filedir':filedir4, 'parallels':[-45, -14, 14, 45],
-        'meridians':[-90, -27.5, 27.5, 90], 'title':'Dynamic (5L), 4% SS Cont'}
-col_6 = {'filedir':filedir6, 'parallels':[-45, -18, 18, 45],
-        'meridians':[-90, -32.5, 32.5, 90], 'title':'Dynamic (5L), 6% SS Cont'}
-col_11 = {'filedir':filedir11, 'parallels':[-45, -22, 22, 45],
-        'meridians':[-90, -47.5, 47.5, 90], 'title':'Dynamic (5L), 11% SS Cont'}
-col_22 = {'filedir':filedir22, 'parallels':[-45, -34, 34, 45],
-        'meridians':[-90, -67.5, 67.5, 90], 'title':'Dynamic (5L), 22% SS Cont'}
-col_26 = {'filedir':filedir26, 'parallels':[-45, -38, 38, 45],
-        'meridians':[-90, -72.5, 72.5, 90], 'title':'Dynamic (5L), 26% SS Cont'}
-col_34 = {'filedir':filedir34, 'parallels':[-45, -42, 42, 45],
-        'meridians':[-90, -87.5, 87.5, 90], 'title':'Dynamic (5L), 34% SS Cont'}
-col_39 = {'filedir':filedir39, 'parallels':[-45, -46, 46, 45],
-        'meridians':[-90, -92.5, 92.5, 90], 'title':'Dynamic (5L), 39% SS Cont'}
+col_0 = {'filedir':filedir0, 'parallels':[0],
+        'meridians':[0], 'title':'Dynamic (5L), Aquaplanet'}
+col_1 = {'filedir':filedir1, 'parallels':[-10, 10],
+        'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
+col_4 = {'filedir':filedir4, 'parallels':[-14, 14],
+        'meridians':[-27.5, 27.5], 'title':'Dynamic (5L), 4% SS Cont'}
+col_6 = {'filedir':filedir6, 'parallels':[-18, 18],
+        'meridians':[-32.5, 32.5], 'title':'Dynamic (5L), 6% SS Cont'}
+col_11 = {'filedir':filedir11, 'parallels':[-22, 22],
+        'meridians':[-47.5, 47.5], 'title':'Dynamic (5L), 11% SS Cont'}
+col_22 = {'filedir':filedir22, 'parallels':[-34, 34],
+        'meridians':[-67.5, 67.5], 'title':'Dynamic (5L), 22% SS Cont'}
+col_26 = {'filedir':filedir26, 'parallels':[-38, 38],
+        'meridians':[-72.5, 72.5], 'title':'Dynamic (5L), 26% SS Cont'}
+col_34 = {'filedir':filedir34, 'parallels':[-42, 42],
+        'meridians':[-87.5, 87.5], 'title':'Dynamic (5L), 34% SS Cont'}
+col_39 = {'filedir':filedir39, 'parallels':[-46, 46],
+        'meridians':[-92.5, 92.5], 'title':'Dynamic (5L), 39% SS Cont'}
 
 col_list = [col_6, col_26]
 
@@ -89,10 +89,10 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
 
-    x1, y1 = m(-32.5, -18)
-    x2, y2 = m(-32.5, 18)
-    x3, y3 = m(32.5, 18)
-    x4, y4 = m(32.5, -18)
+    x1, y1 = m(meridians[0], parallels[0])
+    x2, y2 = m(meridians[0], parallels[1])
+    x3, y3 = m(meridians[1], parallels[1])
+    x4, y4 = m(meridians[0], parallels[0])
     poly = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
     plt.gca().add_patch(poly)
 
