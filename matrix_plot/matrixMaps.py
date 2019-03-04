@@ -85,13 +85,17 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
-    if ylabel == 'Land \n Fraction':
-        levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
-        colors = ('#0000FF', '#D2B48C')  # any hex codes
-        cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
-        cs = m.contourf(x, y, data, ax=ax, cmap=cmap)
-    else:
-        cs = m.contourf(x, y, data, ax=ax)
+
+    def make_cmap(ylabel):
+        if ylabel == 'Land \n Fraction':
+            levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
+            colors = ('#0000FF', '#D2B48C')  # any hex codes
+            cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
+        else:
+            cmap = 'Blues'
+        return cmap
+
+    cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(ylabel))
     m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
@@ -118,7 +122,6 @@ for col_num in range(len(col_list)):
         data = avgDataFiles(filedir, var, num_files = 10)
         makeSubplot(data, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
-
 
 fig.tight_layout()
 plt.savefig('matrix_basemap_big_clouds.svg')
