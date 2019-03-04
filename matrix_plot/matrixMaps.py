@@ -4,7 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
 from matplotlib.patches import Polygon
-# from lat_lon_grid import lat_grid, lon_grid
+from matplotlib.colors import from_levels_and_colors,  LinearSegmentedColormap, rgb2hex
+
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
 filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
@@ -85,7 +86,13 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     cs = m.contourf(x,y,data, ax=ax)
-    m.colorbar(mappable=cs, ax=ax)
+    if ylabel == 'Land \n Fraction':
+        levels = [0, 100]  # whatever levels you want, have to pick the right number for the number of colors you put in
+        colors = ('#0000FF', '#D2B48C')  # any hex codes
+        cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
+        m.colorbar(mappable=cmap, ax=ax)
+    else:
+        m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
     x2, y2 = m(meridians[0], parallels[1])
