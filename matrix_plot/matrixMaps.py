@@ -66,7 +66,6 @@ def avgDataFiles(filedir, var, num_files = 10):
 
 
 def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title):
-    # data = nc[var][:]
     if title == 'Dynamic (5L), Aquaplanet':
         data = np.roll(data, (data.shape[1])//2, axis=1)
     m = Basemap(ax = ax)
@@ -75,11 +74,6 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     # draw parallels and meridians.
     m.drawparallels(parallels, labels=[1,0,0,0], ax = ax, fontsize=4)
     m.drawmeridians(meridians, labels=[0,0,0,1], ax = ax, rotation=45, fontsize=4)
-    ny=data.shape[0]
-    nx=data.shape[1]
-    lons, lats = m.makegrid(nx, ny)
-    x, y = m(lons, lats)
-    cs = m.contourf(x,y,data, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
     x2, y2 = m(meridians[0], parallels[1])
@@ -87,6 +81,12 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     x4, y4 = m(meridians[1], parallels[0])
     poly = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
     plt.gca().add_patch(poly)
+
+    ny=data.shape[0]
+    nx=data.shape[1]
+    lons, lats = m.makegrid(nx, ny)
+    x, y = m(lons, lats)
+    cs = m.contourf(x,y,data, ax=ax)
 
     if ylabel != 'Land \n Fraction':
         m.colorbar(mappable=cs, ax=ax)
