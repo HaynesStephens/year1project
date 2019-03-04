@@ -85,12 +85,12 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
-    cs = m.contourf(x,y,data, ax=ax)
+    cs = m.contourf(x,y,data, ax=ax, cmap='winter')
     if ylabel == 'Land \n Fraction':
         # levels = [0, 100]  # whatever levels you want, have to pick the right number for the number of colors you put in
         # colors = ('#0000FF', '#D2B48C')  # any hex codes
         # cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
-        m.colorbar(mappable='winter', ax=ax)
+        m.colorbar(mappable=cs, ax=ax)
     else:
         m.colorbar(mappable=cs, ax=ax)
 
