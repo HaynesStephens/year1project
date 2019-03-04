@@ -66,7 +66,7 @@ def avgDataFiles(filedir, var, num_files = 10):
     return arr_avg
 
 
-def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title):
+def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, title):
     if title == 'Dynamic (5L), Aquaplanet':
         data = np.roll(data, (data.shape[1])//2, axis=1)
     m = Basemap(ax = ax)
@@ -86,13 +86,15 @@ def makeSubplot(data, ax, row_num, col_num, ylabel, parallels, meridians, title)
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
 
-    def make_cmap(ylabel):
-        if ylabel == 'Land \n Fraction':
+    def make_cmap(var):
+        if var == 'frac_land':
             levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
             colors = ('#0000FF', '#D2B48C')  # any hex codes
             cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
-        else:
+        elif var == 'pscld' or var == 'pdcld':
             cmap = 'Blues_r'
+        else:
+            cmap = 'Blues'
         return cmap
 
     cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(ylabel))
@@ -120,7 +122,7 @@ for col_num in range(len(col_list)):
         row = row_list[row_num]
         var = row['var']
         data = avgDataFiles(filedir, var, num_files = 10)
-        makeSubplot(data, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
+        makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout()
