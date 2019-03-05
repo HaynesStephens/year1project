@@ -96,7 +96,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
             cmap = 'PuOr_r'
         return cmap
 
-    norm = MidPointNorm(midpoint=0)
+    norm = MidPointNorm(midpoint=0, vmin=-100, vmax=100)
     cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(var), norm=norm)
     m.colorbar(mappable=cs, ax=ax)
 
