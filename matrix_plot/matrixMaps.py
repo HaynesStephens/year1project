@@ -119,6 +119,7 @@ for col_num in range(len(col_list)):
     col = col_list[col_num]
     filedir = col['filedir']
     for row_num in range(len(row_list)):
+        print(col_num, row_num)
         row = row_list[row_num]
         var = row['var']
         data = avgDataFiles(filedir, var, num_files = 10)
