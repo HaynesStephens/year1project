@@ -83,22 +83,17 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     x, y = m(lons, lats)
 
     def make_cmap(var):
-        sequential_list = ['frac_land', 'pscld', 'pdcld', 'lwp']
-        if var == 'frac_land':
-            # levels = [-10, 50, 110]  # whatever levels you want, have to pick the right number for the number of colors you put in
-            # colors = ('#0000FF', '#D2B48C')  # any hex codes
-            # cmap, norm = from_levels_and_colors(levels=levels, colors=colors)
-            cmap = 'RdBu_r'
-        elif var == 'pscld' or var == 'pdcld':
+        sequential_list = ['frac_land', 'pscld', 'pdcld', 'lwp'] #list of sequential variables to use for cmap
+        if var in sequential_list:
             cmap = 'Blues_r'
-        elif var == 'lwp':
-            cmap = 'Purples'
+            norm = None
         else:
             cmap = 'bwr'
-        return cmap
+            norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
+        return cmap, norm
 
-    norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
-    cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(var), norm=None)
+    cmap, norm = make_cmap(var)
+    cs = m.contourf(x, y, data, ax=ax, cmap=cmap, norm=norm)
     m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
