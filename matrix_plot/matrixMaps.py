@@ -93,7 +93,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         return cmap, norm
 
     cmap, norm = make_cmap(var)
-    if var != 'frac_land':
+    if var == 'frac_land':
         cs = m.contourf(x, y, data, ax=ax, cmap=cmap, norm=norm, levels=[20])
     else:
         cs = m.contourf(x, y, data, [10], ax=ax, cmap=cmap, norm=norm, levels=[20])
