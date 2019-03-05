@@ -4,7 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
 from matplotlib.patches import Polygon
-from matplotlib.colors import from_levels_and_colors,  LinearSegmentedColormap, rgb2hex
+from import cbar MidPointNorm
+# from matplotlib.colors import from_levels_and_colors,  LinearSegmentedColormap, rgb2hex
 
 
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
@@ -95,7 +96,8 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
             cmap = 'PuOr_r'
         return cmap
 
-    cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(var))
+    norm = MidPointNorm(midpoint=0)
+    cs = m.contourf(x, y, data, ax=ax, cmap=make_cmap(var), norm=norm)
     m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
@@ -106,10 +108,10 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     plt.gca().add_patch(cont_boundary)
 
     if row_num==0:
-        ax.set_title(title, fontsize=7)
+        ax.set_title(title, fontsize=10)
 
     if col_num==0:
-        ax.set_ylabel(ylabel, fontsize=7, labelpad = 40, rotation=0)
+        ax.set_ylabel(ylabel, fontsize=10, labelpad = 40, rotation=0)
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
