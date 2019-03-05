@@ -96,7 +96,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     if var == 'frac_land':
         cs = m.contourf(x, y, data, ax=ax, cmap=cmap, norm=norm)
     else:
-        cs = m.contourf(x, y, data, 2, ax=ax, cmap=cmap, norm=norm)
+        cs = m.contourf(x, y, data, 10, ax=ax, cmap=cmap, norm=norm)
     m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
