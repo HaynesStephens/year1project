@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
 from matplotlib.patches import Polygon
-from import cbar MidPointNorm
+from cbar import MidPointNorm
 # from matplotlib.colors import from_levels_and_colors,  LinearSegmentedColormap, rgb2hex
 
 
