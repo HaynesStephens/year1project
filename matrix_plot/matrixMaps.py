@@ -93,7 +93,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         elif var == 'lwp':
             cmap = 'Purples'
         else:
-            cmap = 'PuOr_r'
+            cmap = 'bwr'
         return cmap
 
     norm = MidPointNorm(midpoint=0, vmin=-100, vmax=100)
