@@ -88,7 +88,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
             cmap = 'Blues_r'
             norm = None
         else:
-            cmap = 'PuOr'
+            cmap = 'PuOr_r'
             norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
         return cmap, norm
 
