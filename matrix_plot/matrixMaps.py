@@ -107,7 +107,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         ax.set_title(title, fontsize=10)
 
     if col_num==0:
-        ax.set_ylabel(ylabel, fontsize=10, labelpad = 40, rotation=0)
+        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0)
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
