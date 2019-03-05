@@ -90,13 +90,11 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         else:
             cmap = 'PuOr_r'
             norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
-        return cmap, norm
+        levels = 20
+        return cmap, norm, levels
 
-    cmap, norm = make_cmap(var)
-    if var == 'frac_land':
-        cs = m.contourf(x, y, data, 20, ax=ax, cmap=cmap, norm=norm)
-    else:
-        cs = m.contourf(x, y, data, 20, ax=ax, cmap=cmap, norm=norm)
+    cmap, norm, levels = make_cmap(var)
+    cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.colorbar(mappable=cs, ax=ax)
 
     x1, y1 = m(meridians[0], parallels[0])
