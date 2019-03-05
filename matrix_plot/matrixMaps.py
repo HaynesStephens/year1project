@@ -90,6 +90,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         else:
             cmap = 'bwr'
             norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
+            norm = None
         return cmap, norm
 
     cmap, norm = make_cmap(var)
