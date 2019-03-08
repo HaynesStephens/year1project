@@ -74,7 +74,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     # m.drawcoastlines()
     # m.fillcontinents(color='coral',lake_color='aqua')
     # draw parallels and meridians.
-    m.drawparallels(parallels, labels=[1,0,0,0], ax = ax, rotation=30, fontsize=8)
+    m.drawparallels(parallels, labels=[1,0,0,0], ax = ax, rotation=30, fontsize=8, linewidth=0)
     m.drawmeridians(meridians, labels=[0,0,0,1], ax = ax, rotation=30, fontsize=8)
 
     ny=data.shape[0]
@@ -108,7 +108,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         ax.set_title(title, fontsize=10)
 
     if col_num==0:
-        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0)
+        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
 fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
 
