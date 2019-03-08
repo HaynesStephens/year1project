@@ -34,8 +34,8 @@ row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover'
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover'}
 row_list = [row_frac_land, row_net_rad_planet, row_tsurf, row_snowicefr]
 
-col_0 = {'filedir':filedir0, 'parallels':[0],
-        'meridians':[0], 'title':'Dynamic (5L), Aquaplanet'}
+col_0 = {'filedir':filedir0, 'parallels':[],
+        'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
 col_1 = {'filedir':filedir1, 'parallels':[-10, 10],
         'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
 col_4 = {'filedir':filedir4, 'parallels':[-14, 14],
