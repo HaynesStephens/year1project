@@ -32,7 +32,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover'}
-row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_pscld]
+row_list = [row_frac_land, row_net_rad_planet, row_tsurf, row_snowicefr]
 
 col_0 = {'filedir':filedir0, 'parallels':[0],
         'meridians':[0], 'title':'Dynamic (5L), Aquaplanet'}
@@ -53,7 +53,7 @@ col_34 = {'filedir':filedir34, 'parallels':[-42, 42],
 col_39 = {'filedir':filedir39, 'parallels':[-46, 46],
         'meridians':[-92.5, 92.5], 'title':'Dynamic (5L), 39% SS Cont'}
 
-col_list = [col_6, col_26]
+col_list = [col_0, col_4, col_26]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
@@ -124,6 +124,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout()
-plt.savefig('matrix_basemap_big_clouds.svg')
-plt.savefig('matrix_basemap_big_clouds.pdf')
+file_name = 'matrix_map_0_4_6_net_rad'
+plt.savefig(file_name+'.svg')
+plt.savefig(file_name+'.pdf')
 plt.show()
