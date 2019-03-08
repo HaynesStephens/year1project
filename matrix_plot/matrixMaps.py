@@ -83,7 +83,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     x, y = m(lons, lats)
 
     def make_cmap(var):
-        sequential_list = ['frac_land', 'pscld', 'pdcld', 'lwp', 'snowicefr', 'tsurf'] #list of sequential variables to use for cmap
+        sequential_list = ['frac_land', 'pscld', 'pdcld', 'lwp', 'snowicefr'] #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = 'Blues_r'
             norm = None
