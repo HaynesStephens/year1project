@@ -125,7 +125,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout()
-file_name = 'matrix_map_0_4_6_net_rad'
+file_name = 'matrix_map_0_4_26_net_rad'
 plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
