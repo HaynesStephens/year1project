@@ -32,7 +32,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover'}
-row_list = [row_frac_land, row_pcldt, row_pscld, row_pdcld]
+row_list = [row_frac_land, row_lwp, row_swcrf_toa, row_lwcrf_toa]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
@@ -83,7 +83,9 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     x, y = m(lons, lats)
 
     def make_cmap(var):
-        sequential_list = ['frac_land', 'pscld', 'pdcld', 'lwp', 'snowicefr'] #list of sequential variables to use for cmap
+        sequential_list = ['frac_land', 'pscld', 'pdcld', 'snowicefr', 'lwp',
+                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld']
+                            #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = 'Blues_r'
             norm = None
