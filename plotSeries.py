@@ -22,7 +22,7 @@ def makeSubPlots(runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2',
     x_lab = 'Year'
     y_list = ['radiation', 'temperature', 'snow_ice_cover', 'ice_thickness']
     y_lab_list = ['Net Radiation (W/m^2)', 'Temperature (C)', 'Snow Ice Cover (%)', 'Ice Thickness (m)']
-# who
+
     for num in range(4):
         i = num // 2
         j = num % 2
