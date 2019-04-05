@@ -13,10 +13,10 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_34p'
+runid = 'pc_proxcenb_ssc5L_TL_39p'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
 startyear = 1950
-endyear = 2769
+endyear = 2649
 
 
 ## ***DEFINE TIME INTERVAL***
