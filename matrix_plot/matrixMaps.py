@@ -90,7 +90,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
             cmap = 'Blues_r'
             norm = None
         else:
-            cmap = 'bwr'
+            cmap = 'seismic'
             norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
         levels = 20
         return cmap, norm, levels
