@@ -32,7 +32,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
-row_list = [row_frac_land, row_ZSI, row_lwp, row_swcrf_toa, row_lwcrf_toa]
+row_list = [row_frac_land, row_net_rad_planet, row_tsurf]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
@@ -84,7 +84,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
 
     def make_cmap(var):
         sequential_list = ['frac_land', 'pscld', 'pdcld', 'snowicefr', 'lwp',
-                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld']
+                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = 'Blues_r'
@@ -128,7 +128,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/0_1_4/matrix_map_0_1_4_B'
+file_name = 'plots/0_1_4/matrix_map_0_1_4_a'
 plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
