@@ -36,10 +36,10 @@ row_list = [row_frac_land, row_net_rad_planet, row_tsurf, row_snowicefr]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
-col_1 = {'filedir':filedir1, 'parallels':[-10, 10],
-        'meridians':[-12.5, 12.5], 'title':'Dynamic (5L), 1% SS Cont'}
-col_4 = {'filedir':filedir4, 'parallels':[-14, 14],
-        'meridians':[-27.5, 27.5], 'title':'Dynamic (5L), 4% SS Cont'}
+col_1 = {'filedir':filedir1, 'parallels':[-12, 12],
+        'meridians':[-15, 15], 'title':'Dynamic (5L), 1% SS Cont'}
+col_4 = {'filedir':filedir4, 'parallels':[-16, 16],
+        'meridians':[-30, 30], 'title':'Dynamic (5L), 4% SS Cont'}
 col_6 = {'filedir':filedir6, 'parallels':[-20, 20],
         'meridians':[-35, 35], 'title':'Dynamic (5L), 6% SS Cont'}
 col_11 = {'filedir':filedir11, 'parallels':[-22, 22],
