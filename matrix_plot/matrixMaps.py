@@ -127,7 +127,7 @@ for col_num in range(len(col_list)):
         makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
-fig.tight_layout()
+fig.tight_layout(w_pad = 0.2)
 file_name = 'plots/0_1_4/matrix_map_0_1_4_A'
 plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
