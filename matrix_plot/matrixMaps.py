@@ -127,7 +127,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout()
-file_name = 'matrix_map_34_39_ice'
+file_name = 'plots/matrix_map_34_39_ice'
 plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
