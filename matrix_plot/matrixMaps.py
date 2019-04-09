@@ -21,7 +21,7 @@ filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 
 row_frac_land =         {'var':'frac_land',      'ylabel':'Land \n Fraction \n [%]'}
 row_net_rad_planet =    {'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation \n [Wm$^{-2}$]'}
-row_tsurf =              {'var':'tsurf',          'ylabel':'Surface \n Temperature \n [C]'}
+row_tsurf =             {'var':'tsurf',          'ylabel':'Surface \n Temperature \n [C]'}
 row_snowicefr =         {'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction \n [%]'}
 row_ZSI =               {'var':'ZSI',            'ylabel':'Sea Ice \n Thickness \n [m]'}
 row_lwp =               {'var':'lwp',            'ylabel':'Liquid \n Water \n Path \n [0.1kgm$^{-2}$]'}
@@ -32,7 +32,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
-row_list = [row_frac_land, row_snowicefr, row_swcrf_toa, row_lwcrf_toa]
+row_list = [row_frac_land, row_swcrf_toa, row_lwcrf_toa]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
