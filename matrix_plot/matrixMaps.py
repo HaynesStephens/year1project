@@ -87,10 +87,10 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
                            'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
-            cmap = 'Purples_r'
+            cmap = 'Blues_r'
             norm = None
         else:
-            cmap = 'PuOr_r'
+            cmap = 'bwr'
             norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
         levels = 20
         return cmap, norm, levels
