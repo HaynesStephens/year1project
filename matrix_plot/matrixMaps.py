@@ -19,7 +19,7 @@ filedir26=filebase+'pc_proxcenb_ssc5L_TL_26p'
 filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
 filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 
-row_frac_land =         {'var':'frac_land',      'ylabel':'Land \n Fraction'}
+row_frac_land =         {'var':'frac_land',      'ylabel':'Land \n Fraction \n [%]'}
 row_net_rad_planet =    {'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation \n [Wm$^{-2}$]'}
 row_tsurf=              {'var':'tsurf',          'ylabel':'Surface \n Temperature \n [C]'}
 row_snowicefr =         {'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction'}
