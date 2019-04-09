@@ -104,7 +104,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         x2, y2 = m(meridians[0], parallels[1])
         x3, y3 = m(meridians[1], parallels[1])
         x4, y4 = m(meridians[1], parallels[0])
-        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='brown', edgecolor='black', linewidth=1)
+        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
         plt.gca().add_patch(cont_boundary)
 
     if row_num==0:
