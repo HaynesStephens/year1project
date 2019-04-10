@@ -32,7 +32,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
-row_list = [row_frac_land, row_pcldt, row_wtrcld, row_icecld]
+row_list = [row_frac_land, row_net_rad_planet, row_tsurf]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
@@ -128,7 +128,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/0_22_26/matrix_map_0_22_26_e'
+file_name = 'plots/0_22_26/matrix_map_0_22_26_a'
 plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
