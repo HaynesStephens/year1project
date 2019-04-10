@@ -53,7 +53,7 @@ col_34 = {'filedir':filedir34, 'parallels':[-44, 44],
 col_39 = {'filedir':filedir39, 'parallels':[-48, 48],
         'meridians':[-95, 95], 'title':'Dynamic (5L), 39% SS Cont'}
 
-col_list = [col_0, col_1, col_4]
+col_list = [col_0, col_22, col_26]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
@@ -128,7 +128,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/0_1_4/matrix_map_0_1_4_e'
+file_name = 'plots/0_22_26/matrix_map_0_22_26_e'
 plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
