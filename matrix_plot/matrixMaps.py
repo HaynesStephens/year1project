@@ -129,6 +129,6 @@ for col_num in range(len(col_list)):
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/0_22_26/matrix_map_0_22_26_d'
-plt.savefig(file_name+'.svg')
+# plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
