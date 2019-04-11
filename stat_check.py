@@ -33,7 +33,7 @@ def iceGrowth(filedir, filename1, filename2):
     #
     # shrink = z_change
     # shrink[shrink > 0] = 0
-    plt.imshow(z_change, cmap='Blues', vmin = -0.1, vmax = 0.1)
+    plt.imshow(z_change, cmap='seismic', vmin = -0.1, vmax = 0.1)
     plt.colorbar()
     plt.show()
 
