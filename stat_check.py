@@ -43,7 +43,7 @@ def iceGrowth(filedir, filename1, filename2):
     im1 = ax1.imshow(zsi1, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
     fig.colorbar(im1, ax=ax1)
 
-    im2 = ax2.imshow(zsi2, cmap='Blues', vmin = zsi_min, vmax = zsi_max))
+    im2 = ax2.imshow(zsi2, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
     fig.colorbar(im2, ax=ax2)
 
     ax3.set_title('Net Radiation [Wm$^{-2}$]')
