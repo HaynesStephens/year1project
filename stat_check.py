@@ -29,11 +29,16 @@ def iceGrowth(filedir, filename1, filename2):
     zsi2 = nc2['ZSI'][:]
     net_rad2 = nc2['net_rad_planet'][:]
 
-    def getScale(arr1, arr2):
+    def getScale(arr1, arr2, div=True):
         arr1_max = np.max(np.abs(arr1))
         arr2_max = np.max(np.abs(arr2))
         tot_max = max(arr1_max, arr2_max)
-        tot_min = tot_max * -1
+        if div:
+            tot_min = tot_max * -1
+        else:
+            arr1_min = np.min(np.abs(arr1))
+            arr2_min = np.min(np.abs(arr2))
+            tot_min = min(arr1_min, arr2_min)
         return tot_min, tot_max
 
     fig, axes = plt.subplots(2, 2)
@@ -41,11 +46,11 @@ def iceGrowth(filedir, filename1, filename2):
     ax1.set_title('Ice Thickness Growth [m]')
     zsi_min, zsi_max = getScale(zsi1, zsi2)
 
-    im1 = ax1.imshow(zsi1, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
+    im1 = ax1.imshow(zsi1, cmap='Blues', vmin = 0, vmax = zsi_max)
     fig.colorbar(im1, ax=ax1)
 
     ax2 = axes[0, 1]
-    im2 = ax2.imshow(zsi2, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
+    im2 = ax2.imshow(zsi2, cmap='Blues', vmin = 0, vmax = zsi_max)
     fig.colorbar(im2, ax=ax2)
 
     ax3 = axes[1, 0]
