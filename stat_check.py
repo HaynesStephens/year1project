@@ -25,8 +25,7 @@ def iceGrowth(filedir, filename1, filename2):
 
     nc2 = ds(filedir + filename2, 'r+', format='NETCDF4')
     zsi2 = nc2['ZSI'][:]
-    print(zsi2 - zsi1)
-    return
+    return zsi2 - zsi1
 
     # def avgDataFiles(filedir, var, num_files=10):
     #     results = glob('{0}/*aij*'.format(filedir))
