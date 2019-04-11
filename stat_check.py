@@ -23,23 +23,37 @@ def oceanPotTemp(filename):
 def iceGrowth(filedir, filename1, filename2):
     nc1 = ds(filedir+filename1, 'r+', format='NETCDF4')
     zsi1 = nc1['ZSI'][:]
+    net_rad1 = nc1['net_rad_planet'][:]
 
     nc2 = ds(filedir + filename2, 'r+', format='NETCDF4')
     zsi2 = nc2['ZSI'][:]
-    z_change = zsi2 - zsi1
+    net_rad2 = nc2['net_rad_planet'][:]
 
-    # growth = z_change
-    # growth[growth < 0] = 0
-    #
-    # shrink = z_change
-    # shrink[shrink > 0] = 0
-    fig, (ax1, ax2) = plt.subplots(2, 1)
+    def getScale(arr1, arr2):
+        arr1_max = np.max(np.abs(arr1))
+        arr2_max = np.max(np.abs(arr2))
+        tot_max = max(arr1_max, arr2_max)
+        tot_min = tot_max * -1
+        return tot_min, tot_max
+
+    fig, (ax1, ax2, ax3, ax4) = plt.subplots(2, 2)
     ax1.set_title('Ice Thickness Growth [m]')
-    im1 = ax1.imshow(z_change, cmap='seismic', vmin = -1, vmax = 1)
+    zsi_min, zsi_max = getScale(zsi1, zsi2)
+
+    im1 = ax1.imshow(zsi1, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
     fig.colorbar(im1, ax=ax1)
 
-    im2 = ax2.imshow(z_change, cmap='seismic', vmin = np.max(np.abs(z_change))*-1, vmax = np.max(np.abs(z_change)))
+    im2 = ax2.imshow(zsi2, cmap='Blues', vmin = zsi_min, vmax = zsi_max))
     fig.colorbar(im2, ax=ax2)
+
+    ax3.set_title('Net Radiation [Wm$^{-2}$]')
+    rad_min, rad_max = getScale(net_rad1, net_rad2)
+    im3 = ax3.imshow(net_rad1, cmap='seismic', vmin=rad_min, vmax=rad_max)
+    fig.colorbar(im3, ax=ax3)
+
+    im4 = ax4.imshow(net_rad2, cmap='seismic', vmin=rad_min, vmax=rad_max)
+    fig.colorbar(im4, ax=ax4)
+
     plt.tight_layout()
     plt.show()
 
