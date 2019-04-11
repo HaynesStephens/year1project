@@ -28,7 +28,7 @@ def iceGrowth(filedir, filename1, filename2):
     zsi2 = nc2['ZSI'][:]
     growth = zsi2 - zsi1
     growth[growth < 0] = 0
-    plt.imshow(growth, cmap='Blues_r')
+    plt.imshow(growth, cmap='PuOr')
     plt.colorbar()
     plt.show()
 
