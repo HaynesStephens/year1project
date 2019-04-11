@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from netCDF4 import Dataset as ds
+import matplotlib.pyplot as plt
 
 def showAvgNetRad(filename):
     df = pd.read_csv(filename)
@@ -25,7 +26,12 @@ def iceGrowth(filedir, filename1, filename2):
 
     nc2 = ds(filedir + filename2, 'r+', format='NETCDF4')
     zsi2 = nc2['ZSI'][:]
-    return zsi2 - zsi1
+    growth = zsi2 - zsi1
+    growth[growth < 0] = 0
+    plt.imshow(growth, cmap='Blues')
+    plt.colorbar()
+    plt.show()
+
 
     # def avgDataFiles(filedir, var, num_files=10):
     #     results = glob('{0}/*aij*'.format(filedir))
