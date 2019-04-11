@@ -19,6 +19,14 @@ def oceanPotTemp(filename):
     print(avg_pot_temp)
     return
 
+def iceGrowth(filedir, filename1, filename2):
+    nc1 = ds(filedir+filename1, 'r+', format='NETCDF4')
+    zsi1 = nc1['ZSI'][:]
+
+    nc2 = ds(filedir + filename2, 'r+', format='NETCDF4')
+    zsi2 = nc2['ZSI'][:]
+    print(zsi2 - zsi1)
+    return
 
     # def avgDataFiles(filedir, var, num_files=10):
     #     results = glob('{0}/*aij*'.format(filedir))
