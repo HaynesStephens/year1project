@@ -34,12 +34,12 @@ def iceGrowth(filedir, filename1, filename2):
     # shrink = z_change
     # shrink[shrink > 0] = 0
     fig, (ax1, ax2) = plt.subplots(2, 1)
+    plt.title('Ice Thickness Growth [m]')
     im1 = ax1.imshow(z_change, cmap='seismic', vmin = -1, vmax = 1)
     fig.colorbar(im1, ax=ax1)
 
     im2 = ax2.imshow(z_change, cmap='seismic', vmin = np.max(np.abs(z_change))*-1, vmax = np.max(np.abs(z_change)))
     fig.colorbar(im2, ax=ax2)
-    plt.title('Ice Thickness Growth [m]')
     plt.tight_layout()
     plt.show()
 
