@@ -36,21 +36,25 @@ def iceGrowth(filedir, filename1, filename2):
         tot_min = tot_max * -1
         return tot_min, tot_max
 
-    fig, (ax1, ax2, ax3, ax4) = plt.subplots(2, 2)
+    fig, axes = plt.subplots(2, 2)
+    ax1 = axes[0,0]
     ax1.set_title('Ice Thickness Growth [m]')
     zsi_min, zsi_max = getScale(zsi1, zsi2)
 
     im1 = ax1.imshow(zsi1, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
     fig.colorbar(im1, ax=ax1)
 
+    ax2 = axes[0, 1]
     im2 = ax2.imshow(zsi2, cmap='Blues', vmin = zsi_min, vmax = zsi_max)
     fig.colorbar(im2, ax=ax2)
 
+    ax3 = axes[1, 0]
     ax3.set_title('Net Radiation [Wm$^{-2}$]')
     rad_min, rad_max = getScale(net_rad1, net_rad2)
     im3 = ax3.imshow(net_rad1, cmap='seismic', vmin=rad_min, vmax=rad_max)
     fig.colorbar(im3, ax=ax3)
 
+    ax4 = axes[1, 1]
     im4 = ax4.imshow(net_rad2, cmap='seismic', vmin=rad_min, vmax=rad_max)
     fig.colorbar(im4, ax=ax4)
 
