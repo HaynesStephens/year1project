@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
+import numpy as np
 
 def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
