@@ -63,7 +63,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
         h_f = dh_ice[i+1]
         dh = h_f = h_i
         ice_flux_i = (dh/dt) * EF_ice * rho_ice
-        ice_flux[i] = ice_flux_i
+        ice_flux.append(ice_flux_i)
     ice_flux = np.array(ice_flux)
 
     ax0.plot(x, df['radiation'])
