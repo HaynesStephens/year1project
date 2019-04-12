@@ -55,7 +55,10 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
     x = x[-50:]
     x_lab = 'Year'
 
-    dh_ice = df['ice_thickness']
+    net_rad = df['radiation']
+    net_rad = net_rad[-50:]
+
+    dh_ice = df['ice_thickness'][-50:]
     rho_ice = 916.9 # kg/m^3
     EF_ice = 333.55 * 10**3 #J/kg
     dt = 10*11.186*24*3600 #seconds in a ProxCenb decade
@@ -68,7 +71,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
         ice_flux.append(ice_flux_i)
     ice_flux = np.array(ice_flux)
     ax0 = axes[0]
-    ax0.plot(x, df['radiation'])
+    ax0.plot(x, net_rad)
     ax0.set_xlabel(x_lab)
     ax0.set_ylabel('Net Radiation (W/m^2)')
     ax0.set_ylim(-10, 10)
@@ -80,7 +83,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
     ax1.set_ylim(-10, 10)
 
     ax2 = axes[2]
-    ax2.plot(x[1:], ice_flux + df['radiation'][1:])
+    ax2.plot(x[1:], ice_flux + net_rad[1:])
     ax2.set_xlabel(x_lab)
     ax2.set_ylabel('Ice + Net (W/m^2)')
     ax2.set_ylim(-10, 10)
