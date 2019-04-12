@@ -40,7 +40,7 @@ def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
     return
 
 
-def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_34p',
+def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
                  data_file = 'ts_data'):
     rundir = runbase + runid
