@@ -81,7 +81,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_34p',
     ax2 = axes[2]
     ax2.plot(x[1:], ice_flux - df['radiation'][1:])
     ax2.set_xlabel(x_lab)
-    ax2.set_ylabel('Ice + Net (W/m^2)')
+    ax2.set_ylabel('Ice - Net (W/m^2)')
     ax2.set_ylim(-10, 10)
 
     fig.suptitle(runid+'Ice-Rad Check', y=1, fontsize=10)
