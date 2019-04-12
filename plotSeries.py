@@ -73,7 +73,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
     ax0.set_ylim(-10, 10)
 
     ax1 = axes[1]
-    ax1.plot(x[1:], ice_flux)
+    ax1.plot(x[1:], ice_flux*-1)
     ax1.set_xlabel(x_lab)
     ax1.set_ylabel('Ice Radiation (W/m^2)')
     ax1.set_ylim(-10, 10)
