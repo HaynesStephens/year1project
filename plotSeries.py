@@ -52,13 +52,13 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
     fig, axes = plt.subplots(1, 3, figsize=(9,9), sharey='col')
 
     x = df['decade'] * 10
-    x = x[-50:]
+    x = x
     x_lab = 'Year'
 
     net_rad = df['radiation']
-    net_rad = net_rad[-50:]
+    net_rad = net_rad
 
-    dh_ice = df['ice_thickness'][-50:]
+    dh_ice = df['ice_thickness']
     rho_ice = 916.9 # kg/m^3
     EF_ice = 333.55 * 10**3 #J/kg
     dt = 10*11.186*24*3600 #seconds in a ProxCenb decade
