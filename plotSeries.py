@@ -49,7 +49,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
 
     df = pd.read_csv(data_file + '.csv')
 
-    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(9,9), sharey='col')
+    fig, axes = plt.subplots(1, 3, figsize=(9,9), sharey='col')
 
     x = df['decade'] * 10
     x_lab = 'Year'
@@ -66,15 +66,22 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
         ice_flux_i = (dh/dt) * EF_ice * rho_ice
         ice_flux.append(ice_flux_i)
     ice_flux = np.array(ice_flux)
-
+    ax0 = axes[0]
     ax0.plot(x, df['radiation'])
     ax0.set_xlabel(x_lab)
     ax0.set_ylabel('Net Radiation (W/m^2)')
     ax0.set_ylim(-10, 10)
 
+    ax1 = axes[1]
     ax1.plot(x[1:], ice_flux)
     ax1.set_xlabel(x_lab)
     ax1.set_ylabel('Ice Radiation (W/m^2)')
+    ax1.set_ylim(-10, 10)
+
+    ax2 = axes[2]
+    ax1.plot(x[1:], ice_flux + df['radiation'][1:])
+    ax1.set_xlabel(x_lab)
+    ax1.set_ylabel('Ice + Net (W/m^2)')
     ax1.set_ylim(-10, 10)
 
     fig.suptitle(runid+'Ice-Rad Check', y=1, fontsize=10)
