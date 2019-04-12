@@ -66,6 +66,6 @@ def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', depth=0):
     arr_avg = arr_tot / num_files
     return arr_avg
 
-avgDataFiles3D(filedir1, 'u')
+x = avgDataFiles3D(filedir1, 'u')
 
 
