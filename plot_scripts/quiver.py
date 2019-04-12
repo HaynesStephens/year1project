@@ -92,7 +92,7 @@ def quiverPlot(col, ax):
     x, y = m(lons, lats)
 
     m.quiver(x, y, u, v, ax=ax)
-    cs = m.contourf(x, y, u,x=ax)
+    cs = m.contourf(x, y, uv_mag, ax=ax)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
 
