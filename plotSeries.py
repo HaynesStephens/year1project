@@ -62,7 +62,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
     for i in range(len(dh_ice)-1):
         h_i = dh_ice[i]
         h_f = dh_ice[i+1]
-        dh = h_f = h_i
+        dh = h_f - h_i
         ice_flux_i = (dh/dt) * EF_ice * rho_ice
         ice_flux.append(ice_flux_i)
     ice_flux = np.array(ice_flux)
