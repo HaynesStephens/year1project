@@ -18,7 +18,7 @@ def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
         axes[i, j].set_xlabel(x_lab)
         axes[i, j].set_ylabel(y_lab)
 
-    x = df['decade']*10
+    x = df['decade'] * 10
     x_lab = 'Year'
     y_list = ['radiation', 'temperature', 'snow_ice_cover', 'ice_thickness']
     y_lab_list = ['Net Radiation (W/m^2)', 'Temperature (C)', 'Snow Ice Cover (%)', 'Ice Thickness (m)']
@@ -35,10 +35,55 @@ def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
     # plt.savefig(data_file + '.svg')
     plt.savefig(data_file + '.pdf')
     plt.show()
-
     print('data saved.')
     return
 
-makeSubPlots()
+
+def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
+                 runbase = '/project2/abbot/haynes/ROCKE3D_output/',
+                 data_file = 'ts_data'):
+    rundir = runbase + runid
+
+    os.chdir(rundir) # Switch on over to the run directory.
+
+    df = pd.read_csv(data_file + '.csv')
+
+    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(9,9), sharey='col')
+
+    x = df['decade'] * 10
+    x_lab = 'Year'
+
+    dh_ice = df['ice_thickness']
+    rho_ice = 916.9 # kg/m^3
+    EF_ice = 333.55 * 10^3 #J/kg
+    dt = 10*11.186*24*3600 #seconds in a ProxCenb decade
+    ice_flux = []
+    for i in range(len(dh_ice)-1):
+        h_i = dh_ice[i]
+        h_f = dh_ice[i+1]
+        dh = h_f = h_i
+        ice_flux_i = (dh/dt) * EF_ice * rho_ice
+        ice_flux[i] = ice_flux_i
+    ice_flux = np.array(ice_flux)
+
+    ax0.plot(x, df['radiation'])
+    ax0.set_xlabel(x_lab)
+    ax0.set_ylabel('Net Radiation (W/m^2)')
+
+    ax1.plot(x[1:], ice_flux)
+    ax1.set_xlabel(x_lab)
+    ax1.set_ylabel('Ice Radiation (W/m^2)')
+
+    fig.suptitle(runid+'Ice-Rad Check', y=1, fontsize=10)
+    fig.tight_layout()
+    # plt.savefig(data_file + '_ice_rad.svg')
+    plt.savefig(data_file + '_ice_rad.pdf')
+    plt.show()
+    print('data saved.')
+    return
+
+
+makeIcePlots()
+# makeSubPlots()
 
 
