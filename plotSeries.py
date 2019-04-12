@@ -52,6 +52,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
     fig, axes = plt.subplots(1, 3, figsize=(9,9), sharey='col')
 
     x = df['decade'] * 10
+    x = x[-50:]
     x_lab = 'Year'
 
     dh_ice = df['ice_thickness']
