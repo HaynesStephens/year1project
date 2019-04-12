@@ -108,7 +108,7 @@ def quiverPlot(col, ax):
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col1, ax)
+quiverPlot(col_1, ax)
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_test'
