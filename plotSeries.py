@@ -55,7 +55,7 @@ def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_39p',
 
     dh_ice = df['ice_thickness']
     rho_ice = 916.9 # kg/m^3
-    EF_ice = 333.55 * 10^3 #J/kg
+    EF_ice = 333.55 * 10**3 #J/kg
     dt = 10*11.186*24*3600 #seconds in a ProxCenb decade
     ice_flux = []
     for i in range(len(dh_ice)-1):
