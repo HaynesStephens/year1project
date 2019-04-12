@@ -66,6 +66,52 @@ def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', depth=0):
     arr_avg = arr_tot / num_files
     return arr_avg
 
-x = avgDataFiles3D(filedir1, 'u')
+def quiverPlot(col, ax):
+    filedir = col['filedir']
+    parallels = col['parallels']
+    meridians = col['meridians']
+    title = col['title']
+
+    u = avgDataFiles3D(filedir, 'u')
+    v = avgDataFiles3D(filedir, 'v')
+
+    # if title == 'Dynamic (5L), Aquaplanet':
+    #     u = np.roll(u, (u.shape[1])//2, axis=1)
+    #     v = np.roll(v, (v.shape[1])//2, axis=1)
+    m = Basemap(ax = ax)
+    # m.drawcoastlines()
+    # m.fillcontinents(color='coral',lake_color='aqua')
+    # draw parallels and meridians.
+    m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax, rotation=30, fontsize=8, linewidth=0)
+    m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax, rotation=40, fontsize=8, linewidth=0)
+
+    ny=u.shape[0]
+    nx=u.shape[1]
+    lons, lats = m.makegrid(nx, ny)
+    x, y = m(lons, lats)
+
+    cs = m.quiver(x, y, u, v, ax=ax)
+    m.ax.tick_params(labelsize=2)
+    m.colorbar(mappable=cs, ax=ax)
+
+    if title != 'Dynamic (5L), Aquaplanet':
+        x1, y1 = m(meridians[0], parallels[0])
+        x2, y2 = m(meridians[0], parallels[1])
+        x3, y3 = m(meridians[1], parallels[1])
+        x4, y4 = m(meridians[1], parallels[0])
+        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
+        plt.gca().add_patch(cont_boundary)
+
+    ax.set_title(title, fontsize=10)
 
 
+
+fig, ax = plt.subplots(figsize = (10,7))
+filedir =
+quiverPlot(col1, ax)
+
+fig.tight_layout(w_pad = 2.25)
+file_name = 'plots/0_22_26/matrix_map_0_22_26_d'
+# plt.savefig(file_name+'.svg')
+plt.savefig(file_name+'.pdf')
+plt.show()
