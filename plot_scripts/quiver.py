@@ -111,7 +111,7 @@ filedir =
 quiverPlot(col1, ax)
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/0_22_26/matrix_map_0_22_26_d'
+file_name = 'plots/quiver_test'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
