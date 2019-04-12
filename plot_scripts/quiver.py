@@ -91,10 +91,10 @@ def quiverPlot(col, ax):
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
 
-    m.quiver(x, y, u, v, ax=ax)
     cs = m.contourf(x, y, uv_mag, ax=ax)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
+    m.quiver(x, y, u, v, ax=ax)
 
     if title != 'Dynamic (5L), Aquaplanet':
         x1, y1 = m(meridians[0], parallels[0])
