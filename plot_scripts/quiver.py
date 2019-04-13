@@ -112,7 +112,6 @@ def quiverPlot(col, ax):
 fig, ax = plt.subplots(figsize = (10,7))
 
 quiverPlot(col_4, ax)
-plt.legend()
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_4p'
