@@ -13,10 +13,10 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_11p'
+runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 1950
-endyear = 4379
+startyear = 2441
+endyear = 3500
 
 
 ## ***DEFINE TIME INTERVAL***
@@ -28,13 +28,13 @@ year_list = range(startyear, endyear, 10)
 # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
 
 os.chdir(rundirectory)  # Switch on over to the run directory.
-
+file_start = 'AN8'
 
 for y in year_list:
     beg_dec = str(y)
     end_dec = str(y + 9)
 
-    accfilename = 'ANM' + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
+    accfilename = file_start + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
 
     print(accfilename)
     subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
@@ -57,12 +57,14 @@ for y in year_list:
     beg_dec = str(y)
     end_dec = str(y + 9)
 
-    aijfilename = 'ANM' + beg_dec + '-' + end_dec + '.aij' + runid + '.nc'
-    oijfilename = 'ANM' + beg_dec + '-' + end_dec + '.oij' + runid + '.nc'
+    aijfilename  = file_start + beg_dec + '-' + end_dec + '.aij'  + runid + '.nc'
+    oijfilename  = file_start + beg_dec + '-' + end_dec + '.oij'  + runid + '.nc'
+    oijlfilename = file_start + beg_dec + '-' + end_dec + '.oijl' + runid + '.nc'
 
     # READ THE NETCDF FILES
     atm_data = Dataset(aijfilename)
     ocn_data=Dataset(oijfilename)
+    ocnl_data = Dataset(oijlfilename)
 
     # GET AREAS -- this could probably be moved outside of the for loop... but, is necessary for
     grid_cell_area = atm_data['axyp'][:]  # Area of each grid cell (m^2)
@@ -127,3 +129,8 @@ for aij_file in aij_list[:-10]: # Cycle through a list of all but the last 10 ai
 oij_list = sorted(glob('*oij*')) # Get a list of all the oij files made.
 for oij_file in oij_list[:-10]: # Cycle through a list of all but the last 10 oij files.
     os.system('rm {0}'.format(oij_file)) # Delete the oij file.
+
+## Delete all but the last 10 oijl files to use in the matrix map plots.
+oijl_list = sorted(glob('*oijl*')) # Get a list of all the oijl files made.
+for oij_file in oijl_list[:-10]: # Cycle through a list of all but the last 10 oijl files.
+    os.system('rm {0}'.format(oijl_file)) # Delete the oijl file.
