@@ -15,7 +15,7 @@ from glob import glob
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
 runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 2441
+startyear = 3401
 endyear = 3500
 
 
@@ -41,6 +41,7 @@ for y in year_list:
     subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
     subprocess.call(["scaleacc", accfilename, 'oijl'])  # convert oceananic output
 
+''' NOT TRYING TO REPRODUCE ALL DATA AGAIN THIS TIME
 # First, determine array size
 total_decs = len(year_list)
 
@@ -119,7 +120,9 @@ a_df = pd.DataFrame({'decade': np.arange(total_decs), 'radiation': global_rad.re
                    'snow_ice_cover': global_snow_ice_cover.reshape(total_decs),
                    'ice_thickness': global_ice_thickness.reshape(total_decs)})
 a_df.to_csv('a_ts_data.csv')
+'''
 
+''' DONT NEED TO DELETE, NEED TO FIGURE OUT HOW TO SEPARATE OIJ AND OIJL FIRST
 ## Delete all but the last 10 aij files to use in the matrix map plots.
 aij_list = sorted(glob('*aij*')) # Get a list of all the aij files made.
 for aij_file in aij_list[:-10]: # Cycle through a list of all but the last 10 aij files.
@@ -134,3 +137,4 @@ for oij_file in oij_list[:-10]: # Cycle through a list of all but the last 10 oi
 oijl_list = sorted(glob('*oijl*')) # Get a list of all the oijl files made.
 for oij_file in oijl_list[:-10]: # Cycle through a list of all but the last 10 oijl files.
     os.system('rm {0}'.format(oijl_file)) # Delete the oijl file.
+'''
