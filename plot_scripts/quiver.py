@@ -111,10 +111,10 @@ def quiverPlot(col, ax):
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col_22, ax)
+quiverPlot(col_39, ax)
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/quiver_22p'
+file_name = 'plots/quiver_39p'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
