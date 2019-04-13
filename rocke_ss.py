@@ -28,7 +28,7 @@ year_list = range(startyear, endyear, 10)
 # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
 
 os.chdir(rundirectory)  # Switch on over to the run directory.
-file_start = 'AN8'
+file_start = 'ANM'
 
 for y in year_list:
     beg_dec = str(y)
