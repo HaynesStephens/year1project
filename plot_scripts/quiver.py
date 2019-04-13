@@ -94,7 +94,7 @@ def quiverPlot(col, ax):
 
     cs = m.contourf(x, y, uv_mag, ax=ax)
     m.ax.tick_params(labelsize=2)
-    m.colorbar(mappable=cs, ax=ax)
+    m.colorbar(mappable=cs, ax=ax, label='cm/s')
     m.quiver(x, y, u, v, ax=ax, width=0.001, headwidth=3, headlength=5)
 
     if title != 'Dynamic (5L), Aquaplanet':
@@ -112,6 +112,7 @@ def quiverPlot(col, ax):
 fig, ax = plt.subplots(figsize = (10,7))
 
 quiverPlot(col_4, ax)
+plt.legend()
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_4p'
