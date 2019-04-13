@@ -77,8 +77,9 @@ def quiverPlot(col, ax):
     uv_mag = np.sqrt((u*u) + (v*v))
 
     if title == 'Dynamic (5L), Aquaplanet':
-        u = np.roll(u, (u.shape[1])//2, axis=1)
-        v = np.roll(v, (v.shape[1])//2, axis=1)
+        u      = np.roll(u,      (u.shape[1])//2, axis=1)
+        v      = np.roll(v,      (v.shape[1])//2, axis=1)
+        uv_mag = np.roll(uv_mag, (uv_mag.shape[1]) // 2, axis=1)
     m = Basemap(ax = ax)
     # m.drawcoastlines()
     # m.fillcontinents(color='coral',lake_color='aqua')
