@@ -76,7 +76,7 @@ def quiverPlot(col, ax):
     v = avgDataFiles3D(filedir, 'v')
     uv_mag = np.sqrt((u*u) + (v*v))
 
-    if title == 'Dynamic (5L), Aquaplanet':
+    if title == 'Dynamic (5L), Aquaplanets':
         u = np.roll(u, (u.shape[1])//2, axis=1)
         v = np.roll(v, (v.shape[1])//2, axis=1)
     m = Basemap(ax = ax)
