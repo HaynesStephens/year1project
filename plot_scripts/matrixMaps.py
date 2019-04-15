@@ -96,7 +96,6 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    # data[data.mask==True] = np.nan
     if var == 'ZSI':
         print(data.mask)
     plt.gca().patch.set_color('.25')
