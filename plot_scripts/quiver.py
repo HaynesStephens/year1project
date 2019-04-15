@@ -78,6 +78,8 @@ def quiverPlot(col, ax, tit_ad):
     u = avgDataFiles3D(filedir, 'u')
     v = avgDataFiles3D(filedir, 'v')
     uv_mag = np.sqrt((u*u) + (v*v))
+    u = u/10
+    v = v/10
 
     if title == 'Dynamic (5L), Aquaplanet':
         u      = np.roll(u,      (u.shape[1])//2, axis=1)
@@ -98,7 +100,7 @@ def quiverPlot(col, ax, tit_ad):
     cs = m.contourf(x, y, uv_mag, ax=ax)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax, label='m/s')
-    m.quiver(x, y, u, v, ax=ax, width=0.001, headwidth=3, headlength=5)
+    m.quiver(x, y, u, v, ax=ax, width=0.001, headwidth=4, headlength=4)
 
     if title != 'Dynamic (5L), Aquaplanet':
         x1, y1 = m(meridians[0], parallels[0])
