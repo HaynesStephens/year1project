@@ -114,7 +114,7 @@ def quiverPlot(col, ax, tit_ad):
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col_39, ax, 'Surface Ocean Velocity')#no bull
+quiverPlot(col_39, ax, 'Surface Ocean Velocity')
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_39p'
