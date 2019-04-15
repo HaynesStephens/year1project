@@ -74,9 +74,12 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
     parallels = col['parallels']
     meridians = col['meridians']
     title = col['title']
-
-    u = avgDataFiles3D(filedir, 'u', num_files, filetype, unit_conv, depth)
-    v = avgDataFiles3D(filedir, 'v', num_files, filetype, unit_conv, depth)
+    if filetype == 'oijl':
+        u = avgDataFiles3D(filedir, 'u', num_files, filetype, unit_conv, depth)
+        v = avgDataFiles3D(filedir, 'v', num_files, filetype, unit_conv, depth)
+    elif filetype == 'aij':
+        u = avgDataFiles3D(filedir, 'usurf', num_files, filetype, unit_conv, depth)
+        v = avgDataFiles3D(filedir, 'vsurf', num_files, filetype, unit_conv, depth)
     uv_mag = np.sqrt((u*u) + (v*v))
 
     if title == 'Dynamic (5L), Aquaplanet':
