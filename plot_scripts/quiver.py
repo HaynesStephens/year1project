@@ -56,7 +56,7 @@ col_39 = {'filedir':filedir39, 'parallels':[-48, 48],
 col_list = [col_0, col_22, col_26]
 
 
-def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', depth=0):
+def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -66,7 +66,7 @@ def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', depth=0):
         else:
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
-    arr_avg = arr_tot / num_files
+    arr_avg = (arr_tot * unit_conv) / num_files
     return arr_avg
 
 def quiverPlot(col, ax, tit_ad):
@@ -97,7 +97,7 @@ def quiverPlot(col, ax, tit_ad):
 
     cs = m.contourf(x, y, uv_mag, ax=ax)
     m.ax.tick_params(labelsize=2)
-    m.colorbar(mappable=cs, ax=ax, label='cm/s')
+    m.colorbar(mappable=cs, ax=ax, label='m/s')
     m.quiver(x, y, u, v, ax=ax, width=0.001, headwidth=3, headlength=5)
 
     if title != 'Dynamic (5L), Aquaplanet':
