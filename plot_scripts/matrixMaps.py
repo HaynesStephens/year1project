@@ -101,7 +101,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         print(data)
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    cmap.set_under('k', 1.)
+    cs.cmap.set_under('k', 1.)
     m.colorbar(mappable=cs, ax=ax)
 
     if title != 'Dynamic (5L), Aquaplanet':
