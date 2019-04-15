@@ -96,12 +96,12 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    masked_data = np.ma.array(data, mask=data.mask)
+    data[data.mask==True] = np.nan
     if var == 'ZSI':
-        print(masked_data)
+        print(data)
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    cs.cmap.set_under('k', 1.)
+    cmap.set_bad('k', 1.)
     m.colorbar(mappable=cs, ax=ax)
 
     if title != 'Dynamic (5L), Aquaplanet':
