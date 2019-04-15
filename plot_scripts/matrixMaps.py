@@ -99,7 +99,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     # masked_data = np.ma.array(data, mask=data.mask)
     if var == 'ZSI':
         print(data)
-    cmap.set_under('k', 1.)
+    cmap.set_bad('k', 1.)
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
