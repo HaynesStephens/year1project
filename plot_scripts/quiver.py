@@ -117,10 +117,10 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col_4, ax, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
+quiverPlot(col_11, ax, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/quiver_4p_a'
+file_name = 'plots/quiver_11p_a'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
