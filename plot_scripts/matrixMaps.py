@@ -96,10 +96,11 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
+    masked_data = np.ma.array(data, mask=data.mask)
+    cmap.set_bad('grey', 1.)
+    cs = m.contourf(x, y, masked_data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
-    m.contourf(x, y, data[data==-1*(10**30)], ax=ax, cmap='k')
 
     if title != 'Dynamic (5L), Aquaplanet':
         x1, y1 = m(meridians[0], parallels[0])
