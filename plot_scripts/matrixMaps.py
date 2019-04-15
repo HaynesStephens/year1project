@@ -1,7 +1,7 @@
 from mpl_toolkits.basemap import Basemap
 from netCDF4 import Dataset as ds
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt, cm as cm
 from glob import glob
 from matplotlib.patches import Polygon
 from cbar import MidPointNorm
@@ -87,10 +87,10 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
                            'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
-            cmap = matplotlib.cm.Blues_r
+            cmap = cm.Blues_r
             norm = None
         else:
-            cmap = matplotlib.cm.seismic
+            cmap = cm.seismic
             norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
         levels = 20
         return cmap, norm, levels
