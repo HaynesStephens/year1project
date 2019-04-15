@@ -114,10 +114,10 @@ def quiverPlot(col, ax, tit_ad):
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col_1, ax, 'Surface Ocean Velocity')
+quiverPlot(col_0, ax, 'Surface Ocean Velocity')
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/quiver_1p_o'
+file_name = 'plots/quiver_0p_o'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
