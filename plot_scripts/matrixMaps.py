@@ -97,6 +97,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
 
     cmap, norm, levels = make_cmap(var)
     masked_data = np.ma.array(data, mask=data.mask)
+    masked_data[data.mask ==True] = np.nan
     if var == 'ZSI':
         print(masked_data)
     cmap.set_bad('grey', 1.)
