@@ -96,8 +96,6 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    if var == 'ZSI':
-        print(data.mask)
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
