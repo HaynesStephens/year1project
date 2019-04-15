@@ -87,7 +87,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
                            'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
-            cmap = 'Blues_r'
+            cmap = matplotlib.cm.Blues_r
             norm = None
         else:
             cmap = 'seismic'
