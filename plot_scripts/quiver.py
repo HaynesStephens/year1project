@@ -56,7 +56,7 @@ col_39 = {'filedir':filedir39, 'parallels':[-48, 48],
 col_list = [col_0, col_22, col_26]
 
 
-def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
+def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -69,14 +69,14 @@ def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', unit_conv=0.1,
     arr_avg = (arr_tot * unit_conv) / num_files
     return arr_avg
 
-def quiverPlot(col, ax, tit_ad):
+def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
     filedir = col['filedir']
     parallels = col['parallels']
     meridians = col['meridians']
     title = col['title']
 
-    u = avgDataFiles3D(filedir, 'u')
-    v = avgDataFiles3D(filedir, 'v')
+    u = avgDataFiles3D(filedir, 'u', num_files, filetype, unit_conv, depth)
+    v = avgDataFiles3D(filedir, 'v', num_files, filetype, unit_conv, depth)
     uv_mag = np.sqrt((u*u) + (v*v))
 
     if title == 'Dynamic (5L), Aquaplanet':
@@ -114,10 +114,10 @@ def quiverPlot(col, ax, tit_ad):
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col_0, ax, 'Surface Ocean Velocity')
+quiverPlot(col_0, ax, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/quiver_0p_o'
+file_name = 'plots/quiver_0p_a'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
