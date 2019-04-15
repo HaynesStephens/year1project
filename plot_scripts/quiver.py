@@ -61,12 +61,15 @@ def avgDataFiles3D(filedir, var, num_files = 10, filetype='oijl', depth=0):
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
-        arr = nc_i[var][:][depth]
+        if depth == None:
+            arr = nc_i[var][:]
+        else:
+            arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = arr_tot / num_files
     return arr_avg
 
-def quiverPlot(col, ax):
+def quiverPlot(col, ax, tit_ad):
     filedir = col['filedir']
     parallels = col['parallels']
     meridians = col['meridians']
@@ -105,13 +108,13 @@ def quiverPlot(col, ax):
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
         plt.gca().add_patch(cont_boundary)
 
-    ax.set_title(title, fontsize=10)
+    ax.set_title(title+': '+tit_ad, fontsize=10)
 
 
 
 fig, ax = plt.subplots(figsize = (10,7))
 
-quiverPlot(col_39, ax)
+quiverPlot(col_39, ax, 'Surface Ocean Velocity')
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_39p'
