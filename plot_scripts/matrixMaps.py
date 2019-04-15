@@ -96,7 +96,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    data[data.mask==True] = np.nan
+    # data[data.mask==True] = np.nan
     if var == 'ZSI':
         print(data)
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
