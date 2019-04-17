@@ -122,6 +122,6 @@ quiverPlot(col_39, ax, 'Air Surface Velocity', filetype='aij', unit_conv=1, dept
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_39p_a'
-# plt.savefig(file_name+'.svg')
-plt.savefig(file_name+'.pdf')
+plt.savefig(file_name+'.svg')
+# plt.savefig(file_name+'.pdf')
 plt.show()
