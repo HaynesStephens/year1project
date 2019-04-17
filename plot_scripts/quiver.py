@@ -103,7 +103,7 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
     m.colorbar(mappable=cs, ax=ax, label='m/s')
     q = m.quiver(x, y, u, v, ax=ax, scale_units='width', scale=1000,
                  pivot='middle', width=0.001, headwidth=5, headlength=4)
-    ax.quiverkey(q, X=0.93, Y=1.02, U=5, label = '10 m/s', labelpos = 'E')
+    ax.quiverkey(q, X=0.93, Y=1.02, U=1, label = '1 m/s', labelpos = 'E')
 
     if title != 'Dynamic (5L), Aquaplanet':
         x1, y1 = m(meridians[0], parallels[0])
