@@ -121,7 +121,7 @@ fig, ax = plt.subplots(figsize = (10,7))
 quiverPlot(col_39, ax, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/quiver_39p_a'
+file_name = 'plots/quiver_39p_a_1'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
