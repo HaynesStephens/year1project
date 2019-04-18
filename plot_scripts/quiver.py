@@ -113,7 +113,8 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
         plt.gca().add_patch(cont_boundary)
 
-    ax.set_ylabel(title+': '+tit_ad, fontsize=10, labelpad = 0.5)
+    ax.set_ylabel(title, fontsize=10)
+    ax.set_ylabel(tit_ad, fontsize=10, labelpad=0.5)
 
 
 
