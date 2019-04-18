@@ -115,7 +115,7 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
 
     if filetype=='aij':
         ax.set_title(title, fontsize=10)
-    ax.set_ylabel(tit_ad, fontsize=10, labelpad=3)
+    ax.set_ylabel(tit_ad, fontsize=10, labelpad=30)
 
 
 
