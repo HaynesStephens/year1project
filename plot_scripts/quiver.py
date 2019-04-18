@@ -113,16 +113,18 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
         plt.gca().add_patch(cont_boundary)
 
-    ax.set_title(title, fontsize=10)
-    ax.set_ylabel(tit_ad, fontsize=10, labelpad=0.5)
+    if filetype=='aij':
+        ax.set_title(title, fontsize=10)
+    ax.set_ylabel(tit_ad, fontsize=10, labelpad=3)
 
 
 
 fig, axes = plt.subplots(2,1, figsize = (10,7))
+
 ax0 = axes[0]
-quiverPlot(col_39, ax0, 'Ocean Surface Velocity', filetype='oijl', unit_conv=0.1, depth=1)
+quiverPlot(col_39, ax0, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
 ax1 = axes[1]
-quiverPlot(col_39, ax1, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
+quiverPlot(col_39, ax1, 'Ocean Surface Velocity', filetype='oijl', unit_conv=0.1, depth=1)
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/quiver_39p'
