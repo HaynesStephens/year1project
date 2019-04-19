@@ -87,13 +87,13 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     ax.set_ylabel(units)
 
 
-row = row_tsurf
+row = row_evap
 fig, ax = plt.subplots()
 
 makeSubplot(ax, row, filetype='aij')
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/global_tsurf'
+file_name = 'plots/global_evap'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
