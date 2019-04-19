@@ -87,7 +87,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
 
 
 row = row_tsurf
-fig, ax = plt.subplots(figsize = (10,7))
+fig, ax = plt.subplots()
 
 makeSubplot(ax, row, filetype='aij')
 
