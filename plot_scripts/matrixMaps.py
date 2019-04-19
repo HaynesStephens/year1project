@@ -53,7 +53,7 @@ col_34 = {'filedir':filedir34, 'parallels':[-44, 44],
 col_39 = {'filedir':filedir39, 'parallels':[-48, 48],
         'meridians':[-95, 95], 'title':'Dynamic (5L), 39% SS Cont'}
 
-col_list = [col_0, co1_1, col_22, col_39]
+col_list = [col_0, col_1, col_22, col_39]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
