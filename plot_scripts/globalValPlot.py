@@ -83,7 +83,7 @@ def makeSubplot(ax, row):
     ax.set_title(ylabel)
 
 
-var = row_tsurf['var']
+row = row_tsurf
 fig, ax = plt.subplots(figsize = (10,7))
 
 makeSubplot(ax, row)
