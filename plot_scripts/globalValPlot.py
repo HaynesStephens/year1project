@@ -68,7 +68,7 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
     return avg_val
 
 
-def makeSubplot(ax, row):
+def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     var = row['var']
     ylabel = row['ylabel']
     SA_arr = []
@@ -86,7 +86,7 @@ def makeSubplot(ax, row):
 row = row_tsurf
 fig, ax = plt.subplots(figsize = (10,7))
 
-makeSubplot(ax, row)
+makeSubplot(ax, row, filetype='aij')
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/global_Tsurf'
