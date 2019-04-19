@@ -19,20 +19,21 @@ filedir26=filebase+'pc_proxcenb_ssc5L_TL_26p'
 filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
 filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 
-row_frac_land =         {'var':'frac_land',      'title':'Land Fraction',                  'units': '[%]'}
-row_evap =              {'var':'evap',           'title':'Evaporation',                    'units': '[mm/day]'}
-row_net_rad_planet =    {'var':'net_rad_planet', 'title':'Net Planet Radiation',           'units': '[Wm$^{-2}$]'}
-row_tsurf =             {'var':'tsurf',          'title':'Surface Temperature',            'units': '[$^{\circ}$C]'}
-row_snowicefr =         {'var':'snowicefr',      'title':'Snow/Ice Fraction',              'units': '[%]'}
-row_ZSI =               {'var':'ZSI',            'title':'Sea Ice Thickness',              'units': '[m]'}
-row_lwp =               {'var':'lwp',            'title':'Liquid Water Path',              'units': '[0.1kgm$^{-2}$]'}
-row_swcrf_toa =         {'var':'swcrf_toa',      'title':'SW Cloud Rad Forcing',           'units': '[Wm$^{-2}$]'}
-row_lwcrf_toa =         {'var':'lwcrf_toa',      'title':'LW Cloud Rad Forcing',           'units': '[Wm$^{-2}$]'}
-row_pcldt =             {'var':'pcldt',          'title':'Total Cloud Cover',              'units': '[%]'}
-row_pscld =             {'var':'pscld',          'title':'Shallow Convective Cloud Cover', 'units': '[%]'}
-row_pdcld =             {'var':'pdcld',          'title':'Deep Convective Cloud Cover',    'units': '[%]'}
-row_wtrcld =            {'var':'wtrcld',         'title':'Water Cloud Cover',              'units': '[%]'}
-row_icecld =            {'var':'icecld',         'title':'Ice Cloud Cover',                'units': '[%]'}
+row_frac_land =         {'var':'frac_land',       'title':'Land Fraction',                  'units':'[%]'}
+row_net_rad_planet =    {'var':'net_rad_planet',  'title':'Net Planet Radiation',           'units':'[Wm$^{-2}$]'}
+row_tsurf =             {'var':'tsurf',           'title':'Surface Temperature',            'units':'[$^{\circ}$C]'}
+row_evap =              {'var':'evap',            'title':'Evaporation',                    'units':'[mm/day]'}
+row_lwaeraa_toa_net =   {'var':'lwaeraa_toa_net', 'title':'LW AER ATMOS. ABSORPTION NET',   'units':'[Wm$^{-2}$]'}
+row_snowicefr =         {'var':'snowicefr',       'title':'Snow/Ice Fraction',              'units':'[%]'}
+row_ZSI =               {'var':'ZSI',             'title':'Sea Ice Thickness',              'units':'[m]'}
+row_lwp =               {'var':'lwp',             'title':'Liquid Water Path',              'units':'[0.1kgm$^{-2}$]'}
+row_swcrf_toa =         {'var':'swcrf_toa',       'title':'SW Cloud Rad Forcing',           'units':'[Wm$^{-2}$]'}
+row_lwcrf_toa =         {'var':'lwcrf_toa',       'title':'LW Cloud Rad Forcing',           'units':'[Wm$^{-2}$]'}
+row_pcldt =             {'var':'pcldt',           'title':'Total Cloud Cover',              'units':'[%]'}
+row_pscld =             {'var':'pscld',           'title':'Shallow Convective Cloud Cover', 'units':'[%]'}
+row_pdcld =             {'var':'pdcld',           'title':'Deep Convective Cloud Cover',    'units':'[%]'}
+row_wtrcld =            {'var':'wtrcld',          'title':'Water Cloud Cover',              'units':'[%]'}
+row_icecld =            {'var':'icecld',          'title':'Ice Cloud Cover',                'units':'[%]'}
 row_list = [row_net_rad_planet, row_tsurf, row_snowicefr, row_ZSI]
 
 col_0  = {'filedir':filedir0,  'SA':0}
@@ -83,7 +84,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     val_arr = np.array(val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='x', markersize=10)
     ax.set_title('Global Mean ' + title)
-    ax.set_xlabel('Surface Area Coverage [%]')
+    ax.set_xlabel('Continent size (% of total surface)')
     ax.set_ylabel(units)
 
 
