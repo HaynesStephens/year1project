@@ -20,8 +20,9 @@ filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
 filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 
 row_frac_land =         {'var':'frac_land',      'title':'Land Fraction',                  'units': '[%]'}
+row_evap =              {'var':'evap',           'title':'Evaporation',                    'units': '[mm/day]'}
 row_net_rad_planet =    {'var':'net_rad_planet', 'title':'Net Planet Radiation',           'units': '[Wm$^{-2}$]'}
-row_tsurf =             {'var':'tsurf',          'title':'Surface Temperature',            'units': '[C]'}
+row_tsurf =             {'var':'tsurf',          'title':'Surface Temperature',            'units': '[$^{\circ}$C]'}
 row_snowicefr =         {'var':'snowicefr',      'title':'Snow/Ice Fraction',              'units': '[%]'}
 row_ZSI =               {'var':'ZSI',            'title':'Sea Ice Thickness',              'units': '[m]'}
 row_lwp =               {'var':'lwp',            'title':'Liquid Water Path',              'units': '[0.1kgm$^{-2}$]'}
@@ -80,7 +81,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
         val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
-    ax.plot(SA_arr, val_arr, color='k', marker='x')
+    ax.plot(SA_arr, val_arr, color='k', marker='x', markersize=12)
     ax.set_title('Global Mean ' + title)
     ax.set_xlabel('Surface Area Coverage [%]')
     ax.set_ylabel(units)
@@ -94,7 +95,7 @@ makeSubplot(ax, row, filetype='aij')
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/global_Tsurf'
 # plt.savefig(file_name+'.svg')
-# plt.savefig(file_name+'.pdf')
+plt.savefig(file_name+'.pdf')
 plt.show()
 
 
