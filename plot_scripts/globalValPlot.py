@@ -19,19 +19,19 @@ filedir26=filebase+'pc_proxcenb_ssc5L_TL_26p'
 filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
 filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 
-row_frac_land =         {'var':'frac_land',      'ylabel':'Land \n Fraction \n [%]'}
-row_net_rad_planet =    {'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation \n [Wm$^{-2}$]'}
-row_tsurf =             {'var':'tsurf',          'ylabel':'Surface \n Temperature \n [C]'}
-row_snowicefr =         {'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction \n [%]'}
-row_ZSI =               {'var':'ZSI',            'ylabel':'Sea Ice \n Thickness \n [m]'}
-row_lwp =               {'var':'lwp',            'ylabel':'Liquid \n Water \n Path \n [0.1kgm$^{-2}$]'}
-row_swcrf_toa =         {'var':'swcrf_toa',      'ylabel':'SW \n Cloud \n Rad \n Forcing \n [Wm$^{-2}$]'}
-row_lwcrf_toa =         {'var':'lwcrf_toa',      'ylabel':'LW \n Cloud \n Rad \n Forcing \n [Wm$^{-2}$]'}
-row_pcldt =             {'var':'pcldt',          'ylabel':'Total Cloud \n Cover \n [%]'}
-row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective \n Cloud \n Cover \n [%]'}
-row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
-row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
-row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
+row_frac_land =         {'var':'frac_land',      'title':'Land Fraction',                  'units': '[%]'}
+row_net_rad_planet =    {'var':'net_rad_planet', 'title':'Net Planet Radiation',           'units': '[Wm$^{-2}$]'}
+row_tsurf =             {'var':'tsurf',          'title':'Surface Temperature',            'units': '[C]'}
+row_snowicefr =         {'var':'snowicefr',      'title':'Snow/Ice Fraction',              'units': '[%]'}
+row_ZSI =               {'var':'ZSI',            'title':'Sea Ice Thickness',              'units': '[m]'}
+row_lwp =               {'var':'lwp',            'title':'Liquid Water Path',              'units': '[0.1kgm$^{-2}$]'}
+row_swcrf_toa =         {'var':'swcrf_toa',      'title':'SW Cloud Rad Forcing',           'units': '[Wm$^{-2}$]'}
+row_lwcrf_toa =         {'var':'lwcrf_toa',      'title':'LW Cloud Rad Forcing',           'units': '[Wm$^{-2}$]'}
+row_pcldt =             {'var':'pcldt',          'title':'Total Cloud Cover',              'units': '[%]'}
+row_pscld =             {'var':'pscld',          'title':'Shallow Convective Cloud Cover', 'units': '[%]'}
+row_pdcld =             {'var':'pdcld',          'title':'Deep Convective Cloud Cover',    'units': '[%]'}
+row_wtrcld =            {'var':'wtrcld',         'title':'Water Cloud Cover',              'units': '[%]'}
+row_icecld =            {'var':'icecld',         'title':'Ice Cloud Cover',                'units': '[%]'}
 row_list = [row_net_rad_planet, row_tsurf, row_snowicefr, row_ZSI]
 
 col_0  = {'filedir':filedir0,  'SA':0}
@@ -70,7 +70,8 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
 
 def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     var = row['var']
-    ylabel = row['ylabel']
+    title = row['title']
+    units = row['units']
     SA_arr = []
     val_arr = []
     for col in col_list:
@@ -80,7 +81,9 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     ax.plot(SA_arr, val_arr)
-    ax.set_title(ylabel)
+    ax.set_title('Global Mean' + title)
+    ax.set_xlabel('Surface Area Coverage [%]')
+    ax.set_ylabel(units)
 
 
 row = row_tsurf
