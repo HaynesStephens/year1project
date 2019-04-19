@@ -82,7 +82,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
         val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
-    ax.plot(SA_arr, val_arr, color='k', marker='x', markersize=10)
+    ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10)
     ax.set_title('Global Mean ' + title)
     ax.set_xlabel('Continent size (% of total surface)')
     ax.set_ylabel(units)
