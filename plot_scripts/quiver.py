@@ -98,7 +98,7 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
     plt.gca().patch.set_color('.25')
-    cs = m.contourf(x, y, uv_mag, ax=ax)
+    cs = m.contourf(x, y, uv_mag, ax=ax, cmap='Reds')
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax, label='m/s')
 
