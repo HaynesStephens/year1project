@@ -104,7 +104,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
 
     def ContLines(m, ax, var, x, y, data):
         if var == 'tsurf':
-            m.contour(x, y, data, ax=ax, levels = [0.15], colors=('k',),linestyles=('--',))
+            m.contour(x, y, data, ax=ax, levels = [0.15], colors=('k',),linestyles=('-.',),linewidths=(1,))
 
 
     ContLines(m, ax, var, x, y, data)
