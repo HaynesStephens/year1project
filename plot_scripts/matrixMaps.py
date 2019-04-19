@@ -32,7 +32,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
-row_list = [row_net_rad_planet, row_tsurf, row_snowicefr, row_ZSI]
+row_list = [row_net_rad_planet, row_tsurf]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
@@ -53,7 +53,7 @@ col_34 = {'filedir':filedir34, 'parallels':[-44, 44],
 col_39 = {'filedir':filedir39, 'parallels':[-48, 48],
         'meridians':[-95, 95], 'title':'Dynamic (5L), 39% SS Cont'}
 
-col_list = [col_0, col_22, col_26]
+col_list = [col_0, co1_1, col_22, col_39]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
@@ -101,6 +101,14 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
 
+
+    def ContLines(m, ax, var, x, y, data):
+        if var == 'tsurf':
+            m.contour(x, y, data, ax=ax)
+
+
+    ContLines(m, ax, var, x, y, data)
+
     if title != 'Dynamic (5L), Aquaplanet':
         x1, y1 = m(meridians[0], parallels[0])
         x2, y2 = m(meridians[0], parallels[1])
@@ -129,7 +137,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/0_22_26/matrix_map_0_22_26_d'
+file_name = 'plots/contour_test'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
