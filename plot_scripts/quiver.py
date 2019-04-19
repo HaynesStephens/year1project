@@ -101,9 +101,21 @@ def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, 
     cs = m.contourf(x, y, uv_mag, ax=ax)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax, label='m/s')
-    q = m.quiver(x, y, u, v, ax=ax, scale_units='width', scale=150,
+
+    def getScale(filetype):
+        if filetype == 'aij':
+            key_scale = 500
+            U = 10
+        elif filetype == 'oijl':
+            key_scale = 150
+            U = 1
+        key_label = '{0} m/s'.format(U)
+        return key_scale, U, key_label
+
+    key_scale, U, key_label = getScale(filetype)
+    q = m.quiver(x, y, u, v, ax=ax, scale_units='width', scale=key_scale,
                  pivot='middle', width=0.001, headwidth=7, headlength=5)
-    ax.quiverkey(q, X=0.93, Y=1.02, U=1, label = '1 m/s', labelpos = 'E')
+    ax.quiverkey(q, X=0.93, Y=1.02, U=U, label = key_label, labelpos = 'E')
 
     if title != 'Dynamic (5L), Aquaplanet':
         x1, y1 = m(meridians[0], parallels[0])
