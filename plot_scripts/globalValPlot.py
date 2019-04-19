@@ -34,59 +34,66 @@ row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover 
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
 row_list = [row_net_rad_planet, row_tsurf, row_snowicefr, row_ZSI]
 
-col_0 = {'filedir':filedir0, 'parallels':[],
-        'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
-col_1 = {'filedir':filedir1, 'parallels':[-12, 12],
-        'meridians':[-15, 15], 'title':'Dynamic (5L), 1% SS Cont'}
-col_4 = {'filedir':filedir4, 'parallels':[-16, 16],
-        'meridians':[-30, 30], 'title':'Dynamic (5L), 4% SS Cont'}
-col_6 = {'filedir':filedir6, 'parallels':[-20, 20],
-        'meridians':[-35, 35], 'title':'Dynamic (5L), 6% SS Cont'}
-col_11 = {'filedir':filedir11, 'parallels':[-24, 24],
-        'meridians':[-50, 50], 'title':'Dynamic (5L), 11% SS Cont'}
-col_22 = {'filedir':filedir22, 'parallels':[-36, 36],
-        'meridians':[-70, 70], 'title':'Dynamic (5L), 22% SS Cont'}
-col_26 = {'filedir':filedir26, 'parallels':[-40, 40],
-        'meridians':[-75, 75], 'title':'Dynamic (5L), 26% SS Cont'}
-col_34 = {'filedir':filedir34, 'parallels':[-44, 44],
-        'meridians':[-90, 90], 'title':'Dynamic (5L), 34% SS Cont'}
-col_39 = {'filedir':filedir39, 'parallels':[-48, 48],
-        'meridians':[-95, 95], 'title':'Dynamic (5L), 39% SS Cont'}
+col_0  = {'filedir':filedir0,  'SA':0}
+col_1  = {'filedir':filedir1,  'SA':1}
+col_4  = {'filedir':filedir4,  'SA':4}
+col_6  = {'filedir':filedir6,  'SA':6}
+col_11 = {'filedir':filedir11, 'SA':11}
+col_22 = {'filedir':filedir22, 'SA':22}
+col_26 = {'filedir':filedir26, 'SA':26}
+col_34 = {'filedir':filedir34, 'SA':34}
+col_39 = {'filedir':filedir39, 'SA':39}
 
-col_list = [col_0, col_22, col_26]
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 
-def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
+def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
+
+        if filetype == 'aij':
+            area_arr = nc_i['axyp'][:]
+        elif filetype == 'oijl':
+            area_arr = nc_i['oxyp3'][:][depth]
+
         if depth == None:
             arr = nc_i[var][:]
         else:
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    return arr_avg
+    avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
+    return avg_val
 
-def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, title):
+
+def makeSubplot(ax, row):
+    var = row['var']
+    ylabel = row['ylabel']
+    SA_arr = []
+    val_arr = []
+    for col in col_list:
+        filedir = col['filedir']
+        SA_arr.append(col['SA'])
+        val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth))
+    SA_arr = np.array(SA_arr)
+    val_arr = np.array(val_arr)
+    ax.plot(SA_arr, val_arr)
+    ax.set_title(ylabel)
 
 
-fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,7))
+var = row_tsurf['var']
+fig, ax = plt.subplots(figsize = (10,7))
 
-for col_num in range(len(col_list)):
-    col = col_list[col_num]
-    filedir = col['filedir']
-    for row_num in range(len(row_list)):
-        print(col_num, row_num)
-        row = row_list[row_num]
-        var = row['var']
-        data = avgDataFiles(filedir, var, num_files = 10)
-        makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
-                    parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
+makeSubplot(ax, row)
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/contour_test'
+file_name = 'plots/global_Tsurf'
 # plt.savefig(file_name+'.svg')
-plt.savefig(file_name+'.pdf')
+# plt.savefig(file_name+'.pdf')
 plt.show()
+
+
+
+
