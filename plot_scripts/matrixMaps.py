@@ -138,7 +138,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/matrix_precip'
+file_name = 'plots/matrix_clouds'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
