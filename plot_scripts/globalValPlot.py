@@ -34,7 +34,7 @@ row_pscld =             {'var':'pscld',           'title':'Shallow Convective Cl
 row_pdcld =             {'var':'pdcld',           'title':'Deep Convective Cloud Cover',    'units':'[%]'}
 row_wtrcld =            {'var':'wtrcld',          'title':'Water Cloud Cover',              'units':'[%]'}
 row_icecld =            {'var':'icecld',          'title':'Ice Cloud Cover',                'units':'[%]'}
-
+row_qatm =              {'var':'qatm',            'title':'Atmospheric Water Vapor',        'units':'[kg/m^2]'}
 
 col_0  = {'filedir':filedir0,  'SA':0}
 col_1  = {'filedir':filedir1,  'SA':1}
@@ -88,7 +88,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     ax.set_ylabel(units)
 
 
-row = row_lwaeraa_toa_net
+row = row_qatm
 fig, ax = plt.subplots()
 
 makeSubplot(ax, row, filetype='aijpc')
