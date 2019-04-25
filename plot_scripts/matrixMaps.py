@@ -124,7 +124,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
-fig, axes = plt.subplots(len(row_list), len(col_list))
+fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
 
 for col_num in range(len(col_list)):
     col = col_list[col_num]
