@@ -58,7 +58,7 @@ col_list = [col_0, col_1, col_39]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
-    results = glob('{0}/*aij*'.format(filedir))
+    results = glob('{0}/*aijpc*'.format(filedir))
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')

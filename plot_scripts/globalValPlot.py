@@ -34,7 +34,7 @@ row_pscld =             {'var':'pscld',           'title':'Shallow Convective Cl
 row_pdcld =             {'var':'pdcld',           'title':'Deep Convective Cloud Cover',    'units':'[%]'}
 row_wtrcld =            {'var':'wtrcld',          'title':'Water Cloud Cover',              'units':'[%]'}
 row_icecld =            {'var':'icecld',          'title':'Ice Cloud Cover',                'units':'[%]'}
-row_list = [row_net_rad_planet, row_tsurf, row_snowicefr, row_ZSI]
+
 
 col_0  = {'filedir':filedir0,  'SA':0}
 col_1  = {'filedir':filedir1,  'SA':1}
@@ -91,7 +91,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
 row = row_lwaeraa_toa_net
 fig, ax = plt.subplots()
 
-makeSubplot(ax, row, filetype='aij')
+makeSubplot(ax, row, filetype='aijpc')
 
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/global_lwaeraa_toa_net'
