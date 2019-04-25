@@ -33,7 +33,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
-row_list = [row_net_rad_planet, row_prec]
+row_list = [row_net_rad_planet, row_tsurf, row_prec]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
@@ -124,7 +124,7 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
-fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
+fig, axes = plt.subplots(len(row_list), len(col_list))
 
 for col_num in range(len(col_list)):
     col = col_list[col_num]
