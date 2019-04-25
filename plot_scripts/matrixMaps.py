@@ -22,6 +22,7 @@ filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
 row_frac_land =         {'var':'frac_land',      'ylabel':'Land \n Fraction \n [%]'}
 row_net_rad_planet =    {'var':'net_rad_planet', 'ylabel':'Net \n Planet \n Radiation \n [Wm$^{-2}$]'}
 row_tsurf =             {'var':'tsurf',          'ylabel':'Surface \n Temperature \n [C]'}
+row_prec =              {'var':'prec',           'ylabel':'Precipitation \n [mm/day]'}
 row_snowicefr =         {'var':'snowicefr',      'ylabel':'Snow/Ice \n Fraction \n [%]'}
 row_ZSI =               {'var':'ZSI',            'ylabel':'Sea Ice \n Thickness \n [m]'}
 row_lwp =               {'var':'lwp',            'ylabel':'Liquid \n Water \n Path \n [0.1kgm$^{-2}$]'}
@@ -32,7 +33,7 @@ row_pscld =             {'var':'pscld',          'ylabel':'Shallow \n Convective
 row_pdcld =             {'var':'pdcld',          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]'}
 row_wtrcld =            {'var':'wtrcld',         'ylabel':'Water \n Cloud Cover \n [%]'}
 row_icecld =            {'var':'icecld',         'ylabel':'Ice \n Cloud Cover \n [%]'}
-row_list = [row_net_rad_planet, row_tsurf]
+row_list = [row_net_rad_planet, row_prec]
 
 col_0 = {'filedir':filedir0, 'parallels':[],
         'meridians':[], 'title':'Dynamic (5L), Aquaplanet'}
@@ -137,7 +138,7 @@ for col_num in range(len(col_list)):
                     parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/contour_tsurf'
+file_name = 'plots/matrix_precip'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
