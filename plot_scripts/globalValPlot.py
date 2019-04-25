@@ -94,7 +94,7 @@ fig, ax = plt.subplots()
 makeSubplot(ax, row, filetype='aijpc')
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/global_lwaeraa_toa_net'
+file_name = 'plots/global_qatm'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
