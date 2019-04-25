@@ -55,9 +55,9 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
 
-        if filetype == 'aij':
+        if filetype == 'aijpc':
             area_arr = nc_i['axyp'][:]
-        elif filetype == 'oijl':
+        elif filetype == 'oijlpc':
             area_arr = nc_i['oxyp3'][:][depth]
 
         if depth == None:
