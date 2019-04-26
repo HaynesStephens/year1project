@@ -44,7 +44,7 @@ def makeSubplot(ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=N
         SA = col['SA']
         if SA ==0:
             SA = 'Aqua'
-        val_arr = avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, avg_coord)
+        val_arr = avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_coord)
         ax.plot(x, val_arr, label=SA+'%')
     ax.legend()
     ax.set_title('Average ' + title)
