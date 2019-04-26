@@ -9,7 +9,6 @@ from files_n_vars import *
 
 col_list = [col_0, col_22, col_26]
 
-
 def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))

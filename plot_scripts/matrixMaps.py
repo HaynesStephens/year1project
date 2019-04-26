@@ -7,9 +7,6 @@ from matplotlib.patches import Polygon
 from cbar import MidPointNorm
 from files_n_vars import *
 
-filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
-
-
 row_list = [row_net_rad_planet, row_tsurf, row_pcldt]
 
 col_list = [col_0, col_1, col_39]
