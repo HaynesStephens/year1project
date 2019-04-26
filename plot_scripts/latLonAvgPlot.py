@@ -60,10 +60,10 @@ col_list = [col_0, col_11, col_39]
 row = row_tsurf
 fig, ax = plt.subplots()
 
-makeSubplot(ax, row, filetype='aijpc', avg_coord='lon')
+makeSubplot(ax, row, filetype='aijpc', avg_coord='lat')
 
 fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/lon_tsurf'
+file_name = 'plots/lat_tsurf'
 # plt.savefig(file_name+'.svg')
 plt.savefig(file_name+'.pdf')
 plt.show()
