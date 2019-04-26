@@ -22,6 +22,8 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
+    if 'aqua' in filedir:
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     if avg_coord == 'lat':
         avg_axis = 1
     elif avg_coord == 'lon':
@@ -45,7 +47,6 @@ def makeSubplot(ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=N
         SA = str(col['SA']) + '%'
         if SA == '0%':
             SA = 'Aqua'
-            val_arr = np.roll(val_arr, (val_arr.shape[1]) // 2, axis=1)
         ax.plot(x, val_arr, label=SA)
     ax.legend()
     ax.set_title('Average ' + title)
