@@ -49,7 +49,7 @@ def makeSubplot(ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=N
             SA = 'Aqua'
         ax.plot(x, val_arr, label=SA)
     if var == 'tsurf':
-        ax.axhline(linestyle='--')
+        ax.axhline(linestyle='--', color='k')
     ax.legend()
     ax.set_title('Average ' + title)
     ax.set_xlabel(x_label)
