@@ -5,19 +5,7 @@ import matplotlib.pyplot as plt
 from glob import glob
 from matplotlib.patches import Polygon
 from cbar import MidPointNorm
-# from matplotlib.colors import from_levels_and_colors,  LinearSegmentedColormap, rgb2hex
-
-
-filebase='/project2/abbot/haynes/ROCKE3D_output/'
-filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
-filedir1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2'
-filedir4=filebase+'pc_proxcenb_ssc5L_TL_4p'
-filedir6=filebase+'pc_proxcenb_ssc5L_TL_6p'
-filedir11=filebase+'pc_proxcenb_ssc5L_TL_11p'
-filedir22=filebase+'pc_proxcenb_ssc5L_TL_22p'
-filedir26=filebase+'pc_proxcenb_ssc5L_TL_26p'
-filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
-filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
+from files_n_vars import *
 
 col_list = [col_0, col_22, col_26]
 

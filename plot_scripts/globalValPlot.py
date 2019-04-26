@@ -1,35 +1,9 @@
-from mpl_toolkits.basemap import Basemap
 from netCDF4 import Dataset as ds
 import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
-from matplotlib.patches import Polygon
-from cbar import MidPointNorm
-# from matplotlib.colors import from_levels_and_colors,  LinearSegmentedColormap, rgb2hex
+from files_n_vars import *
 
-
-filebase='/project2/abbot/haynes/ROCKE3D_output/'
-filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
-filedir1=filebase+'pc_proxcenb_ssc5L_TL_500yr_rs2'
-filedir4=filebase+'pc_proxcenb_ssc5L_TL_4p'
-filedir6=filebase+'pc_proxcenb_ssc5L_TL_6p'
-filedir11=filebase+'pc_proxcenb_ssc5L_TL_11p'
-filedir22=filebase+'pc_proxcenb_ssc5L_TL_22p'
-filedir26=filebase+'pc_proxcenb_ssc5L_TL_26p'
-filedir34=filebase+'pc_proxcenb_ssc5L_TL_34p'
-filedir39=filebase+'pc_proxcenb_ssc5L_TL_39p'
-
-row_qatm =              {'var':'qatm',            'title':'Atmospheric Water Vapor',        'units':'[kg/m^2]'}
-
-col_0  = {'filedir':filedir0,  'SA':0}
-col_1  = {'filedir':filedir1,  'SA':1}
-col_4  = {'filedir':filedir4,  'SA':4}
-col_6  = {'filedir':filedir6,  'SA':6}
-col_11 = {'filedir':filedir11, 'SA':11}
-col_22 = {'filedir':filedir22, 'SA':22}
-col_26 = {'filedir':filedir26, 'SA':26}
-col_34 = {'filedir':filedir34, 'SA':34}
-col_39 = {'filedir':filedir39, 'SA':39}
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
