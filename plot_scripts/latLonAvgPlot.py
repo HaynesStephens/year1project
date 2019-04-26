@@ -41,10 +41,11 @@ def makeSubplot(ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=N
     units = row['units']
     for col in col_list:
         filedir = col['filedir']
-        SA = str(col['SA']) + '%'
-        if SA =='0%':
-            SA = 'Aqua'
         val_arr = avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_coord)
+        SA = str(col['SA']) + '%'
+        if SA == '0%':
+            SA = 'Aqua'
+            val_arr = np.roll(val_arr, (val_arr.shape[1]) // 2, axis=1)
         ax.plot(x, val_arr, label=SA)
     ax.legend()
     ax.set_title('Average ' + title)
