@@ -58,12 +58,12 @@ def plotGlobalVal(var):
 
     if var =='tsurf':
         row = row_tsurf
-        filename = 'LewisGlobalTsurf.csv'
+        data = loadCSV('LewisGlobalTsurf.csv')
+        data[:,1] = data[:,1] - 273.15
     elif var =='evap':
         row = row_evap
-        filename = 'LewisGlobalEvap.csv'
+        data = loadCSV('LewisGlobalEvap.csv')
     label = 'Lewis'
-    data = loadCSV(filename)
 
     fig, ax = plt.subplots()
 
