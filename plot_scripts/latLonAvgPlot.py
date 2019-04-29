@@ -60,7 +60,7 @@ col_list = [col_0, col_11, col_39]
 row = row_tsurf
 fig, ax = plt.subplots()
 
-makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lon')
+makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lat')
 ax.legend()
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/lon_tsurf'
