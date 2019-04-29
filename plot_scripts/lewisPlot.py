@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from files_n_vars import *
-import quiver
 import globalVAlPlot as gvp
 
 
@@ -48,3 +47,5 @@ def plotTsurf():
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name + '.pdf')
     plt.show()
+
+plotTsurf()

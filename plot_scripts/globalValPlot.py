@@ -47,16 +47,17 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     ax.set_ylabel(units)
 
 
-row = row_qatm
-fig, ax = plt.subplots()
+def go():
+    row = row_qatm
+    fig, ax = plt.subplots()
 
-makeSubplot(ax, row, filetype='aijpc')
+    makeSubplot(ax, row, filetype='aijpc')
 
-fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/global_qatm'
-# plt.savefig(file_name+'.svg')
-plt.savefig(file_name+'.pdf')
-plt.show()
+    fig.tight_layout(w_pad = 2.25)
+    file_name = 'plots/global_qatm'
+    # plt.savefig(file_name+'.svg')
+    plt.savefig(file_name+'.pdf')
+    plt.show()
 
 
 
