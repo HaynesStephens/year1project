@@ -70,7 +70,7 @@ def plotGlobalVal(var):
     gvp.makeSubplot(col_list, ax, row, filetype='aijpc')
     ax.plot(data[:, 0], data[:, 1], label=label, color='r', marker='x', markersize=10)
 
-
+    ax.legend()
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/lews_global_tsurf'
     # plt.savefig(file_name+'.svg')
