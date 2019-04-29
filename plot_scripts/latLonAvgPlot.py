@@ -20,11 +20,13 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
             arr = nc_i[var][:]
         else:
             arr = nc_i[var][:][depth]
+
         arr_tot = arr_tot + arr
+
     arr_avg = (arr_tot * unit_conv) / num_files
     if 'aqua' in filedir:
         print('BOY')
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
+        # arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     if avg_coord == 'lat':
         avg_axis = 1
     elif avg_coord == 'lon':
