@@ -39,7 +39,7 @@ def plotTsurf():
     row = row_tsurf
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lat')
+    makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lon')
 
     correctAndPlot(tsurf_aqua, ax, label="Aqua_L")
     correctAndPlot(tsurf_b2, ax, label='7% L')
