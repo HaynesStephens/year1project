@@ -56,15 +56,15 @@ def makeSubplot(col_list, ax, row, filetype, avg_coord, num_files=10, unit_conv=
     ax.set_xlabel(x_label)
     ax.set_ylabel(units)
 
+def latLonAvgPlot():
+    col_list = [col_0, col_11, col_39]
+    row = row_tsurf
+    fig, ax = plt.subplots()
 
-col_list = [col_0, col_11, col_39]
-row = row_tsurf
-fig, ax = plt.subplots()
-
-makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lon')
-ax.legend()
-fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/lon_tsurf'
-# plt.savefig(file_name+'.svg')
-plt.savefig(file_name+'.pdf')
-plt.show()
+    makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lon')
+    ax.legend()
+    fig.tight_layout(w_pad = 2.25)
+    file_name = 'plots/lon_tsurf'
+    # plt.savefig(file_name+'.svg')
+    plt.savefig(file_name+'.pdf')
+    plt.show()

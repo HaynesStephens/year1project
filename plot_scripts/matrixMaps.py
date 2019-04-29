@@ -79,21 +79,23 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
-fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
 
-for col_num in range(len(col_list)):
-    col = col_list[col_num]
-    filedir = col['filedir']
-    for row_num in range(len(row_list)):
-        print(col_num, row_num)
-        row = row_list[row_num]
-        var = row['var']
-        data = avgDataFiles(filedir, var, num_files = 10)
-        makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
-                    parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
+def matrixMaps():
+    fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
 
-fig.tight_layout(w_pad = 2.25)
-file_name = 'plots/matrix_clouds'
-# plt.savefig(file_name+'.svg')
-plt.savefig(file_name+'.pdf')
-plt.show()
+    for col_num in range(len(col_list)):
+        col = col_list[col_num]
+        filedir = col['filedir']
+        for row_num in range(len(row_list)):
+            print(col_num, row_num)
+            row = row_list[row_num]
+            var = row['var']
+            data = avgDataFiles(filedir, var, num_files = 10)
+            makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
+                        parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
+
+    fig.tight_layout(w_pad = 2.25)
+    file_name = 'plots/matrix_clouds'
+    # plt.savefig(file_name+'.svg')
+    plt.savefig(file_name+'.pdf')
+    plt.show()

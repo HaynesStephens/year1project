@@ -47,7 +47,7 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     ax.set_ylabel(units)
 
 
-def go():
+def globalValPlot():
     row = row_qatm
     fig, ax = plt.subplots()
 
