@@ -31,7 +31,7 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
     avg_arr = np.sum(arr_avg * area_arr, axis=avg_axis) / np.sum(area_arr, axis=avg_axis)
     return avg_arr
 
-def makeSubplot(ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=None):
+def makeSubplot(col_list, ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=None):
     if avg_coord == 'lat':
         x = lat_grid
         x_label = 'Latitude'
@@ -50,7 +50,6 @@ def makeSubplot(ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=N
         ax.plot(x, val_arr, label=SA)
     if var == 'tsurf':
         ax.axhline(linestyle='--', color='k')
-    ax.legend()
     ax.set_title('Average ' + title)
     ax.set_xlabel(x_label)
     ax.set_ylabel(units)
@@ -60,8 +59,8 @@ col_list = [col_0, col_11, col_39]
 row = row_tsurf
 fig, ax = plt.subplots()
 
-makeSubplot(ax, row, filetype='aijpc', avg_coord='lat')
-
+makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lat')
+ax.legend()
 fig.tight_layout(w_pad = 2.25)
 file_name = 'plots/lat_tsurf'
 # plt.savefig(file_name+'.svg')
