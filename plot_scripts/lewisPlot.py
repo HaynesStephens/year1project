@@ -51,4 +51,4 @@ def plotTsurf():
     plt.savefig(file_name + '.pdf')
     plt.show()
 
-# plotTsurf()
+plotTsurf()
