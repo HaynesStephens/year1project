@@ -2,10 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from files_n_vars import *
-import matrixMaps
 import quiver
-import globalVAlPlot
-import latLonAvgPlot
+import globalVAlPlot as gvp
 
 
 def loadCSV(filename):
@@ -39,7 +37,7 @@ def plotTsurf():
     row = row_tsurf
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lon')
+    gvp.makeSubplot(col_list, ax, row, filetype='aijpc', avg_coord='lon')
 
     correctAndPlot(tsurf_aqua, ax, label="Aqua_L")
     correctAndPlot(tsurf_b2, ax, label='7% L')
