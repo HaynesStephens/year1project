@@ -72,9 +72,9 @@ def plotGlobalVal(var):
 
     ax.legend()
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/lews_global_tsurf'
+    file_name = 'plots/lews_global_'+var
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-plotGlobalVal('tsurf')
+plotGlobalVal('evap')
