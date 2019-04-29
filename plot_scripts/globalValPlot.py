@@ -5,9 +5,6 @@ from glob import glob
 from files_n_vars import *
 
 
-col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-
-
 def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
@@ -29,7 +26,7 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
     return avg_val
 
 
-def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
+def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None):
     var = row['var']
     title = row['title']
     units = row['units']
@@ -41,17 +38,18 @@ def makeSubplot(ax, row, filetype, num_files=10, unit_conv=1, depth=None):
         val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
-    ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10)
+    ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
     ax.set_title('Global Mean ' + title)
     ax.set_xlabel('Continent size (% of total surface)')
     ax.set_ylabel(units)
 
 
 def globalValPlot():
+    col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
     row = row_qatm
     fig, ax = plt.subplots()
 
-    makeSubplot(ax, row, filetype='aijpc')
+    makeSubplot(col_list, ax, row, filetype='aijpc')
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/global_qatm'

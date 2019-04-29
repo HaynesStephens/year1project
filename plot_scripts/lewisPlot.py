@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from files_n_vars import *
 import latLonAvgPlot as llap
+import globalValPlot as gvp
 
 
 def loadCSV(filename):
@@ -30,7 +31,7 @@ def correctAndPlot(arr, ax, label):
     ax.plot(x[:,0], x[:,1], label=label, linestyle='-.')
 
 
-def plotTsurf():
+def plotLonTsurf():
     tsurf_aqua = loadCSV('LewisLonTsurfAqua.csv')
     tsurf_b2 = loadCSV('LewisLonTsurfB2.csv')
     tsurf_b7 = loadCSV('LewisLonTsurfB7.csv')
@@ -51,4 +52,29 @@ def plotTsurf():
     plt.savefig(file_name + '.pdf')
     plt.show()
 
-plotTsurf()
+
+def plotGlobalVal(var):
+    col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+
+    if var =='tsurf':
+        row = row_tsurf
+        filename = 'LewisGlobalTsurf.csv'
+    elif var =='evap':
+        row = row_evap
+        filename = 'LewisGlobalEvap.csv'
+    label = 'Lewis'
+    data = loadCSV(filename)
+
+    fig, ax = plt.subplots()
+
+    gvp.makeSubplot(col_list, ax, row, filetype='aijpc')
+    ax.plot(data[:, 0], data[:, 1], label=label, color='r', marker='x', markersize=10)
+
+
+    fig.tight_layout(w_pad = 2.25)
+    file_name = 'plots/lews_global_tsurf'
+    # plt.savefig(file_name+'.svg')
+    plt.savefig(file_name+'.pdf')
+    plt.show()
+
+plotGlobalVal('tsurf')
