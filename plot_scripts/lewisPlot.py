@@ -10,27 +10,30 @@ def loadCSV(filename):
     return np.array(df)
 
 
+def correctLon(arr):
+    x = arr.copy()
+    x[:, 0][x[:, 0] > 180] = x[:, 0][x[:, 0] > 180] - 360
+    x[x[:,0].argsort()]
+    return x
+
+
+def correctT(arr):
+    x = arr.copy()
+    x[:, 1] = x[:, 1] - 273.15
+    return x
+
+
+def correctAndPlot(arr, ax, label):
+    x = arr.copy()
+    x = correctLon(x)
+    x = correctT(x)
+    ax.plot(x[:,0], x[:,1], label=label, linestyle='-.')
+
+
 def plotTsurf():
     tsurf_aqua = loadCSV('LewisLonTsurfAqua.csv')
     tsurf_b2 = loadCSV('LewisLonTsurfB2.csv')
     tsurf_b7 = loadCSV('LewisLonTsurfB7.csv')
-
-    def correctLon(arr):
-        x = arr.copy()
-        x[:, 0][x[:, 0] > 180] = x[:, 0][x[:, 0] > 180] - 360
-        x = np.sort(x, axis=0)
-        return x
-
-    def correctT(arr):
-        x = arr.copy()
-        x[:, 1] = x[:, 1] - 273.15
-        return x
-
-    def correctAndPlot(arr, ax, label):
-        x = arr.copy()
-        x = correctLon(x)
-        x = correctT(x)
-        ax.plot(x[:,0], x[:,1], label=label)
 
     col_list = [col_0, col_6, col_34]
     row = row_tsurf
@@ -48,4 +51,4 @@ def plotTsurf():
     plt.savefig(file_name + '.pdf')
     plt.show()
 
-plotTsurf()
+# plotTsurf()
