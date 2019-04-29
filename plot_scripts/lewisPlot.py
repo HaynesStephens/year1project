@@ -13,7 +13,7 @@ def loadCSV(filename):
 def correctLon(arr):
     x = arr.copy()
     x[:, 0][x[:, 0] > 180] = x[:, 0][x[:, 0] > 180] - 360
-    x[x[:,0].argsort()]
+    x = x[x[:,0].argsort()]
     return x
 
 
