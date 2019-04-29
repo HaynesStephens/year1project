@@ -77,4 +77,4 @@ def plotGlobalVal(var):
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-plotGlobalVal('evap')
+plotGlobalVal('tsurf')
