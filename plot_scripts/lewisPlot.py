@@ -27,7 +27,6 @@ def correctAndPlot(arr, ax, label):
     x = arr.copy()
     x = correctLon(x)
     x = correctT(x)
-    print(x)
     ax.plot(x[:,0], x[:,1], label=label, linestyle='-.')
 
 
