@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from files_n_vars import *
-import globalVAlPlot as gvp
+import globalValPlot as gvp
 
 
 def loadCSV(filename):
