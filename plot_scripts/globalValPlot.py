@@ -72,7 +72,7 @@ def globalValPlot():
     row = row_tsurf
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', side='day')
+    makeSubplot(col_list, ax, row, filetype='aijpc', side=None)
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/side_test'
