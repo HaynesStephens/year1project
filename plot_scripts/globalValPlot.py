@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
 from files_n_vars import *
+from lat_lon_grid import *
 
 
 def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side):
