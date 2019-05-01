@@ -31,17 +31,17 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, side
 
 
 def getSideMean(data, area_arr, side):
-    if side == 'day':
-        cropped_data = data[:, -87.5 <= lon_grid <= 87.5]
-        cropped_area = area_arr[:, -87.5 <= lon_grid <= 87.5]
-    elif side == 'night':
-        cropped_data = data[:, np.abs(lon_grid) > 87.5]
-        cropped_area = area_arr[:, np.abs(lon_grid) > 87.5]
-    elif side == 'substellar':
-        cropped_data = data[-10 <= lat_grid <= 10, -12.5 <= lon_grid <= 12.5]
-        cropped_area = area_arr[-10 <= lat_grid <= 10, -12.5 <= lon_grid <= 12.5]
-    avg_val = np.sum(cropped_data * cropped_area) / np.sum(cropped_area)
-    return cropped_data
+    # if side == 'day':
+    #     cropped_data = data[:, -87.5 <= lon_grid <= 87.5]
+    #     cropped_area = area_arr[:, -87.5 <= lon_grid <= 87.5]
+    # elif side == 'night':
+    #     cropped_data = data[:, np.abs(lon_grid) > 87.5]
+    #     cropped_area = area_arr[:, np.abs(lon_grid) > 87.5]
+    # elif side == 'substellar':
+    #     cropped_data = data[-10 <= lat_grid <= 10, -12.5 <= lon_grid <= 12.5]
+    #     cropped_area = area_arr[-10 <= lat_grid <= 10, -12.5 <= lon_grid <= 12.5]
+    # avg_val = np.sum(cropped_data * cropped_area) / np.sum(cropped_area)
+    return data
 
-avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'day')
+x = avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'day')
 
