@@ -26,7 +26,7 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side
         avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
         return avg_val
     else:
-        avg_val = getSideMean(data, area_arr, side)
+        avg_val = getSideMean(arr_avg, area_arr, side)
         return avg_val
 
 
