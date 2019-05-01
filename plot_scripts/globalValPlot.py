@@ -69,13 +69,13 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
 
 def globalValPlot():
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-    row = row_prec
+    row = row_tsurf
     fig, ax = plt.subplots()
 
     makeSubplot(col_list, ax, row, filetype='aijpc', side='day')
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/global_prec'
+    file_name = 'plots/side_test'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
