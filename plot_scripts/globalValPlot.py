@@ -58,7 +58,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
-        val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth))
+        val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
