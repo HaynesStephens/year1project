@@ -48,5 +48,5 @@ def getSideMean(data, area_arr, side):
     print(cropped_data)
     return cropped_data
 
-avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'day')
+avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'substellar')
 
