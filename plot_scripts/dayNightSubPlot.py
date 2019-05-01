@@ -47,5 +47,5 @@ def getSideMean(data, area_arr, side):
     avg_val = np.sum(cropped_data * cropped_area) / np.sum(cropped_area)
     return cropped_data
 
-x = avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'day')
+avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'day')
 
