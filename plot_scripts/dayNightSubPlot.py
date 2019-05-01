@@ -32,7 +32,7 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, side
 
 def getSideMean(data, area_arr, side):
     cropped_data = data.copy()
-    cropped_area = area.copy()
+    cropped_area = area_arr.copy()
     if side == 'day':
         lon_indices = np.where(np.abs(lon_grid) < 88)[0]
     elif side == 'night':
