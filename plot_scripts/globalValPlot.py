@@ -5,7 +5,7 @@ from glob import glob
 from files_n_vars import *
 
 
-def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
+def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -22,11 +22,34 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth):
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
+    if side == None:
+        avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
+        return avg_val
+    else:
+        avg_val = getSideMean(data, area_arr, side)
+        return avg_val
+
+
+def getSideMean(data, area_arr, side):
+    cropped_data = data.copy()
+    cropped_area = area_arr.copy()
+    if side == 'day':
+        lon_indices = np.where(np.abs(lon_grid) < 88)[0]
+    elif side == 'night':
+        lon_indices = np.where(np.abs(lon_grid) > 88)[0]
+    elif side == 'substellar':
+        lon_indices = np.where(np.abs(lon_grid) < 13)[0]
+        lat_indices = np.where(np.abs(lat_grid) < 11)[0]
+        cropped_data = cropped_data[lat_indices, :]
+        cropped_area = cropped_area[lat_indices, :]
+
+    cropped_data = cropped_data[:, lon_indices]
+    cropped_area = cropped_area[:, lon_indices]
+    avg_val = np.sum(cropped_data * cropped_area) / np.sum(cropped_area)
     return avg_val
 
 
-def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None):
+def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side=None):
     var = row['var']
     title = row['title']
     units = row['units']
@@ -49,7 +72,7 @@ def globalValPlot():
     row = row_prec
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc')
+    makeSubplot(col_list, ax, row, filetype='aijpc', side='day')
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/global_prec'
