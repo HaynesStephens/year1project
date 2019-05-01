@@ -23,8 +23,8 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    if 'aqua' in filedir:
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
+    # if 'aqua' in filedir:
+    #     arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     if side == 'Global':
         avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
         return avg_val
