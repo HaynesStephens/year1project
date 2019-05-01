@@ -48,7 +48,7 @@ def getSideMean(data, area_arr, side):
     print(cropped_data)
     print(np.where(cropped_data > 0))
     print(cropped_data.shape)
-    return cropped_data
+    return avg_val
 
 avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'night')
 
