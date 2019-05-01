@@ -22,7 +22,7 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    if side == None:
+    if side == 'Global':
         avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
         return avg_val
     else:
@@ -33,11 +33,11 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side
 def getSideMean(data, area_arr, side):
     cropped_data = data.copy()
     cropped_area = area_arr.copy()
-    if side == 'day':
+    if side == 'Day Side':
         lon_indices = np.where(np.abs(lon_grid) < 88)[0]
-    elif side == 'night':
+    elif side == 'Night Side':
         lon_indices = np.where(np.abs(lon_grid) > 88)[0]
-    elif side == 'substellar':
+    elif side == 'Sub-stellar':
         lon_indices = np.where(np.abs(lon_grid) < 13)[0]
         lat_indices = np.where(np.abs(lat_grid) < 11)[0]
         cropped_data = cropped_data[lat_indices, :]
@@ -49,7 +49,7 @@ def getSideMean(data, area_arr, side):
     return avg_val
 
 
-def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side=None):
+def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side='Global'):
     var = row['var']
     title = row['title']
     units = row['units']
@@ -62,7 +62,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
-    ax.set_title('Global Mean ' + title)
+    ax.set_title(side + ' Mean ' + title)
     ax.set_xlabel('Continent size (% of total surface)')
     ax.set_ylabel(units)
 
@@ -72,7 +72,7 @@ def globalValPlot():
     row = row_tsurf
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', side=None)
+    makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/side_test'
