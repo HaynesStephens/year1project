@@ -6,7 +6,7 @@ from files_n_vars import *
 from lat_lon_grid import *
 
 
-def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth):
+def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, side):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -27,7 +27,7 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth):
     arr_avg = (arr_tot * unit_conv) / num_files
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
-    return avg_arr
+    return getSideMean(arr_avg, area_arr, side)
 
 
 def getSideMean(data, area_arr, side):
@@ -41,6 +41,7 @@ def getSideMean(data, area_arr, side):
         cropped_data = data[-10 <= lat_grid <= 10, -12.5 <= lon_grid <= 12.5]
         cropped_area = area_arr[-10 <= lat_grid <= 10, -12.5 <= lon_grid <= 12.5]
     avg_val = np.sum(cropped_data * cropped_area) / np.sum(cropped_area)
-    return avg_val
+    return cropped_data
 
+avgDataFilesLatLon(filedir1, 'frac_land', 10, 'aijpc', 1, None, 'day')
 
