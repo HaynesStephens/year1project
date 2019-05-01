@@ -22,7 +22,7 @@ def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
     arr_avg = (arr_tot * unit_conv) / num_files
     return arr_avg
 
-def quiverPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
+def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
     filedir = col['filedir']
     parallels = col['parallels']
     meridians = col['meridians']
