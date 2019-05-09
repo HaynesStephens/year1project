@@ -7,9 +7,9 @@ from matplotlib.patches import Polygon
 from cbar import MidPointNorm
 from files_n_vars import *
 
-row_list = [row_net_rad_planet, row_tsurf, row_pcldt]
+row_list = [row_pcldt, row_pscld, row_pdcld, row_wtrcld, row_icecld]
 
-col_list = [col_0, col_1, col_39]
+col_list = [col_0, col_1, col_6, col_22, col_39]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
