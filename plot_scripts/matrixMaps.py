@@ -7,9 +7,9 @@ from matplotlib.patches import Polygon
 from cbar import MidPointNorm
 from files_n_vars import *
 
-row_list = [row_pcldt, row_pscld, row_pdcld, row_wtrcld, row_icecld]
+row_list = [row_pcldt, row_pscld, row_pdcld]
 
-col_list = [col_0, col_1, col_6, col_22, col_39]
+col_list = [col_0, col_11, col_22, col_39]
 
 
 def avgDataFiles(filedir, var, num_files = 10):
@@ -95,7 +95,7 @@ def matrixMaps():
                         parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/matrix_clouds'
+    file_name = 'plots/matrix_clouds4steph'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
