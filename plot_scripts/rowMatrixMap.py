@@ -24,7 +24,7 @@ def avgDataFiles(filedir, var, num_files = 10):
 
 def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     ax = grid[col_num]
-    m = Basemap(ax = ax, suppress_ticks=False)
+    m = Basemap(ax = ax)
 
     ny=data.shape[0]
     nx=data.shape[1]
@@ -67,10 +67,10 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
     # draw parallels and meridians.
-    #     m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
-    #                 rotation=30, fontsize=8, linewidth=0)
-    # m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax,
-    #                 rotation=40, fontsize=8, linewidth=0)
+        m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
+                    rotation=30, fontsize=8, linewidth=0)
+    m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax,
+                    rotation=40, fontsize=8, linewidth=0)
 
     def ContLines(m, ax, var, x, y, data):
         if var == 'tsurf':
