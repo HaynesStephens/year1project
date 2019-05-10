@@ -7,6 +7,7 @@ from matplotlib.patches import Polygon
 from matplotlib.colors import Normalize
 from cbar import MidPointNorm
 from files_n_vars import *
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 row_list = [row_pcldt, row_lwp]
 
@@ -93,7 +94,10 @@ def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels,
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes("right", size="5%", pad=0.05)
+        # plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
+        plt.colorbar(mappable=cs_cbar, cax=cax)
 
 def getDataAndMaxVal(col_list, var):
     """
@@ -117,7 +121,7 @@ def getDataAndMaxVal(col_list, var):
 
 
 def matrixMaps():
-    fig, axes = plt.subplots(len(row_list), len(col_list) + 1, figsize = (10,5))
+    fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
