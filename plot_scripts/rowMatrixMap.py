@@ -147,7 +147,7 @@ def matrixMaps():
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
-    fig.tight_layout(w_pad = 2.25)
+    # fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/row_matrix_clouds4stephLWP'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
