@@ -86,11 +86,12 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
 
-    if row_num==0:
-        ax.set_title(title, fontsize=10)
+    # if row_num==0:
+    #     ax.set_title(title, fontsize=10)
 
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
+        ax.set_title(title, fontsize=10)
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
