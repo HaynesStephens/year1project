@@ -65,8 +65,14 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
     m.ax.tick_params(labelsize=2)
     # m.colorbar(mappable=cs, ax=ax)
 
+    if row_num==0:
+        ax.set_title(title, fontsize=10)
+
+    if col_num==0:
+        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
+
     # draw parallels and meridians.
-    m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
+        m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
                     rotation=30, fontsize=8, linewidth=0)
     m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax,
                     rotation=40, fontsize=8, linewidth=0)
@@ -85,13 +91,6 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
-
-    # if row_num==0:
-    #     ax.set_title(title, fontsize=10)
-
-    if col_num==0:
-        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
-        ax.set_title(title, fontsize=10)
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
