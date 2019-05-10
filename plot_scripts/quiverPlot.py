@@ -68,7 +68,7 @@ def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.
                  pivot='middle', width=0.001, headwidth=7, headlength=5)
     ax.quiverkey(q, X=0.93, Y=1.02, U=U, label = key_label, labelpos = 'E')
 
-    if title != 'Dynamic (5L), Aquaplanet':
+    if title != 'Aqua':
         x1, y1 = m(meridians[0], parallels[0])
         x2, y2 = m(meridians[0], parallels[1])
         x3, y3 = m(meridians[1], parallels[1])

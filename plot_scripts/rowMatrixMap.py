@@ -83,7 +83,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
 
     ContLines(m, ax, var, x, y, data)
 
-    if title != 'Dynamic (5L), Aquaplanet':
+    if title != 'Aqua':
         x1, y1 = m(meridians[0], parallels[0])
         x2, y2 = m(meridians[0], parallels[1])
         x3, y3 = m(meridians[1], parallels[1])
