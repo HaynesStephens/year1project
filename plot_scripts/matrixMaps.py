@@ -25,7 +25,7 @@ def avgDataFiles(filedir, var, num_files = 10):
     return arr_avg
 
 
-def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, title):
+def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, meridians, title):
     m = Basemap(ax = ax)
     # m.drawcoastlines()
     # m.fillcontinents(color='coral',lake_color='aqua')
@@ -45,15 +45,17 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         if var in sequential_list:
             cmap = cm.Blues_r
             norm = None
+            vmin, vmax = 0, max_val
         else:
             cmap = cm.seismic
-            norm = MidPointNorm(midpoint=0, vmin=-np.max(np.abs(data)), vmax=np.max(np.abs(data)))
+            norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
+            vmin, vmax = None, None
         levels = 20
-        return cmap, norm, levels
+        return cmap, norm, levels, vmin, vmax
 
-    cmap, norm, levels = make_cmap(var)
+    cmap, norm, levels, vmin, vmax = make_cmap(var)
     plt.gca().patch.set_color('.25')
-    cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
+    cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm, vmin=vmin, vmax = vmax)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
 
@@ -80,7 +82,13 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
 
-def getUniformColorbar(col_list, var):
+def getDataAndMaxVal(col_list, var):
+    """
+    Used to get data for a given row and the max value in order to have uniform colorbars across a row.
+    :param col_list:
+    :param var:
+    :return:
+    """
     data_list = []
     max_val = 0
     for col in col_list:
@@ -98,13 +106,12 @@ def matrixMaps():
     for row_num in range(len(row_list)):
         row = row_list[row_num]
         var = row['var']
-        data_list, max_val = getUniformColorbar(col_list, var)
+        data_list, max_val = getDataAndMaxVal(col_list, var)
         for col_num in range(len(col_list)):
             col = col_list[col_num]
             print(col_num, row_num)
-            # data = avgDataFiles(col['filedir'], var, num_files = 10)
             data = data_list[col_num]
-            makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
+            makeSubplot(data, var=var, max_val=max_val, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
                         parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
     fig.tight_layout(w_pad = 2.25)
