@@ -94,7 +94,7 @@ def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels,
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1], use_gridspec=True)
+        plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
 
 def getDataAndMaxVal(col_list, var):
     """
@@ -118,7 +118,8 @@ def getDataAndMaxVal(col_list, var):
 
 
 def matrixMaps():
-    fig, axes = plt.subplots(len(row_list), len(col_list) + 1, figsize = (10,5))
+    fig, axes = plt.subplots(len(row_list), len(col_list) + 1,
+                             figsize = (10,5), gridspec_kw={'width_ratios': [1]*len(col_list) + [1/len(col_list)]})
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
