@@ -28,7 +28,6 @@ def avgDataFiles(filedir, var, num_files = 10):
 
 def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     m = Basemap(ax = ax)
-    ax.clear()
 
     ny=data.shape[0]
     nx=data.shape[1]
@@ -53,6 +52,8 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
+
+    ax.clear()
 
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
