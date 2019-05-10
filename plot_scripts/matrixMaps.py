@@ -53,7 +53,7 @@ def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, mer
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    print("VMIN: {0}, VMAX: {1}".format(vmin, vmax))
+    # print("VMIN: {0}, VMAX: {1}".format(vmin, vmax))
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
