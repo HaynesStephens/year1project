@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ROCKE_SS.py" beforeDir="false" afterPath="$PROJECT_DIR$/ROCKE_SS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/matrixMaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/matrixMaps.py" afterDir="false" />
@@ -15,11 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="122" column="96" selection-start-line="122" selection-start-column="96" selection-end-line="122" selection-end-column="96" />
+            <state>
+              <caret selection-end-line="146" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-297">
+              <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -172,6 +185,7 @@
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/matrixMaps.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
       </list>
     </option>
   </component>
@@ -274,21 +288,7 @@
       <workItem from="1557356421922" duration="4000" />
       <workItem from="1557432228179" duration="661000" />
       <workItem from="1557502407145" duration="223000" />
-      <workItem from="1557506688584" duration="9205000" />
-    </task>
-    <task id="LOCAL-00581" summary="new plot">
-      <created>1557507937734</created>
-      <option name="number" value="00581" />
-      <option name="presentableId" value="LOCAL-00581" />
-      <option name="project" value="LOCAL" />
-      <updated>1557507937734</updated>
-    </task>
-    <task id="LOCAL-00582" summary="new plot">
-      <created>1557508164405</created>
-      <option name="number" value="00582" />
-      <option name="presentableId" value="LOCAL-00582" />
-      <option name="project" value="LOCAL" />
-      <updated>1557508164405</updated>
+      <workItem from="1557506688584" duration="10001000" />
     </task>
     <task id="LOCAL-00583" summary="new plot">
       <created>1557508592823</created>
@@ -619,11 +619,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557522147783</updated>
     </task>
-    <option name="localTasksCounter" value="630" />
+    <task id="LOCAL-00630" summary="new plot">
+      <created>1557522154381</created>
+      <option name="number" value="00630" />
+      <option name="presentableId" value="LOCAL-00630" />
+      <option name="project" value="LOCAL" />
+      <updated>1557522154381</updated>
+    </task>
+    <task id="LOCAL-00631" summary="new plot">
+      <created>1557522216839</created>
+      <option name="number" value="00631" />
+      <option name="presentableId" value="LOCAL-00631" />
+      <option name="project" value="LOCAL" />
+      <updated>1557522216839</updated>
+    </task>
+    <option name="localTasksCounter" value="632" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118513000" />
+    <option name="totallyTimeSpent" value="119309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -838,8 +852,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="122" column="96" selection-start-line="122" selection-start-column="96" selection-end-line="122" selection-end-column="96" />
+        <state>
+          <caret selection-end-line="146" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

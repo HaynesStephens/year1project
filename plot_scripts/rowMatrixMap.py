@@ -9,7 +9,7 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-row_list = [row_pcldt, row_lwp]
+row_list = [row_lwp]
 
 col_list = [col_0, col_11, col_22, col_39]
 
@@ -27,8 +27,8 @@ def avgDataFiles(filedir, var, num_files = 10):
     return arr_avg
 
 
-def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
-    ax = axes[row_num, col_num]
+def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
+    ax = grid[col_num]
     m = Basemap(ax = ax)
 
     ny=data.shape[0]
@@ -94,7 +94,8 @@ def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels,
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
+        # plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
+        grid2.cbar_axes[0].colorbar(cs_cbar)
 
 def getDataAndMaxVal(col_list, var):
     """
@@ -118,10 +119,16 @@ def getDataAndMaxVal(col_list, var):
 
 
 def matrixMaps():
-    # fig, axes = plt.subplots(len(row_list), len(col_list) + 1,
-    #                          figsize = (10,5),
-    #                          gridspec_kw={'width_ratios': [1]*len(col_list) + [1/len(col_list)]})
     fig = plt.figure(figsize = (10,5))
+    grid1 = ImageGrid(fig, 111,
+                      nrows_ncols=(len(row_list), len(col_list)),
+                      axes_pad=0.07,
+                      share_all=True,
+                      cbar_location="right",
+                      cbar_mode="single",
+                      cbar_size="7%",
+                      cbar_pad="7%",
+                      aspect=True)
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
@@ -136,12 +143,12 @@ def matrixMaps():
                 plot_cbar = True
             else:
                 plot_cbar = False
-            makeSubplot(data=data, var=var, cbar_data=cbar_data, axes=axes,
+            makeSubplot(data=data, var=var, cbar_data=cbar_data, grid=grid1,
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/matrix_clouds4stephLWP'
+    file_name = 'plots/row_matrix_clouds4stephLWP'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
