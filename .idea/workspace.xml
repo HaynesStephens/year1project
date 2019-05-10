@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+            <state relative-caret-position="300">
+              <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -274,28 +274,7 @@
       <workItem from="1557356421922" duration="4000" />
       <workItem from="1557432228179" duration="661000" />
       <workItem from="1557502407145" duration="223000" />
-      <workItem from="1557506688584" duration="2707000" />
-    </task>
-    <task id="LOCAL-00538" summary="lewis comp plots">
-      <created>1556572588014</created>
-      <option name="number" value="00538" />
-      <option name="presentableId" value="LOCAL-00538" />
-      <option name="project" value="LOCAL" />
-      <updated>1556572588014</updated>
-    </task>
-    <task id="LOCAL-00539" summary="lewis comp plots">
-      <created>1556572722337</created>
-      <option name="number" value="00539" />
-      <option name="presentableId" value="LOCAL-00539" />
-      <option name="project" value="LOCAL" />
-      <updated>1556572722337</updated>
-    </task>
-    <task id="LOCAL-00540" summary="lewis comp plots">
-      <created>1556572987699</created>
-      <option name="number" value="00540" />
-      <option name="presentableId" value="LOCAL-00540" />
-      <option name="project" value="LOCAL" />
-      <updated>1556572987699</updated>
+      <workItem from="1557506688584" duration="3481000" />
     </task>
     <task id="LOCAL-00541" summary="lewis comp plots">
       <created>1556573033660</created>
@@ -619,11 +598,32 @@
       <option name="project" value="LOCAL" />
       <updated>1557509228290</updated>
     </task>
-    <option name="localTasksCounter" value="587" />
+    <task id="LOCAL-00587" summary="new plot">
+      <created>1557511331332</created>
+      <option name="number" value="00587" />
+      <option name="presentableId" value="LOCAL-00587" />
+      <option name="project" value="LOCAL" />
+      <updated>1557511331332</updated>
+    </task>
+    <task id="LOCAL-00588" summary="new plot">
+      <created>1557511335623</created>
+      <option name="number" value="00588" />
+      <option name="presentableId" value="LOCAL-00588" />
+      <option name="project" value="LOCAL" />
+      <updated>1557511335623</updated>
+    </task>
+    <task id="LOCAL-00589" summary="new plot">
+      <created>1557511753632</created>
+      <option name="number" value="00589" />
+      <option name="presentableId" value="LOCAL-00589" />
+      <option name="project" value="LOCAL" />
+      <updated>1557511753632</updated>
+    </task>
+    <option name="localTasksCounter" value="590" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112015000" />
+    <option name="totallyTimeSpent" value="112789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -838,8 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+        <state relative-caret-position="300">
+          <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
