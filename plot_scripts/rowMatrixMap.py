@@ -9,11 +9,6 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-row_list = [row_lwp]
-
-col_list = [col_0, col_11, col_22, col_39]
-
-
 def avgDataFiles(filedir, var, num_files = 10):
     results = glob('{0}/*aijpc*'.format(filedir))
     arr_tot = np.zeros((46,72))
@@ -152,3 +147,7 @@ def matrixMaps():
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
+
+row_list = [row_prec]
+
+col_list = [col_0, col_11, col_22, col_39]
