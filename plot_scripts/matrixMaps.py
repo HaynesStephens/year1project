@@ -53,7 +53,9 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
 
     cmap, norm, levels = make_cmap(var)
 
-    ax.clear()
+    if plot_cbar:
+        m.contourf(x, y, cbar_data, levels, ax=ax, cmap=cmap, norm=norm)
+        ax.clear()
 
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
