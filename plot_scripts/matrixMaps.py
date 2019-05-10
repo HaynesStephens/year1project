@@ -54,6 +54,7 @@ def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, mer
         return cmap, norm, levels, vmin, vmax
 
     cmap, norm, levels, vmin, vmax = make_cmap(var)
+    print("VMIN: {0}, VMAX: {1}".format(vmin, vmax))
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm, vmin=vmin, vmax = vmax)
     m.ax.tick_params(labelsize=2)
@@ -107,6 +108,7 @@ def matrixMaps():
         row = row_list[row_num]
         var = row['var']
         data_list, max_val = getDataAndMaxVal(col_list, var)
+        print('MAX VAL: {0}'.format(max_val))
         for col_num in range(len(col_list)):
             col = col_list[col_num]
             print(col_num, row_num)
