@@ -46,16 +46,18 @@ def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, mer
         if var in sequential_list:
             cmap = cm.Blues_r
             norm = Normalize(vmin = 0, vmax = max_val)
+            vmin, vmax = 0, max_val
         else:
             cmap = cm.seismic
             norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
+            vmin, vmax = None, None
         levels = 20
-        return cmap, norm, levels
+        return cmap, norm, levels, vmin, vmax
 
-    cmap, norm, levels = make_cmap(var)
-    # print("VMIN: {0}, VMAX: {1}".format(vmin, vmax))
+    cmap, norm, levels, vmin, vmax = make_cmap(var)
+    print("VMIN: {0}, VMAX: {1}".format(vmin, vmax))
     plt.gca().patch.set_color('.25')
-    cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
+    cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap vmin=vmin, vmax = vmax)
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax)
 
