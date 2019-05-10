@@ -80,16 +80,27 @@ def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, t
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
 
+def getUniformColorbar(col_list, var):
+    data_list = []
+    max_val = 0
+    for col in col_list:
+        filedir = col['filedir']
+        data = avgDataFiles(filedir, var, num_files=10)
+        data_list.append(data)
+        data_max = np.max(np.abs(data))
+        max_val = max(max_val, data_max)
+    return data_list, max_val
+
+
 def matrixMaps():
     fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
 
-    for col_num in range(len(col_list)):
-        col = col_list[col_num]
-        filedir = col['filedir']
-        for row_num in range(len(row_list)):
+    for row_num in range(len(row_list)):
+        row = row_list[row_num]
+        var = row['var']
+        for col_num in range(len(col_list)):
+            col = col_list[col_num]
             print(col_num, row_num)
-            row = row_list[row_num]
-            var = row['var']
             data = avgDataFiles(filedir, var, num_files = 10)
             makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
                         parallels=col['parallels'], meridians=col['meridians'], title=col['title'])

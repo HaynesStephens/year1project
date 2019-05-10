@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/ROCKE_SS.py" beforeDir="false" afterPath="$PROJECT_DIR$/ROCKE_SS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/matrixMaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/matrixMaps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/plots/global_Tsurf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/plots/global_Tsurf.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +18,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="27" column="86" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+            <state relative-caret-position="207">
+              <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/cbar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,14 +111,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ocn_dat</find>
-      <find>cba</find>
       <find>ice_rad</find>
       <find>levels</find>
       <find>ax</find>
       <find>`</find>
       <find>paralells</find>
-      <find>filedir</find>
       <find>filedir =</find>
       <find>oij</find>
       <find>ocn_data</find>
@@ -131,6 +138,9 @@
       <find>prec</find>
       <find>aqua</find>
       <find>roll</find>
+      <find>midpoin</find>
+      <find>filedir</find>
+      <find>col</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -264,14 +274,7 @@
       <workItem from="1557356421922" duration="4000" />
       <workItem from="1557432228179" duration="661000" />
       <workItem from="1557502407145" duration="223000" />
-      <workItem from="1557506688584" duration="263000" />
-    </task>
-    <task id="LOCAL-00530" summary="lewis comp plots">
-      <created>1556568104418</created>
-      <option name="number" value="00530" />
-      <option name="presentableId" value="LOCAL-00530" />
-      <option name="project" value="LOCAL" />
-      <updated>1556568104418</updated>
+      <workItem from="1557506688584" duration="1171000" />
     </task>
     <task id="LOCAL-00531" summary="lewis comp plots">
       <created>1556568175038</created>
@@ -609,17 +612,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557502498671</updated>
     </task>
-    <option name="localTasksCounter" value="579" />
+    <task id="LOCAL-00579" summary="new plot">
+      <created>1557506956673</created>
+      <option name="number" value="00579" />
+      <option name="presentableId" value="LOCAL-00579" />
+      <option name="project" value="LOCAL" />
+      <updated>1557506956674</updated>
+    </task>
+    <option name="localTasksCounter" value="580" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109571000" />
+    <option name="totallyTimeSpent" value="110479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1558966" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1558966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -633,7 +643,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.509693" side_tool="true" weight="0.23196605" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" visible="true" weight="0.20792079" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" visible="true" weight="0.20792079" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32956153" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -729,15 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/cbar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/substelcont.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
@@ -826,10 +827,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/cbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="27" column="86" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+        <state relative-caret-position="207">
+          <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
