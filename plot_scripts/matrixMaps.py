@@ -93,7 +93,7 @@ def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels,
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        m.colorbar(mappable=cs_cbar, ax=axes[row_num, col_num+1])
+        plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
 
 def getDataAndMaxVal(col_list, var):
     """
