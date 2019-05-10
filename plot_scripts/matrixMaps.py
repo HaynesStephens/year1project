@@ -45,7 +45,7 @@ def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, mer
                             #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = cm.Blues_r
-            norm = Normalize(vmin = 0, vmax = max_val)
+            norm = Normalize(vmin = 0, vmax = 100) #max_val
         else:
             cmap = cm.seismic
             norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
