@@ -93,7 +93,7 @@ def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels,
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        m.colorbar(mappable=cs_cbar, ax=axes[row_num, col_num+1])
+        m.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
 
 def getDataAndMaxVal(col_list, var):
     """
@@ -136,7 +136,7 @@ def matrixMaps():
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
-    # fig.tight_layout(w_pad = 2.25)
+    fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/matrix_clouds4stephLWP'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
