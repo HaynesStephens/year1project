@@ -59,11 +59,15 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
+
+    if plot_cbar:
+        cbar_cs = m.contourf(x, y, cbar_data, levels, ax=ax, cmap=cmap, norm=norm)
+        m.colorbar(mappable=cbar_cs, ax=ax)
+        plt.cla()
+
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    if plot_cbar:
-        m.colorbar(mappable=cbar_data, ax=ax)
 
 
     def ContLines(m, ax, var, x, y, data):
