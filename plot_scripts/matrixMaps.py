@@ -60,10 +60,8 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    m.colorbar(mappable=cs, ax=ax)
+    # m.colorbar(mappable=cs, ax=ax)
 
-    # m.drawcoastlines()
-    # m.fillcontinents(color='coral',lake_color='aqua')
     # draw parallels and meridians.
     m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
                     rotation=30, fontsize=8, linewidth=0)
