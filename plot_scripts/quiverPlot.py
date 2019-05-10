@@ -20,6 +20,8 @@ def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
             arr = nc_i[var][:][depth]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
+    if 'aqua' in filedir:
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     return arr_avg
 
 def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
@@ -35,10 +37,6 @@ def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.
         v = avgDataFiles3D(filedir, 'vsurf', num_files, filetype, unit_conv, depth)
     uv_mag = np.sqrt((u*u) + (v*v))
 
-    if title == 'Dynamic (5L), Aquaplanet':
-        u      = np.roll(u,      (u.shape[1])//2, axis=1)
-        v      = np.roll(v,      (v.shape[1])//2, axis=1)
-        uv_mag = np.roll(uv_mag, (uv_mag.shape[1]) // 2, axis=1)
     m = Basemap(ax = ax)
     # m.drawcoastlines()
     # m.fillcontinents(color='coral',lake_color='aqua')

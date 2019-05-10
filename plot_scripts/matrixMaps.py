@@ -20,12 +20,12 @@ def avgDataFiles(filedir, var, num_files = 10):
         arr = nc_i[var][:]
         arr_tot = arr_tot + arr
     arr_avg = arr_tot / num_files
+    if 'aqua' in filedir:
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     return arr_avg
 
 
 def makeSubplot(data, var, ax, row_num, col_num, ylabel, parallels, meridians, title):
-    if title == 'Dynamic (5L), Aquaplanet':
-        data = np.roll(data, (data.shape[1])//2, axis=1)
     m = Basemap(ax = ax)
     # m.drawcoastlines()
     # m.fillcontinents(color='coral',lake_color='aqua')
