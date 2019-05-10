@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ROCKE_SS.py" beforeDir="false" afterPath="$PROJECT_DIR$/ROCKE_SS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/matrixMaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/matrixMaps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/plots/global_Tsurf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/plots/global_Tsurf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
-              <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+            <state relative-caret-position="277">
+              <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -288,21 +287,7 @@
       <workItem from="1557356421922" duration="4000" />
       <workItem from="1557432228179" duration="661000" />
       <workItem from="1557502407145" duration="223000" />
-      <workItem from="1557506688584" duration="10001000" />
-    </task>
-    <task id="LOCAL-00583" summary="new plot">
-      <created>1557508592823</created>
-      <option name="number" value="00583" />
-      <option name="presentableId" value="LOCAL-00583" />
-      <option name="project" value="LOCAL" />
-      <updated>1557508592823</updated>
-    </task>
-    <task id="LOCAL-00584" summary="new plot">
-      <created>1557508708569</created>
-      <option name="number" value="00584" />
-      <option name="presentableId" value="LOCAL-00584" />
-      <option name="project" value="LOCAL" />
-      <updated>1557508708569</updated>
+      <workItem from="1557506688584" duration="10051000" />
     </task>
     <task id="LOCAL-00585" summary="new plot">
       <created>1557509216905</created>
@@ -633,11 +618,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557522216839</updated>
     </task>
-    <option name="localTasksCounter" value="632" />
+    <task id="LOCAL-00632" summary="new plot">
+      <created>1557524046280</created>
+      <option name="number" value="00632" />
+      <option name="presentableId" value="LOCAL-00632" />
+      <option name="project" value="LOCAL" />
+      <updated>1557524046280</updated>
+    </task>
+    <task id="LOCAL-00633" summary="new plot">
+      <created>1557524078410</created>
+      <option name="number" value="00633" />
+      <option name="presentableId" value="LOCAL-00633" />
+      <option name="project" value="LOCAL" />
+      <updated>1557524078410</updated>
+    </task>
+    <option name="localTasksCounter" value="634" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119309000" />
+    <option name="totallyTimeSpent" value="119359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -862,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+        <state relative-caret-position="277">
+          <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

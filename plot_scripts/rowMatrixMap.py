@@ -95,7 +95,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
         # plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
-        grid1.cbar_axes[0].colorbar(cs_cbar)
+        grid.cbar_axes[0].colorbar(cs_cbar)
 
 def getDataAndMaxVal(col_list, var):
     """
