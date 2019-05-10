@@ -60,7 +60,7 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    # m.colorbar(mappable=cs, ax=ax)
+    m.colorbar(mappable=cs, ax=ax)
 
     # draw parallels and meridians.
     m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
@@ -81,7 +81,7 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
         x4, y4 = m(meridians[1], parallels[0])
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
                                 edgecolor='black', linewidth=1)
-        plt.gca().add_patch(cont_boundary)
+        ax.add_patch(cont_boundary)
 
     if row_num==0:
         ax.set_title(title, fontsize=10)
