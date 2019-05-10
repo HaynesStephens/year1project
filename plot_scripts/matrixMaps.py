@@ -26,7 +26,8 @@ def avgDataFiles(filedir, var, num_files = 10):
     return arr_avg
 
 
-def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
+def makeSubplot(data, var, cbar_data, axes, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
+    ax = axes[row_num, col_num]
     m = Basemap(ax = ax)
 
     ny=data.shape[0]
@@ -92,7 +93,7 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        m.colorbar(mappable=cs_cbar, ax=ax)
+        m.colorbar(mappable=cs_cbar, ax=axes[row_num, col_num+1])
 
 def getDataAndMaxVal(col_list, var):
     """
@@ -116,7 +117,7 @@ def getDataAndMaxVal(col_list, var):
 
 
 def matrixMaps():
-    fig, axes = plt.subplots(len(row_list), len(col_list), figsize = (10,5))
+    fig, axes = plt.subplots(len(row_list), len(col_list) + 1, figsize = (10,5))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
@@ -131,11 +132,11 @@ def matrixMaps():
                 plot_cbar = True
             else:
                 plot_cbar = False
-            makeSubplot(data, var=var, cbar_data = cbar_data, ax=axes[row_num, col_num],
+            makeSubplot(data=data, var=var, cbar_data=cbar_data, axes=axes,
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
-    # fig.tight_layout(w_pad = 2.25)
+    fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/matrix_clouds4stephLWP'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
