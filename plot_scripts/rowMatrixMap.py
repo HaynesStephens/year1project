@@ -143,7 +143,7 @@ def matrixMaps():
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_clouds4stephLWP'
+    file_name = 'plots/row_matrix_prec'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
