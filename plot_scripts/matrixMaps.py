@@ -117,7 +117,7 @@ def matrixMaps():
         row = row_list[row_num]
         var = row['var']
         data_list, cbar_data = getDataAndMaxVal(col_list, var)
-        print('MAX VAL: {0}'.format(max_val))
+        print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(cbar_data), np.max(cbar_data)))
         for col_num in range(len(col_list)):
             col = col_list[col_num]
             print(col_num, row_num)
