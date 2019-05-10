@@ -26,18 +26,23 @@ def avgDataFiles(filedir, var, num_files = 10):
     return arr_avg
 
 
-def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, meridians, title):
+def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     m = Basemap(ax = ax)
     # m.drawcoastlines()
     # m.fillcontinents(color='coral',lake_color='aqua')
     # draw parallels and meridians.
-    m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax, rotation=30, fontsize=8, linewidth=0)
-    m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax, rotation=40, fontsize=8, linewidth=0)
+    m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
+                    rotation=30, fontsize=8, linewidth=0)
+    m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax,
+                    rotation=40, fontsize=8, linewidth=0)
 
     ny=data.shape[0]
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
+
+    min_val = np.min(cbar_data)
+    max_val = np.max(cbar_data)
 
     def make_cmap(var):
         sequential_list = ['frac_land', 'pscld', 'pdcld', 'snowicefr', 'lwp',
@@ -45,19 +50,20 @@ def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, mer
                             #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = cm.Blues_r
-            norm = Normalize(vmin = 0, vmax = max_val)
+            norm = Normalize(vmin = min_val, vmax = max_val)
         else:
             cmap = cm.seismic
-            norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
+            norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
+            """KEEP EYE ON THIS. TRY OUT TO MAKE SURE IT WORKS W/ DIV CBARS"""
         levels = 20
         return cmap, norm, levels
 
     cmap, norm, levels = make_cmap(var)
-    # print("VMIN: {0}, VMAX: {1}".format(vmin, vmax))
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    m.colorbar(ax=ax, mappable = np.linspace((0, max_val, levels)))
+    if plot_cbar:
+        m.colorbar(mappable=cbar_data, ax=ax)
 
 
     def ContLines(m, ax, var, x, y, data):
@@ -72,7 +78,8 @@ def makeSubplot(data, var, max_val, ax, row_num, col_num, ylabel, parallels, mer
         x2, y2 = m(meridians[0], parallels[1])
         x3, y3 = m(meridians[1], parallels[1])
         x4, y4 = m(meridians[1], parallels[0])
-        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
+        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
+                                edgecolor='black', linewidth=1)
         plt.gca().add_patch(cont_boundary)
 
     if row_num==0:
@@ -91,13 +98,16 @@ def getDataAndMaxVal(col_list, var):
     """
     data_list = []
     max_val = 0
+    min_val = 0
     for col in col_list:
         filedir = col['filedir']
         data = avgDataFiles(filedir, var, num_files=10)
         data_list.append(data)
-        data_max = np.max(np.abs(data))
-        max_val = max(max_val, data_max)
-    return data_list, max_val
+        min_val = min(min_val, np.min(data))
+        max_val = max(max_val, np.max(data))
+    cbar_data = np.ones(shape = data.shape) * max_val # creates fake data w/ same shape to use for colorbar
+    cbar_data[0, 0] = min_val # sets one point in fake data to min_val so fake data has the entire spread
+    return data_list, cbar_data
 
 
 def matrixMaps():
@@ -106,14 +116,19 @@ def matrixMaps():
     for row_num in range(len(row_list)):
         row = row_list[row_num]
         var = row['var']
-        data_list, max_val = getDataAndMaxVal(col_list, var)
+        data_list, cbar_data = getDataAndMaxVal(col_list, var)
         print('MAX VAL: {0}'.format(max_val))
         for col_num in range(len(col_list)):
             col = col_list[col_num]
             print(col_num, row_num)
             data = data_list[col_num]
-            makeSubplot(data, var=var, max_val=max_val, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
-                        parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
+            if col_num == len(col_list) - 1:
+                plot_cbar = True
+            else:
+                plot_cbar = False
+            makeSubplot(data, var=var, cbar_data = cbar_data, ax=axes[row_num, col_num],
+                        row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
+                        meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/matrix_clouds4stephLWP'
