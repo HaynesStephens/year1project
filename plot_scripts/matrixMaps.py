@@ -101,7 +101,7 @@ def matrixMaps():
         for col_num in range(len(col_list)):
             col = col_list[col_num]
             print(col_num, row_num)
-            data = avgDataFiles(filedir, var, num_files = 10)
+            data = avgDataFiles(col['filedir'], var, num_files = 10)
             makeSubplot(data, var=var, ax=axes[row_num, col_num], row_num=row_num, col_num=col_num, ylabel=row['ylabel'],
                         parallels=col['parallels'], meridians=col['meridians'], title=col['title'])
 
