@@ -28,19 +28,18 @@ def avgDataFiles(filedir, var, num_files = 10):
 
 def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     m = Basemap(ax = ax)
+    # m.drawcoastlines()
+    # m.fillcontinents(color='coral',lake_color='aqua')
+    # draw parallels and meridians.
+    m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
+                    rotation=30, fontsize=8, linewidth=0)
+    m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax,
+                    rotation=40, fontsize=8, linewidth=0)
+
     ny=data.shape[0]
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
-
-    if title != 'Dynamic (5L), Aquaplanet':
-        x1, y1 = m(meridians[0], parallels[0])
-        x2, y2 = m(meridians[0], parallels[1])
-        x3, y3 = m(meridians[1], parallels[1])
-        x4, y4 = m(meridians[1], parallels[0])
-        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
-                                edgecolor='black', linewidth=1)
-        plt.gca().add_patch(cont_boundary)
 
     min_val = np.min(cbar_data)
     max_val = np.max(cbar_data)
@@ -64,19 +63,13 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
     # if plot_cbar:
     #     cbar_cs = m.contourf(x, y, cbar_data, levels, ax=ax, cmap=cmap, norm=norm)
     #     m.colorbar(mappable=cbar_cs, ax=ax)
-    #     ax.clear()
+    #     plt.cla()
 
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
+    m.colorbar(mappable=cs, ax=ax)
 
-    # m.drawcoastlines()
-    # m.fillcontinents(color='coral',lake_color='aqua')
-    # draw parallels and meridians.
-    m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
-                    rotation=30, fontsize=8, linewidth=0)
-    m.drawmeridians([-135, -90, -45, 0, 45, 90, 135], labels=[0,0,0,1], ax = ax,
-                    rotation=40, fontsize=8, linewidth=0)
 
     def ContLines(m, ax, var, x, y, data):
         if var == 'tsurf':
@@ -84,6 +77,15 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
 
 
     ContLines(m, ax, var, x, y, data)
+
+    if title != 'Dynamic (5L), Aquaplanet':
+        x1, y1 = m(meridians[0], parallels[0])
+        x2, y2 = m(meridians[0], parallels[1])
+        x3, y3 = m(meridians[1], parallels[1])
+        x4, y4 = m(meridians[1], parallels[0])
+        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
+                                edgecolor='black', linewidth=1)
+        plt.gca().add_patch(cont_boundary)
 
     if row_num==0:
         ax.set_title(title, fontsize=10)
