@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+            <state relative-caret-position="161">
+              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -274,21 +274,7 @@
       <workItem from="1557356421922" duration="4000" />
       <workItem from="1557432228179" duration="661000" />
       <workItem from="1557502407145" duration="223000" />
-      <workItem from="1557506688584" duration="6698000" />
-    </task>
-    <task id="LOCAL-00557" summary="lewis comp plots">
-      <created>1556744688342</created>
-      <option name="number" value="00557" />
-      <option name="presentableId" value="LOCAL-00557" />
-      <option name="project" value="LOCAL" />
-      <updated>1556744688342</updated>
-    </task>
-    <task id="LOCAL-00558" summary="lewis comp plots">
-      <created>1556744705767</created>
-      <option name="number" value="00558" />
-      <option name="presentableId" value="LOCAL-00558" />
-      <option name="project" value="LOCAL" />
-      <updated>1556744705767</updated>
+      <workItem from="1557506688584" duration="6784000" />
     </task>
     <task id="LOCAL-00559" summary="lewis comp plots">
       <created>1556745040507</created>
@@ -619,11 +605,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557516357296</updated>
     </task>
-    <option name="localTasksCounter" value="606" />
+    <task id="LOCAL-00606" summary="new plot">
+      <created>1557516540724</created>
+      <option name="number" value="00606" />
+      <option name="presentableId" value="LOCAL-00606" />
+      <option name="project" value="LOCAL" />
+      <updated>1557516540724</updated>
+    </task>
+    <task id="LOCAL-00607" summary="new plot">
+      <created>1557516603067</created>
+      <option name="number" value="00607" />
+      <option name="presentableId" value="LOCAL-00607" />
+      <option name="project" value="LOCAL" />
+      <updated>1557516603067</updated>
+    </task>
+    <option name="localTasksCounter" value="608" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116006000" />
+    <option name="totallyTimeSpent" value="116092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -838,8 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+        <state relative-caret-position="161">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

@@ -28,7 +28,7 @@ def avgDataFiles(filedir, var, num_files = 10):
 
 def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     m = Basemap(ax = ax)
-    ax.Axes.clear()
+    ax.clear()
 
     ny=data.shape[0]
     nx=data.shape[1]
