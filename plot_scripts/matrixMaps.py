@@ -54,13 +54,13 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
     cmap, norm, levels = make_cmap(var)
 
     if plot_cbar:
-        m.contourf(x, y, cbar_data, levels, ax=ax, cmap=cmap, norm=norm)
+        cs_cbar = m.contourf(x, y, cbar_data, levels, ax=ax, cmap=cmap, norm=norm)
         ax.clear()
 
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
-    m.colorbar(mappable=cs, ax=ax)
+    # m.colorbar(mappable=cs, ax=ax)
 
     # draw parallels and meridians.
     m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
@@ -89,6 +89,8 @@ def makeSubplot(data, var, cbar_data, ax, row_num, col_num, ylabel, parallels, m
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
+    if plot_cbar:
+        m.colorbar(mappable=cs_cbar, ax=ax)
 
 def getDataAndMaxVal(col_list, var):
     """
