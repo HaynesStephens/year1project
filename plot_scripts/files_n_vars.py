@@ -120,3 +120,8 @@ row_icecld =            {'var':'icecld',
                          'ylabel':'Ice \n Cloud Cover \n [%]',
                          'title':'Ice Cloud Cover',
                          'units':'[%]'}
+
+row_plan_alb =            {'var':'plan_alb',
+                         'ylabel':'Planetary \n Albedo \n [%]',
+                         'title':'Planetary Albedo',
+                         'units':'[%]'}
