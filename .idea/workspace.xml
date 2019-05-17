@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="89" column="84" selection-start-line="89" selection-start-column="84" selection-end-line="89" selection-end-column="84" />
+            <state relative-caret-position="309">
+              <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -57,11 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filedir =</find>
-      <find>oij</find>
-      <find>ocn_data</find>
-      <find>ocnl_data</find>
-      <find>cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)</find>
       <find>aquaplanet</find>
       <find>cm</find>
       <find>cs</find>
@@ -87,6 +82,11 @@
       <find>side=</find>
       <find>getSideMean</find>
       <find>file</find>
+      <find>filetype</find>
+      <find>filetype=</find>
+      <find>filetype =</find>
+      <find>aij</find>
+      <find>oij</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,21 +225,7 @@
       <workItem from="1557502407145" duration="223000" />
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
-      <workItem from="1558124784295" duration="594000" />
-    </task>
-    <task id="LOCAL-00604" summary="new plot">
-      <created>1557516287234</created>
-      <option name="number" value="00604" />
-      <option name="presentableId" value="LOCAL-00604" />
-      <option name="project" value="LOCAL" />
-      <updated>1557516287234</updated>
-    </task>
-    <task id="LOCAL-00605" summary="new plot">
-      <created>1557516357296</created>
-      <option name="number" value="00605" />
-      <option name="presentableId" value="LOCAL-00605" />
-      <option name="project" value="LOCAL" />
-      <updated>1557516357296</updated>
+      <workItem from="1558124784295" duration="768000" />
     </task>
     <task id="LOCAL-00606" summary="new plot">
       <created>1557516540724</created>
@@ -570,11 +556,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558125408522</updated>
     </task>
-    <option name="localTasksCounter" value="653" />
+    <task id="LOCAL-00653" summary="new plot">
+      <created>1558125514413</created>
+      <option name="number" value="00653" />
+      <option name="presentableId" value="LOCAL-00653" />
+      <option name="project" value="LOCAL" />
+      <updated>1558125514413</updated>
+    </task>
+    <task id="LOCAL-00654" summary="new plot">
+      <created>1558125686576</created>
+      <option name="number" value="00654" />
+      <option name="presentableId" value="LOCAL-00654" />
+      <option name="project" value="LOCAL" />
+      <updated>1558125686576</updated>
+    </task>
+    <option name="localTasksCounter" value="655" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123500000" />
+    <option name="totallyTimeSpent" value="123674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -804,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="89" column="84" selection-start-line="89" selection-start-column="84" selection-end-line="89" selection-end-column="84" />
+        <state relative-caret-position="309">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
