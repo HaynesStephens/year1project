@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocke_ss.py" beforeDir="false" afterPath="$PROJECT_DIR$/rocke_ss.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,13 +25,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
               <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rocke_ss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <folding>
+                <element signature="e#214#232#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,7 +118,6 @@
         <option value="$PROJECT_DIR$/plotSeries.py" />
         <option value="$PROJECT_DIR$/matrix_plot/matrixMaps.py" />
         <option value="$PROJECT_DIR$/quiver.py" />
-        <option value="$PROJECT_DIR$/rocke_ss.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiver.py" />
         <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
@@ -121,6 +132,7 @@
         <option value="$PROJECT_DIR$/pltSeries.py" />
         <option value="$PROJECT_DIR$/stat_check.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
+        <option value="$PROJECT_DIR$/rocke_ss.py" />
       </list>
     </option>
   </component>
@@ -225,21 +237,7 @@
       <workItem from="1557502407145" duration="223000" />
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
-      <workItem from="1558124784295" duration="768000" />
-    </task>
-    <task id="LOCAL-00606" summary="new plot">
-      <created>1557516540724</created>
-      <option name="number" value="00606" />
-      <option name="presentableId" value="LOCAL-00606" />
-      <option name="project" value="LOCAL" />
-      <updated>1557516540724</updated>
-    </task>
-    <task id="LOCAL-00607" summary="new plot">
-      <created>1557516603067</created>
-      <option name="number" value="00607" />
-      <option name="presentableId" value="LOCAL-00607" />
-      <option name="project" value="LOCAL" />
-      <updated>1557516603067</updated>
+      <workItem from="1558124784295" duration="1078000" />
     </task>
     <task id="LOCAL-00608" summary="new plot">
       <created>1557516626904</created>
@@ -570,11 +568,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558125686576</updated>
     </task>
-    <option name="localTasksCounter" value="655" />
+    <task id="LOCAL-00655" summary="new plot">
+      <created>1558125718520</created>
+      <option name="number" value="00655" />
+      <option name="presentableId" value="LOCAL-00655" />
+      <option name="project" value="LOCAL" />
+      <updated>1558125718520</updated>
+    </task>
+    <task id="LOCAL-00656" summary="new plot">
+      <created>1558125948921</created>
+      <option name="number" value="00656" />
+      <option name="presentableId" value="LOCAL-00656" />
+      <option name="project" value="LOCAL" />
+      <updated>1558125948921</updated>
+    </task>
+    <option name="localTasksCounter" value="657" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123674000" />
+    <option name="totallyTimeSpent" value="123984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -738,16 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocke_ss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#214#232#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/substelcont.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1835">
@@ -795,6 +797,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
@@ -802,12 +814,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
+    <entry file="file://$PROJECT_DIR$/rocke_ss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+        <state relative-caret-position="64">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#214#232#0" expanded="true" />
           </folding>
         </state>
       </provider>
