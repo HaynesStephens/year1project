@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocke_ss.py" beforeDir="false" afterPath="$PROJECT_DIR$/rocke_ss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,25 +25,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
-              <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+              <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rocke_ss.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <element signature="e#214#232#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,8 +119,8 @@
         <option value="$PROJECT_DIR$/mergeSeriesData.py" />
         <option value="$PROJECT_DIR$/pltSeries.py" />
         <option value="$PROJECT_DIR$/stat_check.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/rocke_ss.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
       </list>
     </option>
   </component>
@@ -237,21 +225,7 @@
       <workItem from="1557502407145" duration="223000" />
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
-      <workItem from="1558124784295" duration="1207000" />
-    </task>
-    <task id="LOCAL-00610" summary="new plot">
-      <created>1557516767399</created>
-      <option name="number" value="00610" />
-      <option name="presentableId" value="LOCAL-00610" />
-      <option name="project" value="LOCAL" />
-      <updated>1557516767399</updated>
-    </task>
-    <task id="LOCAL-00611" summary="new plot">
-      <created>1557516803128</created>
-      <option name="number" value="00611" />
-      <option name="presentableId" value="LOCAL-00611" />
-      <option name="project" value="LOCAL" />
-      <updated>1557516803129</updated>
+      <workItem from="1558124784295" duration="1321000" />
     </task>
     <task id="LOCAL-00612" summary="new plot">
       <created>1557516840990</created>
@@ -582,11 +556,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558126113296</updated>
     </task>
-    <option name="localTasksCounter" value="659" />
+    <task id="LOCAL-00659" summary="new plot">
+      <created>1558126159637</created>
+      <option name="number" value="00659" />
+      <option name="presentableId" value="LOCAL-00659" />
+      <option name="project" value="LOCAL" />
+      <updated>1558126159637</updated>
+    </task>
+    <task id="LOCAL-00660" summary="new plot">
+      <created>1558126252870</created>
+      <option name="number" value="00660" />
+      <option name="presentableId" value="LOCAL-00660" />
+      <option name="project" value="LOCAL" />
+      <updated>1558126252870</updated>
+    </task>
+    <option name="localTasksCounter" value="661" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124113000" />
+    <option name="totallyTimeSpent" value="124227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -797,16 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
@@ -817,9 +795,19 @@
     <entry file="file://$PROJECT_DIR$/rocke_ss.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="33" />
           <folding>
             <element signature="e#214#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
