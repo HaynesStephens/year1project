@@ -94,3 +94,5 @@ def quiverPlot():
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
+
+quiverPlot()
