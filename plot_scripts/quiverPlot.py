@@ -90,7 +90,7 @@ def quiverPlot():
     quiverSubPlot(col=col, ax=ax1, tit_ad='Ocean Surface Velocity', filetype='oijl', unit_conv=0.1, depth=1)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/quiver_aqua'
+    file_name = 'plots/quiver_1p'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
