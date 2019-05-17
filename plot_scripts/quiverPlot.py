@@ -24,15 +24,15 @@ def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     return arr_avg
 
-def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.1, depth=0):
+def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijlpc', unit_conv=0.1, depth=0):
     filedir = col['filedir']
     parallels = col['parallels']
     meridians = col['meridians']
     title = col['title']
-    if filetype == 'oijl':
+    if filetype == 'oijlpc':
         u = avgDataFiles3D(filedir, 'u', num_files, filetype, unit_conv, depth)
         v = avgDataFiles3D(filedir, 'v', num_files, filetype, unit_conv, depth)
-    elif filetype == 'aij':
+    elif filetype == 'aijpc':
         u = avgDataFiles3D(filedir, 'usurf', num_files, filetype, unit_conv, depth)
         v = avgDataFiles3D(filedir, 'vsurf', num_files, filetype, unit_conv, depth)
     uv_mag = np.sqrt((u*u) + (v*v))
@@ -54,10 +54,10 @@ def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.
     m.colorbar(mappable=cs, ax=ax, label='m/s')
 
     def getScale(filetype):
-        if filetype == 'aij':
+        if filetype == 'aijpc':
             key_scale = 500
             U = 10
-        elif filetype == 'oijl':
+        elif filetype == 'oijlpc':
             key_scale = 150
             U = 1
         key_label = '{0} m/s'.format(U)
@@ -76,7 +76,7 @@ def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none', edgecolor='black', linewidth=1)
         plt.gca().add_patch(cont_boundary)
 
-    if filetype=='aij':
+    if filetype=='aijpc':
         ax.set_title(title, fontsize=10)
     ax.set_ylabel(tit_ad, fontsize=10, labelpad=30)
 
