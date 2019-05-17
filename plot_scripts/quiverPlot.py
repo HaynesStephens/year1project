@@ -83,7 +83,7 @@ def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.
 
 def quiverPlot():
     fig, axes = plt.subplots(2,1, figsize = (10,7))
-    col = col_0
+    col = col_1
     ax0 = axes[0]
     quiverSubPlot(col=col, ax=ax0, tit_ad='Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
     ax1 = axes[1]
