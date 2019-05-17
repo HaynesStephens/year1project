@@ -1,12 +1,22 @@
+"""
+This file is used to check the status of a given run,
+to see whether it has reached a radiative equilibrium state.
+"""
 import numpy as np
 import pandas as pd
 from netCDF4 import Dataset as ds
 import matplotlib.pyplot as plt
 
 def showAvgNetRad(filename):
+    """
+    Show the average net radiation of the past 10 runs
+    :param filename: name of the csv file with timeseries data
+    :return: Nothing, just print the recent net flux values and their average
+    """
     df = pd.read_csv(filename)
-    print(df['radiation'][-10:])
-    print(np.mean(df['radiation'][-10:]))
+    recent_vals = df['radiation'][-10:]
+    print(recent_vals)
+    print(np.mean(recent_vals))
     return
 
 

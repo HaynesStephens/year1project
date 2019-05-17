@@ -1,3 +1,4 @@
+# This file is used to make plots of the timeseries evolution for select characteristics.
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
@@ -6,6 +7,14 @@ import numpy as np
 def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
                  data_file = 'ts_data'):
+    """
+
+    :param runid: the directory for the specific run
+    :param runbase: the base path for the outputted ROCKE-3D files
+    :param data_file: the csv file that will be accessed to plot characteristics,
+        typically named 'ts_data'
+    :return: a plot and saved pdf of the desired timeseries
+    """
     rundir = runbase + runid
 
     os.chdir(rundir) # Switch on over to the run directory.
@@ -43,6 +52,12 @@ def makeSubPlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
 def makeIcePlots(runid = 'pc_proxcenb_ssc5L_TL_11p',
                  runbase = '/project2/abbot/haynes/ROCKE3D_output/',
                  data_file = 'ts_data'):
+    """
+    This plot was used to check whether the flux imbalance could be
+    accounted for due to the freezing ocean.
+    The ocean freezing outputs latent heat energy, which could
+    explain why a given simulation hasn't reached a radiative equilibrium state.
+    """
     rundir = runbase + runid
 
     os.chdir(rundir) # Switch on over to the run directory.

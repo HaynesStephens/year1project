@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ROCKE_SS.py" beforeDir="false" afterPath="$PROJECT_DIR$/ROCKE_SS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/global_Tsurf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/plots/global_Tsurf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/area.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mergeSeriesData.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergeSeriesData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/global_tsurf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/plots/global_tsurf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pltSeries.py" beforeDir="false" afterPath="$PROJECT_DIR$/pltSeries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stat_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/stat_check.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,81 +20,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+            <state relative-caret-position="479">
+              <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/cbar.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-558">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="343">
+              <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="50" column="22" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,15 +46,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
+            <state relative-caret-position="442">
               <caret line="123" column="12" selection-start-line="123" selection-end-line="123" selection-end-column="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -164,13 +105,10 @@
         <option value="$PROJECT_DIR$/ROCKE_SS.py" />
         <option value="$PROJECT_DIR$/ROCKE_SS_stephanie.py" />
         <option value="$PROJECT_DIR$/matrix_plot/matrixMapsOld.py" />
-        <option value="$PROJECT_DIR$/area.py" />
-        <option value="$PROJECT_DIR$/mergeSeriesData.py" />
         <option value="$PROJECT_DIR$/substelcont.py" />
         <option value="$PROJECT_DIR$/matrix_plot/eq_check.py" />
         <option value="$PROJECT_DIR$/eq_check.py" />
         <option value="$PROJECT_DIR$/matrix_plot/cbar.py" />
-        <option value="$PROJECT_DIR$/stat_check.py" />
         <option value="$PROJECT_DIR$/plotSeries.py" />
         <option value="$PROJECT_DIR$/matrix_plot/matrixMaps.py" />
         <option value="$PROJECT_DIR$/quiver.py" />
@@ -180,10 +118,15 @@
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/dayNightSubPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/matrixMaps.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
         <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
+        <option value="$PROJECT_DIR$/area.py" />
+        <option value="$PROJECT_DIR$/mergeSeriesData.py" />
+        <option value="$PROJECT_DIR$/pltSeries.py" />
+        <option value="$PROJECT_DIR$/stat_check.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
       </list>
     </option>
   </component>
@@ -198,7 +141,22 @@
     <panes>
       <pane id="Scope" />
       <pane id="Course" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="year1project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="year1project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="year1project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="year1project" type="462c0819:PsiDirectoryNode" />
+              <item name="plot_scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,6 +231,7 @@
       <workItem from="1557502407145" duration="223000" />
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
+      <workItem from="1558124784295" duration="80000" />
     </task>
     <task id="LOCAL-00598" summary="new plot">
       <created>1557514991554</created>
@@ -621,13 +580,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120463000" />
+    <option name="totallyTimeSpent" value="122986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16074313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1631664" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -641,7 +600,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.509693" side_tool="true" weight="0.23196605" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" visible="true" weight="0.20792079" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" visible="true" weight="0.20792079" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32956153" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -705,20 +664,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="new plot" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ROCKE_SS_stephanie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mergeSeriesData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
     <entry file="file://$PROJECT_DIR$/eq_check.py" />
     <entry file="file://$PROJECT_DIR$/matrix_plot/matrixMapsOld.py" />
@@ -727,53 +672,6 @@
     <entry file="file://$PROJECT_DIR$/matrix_plot/matrixMaps.py" />
     <entry file="file://$PROJECT_DIR$/matrix_plot/quiver.py" />
     <entry file="file://$PROJECT_DIR$/plotSeries.py" />
-    <entry file="file://$PROJECT_DIR$/rocke_ss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#214#232#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/substelcont.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/area.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stat_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pltSeries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dayNightSubPlot.py" />
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -785,46 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/cbar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="22" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -835,19 +693,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mergeSeriesData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="100" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pltSeries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
+          <folding>
+            <element signature="e#2#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ROCKE_SS_stephanie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocke_ss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#214#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/substelcont.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1835">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/cbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stat_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#8#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="105" selection-start-line="1" selection-start-column="105" selection-end-line="1" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
+        <state relative-caret-position="442">
           <caret line="123" column="12" selection-start-line="123" selection-end-line="123" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-558">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="479">
+          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

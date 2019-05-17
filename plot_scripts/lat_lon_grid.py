@@ -1,3 +1,6 @@
+"""
+This file provides preset numpy arrays that have the latitude and longitude values for the ROCKE-3D grid.
+"""
 import numpy as np
 
 lat_grid = np.array([-89, -86, -82, -78, -74, -70, -66, -62, -58, -54, -50, -46, -42, -38,

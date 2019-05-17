@@ -83,14 +83,14 @@ def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijl', unit_conv=0.
 
 def quiverPlot():
     fig, axes = plt.subplots(2,1, figsize = (10,7))
-
+    col = col_0
     ax0 = axes[0]
-    quiverPlot(col_39, ax0, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
+    quiverPlot(col, ax0, 'Air Surface Velocity', filetype='aij', unit_conv=1, depth=None)
     ax1 = axes[1]
-    quiverPlot(col_39, ax1, 'Ocean Surface Velocity', filetype='oijl', unit_conv=0.1, depth=1)
+    quiverPlot(col, ax1, 'Ocean Surface Velocity', filetype='oijl', unit_conv=0.1, depth=1)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/quiver_39p'
+    file_name = 'plots/quiver_aqua'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
