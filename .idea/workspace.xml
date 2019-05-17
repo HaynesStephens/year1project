@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mergeSeriesData.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergeSeriesData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/global_tsurf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/plots/global_tsurf.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pltSeries.py" beforeDir="false" afterPath="$PROJECT_DIR$/pltSeries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stat_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/stat_check.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+            <state relative-caret-position="258">
+              <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -231,21 +225,7 @@
       <workItem from="1557502407145" duration="223000" />
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
-      <workItem from="1558124784295" duration="80000" />
-    </task>
-    <task id="LOCAL-00598" summary="new plot">
-      <created>1557514991554</created>
-      <option name="number" value="00598" />
-      <option name="presentableId" value="LOCAL-00598" />
-      <option name="project" value="LOCAL" />
-      <updated>1557514991554</updated>
-    </task>
-    <task id="LOCAL-00599" summary="new plot">
-      <created>1557515081126</created>
-      <option name="number" value="00599" />
-      <option name="presentableId" value="LOCAL-00599" />
-      <option name="project" value="LOCAL" />
-      <updated>1557515081126</updated>
+      <workItem from="1558124784295" duration="380000" />
     </task>
     <task id="LOCAL-00600" summary="new plot">
       <created>1557515783972</created>
@@ -576,11 +556,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557524995183</updated>
     </task>
-    <option name="localTasksCounter" value="647" />
+    <task id="LOCAL-00647" summary="new plot">
+      <created>1558124868027</created>
+      <option name="number" value="00647" />
+      <option name="presentableId" value="LOCAL-00647" />
+      <option name="project" value="LOCAL" />
+      <updated>1558124868027</updated>
+    </task>
+    <task id="LOCAL-00648" summary="new plot">
+      <created>1558125214848</created>
+      <option name="number" value="00648" />
+      <option name="presentableId" value="LOCAL-00648" />
+      <option name="project" value="LOCAL" />
+      <updated>1558125214848</updated>
+    </task>
+    <option name="localTasksCounter" value="649" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122986000" />
+    <option name="totallyTimeSpent" value="123286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -810,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+        <state relative-caret-position="258">
+          <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
