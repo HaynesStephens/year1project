@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="" />
+    <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/lewisPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/lewisPlot.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
+              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -25,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+            <state relative-caret-position="384">
+              <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -131,8 +134,8 @@
         <option value="$PROJECT_DIR$/stat_check.py" />
         <option value="$PROJECT_DIR$/rocke_ss.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
       </list>
     </option>
   </component>
@@ -267,28 +270,7 @@
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
-      <workItem from="1558371305415" duration="1953000" />
-    </task>
-    <task id="LOCAL-00625" summary="new plot">
-      <created>1557521673340</created>
-      <option name="number" value="00625" />
-      <option name="presentableId" value="LOCAL-00625" />
-      <option name="project" value="LOCAL" />
-      <updated>1557521673340</updated>
-    </task>
-    <task id="LOCAL-00626" summary="new plot">
-      <created>1557521679929</created>
-      <option name="number" value="00626" />
-      <option name="presentableId" value="LOCAL-00626" />
-      <option name="project" value="LOCAL" />
-      <updated>1557521679929</updated>
-    </task>
-    <task id="LOCAL-00627" summary="new plot">
-      <created>1557521755395</created>
-      <option name="number" value="00627" />
-      <option name="presentableId" value="LOCAL-00627" />
-      <option name="project" value="LOCAL" />
-      <updated>1557521755395</updated>
+      <workItem from="1558371305415" duration="2018000" />
     </task>
     <task id="LOCAL-00628" summary="new plot">
       <created>1557521790922</created>
@@ -612,11 +594,32 @@
       <option name="project" value="LOCAL" />
       <updated>1558378104426</updated>
     </task>
-    <option name="localTasksCounter" value="674" />
+    <task id="LOCAL-00674" summary="new plot">
+      <created>1558378137374</created>
+      <option name="number" value="00674" />
+      <option name="presentableId" value="LOCAL-00674" />
+      <option name="project" value="LOCAL" />
+      <updated>1558378137374</updated>
+    </task>
+    <task id="LOCAL-00675" summary="new plot">
+      <created>1558378142569</created>
+      <option name="number" value="00675" />
+      <option name="presentableId" value="LOCAL-00675" />
+      <option name="project" value="LOCAL" />
+      <updated>1558378142570</updated>
+    </task>
+    <task id="LOCAL-00676" summary="new plot">
+      <created>1558378168134</created>
+      <option name="number" value="00676" />
+      <option name="presentableId" value="LOCAL-00676" />
+      <option name="project" value="LOCAL" />
+      <updated>1558378168134</updated>
+    </task>
+    <option name="localTasksCounter" value="677" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126386000" />
+    <option name="totallyTimeSpent" value="126451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -834,22 +837,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+        <state relative-caret-position="360">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
+        <state relative-caret-position="384">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
