@@ -53,21 +53,28 @@ def plotLonTsurf():
     plt.show()
 
 
-def plotGlobalVal(var):
+def plotGlobalVal(var, side):
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
     if var =='tsurf':
         row = row_tsurf
-        data = loadCSV('LewisGlobalTsurf.csv')
-        data[:,1] = data[:,1] - 273.15
+        if side == 'Global':
+            data = loadCSV('lewis_data/LewisGlobalTsurf.csv')
+            data[:,1] = data[:,1] - 273.15
+        elif side == 'Day Side':
+            data = loadCSV('lewis_data/LewisSideDayTsurf.csv')
+        elif side == 'Night Side':
+            data = loadCSV('lewis_data/LewisSideNightTsurf.csv')
+        elif side == 'Sub-stellar':
+            data = loadCSV('lewis_data/LewisSideSubstelTsurf.csv')
     elif var =='evap':
         row = row_evap
-        data = loadCSV('LewisGlobalEvap.csv')
+        data = loadCSV('lewis_data/LewisGlobalEvap.csv')
     label = 'Lewis'
 
     fig, ax = plt.subplots()
 
-    gvp.makeSubplot(col_list, ax, row, filetype='aijpc')
+    gvp.makeSubplot(col_list, ax, row, filetype='aijpc', side=side)
     ax.plot(data[:, 0], data[:, 1], label=label, color='r', marker='x', markersize=10)
 
     ax.legend()
@@ -77,4 +84,4 @@ def plotGlobalVal(var):
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-plotLonTsurf()
+plotGlobalVal('tsurf', 'Day Side')
