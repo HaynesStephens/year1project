@@ -75,10 +75,10 @@ def globalValPlot():
     row = row_tsurf
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', side='Day Side')
+    makeSubplot(col_list, ax, row, filetype='aijpc', side='Night Side')
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/side_day_tsurf'
+    file_name = 'plots/side_night_tsurf'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
