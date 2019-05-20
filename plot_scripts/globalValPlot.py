@@ -75,7 +75,7 @@ def globalValPlot():
     row = row_tsurf
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', side='Night Side')
+    makeSubplot(col_list, ax, row, filetype='aijpc', side='Day Side')
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/side_day_tsurf'
