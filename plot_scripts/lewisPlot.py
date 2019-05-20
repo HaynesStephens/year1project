@@ -79,9 +79,9 @@ def plotGlobalVal(var, side):
 
     ax.legend()
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/lewis_side_day_'+var
+    file_name = 'plots/lewis_side_night_'+var
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-plotGlobalVal('tsurf', 'Day Side')
+plotGlobalVal('tsurf', 'Night Side')
