@@ -83,6 +83,6 @@ def globalValPlot():
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-# globalValPlot)
+# globalValPlot()
 
 
