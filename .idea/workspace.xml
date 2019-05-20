@@ -4,20 +4,6 @@
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_0p_a.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_0p_o.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_11p_a.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_11p_o.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_1p_a.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_1p_o.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_22p_a.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_22p_o.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_39p_a.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_39p_a_1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_39p_o.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_4p_a.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_4p_o.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_aqua.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
+            <state relative-caret-position="328">
+              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -252,21 +238,7 @@
       <workItem from="1557506688584" duration="11002000" />
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
-      <workItem from="1558371305415" duration="188000" />
-    </task>
-    <task id="LOCAL-00615" summary="new plot">
-      <created>1557517319736</created>
-      <option name="number" value="00615" />
-      <option name="presentableId" value="LOCAL-00615" />
-      <option name="project" value="LOCAL" />
-      <updated>1557517319736</updated>
-    </task>
-    <task id="LOCAL-00616" summary="new plot">
-      <created>1557517754350</created>
-      <option name="number" value="00616" />
-      <option name="presentableId" value="LOCAL-00616" />
-      <option name="project" value="LOCAL" />
-      <updated>1557517754350</updated>
+      <workItem from="1558371305415" duration="366000" />
     </task>
     <task id="LOCAL-00617" summary="new plot">
       <created>1557518103584</created>
@@ -597,11 +569,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558126359487</updated>
     </task>
-    <option name="localTasksCounter" value="664" />
+    <task id="LOCAL-00664" summary="new plot">
+      <created>1558371614106</created>
+      <option name="number" value="00664" />
+      <option name="presentableId" value="LOCAL-00664" />
+      <option name="project" value="LOCAL" />
+      <updated>1558371614106</updated>
+    </task>
+    <task id="LOCAL-00665" summary="new plot">
+      <created>1558371705900</created>
+      <option name="number" value="00665" />
+      <option name="presentableId" value="LOCAL-00665" />
+      <option name="project" value="LOCAL" />
+      <updated>1558371705900</updated>
+    </task>
+    <option name="localTasksCounter" value="666" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124621000" />
+    <option name="totallyTimeSpent" value="124799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -831,8 +817,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
+        <state relative-caret-position="328">
+          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
