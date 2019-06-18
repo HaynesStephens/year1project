@@ -36,7 +36,7 @@ def makeSubplot(data, var, axes, row_num, col_num, ylabel, parallels, meridians,
 
     def make_cmap(var):
         sequential_list = ['frac_land', 'pscld', 'pdcld', 'snowicefr', 'lwp',
-                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI']
+                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI', 'prec']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = cm.Blues_r
@@ -93,7 +93,7 @@ def matrixMaps():
         var = row['var']
         for col_num in range(len(col_list)):
             col = col_list[col_num]
-            print(col_num, row_num)
+            print(row_num, col_num)
             filedir=col['filedir']
             data = avgDataFiles(filedir, var)
             makeSubplot(data=data, var=var, axes=axes,
