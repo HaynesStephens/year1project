@@ -9,10 +9,6 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-row_list = [row_pcldt, row_lwp]
-
-col_list = [col_0, col_11, col_22, col_39]
-
 
 def avgDataFiles(filedir, var, num_files = 10):
     results = glob('{0}/*aijpc*'.format(filedir))
@@ -141,7 +137,12 @@ def matrixMaps():
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/matrix_clouds4stephLWP'
+    file_name = 'plots/row_matrix_test'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
+
+
+row_list = [row_tsurf, row_prec, row_qatm, row_pcldt]
+
+col_list = [col_0, col_11, col_22, col_39]
