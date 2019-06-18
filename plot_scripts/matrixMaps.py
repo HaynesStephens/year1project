@@ -52,7 +52,7 @@ def makeSubplot(data, var, axes, row_num, col_num, ylabel, parallels, meridians,
 
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
-    m.ax.tick_params(labelsize=2)
+    m.ax.tick_params(labelsize=1)
     m.colorbar(mappable=cs, ax=ax)
 
     # draw parallels and meridians.
@@ -85,8 +85,7 @@ def makeSubplot(data, var, axes, row_num, col_num, ylabel, parallels, meridians,
 
 def matrixMaps():
     fig, axes = plt.subplots(len(row_list), len(col_list),
-                             figsize = (10,5))#,
-                             #gridspec_kw={'width_ratios': [1]*len(col_list) + [1/len(col_list)]})
+                             figsize = (10,5)))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
