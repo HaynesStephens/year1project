@@ -145,4 +145,6 @@ def matrixMaps():
 
 row_list = [row_tsurf, row_prec, row_qatm, row_pcldt]
 
-col_list = [col_0, col_11, col_22, col_39]
+col_list = [col_0, col_1, col_22, col_39]
+
+matrixMaps()
