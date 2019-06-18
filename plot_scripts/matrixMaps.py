@@ -85,7 +85,7 @@ def makeSubplot(data, var, axes, row_num, col_num, ylabel, parallels, meridians,
 
 def matrixMaps():
     fig, axes = plt.subplots(len(row_list), len(col_list),
-                             figsize = (10,5)))
+                             figsize = (10,5))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
