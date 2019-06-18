@@ -148,6 +148,6 @@ def rowMatrixMap():
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-row_list = [row_tsurf]
+row_list = [row_prec]
 
 col_list = [col_0, col_11, col_22, col_39]
