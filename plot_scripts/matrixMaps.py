@@ -94,7 +94,7 @@ def matrixMaps():
         for col_num in range(len(col_list)):
             col = col_list[col_num]
             print(row_num, col_num)
-            filedir=col['filedir']faj
+            filedir=col['filedir']
             data = avgDataFiles(filedir, var)
             makeSubplot(data=data, var=var, axes=axes,
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],

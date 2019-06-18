@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+            <state relative-caret-position="522">
+              <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -96,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>p</find>
       <find>row_li</find>
       <find>area</find>
       <find>ROW</find>
@@ -120,12 +119,13 @@
       <find>filetype =</find>
       <find>aij</find>
       <find>oij</find>
-      <find>colorbar</find>
       <find>contour</find>
       <find>rowma</find>
       <find>axes</find>
       <find>gridspec_kw</find>
       <find>prec</find>
+      <find>colorbar</find>
+      <find>cbar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -295,21 +295,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="2712000" />
-    </task>
-    <task id="LOCAL-00644" summary="new plot">
-      <created>1557524929548</created>
-      <option name="number" value="00644" />
-      <option name="presentableId" value="LOCAL-00644" />
-      <option name="project" value="LOCAL" />
-      <updated>1557524929548</updated>
-    </task>
-    <task id="LOCAL-00645" summary="new plot">
-      <created>1557524963327</created>
-      <option name="number" value="00645" />
-      <option name="presentableId" value="LOCAL-00645" />
-      <option name="project" value="LOCAL" />
-      <updated>1557524963327</updated>
+      <workItem from="1560785402783" duration="2958000" />
     </task>
     <task id="LOCAL-00646" summary="new plot">
       <created>1557524995183</created>
@@ -640,11 +626,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560892254127</updated>
     </task>
-    <option name="localTasksCounter" value="693" />
+    <task id="LOCAL-00693" summary="row matrix test">
+      <created>1560892301192</created>
+      <option name="number" value="00693" />
+      <option name="presentableId" value="LOCAL-00693" />
+      <option name="project" value="LOCAL" />
+      <updated>1560892301192</updated>
+    </task>
+    <task id="LOCAL-00694" summary="row matrix test">
+      <created>1560892540166</created>
+      <option name="number" value="00694" />
+      <option name="presentableId" value="LOCAL-00694" />
+      <option name="project" value="LOCAL" />
+      <updated>1560892540166</updated>
+    </task>
+    <option name="localTasksCounter" value="695" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129257000" />
+    <option name="totallyTimeSpent" value="129503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -874,8 +874,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+        <state relative-caret-position="522">
+          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
