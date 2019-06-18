@@ -143,12 +143,12 @@ def rowMatrixMap():
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_pcldt'
+    file_name = 'plots/row_matrix_qatm'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-row_list = [row_pcldt]
+row_list = [row_qatm]
 
 col_list = [col_0, col_1, col_22, col_39]
 
