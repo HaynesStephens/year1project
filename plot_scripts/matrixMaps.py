@@ -1,7 +1,7 @@
 from mpl_toolkits.basemap import Basemap
 from netCDF4 import Dataset as ds
 import numpy as np
-from matplotlib import pyplot as plt, cm as cm
+from matplotlib import pyplot as plt, cm as cm, ticker as ticker
 from glob import glob
 from matplotlib.patches import Polygon
 from matplotlib.colors import Normalize
@@ -52,8 +52,11 @@ def makeSubplot(data, var, axes, row_num, col_num, ylabel, parallels, meridians,
 
     plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
-    m.ax.tick_params(labelsize=1)
-    m.colorbar(mappable=cs, ax=ax)
+    m.ax.tick_params(labelsize=2)
+    cb = m.colorbar(mappable=cs, ax=ax)
+    tick_locator = ticker.MaxNLocator(nbins=5)
+    cb.locator = tick_locator
+    cb.update_ticks()
 
     # draw parallels and meridians.
     m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
