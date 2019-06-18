@@ -143,12 +143,12 @@ def rowMatrixMap():
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_prec'
+    file_name = 'plots/row_matrix_tsurf'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-row_list = [row_prec]
+row_list = [row_tsurf]
 
 col_list = [col_0, col_1, col_22, col_39]
 
