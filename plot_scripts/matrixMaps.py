@@ -117,7 +117,7 @@ def matrixMaps():
     # fig, axes = plt.subplots(len(row_list), len(col_list) + 1,
     #                          figsize = (10,5),
     #                          gridspec_kw={'width_ratios': [1]*len(col_list) + [1/len(col_list)]})
-    fig = plt.figure(figsize = (10,5))
+    fig, axes = plt.subplots(len(row_list), len(col_list) + 1, figsize = (10,5))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
