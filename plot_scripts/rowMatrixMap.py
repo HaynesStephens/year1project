@@ -113,7 +113,7 @@ def getDataAndMaxVal(col_list, var):
     return data_list, cbar_data
 
 
-def matrixMaps():
+def rowMatrixMap():
     fig = plt.figure(figsize = (14,8))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(len(row_list), len(col_list)),
