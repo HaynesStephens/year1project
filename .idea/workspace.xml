@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="158">
+              <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -67,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="98" column="9" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="9" />
+            <state relative-caret-position="189">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -96,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rot</find>
       <find>p</find>
       <find>row_li</find>
       <find>area</find>
@@ -106,7 +105,6 @@
       <find>np.roll</find>
       <find>col_list</find>
       <find>prin</find>
-      <find>prec</find>
       <find>roll</find>
       <find>midpoin</find>
       <find>col</find>
@@ -126,6 +124,8 @@
       <find>contour</find>
       <find>rowma</find>
       <find>axes</find>
+      <find>gridspec_kw</find>
+      <find>prec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -295,21 +295,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="2525000" />
-    </task>
-    <task id="LOCAL-00642" summary="new plot">
-      <created>1557524734522</created>
-      <option name="number" value="00642" />
-      <option name="presentableId" value="LOCAL-00642" />
-      <option name="project" value="LOCAL" />
-      <updated>1557524734522</updated>
-    </task>
-    <task id="LOCAL-00643" summary="new plot">
-      <created>1557524884718</created>
-      <option name="number" value="00643" />
-      <option name="presentableId" value="LOCAL-00643" />
-      <option name="project" value="LOCAL" />
-      <updated>1557524884718</updated>
+      <workItem from="1560785402783" duration="2712000" />
     </task>
     <task id="LOCAL-00644" summary="new plot">
       <created>1557524929548</created>
@@ -640,11 +626,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560890627966</updated>
     </task>
-    <option name="localTasksCounter" value="691" />
+    <task id="LOCAL-00691" summary="row matrix test">
+      <created>1560892095574</created>
+      <option name="number" value="00691" />
+      <option name="presentableId" value="LOCAL-00691" />
+      <option name="project" value="LOCAL" />
+      <updated>1560892095574</updated>
+    </task>
+    <task id="LOCAL-00692" summary="row matrix test">
+      <created>1560892254127</created>
+      <option name="number" value="00692" />
+      <option name="presentableId" value="LOCAL-00692" />
+      <option name="project" value="LOCAL" />
+      <updated>1560892254127</updated>
+    </task>
+    <option name="localTasksCounter" value="693" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129070000" />
+    <option name="totallyTimeSpent" value="129257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -700,7 +700,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="checking on crashed 39p run" />
     <MESSAGE value="checking on equilibrium of runs" />
     <MESSAGE value="working to customize matrix maps" />
     <MESSAGE value="looking at net rad and ocean pot temp" />
@@ -725,7 +724,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/HaynesStephens/year1project&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit." />
     <MESSAGE value="new plot" />
     <MESSAGE value="row plots for committee mtg" />
-    <option name="LAST_COMMIT_MESSAGE" value="row plots for committee mtg" />
+    <MESSAGE value="row matrix test" />
+    <option name="LAST_COMMIT_MESSAGE" value="row matrix test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -867,15 +867,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="9" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="9" />
+        <state relative-caret-position="189">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="158">
+          <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

@@ -36,7 +36,7 @@ def makeSubplot(data, var, axes, row_num, col_num, ylabel, parallels, meridians,
 
     def make_cmap(var):
         sequential_list = ['frac_land', 'pscld', 'pdcld', 'snowicefr', 'lwp',
-                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI', 'prec']
+                           'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI', 'prec', 'qatm']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
             cmap = cm.Blues_r
