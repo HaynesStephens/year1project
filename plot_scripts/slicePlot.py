@@ -39,16 +39,27 @@ def getSlice(data, slice_dim, slice_coord):
 
 
 def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num, ylabel, title):
-    ax = axes[row_num, col_num]
+    """
+    :param data: inputted data
+    :param slice_dim: dimension along which you want to cut
+    :param slice_coord: coordinate of slice_dim you want to cut
+    :param axes: axes of figure
+    :param row_num:
+    :param col_num:
+    :param ylabel:
+    :param title:
+    :return: a subplot for the given variable and continent size
+    """
+    ax = axes[col_num]
     section = getSlice(data, slice_dim, slice_coord)
 
     im = ax.imshow(section)
     plt.colorbar(im, ax=ax)
 
-    if row_num==0:
+    if row_num == 0:
         ax.set_title(title, fontsize=10)
 
-    if col_num==0:
+    if col_num == 0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
 
