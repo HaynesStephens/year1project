@@ -98,7 +98,7 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
 
 
 row_list = [row_dens]
-col_list = [col_0, col_1]
+col_list = [col_0, col_1, col_11, col_22, col_39]
 slice_dim = 'lon'
 slice_coord = 2.5
 filetype = 'oijl'
