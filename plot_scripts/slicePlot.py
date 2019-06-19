@@ -35,7 +35,7 @@ def getSlice(data, slice_dim, slice_coord):
         slice_index = np.where(lato == slice_coord)[0][0]
         section = data[:,slice_index,:]
     elif slice_dim == 'lon':
-        slice_index = np.where(lono == slice_coord)[0][0fea
+        slice_index = np.where(lono == slice_coord)[0][0]
         section = data[:,:,slice_index]
     return section
 
