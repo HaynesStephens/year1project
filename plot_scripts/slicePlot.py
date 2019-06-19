@@ -78,7 +78,7 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
             sliceSubplot(data=data, slice_dim = slice_dim, slice_coord = slice_coord, axes=axes,
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], title=col['title'])
 
-    fig.tight_layout(w_pad = 2.25)
+    # fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/slice_dens'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
