@@ -70,10 +70,10 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
 
     if slice_dim == 'lat':
         ax.set_xticks(np.arange(lon_grid.size)[::4])
-        ax.set_xticklabels(lon_grid[::10])
+        ax.set_xticklabels(lon_grid[::4])
     elif slice_dim == 'lon':
         ax.set_xticks(np.arange(lat_grid.size)[::4])
-        ax.set_xticklabels(lat_grid[::10])
+        ax.set_xticklabels(lat_grid[::4])
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
