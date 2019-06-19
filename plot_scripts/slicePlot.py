@@ -5,7 +5,7 @@ from glob import glob
 from files_n_vars import *
 from lat_lon_grid import *
 
-def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv):
+def avgDataFiles(filedir, var, num_files, filetype, unit_conv):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
