@@ -68,16 +68,12 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
     im = ax.imshow(section, aspect = 'auto', interpolation='none')
     plt.colorbar(im, cax=cax)
 
-    # if slice_dim == 'lat':
-    #     half_size = lon_grid.size //2
-    #     indices = [0, half_size-5, half_size+5, lon_grid.size-1]
-    #     ax.set_xticks(np.take(np.arange(lon_grid.size), indices))
-    #     ax.set_xticklabels(np.take(lon_grid, indices))
-    # elif slice_dim == 'lon':
-    #     half_size = lat_grid.size //2
-    #     indices = [0, half_size-5, half_size+5, lat_grid.size-1]
-    #     ax.set_xticks(np.take(np.arange(lat_grid.size), indices))
-    #     ax.set_xticklabels(np.take(lat_grid, indices))
+    if slice_dim == 'lat':
+        ax.set_xlabel('Lon')
+        ax.set_xticklabels(['']*lon_grid.size)
+    elif slice_dim == 'lon':
+        ax.set_xlabel('Lat')
+        ax.set_xticklabels(['']*lat_grid.size)
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
