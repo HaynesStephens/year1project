@@ -69,11 +69,15 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
     plt.colorbar(im, cax=cax)
 
     if slice_dim == 'lat':
-        ax.set_xticks(np.arange(lon_grid.size)[::2][::2])
-        ax.set_xticklabels(lon_grid[::2][::2])
+        half_size = lon_grid.size //2
+        indices = [0, half_size-5, half_size+5, lon_grid.size]
+        ax.set_xticks(np.take(np.arange(lon_grid.size), indices))
+        ax.set_xticklabels(np.take(lon_grid, indices))
     elif slice_dim == 'lon':
-        ax.set_xticks(np.arange(lat_grid.size)[::2][::2])
-        ax.set_xticklabels(lat_grid[::2][::2])
+        half_size = lat_grid.size //2
+        indices = [0, half_size-5, half_size+5, lat_grid.size]
+        ax.set_xticks(np.take(np.arange(lat_grid.size), indices))
+        ax.set_xticklabels(np.take(lat_grid, indices))
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
@@ -97,7 +101,6 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
         z_grid = row['z']
         if z_grid.size == 13:
             z_grid = z_grid[:5]
-            print(z_grid)
         var = row['var']
         for col_num in range(len(col_list)):
             col = col_list[col_num]
