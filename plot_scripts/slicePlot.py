@@ -76,7 +76,7 @@ def sliceSubplot(data, slice_dim, slice_coord, axes,
 
 
 def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
-    fig, axes = plt.subplots(len(row_list), len(col_list)),
+    fig, axes = plt.subplots(len(row_list), len(col_list),
                              figsize = (10,5))
 
     for row_num in range(len(row_list)):
