@@ -17,40 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-677">
-              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="131" column="46" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1036">
-              <caret line="107" column="33" lean-forward="true" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+            <state relative-caret-position="527">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -61,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="89" selection-start-line="89" selection-end-line="92" selection-end-column="43" />
+            <state relative-caret-position="510">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="13" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -70,11 +40,41 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-512">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+            <state relative-caret-position="334">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -93,9 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>area</find>
-      <find>ROW</find>
-      <find>TSUR</find>
       <find>CONTOURF</find>
       <find>np.roll</find>
       <find>col_list</find>
@@ -123,6 +120,9 @@
       <find>colorbar</find>
       <find>cbar</find>
       <find>num_layers</find>
+      <find>lato</find>
+      <find>lat_grid</find>
+      <find>lon_grid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,9 +154,9 @@
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/matrixMaps.py" />
         <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
         <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
       </list>
     </option>
@@ -293,21 +293,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="11833000" />
-    </task>
-    <task id="LOCAL-00683" summary="row plots for committee mtg">
-      <created>1560886094716</created>
-      <option name="number" value="00683" />
-      <option name="presentableId" value="LOCAL-00683" />
-      <option name="project" value="LOCAL" />
-      <updated>1560886094716</updated>
-    </task>
-    <task id="LOCAL-00684" summary="row plots for committee mtg">
-      <created>1560890387740</created>
-      <option name="number" value="00684" />
-      <option name="presentableId" value="LOCAL-00684" />
-      <option name="project" value="LOCAL" />
-      <updated>1560890387741</updated>
+      <workItem from="1560785402783" duration="13001000" />
     </task>
     <task id="LOCAL-00685" summary="row plots for committee mtg">
       <created>1560890397567</created>
@@ -638,11 +624,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560969832057</updated>
     </task>
-    <option name="localTasksCounter" value="732" />
+    <task id="LOCAL-00732" summary="getting slice plot for density structure">
+      <created>1560969870837</created>
+      <option name="number" value="00732" />
+      <option name="presentableId" value="LOCAL-00732" />
+      <option name="project" value="LOCAL" />
+      <updated>1560969870837</updated>
+    </task>
+    <task id="LOCAL-00733" summary="getting slice plot for density structure">
+      <created>1560970994200</created>
+      <option name="number" value="00733" />
+      <option name="presentableId" value="LOCAL-00733" />
+      <option name="project" value="LOCAL" />
+      <updated>1560970994200</updated>
+    </task>
+    <option name="localTasksCounter" value="734" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138378000" />
+    <option name="totallyTimeSpent" value="139546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -813,54 +813,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="131" column="46" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-677">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="510">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="13" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1036">
-          <caret line="107" column="33" lean-forward="true" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+        <state relative-caret-position="527">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="89" selection-start-line="89" selection-end-line="92" selection-end-column="43" />
+        <state relative-caret-position="139">
+          <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-512">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+        <state relative-caret-position="334">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

@@ -60,10 +60,6 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
     :return: a subplot for the given variable and continent size
     """
     ax = axes[col_num]
-    lat_grid = row['lat']
-    lon_grid = row['lon']
-    z_grid = row['z']
-
     divider = make_axes_locatable(ax)
     cax = divider.append_axes("right", size="5%", pad=0.05)
 
