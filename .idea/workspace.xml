@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+            <state relative-caret-position="226">
+              <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -293,21 +293,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="14005000" />
-    </task>
-    <task id="LOCAL-00699" summary="row matrix test">
-      <created>1560892851930</created>
-      <option name="number" value="00699" />
-      <option name="presentableId" value="LOCAL-00699" />
-      <option name="project" value="LOCAL" />
-      <updated>1560892851930</updated>
-    </task>
-    <task id="LOCAL-00700" summary="row matrix test">
-      <created>1560892868298</created>
-      <option name="number" value="00700" />
-      <option name="presentableId" value="LOCAL-00700" />
-      <option name="project" value="LOCAL" />
-      <updated>1560892868299</updated>
+      <workItem from="1560785402783" duration="14317000" />
     </task>
     <task id="LOCAL-00701" summary="row matrix test">
       <created>1560892983182</created>
@@ -638,11 +624,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560972244876</updated>
     </task>
-    <option name="localTasksCounter" value="748" />
+    <task id="LOCAL-00748" summary="getting slice plot for density structure">
+      <created>1560972349290</created>
+      <option name="number" value="00748" />
+      <option name="presentableId" value="LOCAL-00748" />
+      <option name="project" value="LOCAL" />
+      <updated>1560972349290</updated>
+    </task>
+    <task id="LOCAL-00749" summary="getting slice plot for density structure">
+      <created>1560972650765</created>
+      <option name="number" value="00749" />
+      <option name="presentableId" value="LOCAL-00749" />
+      <option name="project" value="LOCAL" />
+      <updated>1560972650765</updated>
+    </task>
+    <option name="localTasksCounter" value="750" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140550000" />
+    <option name="totallyTimeSpent" value="140862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -859,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+        <state relative-caret-position="226">
+          <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
