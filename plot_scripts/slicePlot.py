@@ -59,10 +59,12 @@ def sliceSubplot(data, slice_dim, slice_coord, axes,
     :return: a subplot for the given variable and continent size
     """
     ax = axes[col_num]
+    divider = make_axes_locatable(ax)
+    cax = divider.append_axes("right", size="5%", pad=0.05)
     section = getSlice(data, slice_dim, slice_coord)
 
     im = ax.imshow(section)
-    plt.colorbar(im, ax=ax)
+    plt.colorbar(im, cax=cax)
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
