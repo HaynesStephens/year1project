@@ -93,6 +93,7 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
         z_grid = row['z']
         if z_grid.size == 13:
             z_grid = z_grid[:5]
+            print(z_grid)
         var = row['var']
         for col_num in range(len(col_list)):
             col = col_list[col_num]
