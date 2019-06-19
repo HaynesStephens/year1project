@@ -125,3 +125,8 @@ row_plan_alb =            {'var':'plan_alb',
                          'ylabel':'Planetary \n Albedo \n [%]',
                          'title':'Planetary Albedo',
                          'units':'[%]'}
+
+row_dens =            {'var':'dens',
+                         'ylabel':'Density \n [kgm$^{-3}$]',
+                         'title':'Density',
+                         'units':'[kgm$^{-3}$]'}

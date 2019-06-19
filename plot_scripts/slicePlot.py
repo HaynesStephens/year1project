@@ -39,3 +39,47 @@ def getSlice(data, slice_dim, slice_coord):
         section = data[:,:,slice_index]
     return section
 
+
+def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num, ylabel, title):
+    ax = axes[row_num, col_num]
+    section = getSlice(data, slice_dim, slice_coord)
+
+    im = ax.imshow(section)
+    plt.colorbar(im, ax=ax)
+
+    if row_num==0:
+        ax.set_title(title, fontsize=10)
+
+    if col_num==0:
+        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
+
+
+def slicePlot(row_list, col_list, slice_dim, slice_coord):
+    fig, axes = plt.subplots(len(row_list), len(col_list),
+                             figsize = (10,5))
+
+    for row_num in range(len(row_list)):
+        row = row_list[row_num]
+        var = row['var']
+        for col_num in range(len(col_list)):
+            col = col_list[col_num]
+            print(row_num, col_num)
+            filedir=col['filedir']
+            data = avgDataFiles(filedir, var)
+            sliceSubplot(data=data, slice_dim = slice_dim, slice_coord = slice_coord, axes=axes,
+                        row_num=row_num, col_num=col_num, ylabel=row['ylabel'], title=col['title'])
+
+    fig.tight_layout(w_pad = 2.25)
+    file_name = 'plots/slice_dens'
+    # plt.savefig(file_name+'.svg')
+    plt.savefig(file_name+'.pdf')
+    plt.show()
+
+
+row_list = [row_dens]
+col_list = [col_0, col_1, col_22, col_39]
+slice_dim = 'lon'
+slice_coord = 2.5
+
+slicePlot(row_list, col_list, slice_dim, slice_coord)
+
