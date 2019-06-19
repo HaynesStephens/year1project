@@ -22,7 +22,7 @@ def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     return arr_avg
 
 
-def getSlice(data, slice_dim, slice_coord, filetype):
+def getSlice(data, slice_dim, slice_coord):
     """
     :param data: the inputted 3D data array
     :param slice_dim: the dimension that you want to cut along (depth, lat, lon)
