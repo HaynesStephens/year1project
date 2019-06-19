@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
 from files_n_vars import *
-from lat_lon_grid import *
 
 def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_coord):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
@@ -38,10 +37,10 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
 
 def makeSubplot(col_list, ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=None):
     if avg_coord == 'lat':
-        x = lat_grid
+        x = row['lat']
         x_label = 'Latitude'
     elif avg_coord == 'lon':
-        x = lon_grid
+        x = row['lon']
         x_label = 'Longitude'
     var = row['var']
     title = row['title']

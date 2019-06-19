@@ -1,3 +1,5 @@
+from lat_lon_grid import *
+
 # FILES REPRESENT DIRECTORIES FOR DIFFERENT RUNS
 filebase='/project2/abbot/haynes/ROCKE3D_output/'
 filedir0=filebase+'pc_proxcenb_aqua5L_TL_500yr_rs2'
@@ -44,89 +46,126 @@ col_39 = {'filedir':filedir39, 'parallels':[-48, 48], 'SA':39,
 row_frac_land =         {'var':'frac_land',
                          'ylabel':'Land \n Fraction \n [%]',
                          'title':'Land Fraction',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_net_rad_planet =    {'var':'net_rad_planet',
                          'ylabel':'Net \n Planet \n Radiation \n [Wm$^{-2}$]',
                          'title':'Net Planet Radiation',
-                         'units':'[Wm$^{-2}$]'}
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_tsurf =             {'var':'tsurf',
                          'ylabel':'Surface \n Temperature \n [C]',
                          'title':'Surface Temperature',
-                         'units':'[$^{\circ}$C]'}
+                         'units':'[$^{\circ}$C]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_evap =              {'var':'evap',
                          'ylabel':'Evaporation \n [mm/day]',
                          'title':'Evaporation',
-                         'units':'[mm/day]'}
+                         'units':'[mm/day]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_prec =              {'var':'prec',
                          'ylabel':'Precipitation \n [mm/day]',
                          'title':'Precipitation',
-                         'units':'mm/day'}
+                         'units':'mm/day',
+                         'lat':lat,
+                         'lon':lon}
 
 row_qatm =              {'var':'qatm',
                          'ylabel':'Atmospheric \n Water Vapor \n [kg/m^2]',
                          'title':'Atmospheric Water Vapor',
-                         'units':'[kg/m^2]'}
+                         'units':'[kg/m^2]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_snowicefr =         {'var':'snowicefr',
                          'ylabel':'Snow/Ice \n Fraction \n [%]',
                          'title':'Snow/Ice Fraction',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_ZSI =               {'var':'ZSI',
                          'ylabel':'Sea Ice \n Thickness \n [m]',
                          'title':'Sea Ice Thickness',
-                         'units':'[m]'}
+                         'units':'[m]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_lwp =               {'var':'lwp',
                          'ylabel':'Liquid \n Water \n Path \n [0.1kgm$^{-2}$]',
                          'title':'Liquid Water Path',
-                         'units':'[0.1kgm$^{-2}$]'}
+                         'units':'[0.1kgm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_swcrf_toa =         {'var':'swcrf_toa',
                          'ylabel':'SW \n Cloud \n Rad \n Forcing \n [Wm$^{-2}$]',
                          'title':'SW Cloud Rad Forcing',
-                         'units':'[Wm$^{-2}$]'}
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_lwcrf_toa =         {'var':'lwcrf_toa',
                          'ylabel':'LW \n Cloud \n Rad \n Forcing \n [Wm$^{-2}$]',
                          'title':'LW Cloud Rad Forcing',
-                         'units':'[Wm$^{-2}$]'}
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_pcldt =             {'var':'pcldt',
                          'ylabel':'Total Cloud \n Cover \n [%]',
                          'title':'Total Cloud Cover',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_pscld =             {'var':'pscld',
                          'ylabel':'Shallow \n Convective \n Cloud \n Cover \n [%]',
                          'title':'Shallow Convective Cloud Cover',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_pdcld =             {'var':'pdcld',
                          'ylabel':'Deep \n Convective \n Cloud \n Cover \n [%]',
                          'title':'Deep Convective Cloud Cover',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_wtrcld =            {'var':'wtrcld',
                          'ylabel':'Water \n Cloud Cover \n [%]',
                          'title':'Water Cloud Cover',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
 row_icecld =            {'var':'icecld',
                          'ylabel':'Ice \n Cloud Cover \n [%]',
                          'title':'Ice Cloud Cover',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
-row_plan_alb =            {'var':'plan_alb',
+row_plan_alb =           {'var':'plan_alb',
                          'ylabel':'Planetary \n Albedo \n [%]',
                          'title':'Planetary Albedo',
-                         'units':'[%]'}
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
 
-row_dens =            {'var':'dens',
+row_dens =               {'var':'dens',
                          'ylabel':'Density \n [kgm$^{-3}$]',
                          'title':'Density',
-                         'units':'[kgm$^{-3}$]'}
+                         'units':'[kgm$^{-3}$]',
+                         'lat':lato,
+                         'lon':lono,
+                         'z':zoc}
