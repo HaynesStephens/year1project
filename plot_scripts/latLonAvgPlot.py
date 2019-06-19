@@ -24,6 +24,8 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
         arr_tot = arr_tot + arr
 
     arr_avg = (arr_tot * unit_conv) / num_files
+    if len(arr_avg.shape) == 3:
+        raise ValueError, "This array is 3D, so the axes you are averaging over are invalid."
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     if avg_coord == 'lat':
@@ -32,6 +34,7 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
         avg_axis = 0
     avg_arr = np.sum(arr_avg * area_arr, axis=avg_axis) / np.sum(area_arr, axis=avg_axis)
     return avg_arr
+
 
 def makeSubplot(col_list, ax, row, filetype, avg_coord, num_files=10, unit_conv=1, depth=None):
     if avg_coord == 'lat':
