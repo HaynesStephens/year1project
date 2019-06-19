@@ -72,10 +72,10 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
         ax.set_xticklabels(lon_grid)
     elif slice_dim == 'lon':
         ax.set_xticklabels(lat_grid)
-    ax.set_yticklabels(z_grid)
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
+        ax.set_yticklabels(z_grid)
 
     if col_num == 0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
