@@ -29,10 +29,12 @@ def getSlice(data, slice_dim, slice_coord, filetype):
     :param slice_coord: the coordinate of dimensions that you want to cut along [degrees or m]
     :return: the 2D array sliced out along slice_dim at the coordinate slice_coord
     """
-    if 'oij' in filetype:
+
+    tot_layers = data.shape[0]
+    if tot_layers == 13:
         num_layers = 6 # Use only top 6 layers for ocean
     else:
-        num_layers = data.shape[0] # Use all layers for atmosphere
+        num_layers = tot_layers # Use all layers for atmosphere
 
     if slice_dim == 'lat':
         slice_index = np.where(lato == slice_coord)[0][0]
