@@ -65,7 +65,7 @@ def sliceSubplot(data, slice_dim, slice_coord, axes,
 
     section = getSlice(data, slice_dim, slice_coord)
 
-    im = ax.imshow(section, interpolation='none')
+    im = ax.imshow(section, aspect = 'auto', interpolation='none')
     plt.colorbar(im, cax=cax)
 
     if row_num == 0:
@@ -76,8 +76,8 @@ def sliceSubplot(data, slice_dim, slice_coord, axes,
 
 
 def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
-    fig, axes = plt.subplots(len(row_list), len(col_list))#,
-                             #figsize = (10,5))
+    fig, axes = plt.subplots(len(row_list), len(col_list)),
+                             figsize = (10,5))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
