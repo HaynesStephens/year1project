@@ -10,6 +10,7 @@ def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
+        arr = nc_i[var][:]
         arr_tot = arr_tot + arr
 
 
