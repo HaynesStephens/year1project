@@ -79,7 +79,7 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
 
     if col_num == 0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
-        ax.set_yticklabels(z_grid.tolist())
+        ax.set_yticklabels(['']+z_grid.tolist())
     else:
         ax.set_yticklabels(['']*len(z_grid))
 
