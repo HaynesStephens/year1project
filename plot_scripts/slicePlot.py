@@ -32,7 +32,7 @@ def getSlice(data, slice_dim, slice_coord):
 
     tot_layers = data.shape[0]
     if tot_layers == 13:
-        num_layers = 6 # Use only top 6 layers for ocean
+        num_layers = 5 # Use only top 6 layers for ocean
     else:
         num_layers = tot_layers # Use all layers for atmosphere
 
