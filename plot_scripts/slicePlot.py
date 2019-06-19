@@ -5,7 +5,7 @@ from glob import glob
 from files_n_vars import *
 from lat_lon_grid import *
 
-def avgDataFiles(filedir, var, num_files, filetype, unit_conv):
+def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -54,7 +54,7 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num, ylabel, t
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
 
-def slicePlot(row_list, col_list, slice_dim, slice_coord):
+def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
     fig, axes = plt.subplots(len(row_list), len(col_list),
                              figsize = (10,5))
 
@@ -65,7 +65,7 @@ def slicePlot(row_list, col_list, slice_dim, slice_coord):
             col = col_list[col_num]
             print(row_num, col_num)
             filedir=col['filedir']
-            data = avgDataFiles(filedir, var)
+            data = avgDataFiles(filedir, var, filetype)
             sliceSubplot(data=data, slice_dim = slice_dim, slice_coord = slice_coord, axes=axes,
                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], title=col['title'])
 
@@ -80,6 +80,7 @@ row_list = [row_dens]
 col_list = [col_0, col_1, col_22, col_39]
 slice_dim = 'lon'
 slice_coord = 2.5
+filetype = 'oijl'
 
-slicePlot(row_list, col_list, slice_dim, slice_coord)
+slicePlot(filetype, row_list, col_list, slice_dim, slice_coord)
 
