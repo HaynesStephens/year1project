@@ -10,17 +10,14 @@ def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
-
-        if depth == None:
-            arr = nc_i[var][:]
-        else:
-            arr = nc_i[var][:][depth]
-
         arr_tot = arr_tot + arr
 
+
     arr_avg = (arr_tot * unit_conv) / num_files
+
     if 'aqua' in filedir:
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
+        roll_axis = len(arr_avg.shape) - 1
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=roll_axis)
     return arr_avg
 
 
