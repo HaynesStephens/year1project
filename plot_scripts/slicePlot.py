@@ -22,23 +22,29 @@ def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     return arr_avg
 
 
-def getSlice(data, slice_dim, slice_coord):
+def getSlice(data, slice_dim, slice_coord, filetype):
     """
     :param data: the inputted 3D data array
     :param slice_dim: the dimension that you want to cut along (depth, lat, lon)
     :param slice_coord: the coordinate of dimensions that you want to cut along [degrees or m]
     :return: the 2D array sliced out along slice_dim at the coordinate slice_coord
     """
+    if 'oij' in filetype:
+        num_layers = 6 # Use only top 6 layers for ocean
+    else:
+        num_layers = data.shape[0] # Use all layers for atmosphere
+
     if slice_dim == 'lat':
         slice_index = np.where(lato == slice_coord)[0][0]
-        section = data[:,slice_index,:]
+        section = data[:num_layers,slice_index,:]
     elif slice_dim == 'lon':
         slice_index = np.where(lono == slice_coord)[0][0]
-        section = data[:,:,slice_index]
+        section = data[:num_layers,:,slice_index]
     return section
 
 
-def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num, ylabel, title):
+def sliceSubplot(data, slice_dim, slice_coord, axes,
+                 row_num, col_num, ylabel, title):
     """
     :param data: inputted data
     :param slice_dim: dimension along which you want to cut
@@ -76,7 +82,7 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
             filedir=col['filedir']
             data = avgDataFiles(filedir, var, filetype)
             sliceSubplot(data=data, slice_dim = slice_dim, slice_coord = slice_coord, axes=axes,
-                        row_num=row_num, col_num=col_num, ylabel=row['ylabel'], title=col['title'])
+                         row_num=row_num, col_num=col_num, ylabel=row['ylabel'], title=col['title'])
 
     # fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/slice_dens'
