@@ -66,7 +66,7 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
     section = getSlice(data, slice_dim, slice_coord, lat_grid, lon_grid)
 
     im = ax.imshow(section, aspect = 'auto', interpolation='none')
-    plt.colorbar(im, cax=cax)
+    plt.colorbar(im, cax=cax, levels =20)
 
     if slice_dim == 'lat':
         ax.set_xticklabels(lon_grid)
