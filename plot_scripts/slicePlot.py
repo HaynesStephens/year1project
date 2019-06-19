@@ -54,7 +54,7 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num, ylabel, t
     section = getSlice(data, slice_dim, slice_coord)
 
     im = ax.imshow(section)
-    plt.colorbar(im, cax=ax)
+    plt.colorbar(im, ax=ax)
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
@@ -86,7 +86,7 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
 
 
 row_list = [row_dens]
-col_list = [col_0, col_1, col_22, col_39]
+col_list = [col_0]
 slice_dim = 'lon'
 slice_coord = 2.5
 filetype = 'oijl'
