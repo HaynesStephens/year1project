@@ -9,7 +9,7 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-def avgDataFiles(filedir, var, filetype, unit_conv = 1, depth = None, num_files=10):
+def avgDataFiles(filedir, var, filetype, unit_conv = 1, depth = 0, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -148,15 +148,15 @@ def rowMatrixMap(row_list, col_list, filetype):
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_qatm_1'
+    file_name = 'plots/row_matrix_o_w'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-row_list = [row_qatm]
+row_list = [row_o_w]
 
 col_list = [col_0, col_1, col_22, col_39]
 
-filetype = 'aijpc'
+filetype = 'oijlpc'
 
 rowMatrixMap(row_list, col_list, filetype)

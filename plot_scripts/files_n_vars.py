@@ -169,3 +169,11 @@ row_dens =               {'var':'dens',
                          'lat':lato,
                          'lon':lono,
                          'z':zoc}
+
+row_o_w =               {'var':'w',
+                         'ylabel':'Downward \n Velocity \n [cm/s]',
+                         'title':'Downward Velocity',
+                         'units':'[cm/s]',
+                         'lat':lato,
+                         'lon':lono,
+                         'z':zoce}
