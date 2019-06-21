@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/quiver_1p.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/plots/quiver_1p.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/quiverPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+            <state relative-caret-position="309">
+              <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -106,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>col_list</find>
       <find>prin</find>
       <find>roll</find>
       <find>midpoin</find>
@@ -136,6 +134,7 @@
       <find>z_grid</find>
       <find>lat_grid</find>
       <find>avgDataFiles</find>
+      <find>depth</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -306,14 +305,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="15973000" />
-    </task>
-    <task id="LOCAL-00708" summary="getting slice plot for density structure">
-      <created>1560966496963</created>
-      <option name="number" value="00708" />
-      <option name="presentableId" value="LOCAL-00708" />
-      <option name="project" value="LOCAL" />
-      <updated>1560966496963</updated>
+      <workItem from="1560785402783" duration="16275000" />
     </task>
     <task id="LOCAL-00709" summary="getting slice plot for density structure">
       <created>1560967156877</created>
@@ -651,11 +643,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561128975599</updated>
     </task>
-    <option name="localTasksCounter" value="757" />
+    <task id="LOCAL-00757" summary="getting slice plot for density structure">
+      <created>1561129839618</created>
+      <option name="number" value="00757" />
+      <option name="presentableId" value="LOCAL-00757" />
+      <option name="project" value="LOCAL" />
+      <updated>1561129839618</updated>
+    </task>
+    <option name="localTasksCounter" value="758" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142518000" />
+    <option name="totallyTimeSpent" value="142820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -872,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+        <state relative-caret-position="309">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
