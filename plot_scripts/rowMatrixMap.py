@@ -159,4 +159,4 @@ col_list = [col_0, col_1, col_22, col_39]
 
 filetype = 'aijpc'
 
-rowMatrixMap()
+rowMatrixMap(row_list, col_list, filetype)
