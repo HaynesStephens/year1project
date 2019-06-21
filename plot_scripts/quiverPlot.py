@@ -92,7 +92,7 @@ def quiverPlot():
     ax2 = axes[1, 0]
     quiverSubPlot(col=col, ax=ax2, tit_ad='Ocean 1 Layer', filetype='oijlpc', unit_conv=0.1, depth=1)
     ax3 = axes[1, 1]
-    quiverSubPlot(col=col, ax=ax3, tit_ad='Ocean 2 Layer', filetype='oijlpc', unit_conv=0.1, depth=4)
+    quiverSubPlot(col=col, ax=ax3, tit_ad='Ocean 2 Layer', filetype='oijlpc', unit_conv=0.1, depth=5)
 
 
     fig.tight_layout(w_pad = 2.25)
