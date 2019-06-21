@@ -24,7 +24,7 @@ def avgDataFiles3D(filedir, var, num_files, filetype, unit_conv, depth):
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     return arr_avg
 
-def quiverSubPlot(col, ax, tit_ad, num_files = 10, filetype='oijlpc', unit_conv=0.1, depth=0):
+def quiverSubPlot(col, ax, tit_ad, filetype, unit_conv, depth, num_files = 10):
     filedir = col['filedir']
     parallels = col['parallels']
     meridians = col['meridians']
@@ -87,7 +87,7 @@ def quiverPlot():
     ax0 = axes[0]
     quiverSubPlot(col=col, ax=ax0, tit_ad='Air Surface Velocity', filetype='aijpc', unit_conv=1, depth=None)
     ax1 = axes[1]
-    quiverSubPlot(col=col, ax=ax1, tit_ad='Ocean Surface Velocity', filetype='oijlpc', unit_conv=0.1, depth=1)
+    quiverSubPlot(col=col, ax=ax1, tit_ad='Ocean Surface Velocity', filetype='oijlpc', unit_conv=0.1, depth=0)
 
     fig.tight_layout(w_pad = 2.25)
     file_name = 'plots/quiver_34p'
