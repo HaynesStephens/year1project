@@ -99,7 +99,7 @@ def quiverPlot():
 
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/quiver_0p'
+    file_name = 'plots/quiver_0p_0'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
