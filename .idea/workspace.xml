@@ -305,21 +305,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="17791000" />
-    </task>
-    <task id="LOCAL-00728" summary="getting slice plot for density structure">
-      <created>1560969699321</created>
-      <option name="number" value="00728" />
-      <option name="presentableId" value="LOCAL-00728" />
-      <option name="project" value="LOCAL" />
-      <updated>1560969699321</updated>
-    </task>
-    <task id="LOCAL-00729" summary="getting slice plot for density structure">
-      <created>1560969745016</created>
-      <option name="number" value="00729" />
-      <option name="presentableId" value="LOCAL-00729" />
-      <option name="project" value="LOCAL" />
-      <updated>1560969745016</updated>
+      <workItem from="1560785402783" duration="17840000" />
     </task>
     <task id="LOCAL-00730" summary="getting slice plot for density structure">
       <created>1560969795541</created>
@@ -650,11 +636,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561131882417</updated>
     </task>
-    <option name="localTasksCounter" value="777" />
+    <task id="LOCAL-00777" summary="generating new quiver plots by depth">
+      <created>1561131912664</created>
+      <option name="number" value="00777" />
+      <option name="presentableId" value="LOCAL-00777" />
+      <option name="project" value="LOCAL" />
+      <updated>1561131912664</updated>
+    </task>
+    <task id="LOCAL-00778" summary="generating new quiver plots by depth">
+      <created>1561131937306</created>
+      <option name="number" value="00778" />
+      <option name="presentableId" value="LOCAL-00778" />
+      <option name="project" value="LOCAL" />
+      <updated>1561131937306</updated>
+    </task>
+    <option name="localTasksCounter" value="779" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144336000" />
+    <option name="totallyTimeSpent" value="144385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
