@@ -86,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+              <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -305,21 +305,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="17711000" />
-    </task>
-    <task id="LOCAL-00726" summary="getting slice plot for density structure">
-      <created>1560969642936</created>
-      <option name="number" value="00726" />
-      <option name="presentableId" value="LOCAL-00726" />
-      <option name="project" value="LOCAL" />
-      <updated>1560969642936</updated>
-    </task>
-    <task id="LOCAL-00727" summary="getting slice plot for density structure">
-      <created>1560969691082</created>
-      <option name="number" value="00727" />
-      <option name="presentableId" value="LOCAL-00727" />
-      <option name="project" value="LOCAL" />
-      <updated>1560969691082</updated>
+      <workItem from="1560785402783" duration="17791000" />
     </task>
     <task id="LOCAL-00728" summary="getting slice plot for density structure">
       <created>1560969699321</created>
@@ -650,11 +636,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561131810607</updated>
     </task>
-    <option name="localTasksCounter" value="775" />
+    <task id="LOCAL-00775" summary="generating new quiver plots by depth">
+      <created>1561131835992</created>
+      <option name="number" value="00775" />
+      <option name="presentableId" value="LOCAL-00775" />
+      <option name="project" value="LOCAL" />
+      <updated>1561131835992</updated>
+    </task>
+    <task id="LOCAL-00776" summary="generating new quiver plots by depth">
+      <created>1561131882417</created>
+      <option name="number" value="00776" />
+      <option name="presentableId" value="LOCAL-00776" />
+      <option name="project" value="LOCAL" />
+      <updated>1561131882417</updated>
+    </task>
+    <option name="localTasksCounter" value="777" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144256000" />
+    <option name="totallyTimeSpent" value="144336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -872,7 +872,7 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
