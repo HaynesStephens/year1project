@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+            <state relative-caret-position="317">
+              <caret line="89" column="109" selection-start-line="89" selection-start-column="109" selection-end-line="89" selection-end-column="109" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -305,21 +305,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="16350000" />
-    </task>
-    <task id="LOCAL-00711" summary="getting slice plot for density structure">
-      <created>1560967493089</created>
-      <option name="number" value="00711" />
-      <option name="presentableId" value="LOCAL-00711" />
-      <option name="project" value="LOCAL" />
-      <updated>1560967493089</updated>
-    </task>
-    <task id="LOCAL-00712" summary="getting slice plot for density structure">
-      <created>1560967859924</created>
-      <option name="number" value="00712" />
-      <option name="presentableId" value="LOCAL-00712" />
-      <option name="project" value="LOCAL" />
-      <updated>1560967859924</updated>
+      <workItem from="1560785402783" duration="16531000" />
     </task>
     <task id="LOCAL-00713" summary="getting slice plot for density structure">
       <created>1560967909338</created>
@@ -650,11 +636,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561129932995</updated>
     </task>
-    <option name="localTasksCounter" value="760" />
+    <task id="LOCAL-00760" summary="getting slice plot for density structure">
+      <created>1561129994535</created>
+      <option name="number" value="00760" />
+      <option name="presentableId" value="LOCAL-00760" />
+      <option name="project" value="LOCAL" />
+      <updated>1561129994535</updated>
+    </task>
+    <task id="LOCAL-00761" summary="generating new quiver plots by depth">
+      <created>1561130150317</created>
+      <option name="number" value="00761" />
+      <option name="presentableId" value="LOCAL-00761" />
+      <option name="project" value="LOCAL" />
+      <updated>1561130150317</updated>
+    </task>
+    <option name="localTasksCounter" value="762" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142895000" />
+    <option name="totallyTimeSpent" value="143076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -687,7 +687,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="working to customize matrix maps" />
     <MESSAGE value="looking at net rad and ocean pot temp" />
     <MESSAGE value="looking at smallest ssc run" />
     <MESSAGE value="check out runs to see if at EQ" />
@@ -712,7 +711,8 @@
     <MESSAGE value="row plots for committee mtg" />
     <MESSAGE value="row matrix test" />
     <MESSAGE value="getting slice plot for density structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting slice plot for density structure" />
+    <MESSAGE value="generating new quiver plots by depth" />
+    <option name="LAST_COMMIT_MESSAGE" value="generating new quiver plots by depth" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -871,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        <state relative-caret-position="317">
+          <caret line="89" column="109" selection-start-line="89" selection-start-column="109" selection-end-line="89" selection-end-column="109" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
