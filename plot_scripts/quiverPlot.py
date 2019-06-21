@@ -81,17 +81,25 @@ def quiverSubPlot(col, ax, tit_ad, filetype, unit_conv, depth, num_files = 10):
     ax.set_ylabel(tit_ad, fontsize=10, labelpad=30)
 
 
+air_surf_vel = {'tit_ad':'Air Surface Velocity','filetype':'aijpc','unit_conv':1,'depth':None}
+oc_0_vel     = {'tit_ad':'Ocean 6m Velocity','filetype':'oijlpc','unit_conv':0.1,'depth':0}
+oc_1_vel     = {'tit_ad':'Ocean 21m Velocity','filetype':'oijlpc','unit_conv':0.1,'depth':1}
+oc_2_vel     = {'tit_ad':'Ocean 44m Velocity','filetype':'oijlpc','unit_conv':0.1,'depth':2}
+oc_3_vel     = {'tit_ad':'Ocean 77m Velocity','filetype':'oijlpc','unit_conv':0.1,'depth':3}
+oc_4_vel     = {'tit_ad':'Ocean 128m Velocity','filetype':'oijlpc','unit_conv':0.1,'depth':4}
+
+
 def quiverPlot():
     fig, axes = plt.subplots(2,1, figsize = (10,7))
     col = col_0
     ax0 = axes[0]
     quiverSubPlot(col=col, ax=ax0, tit_ad='Air Surface Velocity', filetype='aijpc', unit_conv=1, depth=None)
     ax1 = axes[1]
-    quiverSubPlot(col=col, ax=ax1, tit_ad='Ocean Surface Velocity', filetype='oijlpc', unit_conv=0.1, depth=0)
+    quiverSubPlot(col=col, ax=ax1, tit_ad='Ocean 6m Velocity', filetype='oijlpc', unit_conv=0.1, depth=0)
 
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/quiver_0_1p'
+    file_name = 'plots/quiver_0p'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
