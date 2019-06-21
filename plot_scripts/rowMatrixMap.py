@@ -9,7 +9,7 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-def avgDataFiles(filedir, var, filetype, unit_conv = 1, depth = 0, num_files=10):
+def avgDataFiles(filedir, filetype, var, depth, unit_conv = 1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
@@ -97,7 +97,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         # plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
         grid.cbar_axes[0].colorbar(cs_cbar)
 
-def getDataAndMaxVal(col_list, filetype, var):
+def getDataAndMaxVal(col_list, filetype, var, depth):
     """
     Used to get data for a given row and the max value in order to have uniform colorbars across a row.
     :param col_list:
@@ -109,7 +109,7 @@ def getDataAndMaxVal(col_list, filetype, var):
     min_val = 0
     for col in col_list:
         filedir = col['filedir']
-        data = avgDataFiles(filedir, var, filetype)
+        data = avgDataFiles(filedir, filetype, var, depth)
         data_list.append(data)
         min_val = min(min_val, np.min(data))
         max_val = max(max_val, np.max(data))
@@ -118,7 +118,7 @@ def getDataAndMaxVal(col_list, filetype, var):
     return data_list, cbar_data
 
 
-def rowMatrixMap(row_list, col_list, filetype):
+def rowMatrixMap(row_list, col_list, filetype, depth = None):
     fig = plt.figure(figsize = (14,8))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(len(row_list), len(col_list)),
@@ -133,7 +133,7 @@ def rowMatrixMap(row_list, col_list, filetype):
     for row_num in range(len(row_list)):
         row = row_list[row_num]
         var = row['var']
-        data_list, cbar_data = getDataAndMaxVal(col_list, filetype, var)
+        data_list, cbar_data = getDataAndMaxVal(col_list, filetype, var, depth)
         print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(cbar_data), np.max(cbar_data)))
         for col_num in range(len(col_list)):
             col = col_list[col_num]
@@ -159,4 +159,4 @@ col_list = [col_0, col_1, col_22, col_39]
 
 filetype = 'oijlpc'
 
-rowMatrixMap(row_list, col_list, filetype)
+rowMatrixMap(row_list, col_list, filetype, depth = 0)
