@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/slicePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/slicePlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="207">
+              <caret line="150" column="40" selection-start-line="150" selection-start-column="40" selection-end-line="150" selection-end-column="40" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -43,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-512">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="242">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="47" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -64,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
+            <state relative-caret-position="289">
               <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+            <state relative-caret-position="109">
+              <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -93,7 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>np.roll</find>
       <find>col_list</find>
       <find>prin</find>
       <find>roll</find>
@@ -120,9 +119,10 @@
       <find>cbar</find>
       <find>num_layers</find>
       <find>lato</find>
-      <find>lat_grid</find>
       <find>lon_grid</find>
       <find>z_grid</find>
+      <find>lat_grid</find>
+      <find>avgDataFiles</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,11 +153,11 @@
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/matrixMaps.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
         <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
       </list>
     </option>
   </component>
@@ -293,21 +293,7 @@
       <workItem from="1557946813556" duration="153000" />
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
-      <workItem from="1560785402783" duration="14500000" />
-    </task>
-    <task id="LOCAL-00703" summary="row matrix test">
-      <created>1560893186730</created>
-      <option name="number" value="00703" />
-      <option name="presentableId" value="LOCAL-00703" />
-      <option name="project" value="LOCAL" />
-      <updated>1560893186730</updated>
-    </task>
-    <task id="LOCAL-00704" summary="row matrix test">
-      <created>1560956492177</created>
-      <option name="number" value="00704" />
-      <option name="presentableId" value="LOCAL-00704" />
-      <option name="project" value="LOCAL" />
-      <updated>1560956492177</updated>
+      <workItem from="1560785402783" duration="15147000" />
     </task>
     <task id="LOCAL-00705" summary="getting slice plot for density structure">
       <created>1560956533237</created>
@@ -638,11 +624,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560972764706</updated>
     </task>
-    <option name="localTasksCounter" value="752" />
+    <task id="LOCAL-00752" summary="getting slice plot for density structure">
+      <created>1560972858162</created>
+      <option name="number" value="00752" />
+      <option name="presentableId" value="LOCAL-00752" />
+      <option name="project" value="LOCAL" />
+      <updated>1560972858162</updated>
+    </task>
+    <task id="LOCAL-00753" summary="getting slice plot for density structure">
+      <created>1560972965049</created>
+      <option name="number" value="00753" />
+      <option name="presentableId" value="LOCAL-00753" />
+      <option name="project" value="LOCAL" />
+      <updated>1560972965049</updated>
+    </task>
+    <option name="localTasksCounter" value="754" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141045000" />
+    <option name="totallyTimeSpent" value="141692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -813,12 +813,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="109">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,17 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-512">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="242">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="47" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -852,17 +845,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
+        <state relative-caret-position="289">
           <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        <state relative-caret-position="139">
+          <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="150" column="40" selection-start-line="150" selection-start-column="40" selection-end-line="150" selection-end-column="40" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

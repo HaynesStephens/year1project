@@ -9,14 +9,19 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-def avgDataFiles(filedir, var, num_files = 10):
-    results = glob('{0}/*aijpc*'.format(filedir))
+def avgDataFiles(filedir, var, filetype, unit_conv = 1, depth = None, num_files=10):
+    results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = np.zeros((46,72))
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
-        arr = nc_i[var][:]
+
+        if depth == None:
+            arr = nc_i[var][:]
+        else:
+            arr = nc_i[var][:][depth]
+
         arr_tot = arr_tot + arr
-    arr_avg = arr_tot / num_files
+    arr_avg = (arr_tot * unit_conv) / num_files
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     return arr_avg
@@ -92,7 +97,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         # plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
         grid.cbar_axes[0].colorbar(cs_cbar)
 
-def getDataAndMaxVal(col_list, var):
+def getDataAndMaxVal(col_list, filetype, var):
     """
     Used to get data for a given row and the max value in order to have uniform colorbars across a row.
     :param col_list:
@@ -104,7 +109,7 @@ def getDataAndMaxVal(col_list, var):
     min_val = 0
     for col in col_list:
         filedir = col['filedir']
-        data = avgDataFiles(filedir, var, num_files=10)
+        data = avgDataFiles(filedir, var, filetype)
         data_list.append(data)
         min_val = min(min_val, np.min(data))
         max_val = max(max_val, np.max(data))
@@ -113,7 +118,7 @@ def getDataAndMaxVal(col_list, var):
     return data_list, cbar_data
 
 
-def rowMatrixMap():
+def rowMatrixMap(row_list, col_list, filetype):
     fig = plt.figure(figsize = (14,8))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(len(row_list), len(col_list)),
@@ -128,7 +133,7 @@ def rowMatrixMap():
     for row_num in range(len(row_list)):
         row = row_list[row_num]
         var = row['var']
-        data_list, cbar_data = getDataAndMaxVal(col_list, var)
+        data_list, cbar_data = getDataAndMaxVal(col_list, filetype, var)
         print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(cbar_data), np.max(cbar_data)))
         for col_num in range(len(col_list)):
             col = col_list[col_num]
@@ -143,7 +148,7 @@ def rowMatrixMap():
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_qatm'
+    file_name = 'plots/row_matrix_qatm_1'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
@@ -151,5 +156,7 @@ def rowMatrixMap():
 row_list = [row_qatm]
 
 col_list = [col_0, col_1, col_22, col_39]
+
+filetype = 'aijpc'
 
 rowMatrixMap()
