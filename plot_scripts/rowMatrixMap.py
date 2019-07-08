@@ -106,14 +106,17 @@ def getDataAndMaxVal(col_list, filetype, var, depth):
     :return:
     """
     data_list = []
-    max_val = 0
-    min_val = 0
-    for col in col_list:
+    for i in range(len(col_list)):
+        col = col_list[i]
         filedir = col['filedir']
         data = avgDataFiles(filedir, filetype, var, depth)
         data_list.append(data)
-        min_val = min(min_val, np.min(data))
-        max_val = max(max_val, np.max(data))
+        if i == 0:
+            min_val = np.min(data)
+            max_val = np.max(data)
+        else:
+            min_val = min(min_val, np.min(data))
+            max_val = max(max_val, np.max(data))
     cbar_data = np.ones(shape = data.shape) * max_val # creates fake data w/ same shape to use for colorbar
     cbar_data[0, 0] = min_val # sets one point in fake data to min_val so fake data has the entire spread
     return data_list, cbar_data
