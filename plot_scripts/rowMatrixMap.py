@@ -43,10 +43,10 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
     def make_cmap(var):
         sequential_list = ['frac_land', 'pscld', 'pdcld', 'snowicefr', 'lwp',
                            'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI', 'prec', 'qatm',
-                           'pot_dens', 'pot_temp', 'salt']
+                           'pot_dens', 'salt']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
-            cmap = cm.Oranges#_r
+            cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         else:
             cmap = cm.seismic
