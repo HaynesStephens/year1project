@@ -186,7 +186,7 @@ row_o_pot_temp =         {'var':'pot_temp',
                          'lon':lono,
                          'z':zoc}
 
-row_salt =               {'var':'salt',
+row_o_salt =               {'var':'salt',
                          'ylabel':'Salinity \n [psu]',
                          'title':'Salinity',
                          'units':'[psu]',
