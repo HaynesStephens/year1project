@@ -62,7 +62,6 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         cs_cbar = m.contourf(x, y, cbar_data, levels, ax=ax, cmap=cmap, norm=norm)
         ax.clear()
 
-    plt.gca().patch.set_color('.25')
     cs = m.contourf(x, y, data, levels, ax=ax, cmap=cmap, norm=norm)
     m.ax.tick_params(labelsize=2)
     # m.colorbar(mappable=cs, ax=ax)
@@ -90,7 +89,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         x2, y2 = m(meridians[0], parallels[1])
         x3, y3 = m(meridians[1], parallels[1])
         x4, y4 = m(meridians[1], parallels[0])
-        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
+        cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='grey',
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
 
