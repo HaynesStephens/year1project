@@ -77,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="155" column="46" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
+              <caret line="155" column="42" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
-              <caret line="172" column="41" lean-forward="true" selection-start-line="172" selection-start-column="33" selection-end-line="172" selection-end-column="41" />
+            <state relative-caret-position="166">
+              <caret line="188" column="6" selection-start-line="188" selection-start-column="6" selection-end-line="188" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -167,8 +167,8 @@
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
         <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
       </list>
     </option>
@@ -306,21 +306,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="4857000" />
-    </task>
-    <task id="LOCAL-00776" summary="generating new quiver plots by depth">
-      <created>1561131882417</created>
-      <option name="number" value="00776" />
-      <option name="presentableId" value="LOCAL-00776" />
-      <option name="project" value="LOCAL" />
-      <updated>1561131882417</updated>
-    </task>
-    <task id="LOCAL-00777" summary="generating new quiver plots by depth">
-      <created>1561131912664</created>
-      <option name="number" value="00777" />
-      <option name="presentableId" value="LOCAL-00777" />
-      <option name="project" value="LOCAL" />
-      <updated>1561131912664</updated>
+      <workItem from="1562602194668" duration="5038000" />
     </task>
     <task id="LOCAL-00778" summary="generating new quiver plots by depth">
       <created>1561131937306</created>
@@ -651,11 +637,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562626437058</updated>
     </task>
-    <option name="localTasksCounter" value="825" />
+    <task id="LOCAL-00825" summary="layer plots for malte">
+      <created>1562626517563</created>
+      <option name="number" value="00825" />
+      <option name="presentableId" value="LOCAL-00825" />
+      <option name="project" value="LOCAL" />
+      <updated>1562626517563</updated>
+    </task>
+    <task id="LOCAL-00826" summary="layer plots for malte">
+      <created>1562626650550</created>
+      <option name="number" value="00826" />
+      <option name="presentableId" value="LOCAL-00826" />
+      <option name="project" value="LOCAL" />
+      <updated>1562626650550</updated>
+    </task>
+    <option name="localTasksCounter" value="827" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150755000" />
+    <option name="totallyTimeSpent" value="150936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -865,15 +865,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="172" column="41" lean-forward="true" selection-start-line="172" selection-start-column="33" selection-end-line="172" selection-end-column="41" />
+        <state relative-caret-position="166">
+          <caret line="188" column="6" selection-start-line="188" selection-start-column="6" selection-end-line="188" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="155" column="46" selection-start-line="155" selection-start-column="46" selection-end-line="155" selection-end-column="46" />
+          <caret line="155" column="42" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
