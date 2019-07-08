@@ -29,6 +29,7 @@ def avgDataFiles(filedir, filetype, var, depth, unit_conv = 1, num_files=10):
 
 def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     ax = grid[col_num]
+    ax.set_facecolor('.25')
     m = Basemap(ax = ax)
 
     ny=data.shape[0]
@@ -91,8 +92,6 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
-
-    plt.gca().patch.set_color('black')
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
