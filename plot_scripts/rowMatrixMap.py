@@ -35,6 +35,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
+    plt.gca().patch.set_color('.25')
 
     min_val = np.min(cbar_data)
     max_val = np.max(cbar_data)
