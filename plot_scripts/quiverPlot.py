@@ -48,7 +48,7 @@ def quiverSubPlot(col, ax, tit_ad, filetype, unit_conv, depth, num_files = 10):
     nx=u.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
-    plt.gca().patch.set_color('.25')
+    plt.gca().patch.set_color('grey')
     cs = m.contourf(x, y, uv_mag, ax=ax, cmap='Reds')
     m.ax.tick_params(labelsize=2)
     m.colorbar(mappable=cs, ax=ax, label='m/s')
