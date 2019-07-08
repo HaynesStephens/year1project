@@ -35,7 +35,6 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
     nx=data.shape[1]
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
-    plt.gca().patch.set_color('black')
 
     min_val = np.min(cbar_data)
     max_val = np.max(cbar_data)
@@ -92,6 +91,8 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
         cont_boundary = Polygon([(x1, y1), (x2, y2), (x3, y3), (x4, y4)], facecolor='none',
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
+
+    plt.gca().patch.set_color('black')
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
