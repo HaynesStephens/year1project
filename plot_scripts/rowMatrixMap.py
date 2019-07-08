@@ -46,7 +46,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
                            'pot_dens', 'pot_temp', 'salt']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
-            cmap = cm.Blues#_r
+            cmap = cm.Oranges#_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         else:
             cmap = cm.seismic
@@ -152,15 +152,15 @@ def rowMatrixMap(row_list, col_list, filetype, depth = None):
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_o_pot_dens_4'
+    file_name = 'plots/row_matrix_o_pot_temp_0'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-row_list = [row_o_pot_dens]
+row_list = [row_o_pot_temp]
 
 col_list = [col_0, col_1, col_22, col_39]
 
 filetype = 'oijlpc'
 
-rowMatrixMap(row_list, col_list, filetype, depth = 4)
+rowMatrixMap(row_list, col_list, filetype, depth = 0)

@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+            <state relative-caret-position="315">
+              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -306,21 +306,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="4254000" />
-    </task>
-    <task id="LOCAL-00768" summary="generating new quiver plots by depth">
-      <created>1561131606121</created>
-      <option name="number" value="00768" />
-      <option name="presentableId" value="LOCAL-00768" />
-      <option name="project" value="LOCAL" />
-      <updated>1561131606121</updated>
-    </task>
-    <task id="LOCAL-00769" summary="generating new quiver plots by depth">
-      <created>1561131612791</created>
-      <option name="number" value="00769" />
-      <option name="presentableId" value="LOCAL-00769" />
-      <option name="project" value="LOCAL" />
-      <updated>1561131612791</updated>
+      <workItem from="1562602194668" duration="4462000" />
     </task>
     <task id="LOCAL-00770" summary="generating new quiver plots by depth">
       <created>1561131689292</created>
@@ -651,11 +637,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562625772322</updated>
     </task>
-    <option name="localTasksCounter" value="817" />
+    <task id="LOCAL-00817" summary="layer plots for malte">
+      <created>1562625856067</created>
+      <option name="number" value="00817" />
+      <option name="presentableId" value="LOCAL-00817" />
+      <option name="project" value="LOCAL" />
+      <updated>1562625856067</updated>
+    </task>
+    <task id="LOCAL-00818" summary="layer plots for malte">
+      <created>1562625928253</created>
+      <option name="number" value="00818" />
+      <option name="presentableId" value="LOCAL-00818" />
+      <option name="project" value="LOCAL" />
+      <updated>1562625928253</updated>
+    </task>
+    <option name="localTasksCounter" value="819" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150152000" />
+    <option name="totallyTimeSpent" value="150360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -872,8 +872,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+        <state relative-caret-position="315">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
