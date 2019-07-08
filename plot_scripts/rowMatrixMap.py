@@ -46,7 +46,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
                            'pot_dens', 'pot_temp', 'salt']
                             #list of sequential variables to use for cmap
         if var in sequential_list:
-            cmap = cm.Blues_r
+            cmap = cm.Blues#_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         else:
             cmap = cm.seismic
