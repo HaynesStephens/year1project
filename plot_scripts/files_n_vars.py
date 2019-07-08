@@ -162,15 +162,39 @@ row_plan_alb =           {'var':'plan_alb',
                          'lat':lat,
                          'lon':lon}
 
-row_dens =               {'var':'dens',
-                         'ylabel':'Density \n [kgm$^{-3}$]',
+row_o_dens =             {'var':'dens',
+                         'ylabel':'Density \n [kgm$^{-3}$] \n (- 1000)',
                          'title':'Density',
-                         'units':'[kgm$^{-3}$]',
+                         'units':'[kgm$^{-3}$] (- 1000)',
                          'lat':lato,
                          'lon':lono,
                          'z':zoc}
 
-row_o_w =               {'var':'w',
+row_o_pot_dens =         {'var':'pot_dens',
+                         'ylabel':'Pot. Density \n [kgm$^{-3}$] \n (- 1000)',
+                         'title':'Pot. Density',
+                         'units':'[kgm$^{-3}$] (- 1000)',
+                         'lat':lato,
+                         'lon':lono,
+                         'z':zoc}
+
+row_o_pot_temp =         {'var':'pot_temp',
+                         'ylabel':'Pot. Temp. \n [C]',
+                         'title':'Pot. Temp.',
+                         'units':'[C]',
+                         'lat':lato,
+                         'lon':lono,
+                         'z':zoc}
+
+row_salt =               {'var':'salt',
+                         'ylabel':'Salinity \n [psu]',
+                         'title':'Salinity',
+                         'units':'[psu]',
+                         'lat':lato,
+                         'lon':lono,
+                         'z':zoc}
+
+row_o_w =                {'var':'w',
                          'ylabel':'Downward \n Velocity \n [cm/s]',
                          'title':'Downward Velocity',
                          'units':'[cm/s]',
