@@ -45,10 +45,11 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
                            'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI', 'prec', 'qatm',
                            'pot_dens', 'salt']
                             #list of sequential variables to use for cmap
+        divergent_list = ['pot_temp', 'tsurf']
         if var in sequential_list:
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
-        else:
+        elif var in divergent_list:
             cmap = cm.seismic
             norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
             """KEEP EYE ON THIS. TRY OUT TO MAKE SURE IT WORKS W/ DIV CBARS"""
