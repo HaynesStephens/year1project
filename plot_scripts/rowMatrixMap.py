@@ -162,6 +162,6 @@ row_list = [row_ZSI]
 
 col_list = [col_0, col_1, col_22, col_39]
 
-filetype = 'oijlpc'
+filetype = 'aijpc'
 
 rowMatrixMap(row_list, col_list, filetype, depth = None)
