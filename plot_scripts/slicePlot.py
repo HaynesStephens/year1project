@@ -5,7 +5,6 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 from glob import glob
 from files_n_vars import *
 from lat_lon_grid import *
-from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
 def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
@@ -47,27 +46,27 @@ def getSlice(data, slice_dim, slice_coord, lat_grid, lon_grid):
     return section
 
 
-def sliceSubplot(data, slice_dim, slice_coord, grid, row_num, col_num,
+def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
                  ylabel, title, lat_grid, lon_grid, z_grid):
     """
     :param data: inputted data
     :param slice_dim: dimension along which you want to cut
     :param slice_coord: coordinate of slice_dim you want to cut
-    :param grid: axes of figure
+    :param axes: axes of figure
     :param row_num:
     :param col_num:
     :param ylabel:
     :param title:
     :return: a subplot for the given variable and continent size
     """
-    ax = grid[col_num]
+    ax = axes#[col_num]
     divider = make_axes_locatable(ax)
     cax = divider.append_axes("right", size="5%", pad=0.05)
 
     section = getSlice(data, slice_dim, slice_coord, lat_grid, lon_grid)
 
     im = ax.imshow(section, aspect = 'auto')
-    grid.cbar_axes[0].colorbar(im)
+    plt.colorbar(im, cax=cax)
 
     if slice_dim == 'lat':
         ax.set_xlabel('Lon')
@@ -88,16 +87,8 @@ def sliceSubplot(data, slice_dim, slice_coord, grid, row_num, col_num,
 
 
 def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
-    fig = plt.figure(figsize = (14,8))
-    grid1 = ImageGrid(fig, 111,
-                      nrows_ncols=(len(row_list), len(col_list)),
-                      axes_pad=0.07,
-                      share_all=True,
-                      cbar_location="right",
-                      cbar_mode="single",
-                      cbar_size="7%",
-                      cbar_pad="7%",
-                      aspect=True)
+    fig, axes = plt.subplots(len(row_list), len(col_list),
+                             figsize = (12,3))
 
     for row_num in range(len(row_list)):
         row = row_list[row_num]
@@ -112,7 +103,7 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
             print(row_num, col_num)
             filedir=col['filedir']
             data = avgDataFiles(filedir, var, filetype)
-            sliceSubplot(data=data, slice_dim = slice_dim, slice_coord = slice_coord, grid=grid1,
+            sliceSubplot(data=data, slice_dim = slice_dim, slice_coord = slice_coord, axes=axes,
                          row_num=row_num, col_num=col_num, ylabel=row['ylabel'], title=col['title'],
                          lat_grid=lat_grid, lon_grid=lon_grid, z_grid=z_grid)
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/slicePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/slicePlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="155" column="51" selection-start-line="155" selection-start-column="51" selection-end-line="155" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -75,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+            <state relative-caret-position="246">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -104,10 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>max_val</find>
-      <find>pl</find>
-      <find>aqua</find>
-      <find>side=</find>
       <find>getSideMean</find>
       <find>file</find>
       <find>filetype</find>
@@ -117,7 +111,6 @@
       <find>oij</find>
       <find>contour</find>
       <find>rowma</find>
-      <find>axes</find>
       <find>gridspec_kw</find>
       <find>prec</find>
       <find>colorbar</find>
@@ -134,6 +127,11 @@
       <find>patch</find>
       <find>grey</find>
       <find>plt.gca().patch.set_color('.25')</find>
+      <find>grid</find>
+      <find>cs</find>
+      <find>bar</find>
+      <find>cs_cbar</find>
+      <find>axes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,21 +303,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="6218000" />
-    </task>
-    <task id="LOCAL-00790" summary="generating new quiver plots by depth">
-      <created>1561132467924</created>
-      <option name="number" value="00790" />
-      <option name="presentableId" value="LOCAL-00790" />
-      <option name="project" value="LOCAL" />
-      <updated>1561132467924</updated>
-    </task>
-    <task id="LOCAL-00791" summary="generating new quiver plots by depth">
-      <created>1561132516138</created>
-      <option name="number" value="00791" />
-      <option name="presentableId" value="LOCAL-00791" />
-      <option name="project" value="LOCAL" />
-      <updated>1561132516138</updated>
+      <workItem from="1562602194668" duration="6600000" />
     </task>
     <task id="LOCAL-00792" summary="generating new quiver plots by depth">
       <created>1561132622618</created>
@@ -650,11 +634,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562713509197</updated>
     </task>
-    <option name="localTasksCounter" value="839" />
+    <task id="LOCAL-00839" summary="confirming slice plot aqua roll">
+      <created>1562713643423</created>
+      <option name="number" value="00839" />
+      <option name="presentableId" value="LOCAL-00839" />
+      <option name="project" value="LOCAL" />
+      <updated>1562713643423</updated>
+    </task>
+    <task id="LOCAL-00840" summary="confirming slice plot aqua roll">
+      <created>1562713952131</created>
+      <option name="number" value="00840" />
+      <option name="presentableId" value="LOCAL-00840" />
+      <option name="project" value="LOCAL" />
+      <updated>1562713952131</updated>
+    </task>
+    <option name="localTasksCounter" value="841" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152116000" />
+    <option name="totallyTimeSpent" value="152498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -884,18 +882,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="155" column="51" selection-start-line="155" selection-start-column="51" selection-end-line="155" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+        <state relative-caret-position="246">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
