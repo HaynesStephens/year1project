@@ -153,7 +153,7 @@ def rowMatrixMap(row_list, col_list, filetype, depth = None):
                         meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/row_matrix_o_pot_dens_surf'
+    file_name = 'plots/row_matrix_o_pot_dens_aqua_0'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
