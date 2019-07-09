@@ -17,9 +17,9 @@ def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
 
     arr_avg = (arr_tot * unit_conv) / num_files
 
-    if 'aqua' in filedir:
-        roll_axis = len(arr_avg.shape) - 1
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=roll_axis)
+    # if 'aqua' in filedir:
+    #     roll_axis = len(arr_avg.shape) - 1
+    #     arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=roll_axis)
     return arr_avg
 
 
