@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/slicePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/slicePlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big_clouds.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big_clouds.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_small.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_small.svg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,19 +68,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="66" />
+            <state relative-caret-position="1652">
+              <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="-513">
               <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -165,8 +175,8 @@
         <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
       </list>
     </option>
   </component>
@@ -303,21 +313,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="6600000" />
-    </task>
-    <task id="LOCAL-00792" summary="generating new quiver plots by depth">
-      <created>1561132622618</created>
-      <option name="number" value="00792" />
-      <option name="presentableId" value="LOCAL-00792" />
-      <option name="project" value="LOCAL" />
-      <updated>1561132622618</updated>
-    </task>
-    <task id="LOCAL-00793" summary="generating new quiver plots by depth">
-      <created>1561132644471</created>
-      <option name="number" value="00793" />
-      <option name="presentableId" value="LOCAL-00793" />
-      <option name="project" value="LOCAL" />
-      <updated>1561132644471</updated>
+      <workItem from="1562602194668" duration="7119000" />
     </task>
     <task id="LOCAL-00794" summary="generating new quiver plots by depth">
       <created>1561132667243</created>
@@ -648,11 +644,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562713952131</updated>
     </task>
-    <option name="localTasksCounter" value="841" />
+    <task id="LOCAL-00841" summary="confirming slice plot aqua roll">
+      <created>1562714021534</created>
+      <option name="number" value="00841" />
+      <option name="presentableId" value="LOCAL-00841" />
+      <option name="project" value="LOCAL" />
+      <updated>1562714021534</updated>
+    </task>
+    <task id="LOCAL-00842" summary="confirming slice plot aqua roll">
+      <created>1562714443781</created>
+      <option name="number" value="00842" />
+      <option name="presentableId" value="LOCAL-00842" />
+      <option name="project" value="LOCAL" />
+      <updated>1562714443781</updated>
+    </task>
+    <option name="localTasksCounter" value="843" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152498000" />
+    <option name="totallyTimeSpent" value="153017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -880,19 +890,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="-513">
           <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1652">
+          <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
