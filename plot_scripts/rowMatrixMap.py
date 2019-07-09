@@ -124,7 +124,7 @@ def getDataAndMaxVal(col_list, filetype, var, depth):
 
 
 def rowMatrixMap(row_list, col_list, filetype, depth = None):
-    fig = plt.figure(figsize = (14,8))
+    fig = plt.figure(figsize = (14,6))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(len(row_list), len(col_list)),
                       axes_pad=0.07,
