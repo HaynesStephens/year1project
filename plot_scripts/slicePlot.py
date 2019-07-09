@@ -108,14 +108,14 @@ def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
                          lat_grid=lat_grid, lon_grid=lon_grid, z_grid=z_grid)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/slice_o_pot_dens'
+    file_name = 'plots/slice_o_pot_dens_aqua'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
 
 row_list = [row_o_pot_dens]
-col_list = [col_0, col_1, col_22, col_39]
+col_list = [col_0]#, col_1, col_22, col_39]
 slice_dim = 'lon'
 slice_coord = 2.5
 filetype = 'oijl'
