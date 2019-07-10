@@ -46,7 +46,7 @@ def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
                            'pcldt', 'pscld', 'pdcld', 'wtrcld', 'icecld', 'ZSI', 'prec', 'qatm',
                            'pot_dens', 'salt']
                             #list of sequential variables to use for cmap
-        divergent_list = ['pot_temp', 'tsurf']
+        divergent_list = ['pot_temp', 'tsurf', 'w']
         if var in sequential_list:
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -195,8 +195,10 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
 row = row_o_w
 col_list = [col_0]
 filetype = 'oijlpc'
-# depth_list = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #zoc depths to use in title
-depth_list = ['12m', '30m', '57m', '97.5m', '158.25m'] #zoce depths to use in title
+
+zoc_depths = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #zoc depths to use in title
+zoce_depths = ['12m', '30m', '57m', '97.5m', '158.25m'] #zoce depths to use in title
+depth_list = zoce_depths
 
 for depth_i in range(5):
     rowMatrixMap(row, col_list, filetype, depth = depth_i)
