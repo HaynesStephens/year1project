@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="524">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="41" />
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -88,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-309">
-              <caret line="152" column="51" lean-forward="true" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
+            <state relative-caret-position="2325">
+              <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -306,21 +305,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="10834000" />
-    </task>
-    <task id="LOCAL-00811" summary="layer plots for malte">
-      <created>1562625344605</created>
-      <option name="number" value="00811" />
-      <option name="presentableId" value="LOCAL-00811" />
-      <option name="project" value="LOCAL" />
-      <updated>1562625344605</updated>
-    </task>
-    <task id="LOCAL-00812" summary="layer plots for malte">
-      <created>1562625460917</created>
-      <option name="number" value="00812" />
-      <option name="presentableId" value="LOCAL-00812" />
-      <option name="project" value="LOCAL" />
-      <updated>1562625460917</updated>
+      <workItem from="1562602194668" duration="10970000" />
     </task>
     <task id="LOCAL-00813" summary="layer plots for malte">
       <created>1562625490330</created>
@@ -651,11 +636,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562777720701</updated>
     </task>
-    <option name="localTasksCounter" value="860" />
+    <task id="LOCAL-00860" summary="generating single layer ocean plots">
+      <created>1562777739290</created>
+      <option name="number" value="00860" />
+      <option name="presentableId" value="LOCAL-00860" />
+      <option name="project" value="LOCAL" />
+      <updated>1562777739290</updated>
+    </task>
+    <task id="LOCAL-00861" summary="generating single layer ocean plots">
+      <created>1562778027194</created>
+      <option name="number" value="00861" />
+      <option name="presentableId" value="LOCAL-00861" />
+      <option name="project" value="LOCAL" />
+      <updated>1562778027194</updated>
+    </task>
+    <option name="localTasksCounter" value="862" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156732000" />
+    <option name="totallyTimeSpent" value="156868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -882,14 +881,14 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="41" />
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-309">
-          <caret line="152" column="51" lean-forward="true" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
+        <state relative-caret-position="2325">
+          <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
         </state>
       </provider>
     </entry>
