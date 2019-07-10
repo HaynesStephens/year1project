@@ -27,7 +27,7 @@ def avgDataFiles(filedir, filetype, var, depth, unit_conv = 1, num_files=10):
     return arr_avg
 
 
-def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
+def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
     ax = grid[col_num]
     ax.set_facecolor('.25')
     m = Basemap(ax = ax)
@@ -67,8 +67,7 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
     m.ax.tick_params(labelsize=2)
     # m.colorbar(mappable=cs, ax=ax)
 
-    if row_num==0:
-        ax.set_title(title, fontsize=10)
+    ax.set_title(title, fontsize=10)
 
     if col_num==0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
@@ -96,7 +95,6 @@ def makeSubplot(data, var, cbar_data, grid, row_num, col_num, ylabel, parallels,
 
     if plot_cbar:
         #Plot the colorbar on the final plot of the row
-        # plt.colorbar(mappable=cs_cbar, cax=axes[row_num, col_num+1])
         grid.cbar_axes[0].colorbar(cs_cbar)
 
 def getDataAndMaxVal(col_list, filetype, var, depth):
@@ -165,14 +163,14 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(cbar_data), np.max(cbar_data)))
     for col_num in range(len(col_list)):
         col = col_list[col_num]
-        print(col_num, row_num)
+        print(col_num)
         data = data_list[col_num]
         if col_num == len(col_list) - 1:
             plot_cbar = True
         else:
             plot_cbar = False
         makeSubplot(data=data, var=var, cbar_data=cbar_data, grid=grid1,
-                    row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
+                    col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
                     meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
