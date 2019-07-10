@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
+            <state relative-caret-position="338">
+              <caret line="194" column="20" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="187" column="89" selection-start-line="187" selection-start-column="89" selection-end-line="187" selection-end-column="89" />
+            <state relative-caret-position="439">
+              <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -319,21 +319,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="13838000" />
-    </task>
-    <task id="LOCAL-00829" summary="layer plots for malte">
-      <created>1562626880435</created>
-      <option name="number" value="00829" />
-      <option name="presentableId" value="LOCAL-00829" />
-      <option name="project" value="LOCAL" />
-      <updated>1562626880435</updated>
-    </task>
-    <task id="LOCAL-00830" summary="layer plots for malte">
-      <created>1562626940577</created>
-      <option name="number" value="00830" />
-      <option name="presentableId" value="LOCAL-00830" />
-      <option name="project" value="LOCAL" />
-      <updated>1562626940577</updated>
+      <workItem from="1562602194668" duration="13940000" />
     </task>
     <task id="LOCAL-00831" summary="layer plots for malte">
       <created>1562627071695</created>
@@ -664,11 +650,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562785029506</updated>
     </task>
-    <option name="localTasksCounter" value="878" />
+    <task id="LOCAL-00878" summary="generating vertically averaged plots for malte">
+      <created>1562785109362</created>
+      <option name="number" value="00878" />
+      <option name="presentableId" value="LOCAL-00878" />
+      <option name="project" value="LOCAL" />
+      <updated>1562785109362</updated>
+    </task>
+    <task id="LOCAL-00879" summary="generating vertically averaged plots for malte">
+      <created>1562785155721</created>
+      <option name="number" value="00879" />
+      <option name="presentableId" value="LOCAL-00879" />
+      <option name="project" value="LOCAL" />
+      <updated>1562785155721</updated>
+    </task>
+    <option name="localTasksCounter" value="880" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159736000" />
+    <option name="totallyTimeSpent" value="159838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -908,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="187" column="89" selection-start-line="187" selection-start-column="89" selection-end-line="187" selection-end-column="89" />
+        <state relative-caret-position="439">
+          <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -918,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
+        <state relative-caret-position="338">
+          <caret line="194" column="20" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
