@@ -193,7 +193,7 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
     plt.show()
 
 row = row_o_pot_dens
-col_list = [col_0]
+col_list = [col_1]
 filetype = 'oijlpc'
 depth_list = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #list of depths in zoc array to use in title
 
