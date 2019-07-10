@@ -123,10 +123,35 @@ def getDataAndMaxVal(col_list, filetype, var, depth):
     return data_list, cbar_data
 
 
-def rowMatrixMap(row_list, col_list, filetype, depth = None):
+def getSinglePlotName(row, col_list, filetype, depth):
+    """
+    If the plot is a single figure (one simulation),
+    then generate the filename automatically.
+    :param row:
+    :param col_list:
+    :param filetype:
+    :param depth:
+    :return:
+    """
+    if depth == None:
+        depth_name = ''
+    else:
+        depth_name = str(depth)
+
+    var_name = row['var']
+    if 'o' in filetype:
+        var_name = 'o_' + var_name
+
+    p_name = str(col_list[0]['SA'])+'p'
+
+    file_name = 'plots/{0}/{1}_{2}'.format(p_name, var_name, depth_name)
+    return file_name
+
+
+def rowMatrixMap(row, col_list, filetype, depth = None):
     fig = plt.figure(figsize = (14,6))
     grid1 = ImageGrid(fig, 111,
-                      nrows_ncols=(len(row_list), len(col_list)),
+                      nrows_ncols=(1, len(col_list)),
                       axes_pad=0.07,
                       share_all=True,
                       cbar_location="right",
@@ -135,33 +160,36 @@ def rowMatrixMap(row_list, col_list, filetype, depth = None):
                       cbar_pad="7%",
                       aspect=True)
 
-    for row_num in range(len(row_list)):
-        row = row_list[row_num]
-        var = row['var']
-        data_list, cbar_data = getDataAndMaxVal(col_list, filetype, var, depth)
-        print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(cbar_data), np.max(cbar_data)))
-        for col_num in range(len(col_list)):
-            col = col_list[col_num]
-            print(col_num, row_num)
-            data = data_list[col_num]
-            if col_num == len(col_list) - 1:
-                plot_cbar = True
-            else:
-                plot_cbar = False
-            makeSubplot(data=data, var=var, cbar_data=cbar_data, grid=grid1,
-                        row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
-                        meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
+    var = row['var']
+    data_list, cbar_data = getDataAndMaxVal(col_list, filetype, var, depth)
+    print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(cbar_data), np.max(cbar_data)))
+    for col_num in range(len(col_list)):
+        col = col_list[col_num]
+        print(col_num, row_num)
+        data = data_list[col_num]
+        if col_num == len(col_list) - 1:
+            plot_cbar = True
+        else:
+            plot_cbar = False
+        makeSubplot(data=data, var=var, cbar_data=cbar_data, grid=grid1,
+                    row_num=row_num, col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
+                    meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/0p/o_pot_dens_0'
+    if len(col_list) == 1:
+        file_name = getSinglePlotName(row, col_list, filetype, depth)
+    else:
+        file_name = 'plots/manual'
+    print('PLOT NAME:', file_name)
+
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-row_list = [row_o_pot_dens]
+row = row_o_pot_dens
 
 col_list = [col_0]
 
 filetype = 'oijlpc'
 
-rowMatrixMap(row_list, col_list, filetype, depth = 0)
+rowMatrixMap(row, col_list, filetype, depth = 0)
