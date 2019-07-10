@@ -179,6 +179,7 @@ def rowMatrixMap(row, col_list, filetype):
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     # plt.show()
+    print('Done')
 
 row = row_o_pot_temp
 #col_list = [col_1]
