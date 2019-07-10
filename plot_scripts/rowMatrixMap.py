@@ -190,7 +190,7 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
 
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
-    plt.show()
+    #plt.show()
 
 row = row_o_pot_dens
 col_list = [col_1]
