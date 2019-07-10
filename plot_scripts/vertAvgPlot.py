@@ -182,7 +182,7 @@ def rowMatrixMap(row, col_list, filetype):
 
 row = row_o_pot_dens
 #col_list = [col_1]
-col_outer_list = [col_0]#, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+col_outer_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 filetype = 'oijlpc'
 
 # This is a makeshift loop to create these plots quickly, looping through all p's and all depths for ocean

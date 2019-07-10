@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="180" column="12" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="12" />
+            <state relative-caret-position="439">
+              <caret line="184" column="23" selection-start-line="184" selection-start-column="23" selection-end-line="184" selection-end-column="23" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -318,14 +319,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="13577000" />
-    </task>
-    <task id="LOCAL-00826" summary="layer plots for malte">
-      <created>1562626650550</created>
-      <option name="number" value="00826" />
-      <option name="presentableId" value="LOCAL-00826" />
-      <option name="project" value="LOCAL" />
-      <updated>1562626650550</updated>
+      <workItem from="1562602194668" duration="13741000" />
     </task>
     <task id="LOCAL-00827" summary="layer plots for malte">
       <created>1562626738344</created>
@@ -663,11 +657,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562784740202</updated>
     </task>
-    <option name="localTasksCounter" value="875" />
+    <task id="LOCAL-00875" summary="generating vertically averaged plots for malte">
+      <created>1562784747140</created>
+      <option name="number" value="00875" />
+      <option name="presentableId" value="LOCAL-00875" />
+      <option name="project" value="LOCAL" />
+      <updated>1562784747140</updated>
+    </task>
+    <option name="localTasksCounter" value="876" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159475000" />
+    <option name="totallyTimeSpent" value="159639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -917,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="180" column="12" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="12" />
+        <state relative-caret-position="439">
+          <caret line="184" column="23" selection-start-line="184" selection-start-column="23" selection-end-line="184" selection-end-column="23" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
