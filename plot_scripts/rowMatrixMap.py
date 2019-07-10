@@ -204,5 +204,5 @@ depth_list = zoc_depths
 # This is a makeshift loop to create these plots quickly, looping through all p's and all depths for ocean
 for col_out in col_outer_list:
     col_list = [col_out]
-    for depth_i in range(5):
+    for depth_i in range(len(depth_list)):
         rowMatrixMap(row, col_list, filetype, depth = depth_i)
