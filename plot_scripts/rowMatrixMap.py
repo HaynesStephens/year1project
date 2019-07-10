@@ -192,7 +192,7 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
     plt.savefig(file_name+'.pdf')
     #plt.show()
 
-row = row_o_pot_temp
+row = row_o_salt
 col_list = [col_1]
 filetype = 'oijlpc'
 
