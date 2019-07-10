@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/for_malte/quiver_0p_all.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/for_malte/quiver_1p_all.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/for_malte/quiver_22p_all.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/for_malte/quiver_39p_all.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/for_malte/row_matrix_o_w_all.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
-              <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+              <caret line="190" column="41" selection-start-line="190" selection-start-column="41" selection-end-line="190" selection-end-column="41" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -324,14 +319,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="13377000" />
-    </task>
-    <task id="LOCAL-00822" summary="layer plots for malte">
-      <created>1562626257197</created>
-      <option name="number" value="00822" />
-      <option name="presentableId" value="LOCAL-00822" />
-      <option name="project" value="LOCAL" />
-      <updated>1562626257197</updated>
+      <workItem from="1562602194668" duration="13391000" />
     </task>
     <task id="LOCAL-00823" summary="layer plots for malte">
       <created>1562626356840</created>
@@ -669,11 +657,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562783967014</updated>
     </task>
-    <option name="localTasksCounter" value="871" />
+    <task id="LOCAL-00871" summary="generating vertically averaged plots for malte">
+      <created>1562783982279</created>
+      <option name="number" value="00871" />
+      <option name="presentableId" value="LOCAL-00871" />
+      <option name="project" value="LOCAL" />
+      <updated>1562783982279</updated>
+    </task>
+    <option name="localTasksCounter" value="872" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159275000" />
+    <option name="totallyTimeSpent" value="159289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -729,7 +724,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="map plots" />
     <MESSAGE value="checking on runs" />
     <MESSAGE value="checking on ice thickness for 34p and 39p" />
     <MESSAGE value="creating plots for 0_1_4" />
@@ -754,7 +748,8 @@
     <MESSAGE value="layer plots for malte" />
     <MESSAGE value="confirming slice plot aqua roll" />
     <MESSAGE value="generating single layer ocean plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="generating single layer ocean plots" />
+    <MESSAGE value="generating vertically averaged plots for malte" />
+    <option name="LAST_COMMIT_MESSAGE" value="generating vertically averaged plots for malte" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -924,7 +919,7 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+          <caret line="190" column="41" selection-start-line="190" selection-start-column="41" selection-end-line="190" selection-end-column="41" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
