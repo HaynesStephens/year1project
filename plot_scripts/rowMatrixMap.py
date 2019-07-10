@@ -192,10 +192,10 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
     plt.savefig(file_name+'.pdf')
     #plt.show()
 
-row = row_o_w
+row = row_ZSI
 #col_list = [col_1]
 col_outer_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-filetype = 'oijlpc'
+filetype = 'aijpc'
 
 zoc_depths = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #zoc depths to use in title
 zoce_depths = ['12m', '30m', '57m', '97.5m'] #zoce depths to use in title
@@ -204,5 +204,4 @@ depth_list = zoce_depths
 # This is a makeshift loop to create these plots quickly, looping through all p's and all depths for ocean
 for col_out in col_outer_list:
     col_list = [col_out]
-    for depth_i in range(len(depth_list)):
-        rowMatrixMap(row, col_list, filetype, depth = depth_i)
+    rowMatrixMap(row, col_list, filetype, depth = None)
