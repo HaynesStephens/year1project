@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+            <state relative-caret-position="541">
+              <caret line="192" column="47" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -104,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>file</find>
       <find>filetype</find>
       <find>filetype=</find>
       <find>filetype =</find>
@@ -134,6 +134,7 @@
       <find>cs_cbar</find>
       <find>axes</find>
       <find>row_list</find>
+      <find>row_num</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,28 +306,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="8488000" />
-    </task>
-    <task id="LOCAL-00794" summary="generating new quiver plots by depth">
-      <created>1561132667243</created>
-      <option name="number" value="00794" />
-      <option name="presentableId" value="LOCAL-00794" />
-      <option name="project" value="LOCAL" />
-      <updated>1561132667243</updated>
-    </task>
-    <task id="LOCAL-00795" summary="generating new quiver plots by depth">
-      <created>1561132691952</created>
-      <option name="number" value="00795" />
-      <option name="presentableId" value="LOCAL-00795" />
-      <option name="project" value="LOCAL" />
-      <updated>1561132691952</updated>
-    </task>
-    <task id="LOCAL-00796" summary="generating new quiver plots by depth">
-      <created>1562622875819</created>
-      <option name="number" value="00796" />
-      <option name="presentableId" value="LOCAL-00796" />
-      <option name="project" value="LOCAL" />
-      <updated>1562622875820</updated>
+      <workItem from="1562602194668" duration="8700000" />
     </task>
     <task id="LOCAL-00797" summary="layer plots for malte">
       <created>1562622889664</created>
@@ -650,11 +630,32 @@
       <option name="project" value="LOCAL" />
       <updated>1562714443781</updated>
     </task>
-    <option name="localTasksCounter" value="843" />
+    <task id="LOCAL-00843" summary="confirming slice plot aqua roll">
+      <created>1562774875854</created>
+      <option name="number" value="00843" />
+      <option name="presentableId" value="LOCAL-00843" />
+      <option name="project" value="LOCAL" />
+      <updated>1562774875854</updated>
+    </task>
+    <task id="LOCAL-00844" summary="generating single layer ocean plots">
+      <created>1562774889417</created>
+      <option name="number" value="00844" />
+      <option name="presentableId" value="LOCAL-00844" />
+      <option name="project" value="LOCAL" />
+      <updated>1562774889417</updated>
+    </task>
+    <task id="LOCAL-00845" summary="generating single layer ocean plots">
+      <created>1562775045484</created>
+      <option name="number" value="00845" />
+      <option name="presentableId" value="LOCAL-00845" />
+      <option name="project" value="LOCAL" />
+      <updated>1562775045484</updated>
+    </task>
+    <option name="localTasksCounter" value="846" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154386000" />
+    <option name="totallyTimeSpent" value="154598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -710,7 +711,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="check out runs to see if at EQ" />
     <MESSAGE value="map plots" />
     <MESSAGE value="checking on runs" />
     <MESSAGE value="checking on ice thickness for 34p and 39p" />
@@ -735,7 +735,8 @@
     <MESSAGE value="generating new quiver plots by depth" />
     <MESSAGE value="layer plots for malte" />
     <MESSAGE value="confirming slice plot aqua roll" />
-    <option name="LAST_COMMIT_MESSAGE" value="confirming slice plot aqua roll" />
+    <MESSAGE value="generating single layer ocean plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="generating single layer ocean plots" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -894,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+        <state relative-caret-position="541">
+          <caret line="192" column="47" selection-start-line="192" selection-start-column="47" selection-end-line="192" selection-end-column="47" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

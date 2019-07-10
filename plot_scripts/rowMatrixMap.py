@@ -190,4 +190,4 @@ col_list = [col_0]
 
 filetype = 'oijlpc'
 
-rowMatrixMap(row, col_list, filetype, depth = 0)
+rowMatrixMap(row, col_list, filetype, depth = 1)
