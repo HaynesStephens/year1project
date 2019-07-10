@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+            <state relative-caret-position="371">
+              <caret line="180" column="12" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="12" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -319,21 +318,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="13559000" />
-    </task>
-    <task id="LOCAL-00824" summary="layer plots for malte">
-      <created>1562626437058</created>
-      <option name="number" value="00824" />
-      <option name="presentableId" value="LOCAL-00824" />
-      <option name="project" value="LOCAL" />
-      <updated>1562626437058</updated>
-    </task>
-    <task id="LOCAL-00825" summary="layer plots for malte">
-      <created>1562626517563</created>
-      <option name="number" value="00825" />
-      <option name="presentableId" value="LOCAL-00825" />
-      <option name="project" value="LOCAL" />
-      <updated>1562626517563</updated>
+      <workItem from="1562602194668" duration="13577000" />
     </task>
     <task id="LOCAL-00826" summary="layer plots for malte">
       <created>1562626650550</created>
@@ -664,11 +649,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562783989249</updated>
     </task>
-    <option name="localTasksCounter" value="873" />
+    <task id="LOCAL-00873" summary="generating vertically averaged plots for malte">
+      <created>1562784729553</created>
+      <option name="number" value="00873" />
+      <option name="presentableId" value="LOCAL-00873" />
+      <option name="project" value="LOCAL" />
+      <updated>1562784729554</updated>
+    </task>
+    <task id="LOCAL-00874" summary="generating vertically averaged plots for malte">
+      <created>1562784740202</created>
+      <option name="number" value="00874" />
+      <option name="presentableId" value="LOCAL-00874" />
+      <option name="project" value="LOCAL" />
+      <updated>1562784740202</updated>
+    </task>
+    <option name="localTasksCounter" value="875" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159457000" />
+    <option name="totallyTimeSpent" value="159475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -918,8 +917,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/vertAvgPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+        <state relative-caret-position="371">
+          <caret line="180" column="12" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
