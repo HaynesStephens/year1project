@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big_clouds.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_big_clouds.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_small.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/matrix_basemap_small.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +60,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1652">
-              <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+            <state relative-caret-position="354">
+              <caret line="155" column="36" selection-start-line="155" selection-start-column="36" selection-end-line="155" selection-end-column="36" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -81,22 +85,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-513">
-              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="172" selection-start-line="172" selection-end-line="172" selection-end-column="14" />
+            <state relative-caret-position="2730">
+              <caret line="169" column="36" lean-forward="true" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -313,7 +305,7 @@
       <workItem from="1558124784295" duration="1527000" />
       <workItem from="1558371305415" duration="2112000" />
       <workItem from="1560785402783" duration="19353000" />
-      <workItem from="1562602194668" duration="7119000" />
+      <workItem from="1562602194668" duration="7614000" />
     </task>
     <task id="LOCAL-00794" summary="generating new quiver plots by depth">
       <created>1561132667243</created>
@@ -662,7 +654,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153017000" />
+    <option name="totallyTimeSpent" value="153512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -846,16 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/matrixMaps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -883,17 +865,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="172" selection-start-line="172" selection-end-line="172" selection-end-column="14" />
+        <state relative-caret-position="2730">
+          <caret line="169" column="36" lean-forward="true" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        <state relative-caret-position="320">
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -902,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1652">
-          <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+        <state relative-caret-position="354">
+          <caret line="155" column="36" selection-start-line="155" selection-start-column="36" selection-end-line="155" selection-end-column="36" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
