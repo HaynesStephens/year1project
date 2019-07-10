@@ -199,7 +199,7 @@ filetype = 'oijlpc'
 
 zoc_depths = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #zoc depths to use in title
 zoce_depths = ['12m', '30m', '57m', '97.5m'] #zoce depths to use in title
-depth_list = zoc_depths
+depth_list = zoce_depths
 
 # This is a makeshift loop to create these plots quickly, looping through all p's and all depths for ocean
 for col_out in col_outer_list:
