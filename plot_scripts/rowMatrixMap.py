@@ -192,10 +192,11 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
     plt.savefig(file_name+'.pdf')
     #plt.show()
 
-row = row_o_salt
+row = row_o_w
 col_list = [col_0]
 filetype = 'oijlpc'
-depth_list = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #list of depths in zoc array to use in title
+# depth_list = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #zoc depths to use in title
+depth_list = ['12m', '30m', '57m', '97.5m', '158.25m'] #zoce depths to use in title
 
 for depth_i in range(5):
     rowMatrixMap(row, col_list, filetype, depth = depth_i)
