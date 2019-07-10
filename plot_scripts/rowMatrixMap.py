@@ -185,9 +185,8 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
     plt.show()
 
 row = row_o_pot_dens
-
 col_list = [col_0]
-
 filetype = 'oijlpc'
 
-rowMatrixMap(row, col_list, filetype, depth = 1)
+for depth_i in range(5):
+    rowMatrixMap(row, col_list, filetype, depth = depth_i)
