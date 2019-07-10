@@ -27,7 +27,8 @@ def avgDataFiles(filedir, filetype, var, depth, unit_conv = 1, num_files=10):
     return arr_avg
 
 
-def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels, meridians, title, plot_cbar=False):
+def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
+                meridians, title, plot_cbar=False):
     ax = grid[col_num]
     ax.set_facecolor('.25')
     m = Basemap(ax = ax)
@@ -169,9 +170,16 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
             plot_cbar = True
         else:
             plot_cbar = False
+
+        if depth == None:
+            title = col['title']
+        else:
+            title = col['title'] + ' ' + depth_list[depth]
+
         makeSubplot(data=data, var=var, cbar_data=cbar_data, grid=grid1,
                     col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
-                    meridians=col['meridians'], title=col['title'], plot_cbar=plot_cbar)
+                    meridians=col['meridians'], title=title,
+                    plot_cbar=plot_cbar)
 
     # fig.tight_layout(w_pad = 2.25)
     if len(col_list) == 1:
@@ -187,6 +195,7 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
 row = row_o_pot_dens
 col_list = [col_0]
 filetype = 'oijlpc'
+depth_list = ['6m', '21m', '43.5m', '77.25m', '127.875m'] #list of depths in zoc array to use in title
 
 for depth_i in range(5):
     rowMatrixMap(row, col_list, filetype, depth = depth_i)
