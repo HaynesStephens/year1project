@@ -9,21 +9,22 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
+def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
-    arr_tot = np.zeros((46,72))
+    arr_tot = 0
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
         arr = nc_i[var][:]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    if 'aqua' in filedir:
+
+    if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
         arr_avg = np.roll(arr_avg, (arr_avg.shape[2]) // 2, axis=2)
 
-    def vertAvg(arr):
-        return np.mean(arr, axis=0)
+    if 'o' in filetype: #if it's ocean file, only take the top 5 levels
+        arr_avg = arr_avg[:5, :, :]
 
-    return vertAvg(arr_avg)
+    return np.mean(arr_avg, axis=0)
 
 
 def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,

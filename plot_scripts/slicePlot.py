@@ -8,18 +8,19 @@ from lat_lon_grid import *
 
 def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
-    arr_tot = np.zeros((46,72))
+    arr_tot = 0
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
         arr = nc_i[var][:]
         arr_tot = arr_tot + arr
-
-
     arr_avg = (arr_tot * unit_conv) / num_files
 
-    if 'aqua' in filedir:
-        roll_axis = len(arr_avg.shape) - 1
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=roll_axis)
+    if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[2]) // 2, axis=2)
+
+    if 'o' in filetype: #if it's ocean file, only take the top 5 levels
+        arr_avg = arr_avg[:5, :, :]
+
     return arr_avg
 
 
@@ -30,19 +31,12 @@ def getSlice(data, slice_dim, slice_coord, lat_grid, lon_grid):
     :param slice_coord: the coordinate of dimensions that you want to cut along [degrees or m]
     :return: the 2D array sliced out along slice_dim at the coordinate slice_coord
     """
-
-    tot_layers = data.shape[0]
-    if tot_layers == 13:
-        num_layers = 5 # Use only top 6 layers for ocean
-    else:
-        num_layers = tot_layers # Use all layers for atmosphere
-
     if slice_dim == 'lat': # slice along a latitude
         slice_index = np.where(lat_grid == slice_coord)[0][0]
-        section = data[:num_layers,slice_index,:]
+        section = data[:,slice_index,:]
     elif slice_dim == 'lon': # slice along a longitude
         slice_index = np.where(lon_grid == slice_coord)[0][0]
-        section = data[:num_layers,:,slice_index]
+        section = data[:,:,slice_index]
     return section
 
 
@@ -70,10 +64,10 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
 
     if slice_dim == 'lat':
         ax.set_xlabel('Lon')
-        ax.set_xticklabels(['']*lon_grid.size)
+        # ax.set_xticklabels(['']*lon_grid.size)
     elif slice_dim == 'lon':
         ax.set_xlabel('Lat')
-        ax.set_xticklabels(['']*lat_grid.size)
+        # ax.set_xticklabels(['']*lat_grid.size)
 
     if row_num == 0:
         ax.set_title(title, fontsize=10)
@@ -82,8 +76,8 @@ def sliceSubplot(data, slice_dim, slice_coord, axes, row_num, col_num,
     if col_num == 0:
         ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
         ax.set_yticklabels(['']+z_grid.tolist())
-    else:
-        ax.set_yticklabels(['']*len(z_grid))
+    # else:
+    #     ax.set_yticklabels(['']*len(z_grid))
 
 
 def slicePlot(filetype, row_list, col_list, slice_dim, slice_coord):
