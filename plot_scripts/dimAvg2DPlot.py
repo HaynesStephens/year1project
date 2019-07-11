@@ -96,13 +96,12 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
     print(data.shape)
-    print(data[:,-1])
 
     if 'a' in filetype:
         rot_origin = True
     else:
         rot_origin = False
-    makeSubplot(data=data, grid=grid, row=row, col=col, seq_or_div=seq_or_div, rot_origin=rot_origin)
+    makeSubplot(data=data, grid=grid, row=row, col=col, coord=avg_coord, seq_or_div=seq_or_div, rot_origin=rot_origin)
 
     # fig.tight_layout(w_pad = 2.25)
     file_name = getPlotName(row, col, filetype, avg_coord)
