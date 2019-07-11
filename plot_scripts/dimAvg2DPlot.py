@@ -90,7 +90,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
     print(data.shape)
-    print(data[:,0])
+    print(data[:,-1])
 
     if 'a' in filetype:
         rot_origin = True
