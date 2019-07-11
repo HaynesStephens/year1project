@@ -67,11 +67,13 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         xticklabels = row['lat'][::3]
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels)
+        ax.set_xlabel('Latitude')
 
     yticks = np.arange(row['z'].size)[::4]
     yticklabels = row['z'][::4]
     ax.set_yticks(yticks)
     ax.set_yticklabels(yticklabels)
+    ax.set_ylabel('Pressure [mb]')
 
     grid.cbar_axes[0].colorbar(im)
     ax.set_title(col['title'] + ', ' + row['title'])
