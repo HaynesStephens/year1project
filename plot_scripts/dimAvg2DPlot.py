@@ -58,9 +58,9 @@ def makeSubplot(data, grid, row, col, seq_or_div, rot_origin):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
     if rot_origin:
-        im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower')
+        im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower', interpolation='none')
     else:
-        im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper')
+        im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none')
     grid.cbar_axes[0].colorbar(im)
     ax.set_title(col['title'] + ', ' + row['title'])
 
