@@ -63,10 +63,15 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none')
 
     if coord == 'lon':
-        ticks = np.arange(1, row['lat'].size)[::4]
-        ticklabels = row['lat'][1::4]
-        # ax.set_xticks(ticks)
-        ax.set_xticklabels(ticklabels)
+        xticks = np.arange(row['lat'].size)[::4]
+        xticklabels = row['lat'][::4]
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xticklabels)
+
+    yticks = np.arange(row['z'].size)[::4]
+    yticklabels = row['z'][::4]
+    ax.set_yticks(yticks)
+    ax.set_yticklabels(yticklabels)
 
     grid.cbar_axes[0].colorbar(im)
     ax.set_title(col['title'] + ', ' + row['title'])
