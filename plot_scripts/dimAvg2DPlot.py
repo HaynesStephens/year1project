@@ -102,6 +102,6 @@ row = row_ub
 col = col_4
 filetype = 'aijkpc'
 avg_coord = 'lon'
-seq_or_div = 'seq'
+seq_or_div = 'div'
 
 dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
