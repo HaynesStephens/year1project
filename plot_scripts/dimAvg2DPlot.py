@@ -98,9 +98,9 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     plt.show()
     print('Plot Saved.')
 
-row = row_o_salt
-col = col_0
-filetype = 'oijlpc'
+row = row_ub
+col = col_4
+filetype = 'aijkpc'
 avg_coord = 'lon'
 seq_or_div = 'seq'
 

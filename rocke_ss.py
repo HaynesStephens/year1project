@@ -13,10 +13,13 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_34p'
+runid = 'pc_proxcenb_ssc5L_TL_4p'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-startyear = 2670
-endyear = 2769
+endyear = 3549
+startyear = endyear - 99
+# startyear = ####
+
+
 
 
 ## ***DEFINE TIME INTERVAL***
@@ -37,7 +40,9 @@ for y in year_list:
     accfilename = file_start + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
 
     print(accfilename)
-    subprocess.call(["scaleacc", accfilename, 'all']) # get all the
+    ext_list = ['aijk', 'aijl', 'aij', 'icij', 'oijl', 'oij']
+    for ext in ext_list:
+        subprocess.call(["scaleacc", accfilename, ext])
     # subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
     # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
     # subprocess.call(["scaleacc", accfilename, 'oijl'])  # convert oceananic output

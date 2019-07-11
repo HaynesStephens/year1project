@@ -43,6 +43,8 @@ col_39 = {'filedir':filedir39, 'parallels':[-48, 48], 'SA':39,
 
 
 # ROWS REPRESENT DIFFERENT VARIABLES
+
+# ATMOSPHERE
 row_frac_land =         {'var':'frac_land',
                          'ylabel':'Land \n Fraction \n [%]',
                          'title':'Land Fraction',
@@ -162,6 +164,16 @@ row_plan_alb =           {'var':'plan_alb',
                          'lat':lat,
                          'lon':lon}
 
+row_ub =                 {'var':'ub',
+                         'ylabel':'Zonal Wind \n [m/s]',
+                         'title':'Zonal Wind',
+                         'units':'[m/s]',
+                         'lat':lat2,
+                         'lon':lon2,
+                          'z':plm}
+
+
+# OCEAN
 row_o_dens =             {'var':'dens',
                          'ylabel':'Density \n [kgm$^{-3}$] \n (- 1000)',
                          'title':'Density',
