@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+            <state relative-caret-position="412">
+              <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -311,20 +310,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00860" summary="generating single layer ocean plots">
-      <created>1562777739290</created>
-      <option name="number" value="00860" />
-      <option name="presentableId" value="LOCAL-00860" />
-      <option name="project" value="LOCAL" />
-      <updated>1562777739290</updated>
-    </task>
-    <task id="LOCAL-00861" summary="generating single layer ocean plots">
-      <created>1562778027194</created>
-      <option name="number" value="00861" />
-      <option name="presentableId" value="LOCAL-00861" />
-      <option name="project" value="LOCAL" />
-      <updated>1562778027194</updated>
     </task>
     <task id="LOCAL-00862" summary="generating single layer ocean plots">
       <created>1562778034213</created>
@@ -655,11 +640,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562886887832</updated>
     </task>
-    <option name="localTasksCounter" value="909" />
+    <task id="LOCAL-00909" summary="zonal average wind">
+      <created>1562886895124</created>
+      <option name="number" value="00909" />
+      <option name="presentableId" value="LOCAL-00909" />
+      <option name="project" value="LOCAL" />
+      <updated>1562886895124</updated>
+    </task>
+    <task id="LOCAL-00910" summary="zonal average wind">
+      <created>1562887154859</created>
+      <option name="number" value="00910" />
+      <option name="presentableId" value="LOCAL-00910" />
+      <option name="project" value="LOCAL" />
+      <updated>1562887154859</updated>
+    </task>
+    <option name="localTasksCounter" value="911" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169215000" />
+    <option name="totallyTimeSpent" value="169483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -920,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        <state relative-caret-position="412">
+          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
