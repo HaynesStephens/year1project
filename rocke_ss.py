@@ -16,7 +16,7 @@ from glob import glob
 runid = 'pc_proxcenb_ssc5L_TL_4p'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
 endyear = 3549
-startyear = endyear - 993
+startyear = endyear - 99
 # startyear = ####
 
 
