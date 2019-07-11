@@ -87,7 +87,7 @@ def getPlotName(row, col, filetype, avg_coord):
 
 
 def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
-    fig = plt.figure(figsize = (14,6))
+    fig = plt.figure()
     grid = ImageGrid(fig, 111,
                       nrows_ncols=(1, 1),
                       axes_pad=0.07,
