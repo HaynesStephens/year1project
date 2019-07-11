@@ -70,7 +70,7 @@ def getPlotName(row, col, filetype, avg_coord):
     if 'o' in filetype:
         var_name = 'o_' + var_name
     p_name = str(col['SA'])+'p'
-    file_name = 'plots/{0}/{1}_{2}Avg2D'.format(p_name, var_name, avg_coord)
+    file_name = 'plots/{0}/avg2D{1}_{2}'.format(p_name, avg_coord, var_name)
     return file_name
 
 
