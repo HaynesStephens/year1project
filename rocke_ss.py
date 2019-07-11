@@ -37,9 +37,10 @@ for y in year_list:
     accfilename = file_start + beg_dec + '-' + end_dec + '.acc' + runid + '.nc'
 
     print(accfilename)
-    subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
-    subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
-    subprocess.call(["scaleacc", accfilename, 'oijl'])  # convert oceananic output
+    subprocess.call(["scaleacc", accfilename, 'all']) # get all the
+    # subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
+    # subprocess.call(["scaleacc", accfilename, 'oij']) #convert oceananic output
+    # subprocess.call(["scaleacc", accfilename, 'oijl'])  # convert oceananic output
 
 ''' NOT TRYING TO REPRODUCE ALL DATA AGAIN THIS TIME
 # First, determine array size
