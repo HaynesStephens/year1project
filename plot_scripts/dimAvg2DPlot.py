@@ -58,7 +58,7 @@ def makeSubplot(data, grid, row, col, seq_or_div):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
-    im = ax.imshow(data, cmap=cmap, norm=norm, levels=levels)
+    im = ax.imshow(data, cmap=cmap, norm=norm)
     grid.cbar_axes[0].colorbar(im)
     ax.set_title(col['title'] + ', ' + row['title'])
 
