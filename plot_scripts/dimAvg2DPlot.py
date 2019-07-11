@@ -111,7 +111,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
         rot_origin = False
     makeSubplot(data=data, grid=grid, row=row, col=col, coord=avg_coord, seq_or_div=seq_or_div, rot_origin=rot_origin)
 
-    fig.tight_layout(w_pad = 2.25)
+    # fig.tight_layout(w_pad = 2.25)
     file_name = getPlotName(row, col, filetype, avg_coord)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
