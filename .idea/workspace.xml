@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="113" column="20" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="20" />
+            <state relative-caret-position="155">
+              <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -310,20 +311,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00864" summary="generating single layer ocean plots">
-      <created>1562778828329</created>
-      <option name="number" value="00864" />
-      <option name="presentableId" value="LOCAL-00864" />
-      <option name="project" value="LOCAL" />
-      <updated>1562778828329</updated>
-    </task>
-    <task id="LOCAL-00865" summary="generating single layer ocean plots">
-      <created>1562779192096</created>
-      <option name="number" value="00865" />
-      <option name="presentableId" value="LOCAL-00865" />
-      <option name="project" value="LOCAL" />
-      <updated>1562779192097</updated>
     </task>
     <task id="LOCAL-00866" summary="generating single layer ocean plots">
       <created>1562779270348</created>
@@ -654,11 +641,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562887233364</updated>
     </task>
-    <option name="localTasksCounter" value="913" />
+    <task id="LOCAL-00913" summary="zonal average wind">
+      <created>1562887240907</created>
+      <option name="number" value="00913" />
+      <option name="presentableId" value="LOCAL-00913" />
+      <option name="project" value="LOCAL" />
+      <updated>1562887240907</updated>
+    </task>
+    <task id="LOCAL-00914" summary="zonal average wind">
+      <created>1562887301551</created>
+      <option name="number" value="00914" />
+      <option name="presentableId" value="LOCAL-00914" />
+      <option name="project" value="LOCAL" />
+      <updated>1562887301551</updated>
+    </task>
+    <option name="localTasksCounter" value="915" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169505000" />
+    <option name="totallyTimeSpent" value="169599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -919,8 +920,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="113" column="20" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="20" />
+        <state relative-caret-position="155">
+          <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
