@@ -42,7 +42,7 @@ def getDimAvg(data, avg_coord):
     return np.mean(data, axis=avg_axis)
 
 
-def makeSubplot(data, grid, row, col, seq_or_div):
+def makeSubplot(data, grid, row, col, seq_or_div, rot_origin):
     ax = grid[0]
 
     min_val = np.min(data)
@@ -57,8 +57,10 @@ def makeSubplot(data, grid, row, col, seq_or_div):
             norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
-
-    im = ax.imshow(data, cmap=cmap, norm=norm)
+    if rot_origin:
+        im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower')
+    else:
+        im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper')
     grid.cbar_axes[0].colorbar(im)
     ax.set_title(col['title'] + ', ' + row['title'])
 
@@ -87,8 +89,13 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     filedir = col['filedir']
     data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
+    print(data.shape)
 
-    makeSubplot(data=data, grid=grid, row=row, col=col, seq_or_div=seq_or_div)
+    if 'a' in filetype:
+        rot_origin = True
+    else:
+        rot_origin = False
+    makeSubplot(data=data, grid=grid, row=row, col=col, seq_or_div=seq_or_div, rot_origin=rot_origin)
 
     # fig.tight_layout(w_pad = 2.25)
     file_name = getPlotName(row, col, filetype, avg_coord)

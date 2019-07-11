@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocke_ss.py" beforeDir="false" afterPath="$PROJECT_DIR$/rocke_ss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="530">
               <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
             </state>
           </provider>
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+            <state relative-caret-position="320">
+              <caret line="62" column="64" selection-start-line="62" selection-start-column="64" selection-end-line="62" selection-end-column="64" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -82,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rocke_ss.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -171,8 +171,8 @@
         <option value="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" />
         <option value="$PROJECT_DIR$/rocke_ss.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" />
       </list>
     </option>
   </component>
@@ -311,20 +311,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00843" summary="confirming slice plot aqua roll">
-      <created>1562774875854</created>
-      <option name="number" value="00843" />
-      <option name="presentableId" value="LOCAL-00843" />
-      <option name="project" value="LOCAL" />
-      <updated>1562774875854</updated>
-    </task>
-    <task id="LOCAL-00844" summary="generating single layer ocean plots">
-      <created>1562774889417</created>
-      <option name="number" value="00844" />
-      <option name="presentableId" value="LOCAL-00844" />
-      <option name="project" value="LOCAL" />
-      <updated>1562774889417</updated>
     </task>
     <task id="LOCAL-00845" summary="generating single layer ocean plots">
       <created>1562775045484</created>
@@ -655,11 +641,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562883918369</updated>
     </task>
-    <option name="localTasksCounter" value="892" />
+    <task id="LOCAL-00892" summary="zonal average wind">
+      <created>1562883926032</created>
+      <option name="number" value="00892" />
+      <option name="presentableId" value="LOCAL-00892" />
+      <option name="project" value="LOCAL" />
+      <updated>1562883926032</updated>
+    </task>
+    <task id="LOCAL-00893" summary="zonal average wind">
+      <created>1562883939772</created>
+      <option name="number" value="00893" />
+      <option name="presentableId" value="LOCAL-00893" />
+      <option name="project" value="LOCAL" />
+      <updated>1562883939772</updated>
+    </task>
+    <option name="localTasksCounter" value="894" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167212000" />
+    <option name="totallyTimeSpent" value="167582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -894,10 +894,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
+    <entry file="file://$PROJECT_DIR$/rocke_ss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state relative-caret-position="306">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#214#232#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -908,22 +911,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="530">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocke_ss.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="320">
+          <caret line="62" column="64" selection-start-line="62" selection-start-column="64" selection-end-line="62" selection-end-column="64" />
           <folding>
-            <element signature="e#214#232#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
