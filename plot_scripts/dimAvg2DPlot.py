@@ -53,7 +53,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
-            cmap = cm.seismic
+            cmap = cm.RdBu
             norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
