@@ -1,4 +1,3 @@
-from mpl_toolkits.basemap import Basemap
 from netCDF4 import Dataset as ds
 import numpy as np
 from matplotlib import pyplot as plt, cm as cm
@@ -53,7 +52,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
-            cmap = cm.RdBu
+            cmap = cm.seismic
             norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
@@ -115,7 +114,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     file_name = getPlotName(row, col, filetype, avg_coord)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
+    plt.savefig(file_name+'.pdf')
     plt.show()
     print('Plot Saved.')
 
