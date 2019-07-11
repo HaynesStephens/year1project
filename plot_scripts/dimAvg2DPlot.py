@@ -63,8 +63,8 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none')
 
     if coord == 'lon':
-        xticks = np.arange(row['lat'].size)[::4]
-        xticklabels = row['lat'][::4]
+        xticks = np.arange(row['lat'].size)[::3]
+        xticklabels = row['lat'][::3]
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels)
 
