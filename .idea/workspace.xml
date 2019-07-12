@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="50" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="102">
+              <caret line="6" column="42" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rocke_ss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="367">
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding>
                 <element signature="e#214#232#0" expanded="true" />
               </folding>
@@ -311,20 +311,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00870" summary="generating single layer ocean plots">
-      <created>1562783967014</created>
-      <option name="number" value="00870" />
-      <option name="presentableId" value="LOCAL-00870" />
-      <option name="project" value="LOCAL" />
-      <updated>1562783967014</updated>
-    </task>
-    <task id="LOCAL-00871" summary="generating vertically averaged plots for malte">
-      <created>1562783982279</created>
-      <option name="number" value="00871" />
-      <option name="presentableId" value="LOCAL-00871" />
-      <option name="project" value="LOCAL" />
-      <updated>1562783982279</updated>
     </task>
     <task id="LOCAL-00872" summary="generating vertically averaged plots for malte">
       <created>1562783989249</created>
@@ -655,11 +641,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562888213170</updated>
     </task>
-    <option name="localTasksCounter" value="919" />
+    <task id="LOCAL-00919" summary="zonal average wind">
+      <created>1562944090047</created>
+      <option name="number" value="00919" />
+      <option name="presentableId" value="LOCAL-00919" />
+      <option name="project" value="LOCAL" />
+      <updated>1562944090047</updated>
+    </task>
+    <task id="LOCAL-00920" summary="zonal average wind">
+      <created>1562944594147</created>
+      <option name="number" value="00920" />
+      <option name="presentableId" value="LOCAL-00920" />
+      <option name="project" value="LOCAL" />
+      <updated>1562944594147</updated>
+    </task>
+    <option name="localTasksCounter" value="921" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170368000" />
+    <option name="totallyTimeSpent" value="170904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -913,15 +913,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="50" />
+        <state relative-caret-position="102">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rocke_ss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="367">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#214#232#0" expanded="true" />
           </folding>
