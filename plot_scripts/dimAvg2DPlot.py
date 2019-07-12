@@ -67,9 +67,9 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     y = row['z']
 
     if not rot_origin:
-        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm, origin ='lower')#, extent=extent, aspect = 0.1)
+        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)#, extent=extent, aspect = 0.1)
     else:
-        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm, origin='upper')#, extent=extent, aspect = 0.1)
+        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)#, extent=extent, aspect = 0.1)
 
     def plotContLatLine(ax, col):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
@@ -77,6 +77,8 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     if coord == 'lon':
         ax.set_xlabel('Latitude')
         # plotContLatLine(ax, col)
+
+    plt.gca().invert_yaxis()
 
     ax.set_ylabel('Pressure [mb]')
 

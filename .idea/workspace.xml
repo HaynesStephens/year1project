@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+            <state relative-caret-position="409">
+              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -299,20 +299,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00918" summary="zonal average wind">
-      <created>1562888213170</created>
-      <option name="number" value="00918" />
-      <option name="presentableId" value="LOCAL-00918" />
-      <option name="project" value="LOCAL" />
-      <updated>1562888213170</updated>
-    </task>
-    <task id="LOCAL-00919" summary="zonal average wind">
-      <created>1562944090047</created>
-      <option name="number" value="00919" />
-      <option name="presentableId" value="LOCAL-00919" />
-      <option name="project" value="LOCAL" />
-      <updated>1562944090047</updated>
     </task>
     <task id="LOCAL-00920" summary="zonal average wind">
       <created>1562944594147</created>
@@ -643,11 +629,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562952543637</updated>
     </task>
-    <option name="localTasksCounter" value="967" />
+    <task id="LOCAL-00967" summary="zonal average wind">
+      <created>1562952623975</created>
+      <option name="number" value="00967" />
+      <option name="presentableId" value="LOCAL-00967" />
+      <option name="project" value="LOCAL" />
+      <updated>1562952623975</updated>
+    </task>
+    <task id="LOCAL-00968" summary="zonal average wind">
+      <created>1562952763260</created>
+      <option name="number" value="00968" />
+      <option name="presentableId" value="LOCAL-00968" />
+      <option name="project" value="LOCAL" />
+      <updated>1562952763260</updated>
+    </task>
+    <option name="localTasksCounter" value="969" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175944000" />
+    <option name="totallyTimeSpent" value="176230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -908,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+        <state relative-caret-position="409">
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
