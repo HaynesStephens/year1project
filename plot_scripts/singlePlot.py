@@ -104,7 +104,7 @@ def getPlotName(row, col, filetype, depth):
     return file_name
 
 
-def singlePlot(row, col, filetype, depth):
+def singlePlot(row, col, filetype, depth, seq_or_div):
     fig = plt.figure(figsize = (14,6))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(1,1),
@@ -130,7 +130,7 @@ def singlePlot(row, col, filetype, depth):
             ext = ' mb'
         title = col['title'] + ', ' + str(row['z'][depth]) + ext
 
-    makeSubplot(grid=grid1, data=data, row=row, col=col, title=title)
+    makeSubplot(grid=grid1, data=data, row=row, col=col, title=title, seq_or_div=seq_or_div)
 
 
     # fig.tight_layout(w_pad = 2.25)
@@ -146,5 +146,6 @@ row = row_o_pot_dens
 col = col_4
 filetype = 'oijlpc'
 depth = 0
+seq_or_div = 'seq'
 
-singlePlot(row, col, filetype, depth)
+singlePlot(row, col, filetype, depth, seq_or_div)
