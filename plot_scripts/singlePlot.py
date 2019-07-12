@@ -161,13 +161,22 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     plt.show()
     print('Plot saved.')
 
+
 row = row_w
-col = col_4
+col = col_0
 filetype = 'aijkpc'
-depth = 'vertAvg'
 seq_or_div = 'div'
 
+############# SINGLE DEPTH PLOT #################
+depth = 0
 singlePlot(row, col, filetype, depth, seq_or_div)
 
+# ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
 #     singlePlot(row, col, filetype, depth_i, seq_or_div)
+
+# ############# ALL VERT AVGS PLOT #################
+# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+# depth = 'vertAvg'
+# for col_i in col_list:
+#     singlePlot(row, col_i, filetype, depth, seq_or_div)
