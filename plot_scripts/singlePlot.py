@@ -140,14 +140,15 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
-    plt.show()
+    plt.savefig(file_name+'.pdf')
+    # plt.show()
     print('Plot saved.')
 
 row = row_w
-col = col_4
+col = col_0
 filetype = 'aijkpc'
 depth = 0
 seq_or_div = 'div'
 
-singlePlot(row, col, filetype, depth, seq_or_div)
+for depth_i in range(row['z'].size):
+    singlePlot(row, col, filetype, depth_i, seq_or_div)
