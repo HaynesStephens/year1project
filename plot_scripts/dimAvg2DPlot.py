@@ -57,7 +57,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
-    extent = (-90, 90, 0, 1000)
+    extent = (-90, 90, row['z'][0], row['z'][-1])
     if rot_origin:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower',
                        interpolation='none', extent=extent, aspect='auto')
