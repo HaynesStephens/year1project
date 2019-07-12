@@ -45,12 +45,13 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     ax = grid[0]
 
     max_val = np.max(np.abs(data))
+    min_val = np.min(data)
 
 
     def make_cmap(seq_or_div, levels = 20):
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
-            norm = Normalize(vmin = 0, vmax = max_val)
+            norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
             norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
@@ -132,4 +133,8 @@ filetype = 'aijkpc'
 avg_coord = 'lon'
 seq_or_div = 'div'
 
-dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
+# dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
+
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+for col_i in col_list:
+    dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
