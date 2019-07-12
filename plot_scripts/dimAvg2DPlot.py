@@ -76,10 +76,10 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         ax.set_xlabel('Latitude')
         plotContLatLine(ax, col)
 
-    yticks = np.arange(row['z'].size)[::4]
-    yticklabels = row['z'][::4]
-    ax.set_yticks(yticks)
-    ax.set_yticklabels(yticklabels)
+    # yticks = np.arange(row['z'].size)[::4]
+    # yticklabels = row['z'][::4]
+    # ax.set_yticks(yticks)
+    # ax.set_yticklabels(yticklabels)
     ax.set_ylabel('Pressure [mb]')
 
     cbar = grid.cbar_axes[0].colorbar(im)
