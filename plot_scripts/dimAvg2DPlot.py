@@ -69,17 +69,17 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
 
     if coord == 'lon':
-        # xticks = np.arange(row['lat'].size)[::3]
-        # xticklabels = row['lat'][::3]
-        # ax.set_xticks(xticks)
-        # ax.set_xticklabels(xticklabels)
+        xticks = np.arange(row['lat'].size)[::3]
+        xticklabels = row['lat'][::3]
+        ax.set_xticks(xticks)
+        ax.set_xticklabels(xticklabels)
         ax.set_xlabel('Latitude')
-        plotContLatLine(ax, col)
+        # plotContLatLine(ax, col)
 
-    # yticks = np.arange(row['z'].size)[::4]
-    # yticklabels = row['z'][::4]
-    # ax.set_yticks(yticks)
-    # ax.set_yticklabels(yticklabels)
+    yticks = np.arange(row['z'].size)[::4]
+    yticklabels = row['z'][::4]
+    ax.set_yticks(yticks)
+    ax.set_yticklabels(yticklabels)
     ax.set_ylabel('Pressure [mb]')
 
     cbar = grid.cbar_axes[0].colorbar(im)
@@ -104,8 +104,8 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       share_all=True,
                       cbar_location="bottom",
                       cbar_mode="single",
-                      cbar_size="1%",
-                      cbar_pad="2%",
+                      cbar_size="5%",
+                      cbar_pad="15%",
                       aspect=True)
     var = row['var']
     filedir = col['filedir']
