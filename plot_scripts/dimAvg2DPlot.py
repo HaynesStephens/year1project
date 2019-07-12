@@ -41,7 +41,7 @@ def getDimAvg(data, avg_coord):
     return np.mean(data, axis=avg_axis)
 
 
-def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
+def makeSubplot(data, grid, row, col, coord, seq_or_div):
     ax = grid[0]
 
     max_val = np.max(np.abs(data))
@@ -66,10 +66,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
 
     y = row['z']
 
-    if not rot_origin:
-        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
-    else:
-        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
+    im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
     ax.set_aspect(0.1)
 
     def plotContLatLine(ax, col):
@@ -81,6 +78,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
 
     if y[0] > y[-1]:
         ax.set_ylim(y[0], y[-1])
+        ax.set_yscale('log')
 
     ax.set_ylabel('Pressure [mb]')
 
@@ -113,12 +111,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     filedir = col['filedir']
     data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
-
-    if 'a' in filetype:
-        rot_origin = True
-    else:
-        rot_origin = False
-    makeSubplot(data=data, grid=grid, row=row, col=col, coord=avg_coord, seq_or_div=seq_or_div, rot_origin=rot_origin)
+    makeSubplot(data=data, grid=grid, row=row, col=col, coord=avg_coord, seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
     file_name = getPlotName(row, col, filetype, avg_coord)
