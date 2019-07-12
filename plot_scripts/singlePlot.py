@@ -128,7 +128,7 @@ def singlePlot(row, col, filetype, depth):
             ext = ' m'
         elif 'a' in filetype:
             ext = ' mb'
-        title = col['title'] + ', ' + row['z'][depth] + ext
+        title = col['title'] + ', ' + str(row['z'][depth]) + ext
 
     makeSubplot(grid=grid1, data=data, row=row, col=col, title=title)
 
