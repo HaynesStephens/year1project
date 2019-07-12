@@ -75,7 +75,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     ax.set_ylabel('Pressure [mb]')
 
     cbar = grid.cbar_axes[0].colorbar(im)
-    cbar.set_label(row['units'], rotation=270)
+    cbar.ax.set_label_text(row['units'], rotation=270)
     ax.set_title(col['title'] + ', ' + row['title'])
 
 
