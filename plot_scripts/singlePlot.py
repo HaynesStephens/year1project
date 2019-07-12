@@ -39,8 +39,8 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -0.7
-        max_val = 0.7
+        min_val = -0.6
+        max_val = 0.6
         levels = np.linspace(min_val, max_val, 40)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
