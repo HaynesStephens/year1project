@@ -44,26 +44,26 @@ def getDimAvg(data, avg_coord):
 def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     ax = grid[0]
 
-    min_val = np.min(data)
-    max_val = np.max(data)
+    max_val = np.max(np.abs(data))
+
 
     def make_cmap(seq_or_div, levels = 20):
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
-            norm = Normalize(vmin = min_val, vmax = max_val)
+            norm = Normalize(vmin = 0, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
-            norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
+            norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
     extent = (-90, 90, row['z'][0], row['z'][-1])
     if rot_origin:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower',
-                       interpolation='nearest')#, extent=extent, aspect = 0.1)
+                       interpolation='none')#, extent=extent, aspect = 0.1)
     else:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper',
-                       interpolation='nearest')#, extent=extent, aspect = 0.1)
+                       interpolation='none')#, extent=extent, aspect = 0.1)
 
     def plotContLatLine(ax, col):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
@@ -97,7 +97,7 @@ def getPlotName(row, col, filetype, avg_coord):
 
 
 def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
-    fig = plt.figure(figsize=(12,6))
+    fig = plt.figure()
     grid = ImageGrid(fig, 111,
                       nrows_ncols=(1, 1),
                       axes_pad=0.07,
