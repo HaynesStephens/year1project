@@ -158,7 +158,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
-    # plt.show()
+    plt.show()
     print('Plot saved.')
 
 row = row_w
@@ -167,7 +167,7 @@ filetype = 'aijkpc'
 depth = 'vertAvg'
 seq_or_div = 'div'
 
-# singlePlot(row, col, filetype, depth, seq_or_div)
+singlePlot(row, col, filetype, depth, seq_or_div)
 
 # for depth_i in range(row['z'].size):
 #     singlePlot(row, col, filetype, depth_i, seq_or_div)
