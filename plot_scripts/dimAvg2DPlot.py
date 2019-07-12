@@ -115,7 +115,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.show()
     print('Plot Saved.')
 
 row = row_ub
