@@ -119,6 +119,8 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     var = row['var']
     filedir = col['filedir']
     data = avgDataFiles(filedir, filetype, var)
+    if depth != None:
+        data = data[depth,:,:]
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
 
     if depth == None:

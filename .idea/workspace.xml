@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="371">
+              <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -324,20 +324,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00947" summary="zonal average wind">
-      <created>1562947920054</created>
-      <option name="number" value="00947" />
-      <option name="presentableId" value="LOCAL-00947" />
-      <option name="project" value="LOCAL" />
-      <updated>1562947920054</updated>
-    </task>
-    <task id="LOCAL-00948" summary="zonal average wind">
-      <created>1562948038811</created>
-      <option name="number" value="00948" />
-      <option name="presentableId" value="LOCAL-00948" />
-      <option name="project" value="LOCAL" />
-      <updated>1562948038811</updated>
     </task>
     <task id="LOCAL-00949" summary="zonal average wind">
       <created>1562948104814</created>
@@ -668,11 +654,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562962608158</updated>
     </task>
-    <option name="localTasksCounter" value="996" />
+    <task id="LOCAL-00996" summary="zonal average wind">
+      <created>1562962663583</created>
+      <option name="number" value="00996" />
+      <option name="presentableId" value="LOCAL-00996" />
+      <option name="project" value="LOCAL" />
+      <updated>1562962663583</updated>
+    </task>
+    <task id="LOCAL-00997" summary="zonal average wind">
+      <created>1562962741273</created>
+      <option name="number" value="00997" />
+      <option name="presentableId" value="LOCAL-00997" />
+      <option name="project" value="LOCAL" />
+      <updated>1562962741273</updated>
+    </task>
+    <option name="localTasksCounter" value="998" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181571000" />
+    <option name="totallyTimeSpent" value="181758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -943,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="371">
+          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
