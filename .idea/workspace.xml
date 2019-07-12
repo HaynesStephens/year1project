@@ -300,20 +300,6 @@
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
     </task>
-    <task id="LOCAL-00936" summary="zonal average wind">
-      <created>1562946544490</created>
-      <option name="number" value="00936" />
-      <option name="presentableId" value="LOCAL-00936" />
-      <option name="project" value="LOCAL" />
-      <updated>1562946544490</updated>
-    </task>
-    <task id="LOCAL-00937" summary="zonal average wind">
-      <created>1562947174560</created>
-      <option name="number" value="00937" />
-      <option name="presentableId" value="LOCAL-00937" />
-      <option name="project" value="LOCAL" />
-      <updated>1562947174560</updated>
-    </task>
     <task id="LOCAL-00938" summary="zonal average wind">
       <created>1562947188714</created>
       <option name="number" value="00938" />
@@ -643,11 +629,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562954657348</updated>
     </task>
-    <option name="localTasksCounter" value="985" />
+    <task id="LOCAL-00985" summary="zonal average wind">
+      <created>1562954723307</created>
+      <option name="number" value="00985" />
+      <option name="presentableId" value="LOCAL-00985" />
+      <option name="project" value="LOCAL" />
+      <updated>1562954723307</updated>
+    </task>
+    <task id="LOCAL-00986" summary="zonal average wind">
+      <created>1562954801824</created>
+      <option name="number" value="00986" />
+      <option name="presentableId" value="LOCAL-00986" />
+      <option name="project" value="LOCAL" />
+      <updated>1562954801824</updated>
+    </task>
+    <option name="localTasksCounter" value="987" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177460000" />
+    <option name="totallyTimeSpent" value="177626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
