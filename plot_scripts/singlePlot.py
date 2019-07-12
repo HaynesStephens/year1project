@@ -162,7 +162,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('Plot saved.')
 
 row = row_w
-col = col_0
+col = col_4
 filetype = 'aijkpc'
 depth = 'vertAvg'
 seq_or_div = 'div'
