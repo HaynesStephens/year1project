@@ -13,9 +13,11 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2'
+runid = 'pc_proxcenb_ssc5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-endyear = 3500
+endyear_dict = {'0p':3500, '1p':4140, '4p':3549, '6p':4179,
+                '11p':4379, '22p':3729, '26p':3649, '34p':2769, '39p':2649}
+endyear = endyear_dict['1p']
 startyear = endyear - 99
 # startyear = ####
 
