@@ -74,7 +74,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     ax.set_yticklabels(yticklabels)
     ax.set_ylabel('Pressure [mb]')
 
-    grid.cbar_axes[0].colorbar(im)
+    grid.cbar_axes[0].colorbar(im, label=row['units'])
     ax.set_title(col['title'] + ', ' + row['title'])
 
 
