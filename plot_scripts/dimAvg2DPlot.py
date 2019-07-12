@@ -49,7 +49,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div):
 
 
     def make_cmap(seq_or_div):
-        levels = np.arange(-40,41,5)
+        levels = np.arange(-45,46,5)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
