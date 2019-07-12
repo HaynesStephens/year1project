@@ -98,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
-              <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
+              <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -324,13 +324,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00953" summary="zonal average wind">
-      <created>1562948658245</created>
-      <option name="number" value="00953" />
-      <option name="presentableId" value="LOCAL-00953" />
-      <option name="project" value="LOCAL" />
-      <updated>1562948658245</updated>
     </task>
     <task id="LOCAL-00954" summary="zonal average wind">
       <created>1562948984853</created>
@@ -668,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562963513247</updated>
     </task>
-    <option name="localTasksCounter" value="1002" />
+    <task id="LOCAL-01002" summary="upward vertical motion">
+      <created>1562963527964</created>
+      <option name="number" value="01002" />
+      <option name="presentableId" value="LOCAL-01002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562963527964</updated>
+    </task>
+    <option name="localTasksCounter" value="1003" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182220000" />
+    <option name="totallyTimeSpent" value="182235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -728,7 +728,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="checking on ice thickness for 34p and 39p" />
     <MESSAGE value="creating plots for 0_1_4" />
     <MESSAGE value="check in on 11p" />
     <MESSAGE value="0-22-26 plots" />
@@ -753,7 +752,8 @@
     <MESSAGE value="generating single layer ocean plots" />
     <MESSAGE value="generating vertically averaged plots for malte" />
     <MESSAGE value="zonal average wind" />
-    <option name="LAST_COMMIT_MESSAGE" value="zonal average wind" />
+    <MESSAGE value="upward vertical motion" />
+    <option name="LAST_COMMIT_MESSAGE" value="upward vertical motion" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -944,7 +944,7 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="149" column="11" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
+          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
