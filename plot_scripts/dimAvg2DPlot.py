@@ -64,7 +64,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div):
     if coord == 'lon':
         x = row['lat']
         ax.set_xlabel('Latitude')
-        ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=2)
+        ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
     ax.set_aspect(0.1)
@@ -124,8 +124,8 @@ filetype = 'aijkpc'
 avg_coord = 'lon'
 seq_or_div = 'div'
 
-dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
+# dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
 
-# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-# for col_i in col_list:
-#     dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+for col_i in col_list:
+    dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
