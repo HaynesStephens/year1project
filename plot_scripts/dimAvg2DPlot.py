@@ -57,7 +57,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
-    extent = (-90, 90, row['z'][0], row['z'][-1])
+    extent = (-90, 90, row['z'][-1], row['z'][0])
     if rot_origin:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower',
                        interpolation='none', extent=extent, aspect='auto')
@@ -97,7 +97,7 @@ def getPlotName(row, col, filetype, avg_coord):
 
 
 def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
-    fig = plt.figure()
+    fig = plt.figure(figsize=(12,6))
     grid = ImageGrid(fig, 111,
                       nrows_ncols=(1, 1),
                       axes_pad=0.07,
