@@ -62,7 +62,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none')
 
     def plotContLatLine(ax, col):
-        ax.plot([0,0], col['parallels'], c='k')
+        ax.plot(col['parallels'], [0,0], c='k')
 
     if coord == 'lon':
         xticks = np.arange(row['lat'].size)[::3]
