@@ -56,19 +56,19 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
             norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
+
+    extent = (-90, 90, 0, 1000)
     if rot_origin:
-        im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower', interpolation='none')
+        im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower', interpolation='none', extent=extent)
     else:
-        im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none')
+        im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none', extent=extent)
 
     def plotContLatLine(ax, col):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
 
     if coord == 'lon':
-        # xticks = np.arange(row['lat'].size)[::3]
-        # xticklabels = row['lat'][::3]
-        xticks = np.arange(row['lat'].size)[::4]
-        xticklabels = np.arange(-90,90.1,180/row['lat'].size)[::4]
+        xticks = np.arange(row['lat'].size)[::3]
+        xticklabels = row['lat'][::3]
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels)
         ax.set_xlabel('Latitude')
