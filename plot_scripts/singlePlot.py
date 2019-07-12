@@ -93,6 +93,8 @@ def getPlotName(row, col, filetype, depth):
     """
     if depth == None:
         depth_name = ''
+    elif depth == 'vertAvg':
+        depth_name = '_vertAvg'
     else:
         depth_name = '_' + str(depth)
 
@@ -104,6 +106,29 @@ def getPlotName(row, col, filetype, depth):
 
     file_name = 'plots/{0}/{1}{2}'.format(p_name, var_name, depth_name)
     return file_name
+
+
+def depthOrVertAvg(data, col, depth):
+    if depth == None:
+        data = data
+        title = col['title']
+
+    elif depth == 'vertAvg':
+        data = np.mean(data, axis=0)
+        print("AVG MIN: {0}, AVG MAX: {1}".format(np.min(data), np.max(data)))
+        title = col['title'] + ', Vert. Avg.'
+
+    else:
+        data = data[depth,:,:]
+        print("DEPTH MIN: {0}, DEPTH MAX: {1}".format(np.min(data), np.max(data)))
+        if 'o' in filetype:
+            ext = ' m'
+        elif 'a' in filetype:
+            ext = ' mb'
+        title = col['title'] + ', ' + str(row['z'][depth]) + ext
+
+    return data, title
+
 
 
 def singlePlot(row, col, filetype, depth, seq_or_div):
@@ -122,18 +147,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     filedir = col['filedir']
     data = avgDataFiles(filedir, filetype, var)
     print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
-    if depth != None:
-        data = data[depth,:,:]
-        print("DEPTH MIN: {0}, DEPTH MAX: {1}".format(np.min(data), np.max(data)))
-
-    if depth == None:
-        title = col['title']
-    else:
-        if 'o' in filetype:
-            ext = ' m'
-        elif 'a' in filetype:
-            ext = ' mb'
-        title = col['title'] + ', ' + str(row['z'][depth]) + ext
+    data, title = depthOrVertAvg(data, col, depth)
 
     makeSubplot(grid=grid1, data=data, row=row, col=col, title=title, seq_or_div=seq_or_div)
 
@@ -150,10 +164,10 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 row = row_w
 col = col_0
 filetype = 'aijkpc'
-depth = 0
+depth = 'vertAvg'
 seq_or_div = 'div'
 
 # singlePlot(row, col, filetype, depth, seq_or_div)
 
-for depth_i in range(row['z'].size):
-    singlePlot(row, col, filetype, depth_i, seq_or_div)
+# for depth_i in range(row['z'].size):
+#     singlePlot(row, col, filetype, depth_i, seq_or_div)
