@@ -9,26 +9,24 @@ from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
 
-def avgDataFiles(filedir, filetype, var, depth, unit_conv = 1, num_files=10):
+def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
-    arr_tot = np.zeros((46,72))
+    arr_tot = 0
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
-
-        if depth == None:
-            arr = nc_i[var][:]
-        else:
-            arr = nc_i[var][:][depth]
-
+        arr = nc_i[var][:]
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    if 'aqua' in filedir:
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
+
+    if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[2]) // 2, axis=2)
+    if 'o' in filetype: #if it's ocean file, only take the top 5 levels
+        arr_avg = arr_avg[:5, :, :]
     return arr_avg
 
 
-def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
-                meridians, title, plot_cbar=False):
+def makeSubplot(grid, data, row, col, col_num, title, cbar_data, plot_cbar=False):
+    var = row['var']
     ax = grid[col_num]
     ax.set_facecolor('.25')
     m = Basemap(ax = ax)
@@ -52,7 +50,7 @@ def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif var in divergent_list:
             cmap = cm.seismic
-            norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
+            norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
             """KEEP EYE ON THIS. TRY OUT TO MAKE SURE IT WORKS W/ DIV CBARS"""
         levels = 20
         return cmap, norm, levels
@@ -71,7 +69,7 @@ def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
     ax.set_title(title, fontsize=10)
 
     if col_num==0:
-        ax.set_ylabel(ylabel, fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
+        ax.set_ylabel(col['ylabel'], fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
     # draw parallels and meridians.
         m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
@@ -85,6 +83,8 @@ def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
 
     ContLines(m, ax, var, x, y, data)
 
+    parallels = col['parallels']
+    meridians = col['meridians']
     if 'Aqua' not in title:
         x1, y1 = m(meridians[0], parallels[0])
         x2, y2 = m(meridians[0], parallels[1])
@@ -98,6 +98,7 @@ def makeSubplot(data, var, cbar_data, grid, col_num, ylabel, parallels,
         #Plot the colorbar on the final plot of the row
         grid.cbar_axes[0].colorbar(cs_cbar)
 
+
 def getDataAndMaxVal(col_list, filetype, var, depth):
     """
     Used to get data for a given row and the max value in order to have uniform colorbars across a row.
@@ -109,7 +110,7 @@ def getDataAndMaxVal(col_list, filetype, var, depth):
     for i in range(len(col_list)):
         col = col_list[i]
         filedir = col['filedir']
-        data = avgDataFiles(filedir, filetype, var, depth)
+        data = avgDataFiles(filedir, filetype, var)[depth,:,:]
         data_list.append(data)
         if i == 0:
             min_val = np.min(data)
@@ -176,10 +177,9 @@ def rowMatrixMap(row, col_list, filetype, depth = None):
         else:
             title = col['title'] + ' ' + depth_list[depth]
 
-        makeSubplot(data=data, var=var, cbar_data=cbar_data, grid=grid1,
-                    col_num=col_num, ylabel=row['ylabel'], parallels=col['parallels'],
-                    meridians=col['meridians'], title=title,
-                    plot_cbar=plot_cbar)
+        makeSubplot(grid=grid1, data=data, row=row, col=col, col_num=col_num,
+                    title=title, cbar_data=cbar_data, plot_cbar=plot_cbar)
+
 
     # fig.tight_layout(w_pad = 2.25)
     if len(col_list) == 1:
