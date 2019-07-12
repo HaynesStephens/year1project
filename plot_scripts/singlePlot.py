@@ -54,7 +54,7 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
 
     ax.set_title(title, fontsize=10)
 
-    ax.set_ylabel(col['ylabel'], fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
+    ax.set_ylabel(row['ylabel'], fontsize=10, labelpad = 60, rotation=0, verticalalignment ='center')
 
     # draw parallels and meridians.
     m.drawparallels([-60, -30, 0, 30, 60], labels=[1,0,0,0], ax = ax,
