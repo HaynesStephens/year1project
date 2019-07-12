@@ -68,7 +68,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         # xticks = np.arange(row['lat'].size)[::3]
         # xticklabels = row['lat'][::3]
         xticks = np.arange(row['lat'].size)[::4]
-        xticklabels = np.arange(-90,90,180/row['lat'].size)[::4]
+        xticklabels = np.arange(-90,90.1,180/row['lat'].size)[::4]
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels)
         ax.set_xlabel('Latitude')
