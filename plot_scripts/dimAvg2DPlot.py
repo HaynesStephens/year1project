@@ -61,12 +61,16 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     else:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper', interpolation='none')
 
+    def plotContLatLine(ax, col):
+        ax.plot([0,0], col['parallels'], c='k')
+
     if coord == 'lon':
         xticks = np.arange(row['lat'].size)[::3]
         xticklabels = row['lat'][::3]
         ax.set_xticks(xticks)
         ax.set_xticklabels(xticklabels)
         ax.set_xlabel('Latitude')
+        plotContLatLine(ax, col)
 
     yticks = np.arange(row['z'].size)[::4]
     yticklabels = row['z'][::4]
@@ -75,7 +79,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     ax.set_ylabel('Pressure [mb]')
 
     cbar = grid.cbar_axes[0].colorbar(im)
-    cbar.set_label_text(row['units'], rotation=270)
+    cbar.set_label_text(row['units'])
     ax.set_title(col['title'] + ', ' + row['title'])
 
 
