@@ -146,7 +146,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
 row = row_w
 col = col_4
-filetype = 'oijlpc'
+filetype = 'aijkpc'
 depth = 0
 seq_or_div = 'seq'
 
