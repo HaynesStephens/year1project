@@ -64,7 +64,8 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div):
     if coord == 'lon':
         x = row['lat']
         ax.set_xlabel('Latitude')
-        ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
+        if col['title'] != 'Aqua':
+            ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
     ax.set_aspect(0.1)
