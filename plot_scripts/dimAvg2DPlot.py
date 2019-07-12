@@ -78,7 +78,8 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
         ax.set_xlabel('Latitude')
         # plotContLatLine(ax, col)
 
-    ax.set_ylim(y[0], y[-1])
+    if y[0] > y[-1]:
+        ax.set_ylim(y[0], y[-1])
 
     ax.set_ylabel('Pressure [mb]')
 
