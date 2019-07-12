@@ -13,9 +13,9 @@ import pandas as pd
 from glob import glob
 
 ## ***SPECIFY EXPERIMENT & ITS LOCATION ON MIDWAY***
-runid = 'pc_proxcenb_ssc5L_TL_4p'
+runid = 'pc_proxcenb_aqua5L_TL_500yr_rs2'
 rundirectory = '/project2/abbot/haynes/ROCKE3D_output/' + runid
-endyear = 3549
+endyear = 3500
 startyear = endyear - 99
 # startyear = ####
 
@@ -31,7 +31,7 @@ year_list = range(startyear, endyear, 10)
 # PREPARE THE DATA FOR ANALYSIS (use GISS'scaleacc' diagnostic tool)
 
 os.chdir(rundirectory)  # Switch on over to the run directory.
-file_start = 'ANM'
+file_start = 'AN8'
 
 for y in year_list:
     beg_dec = str(y)
