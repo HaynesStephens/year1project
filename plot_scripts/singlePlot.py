@@ -25,7 +25,7 @@ def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
     return arr_avg
 
 
-def makeSubPlot(grid, data, row, col, title, seq_or_div):
+def makeSubplot(grid, data, row, col, title, seq_or_div):
     ax = grid[0]
     ax.set_facecolor('.25')
     m = Basemap(ax = ax)
