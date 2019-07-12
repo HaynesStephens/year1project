@@ -325,20 +325,6 @@
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
     </task>
-    <task id="LOCAL-00969" summary="zonal average wind">
-      <created>1562952939426</created>
-      <option name="number" value="00969" />
-      <option name="presentableId" value="LOCAL-00969" />
-      <option name="project" value="LOCAL" />
-      <updated>1562952939426</updated>
-    </task>
-    <task id="LOCAL-00970" summary="zonal average wind">
-      <created>1562953163293</created>
-      <option name="number" value="00970" />
-      <option name="presentableId" value="LOCAL-00970" />
-      <option name="project" value="LOCAL" />
-      <updated>1562953163293</updated>
-    </task>
     <task id="LOCAL-00971" summary="zonal average wind">
       <created>1562953226130</created>
       <option name="number" value="00971" />
@@ -668,11 +654,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562967396696</updated>
     </task>
-    <option name="localTasksCounter" value="1018" />
+    <task id="LOCAL-01018" summary="upward vertical motion">
+      <created>1562967882363</created>
+      <option name="number" value="01018" />
+      <option name="presentableId" value="LOCAL-01018" />
+      <option name="project" value="LOCAL" />
+      <updated>1562967882363</updated>
+    </task>
+    <task id="LOCAL-01019" summary="upward vertical motion">
+      <created>1562967951603</created>
+      <option name="number" value="01019" />
+      <option name="presentableId" value="LOCAL-01019" />
+      <option name="project" value="LOCAL" />
+      <updated>1562967951603</updated>
+    </task>
+    <option name="localTasksCounter" value="1020" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185228000" />
+    <option name="totallyTimeSpent" value="185372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />

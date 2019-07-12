@@ -163,7 +163,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
 
 row = row_w
-col = col_1
+col = col_4
 filetype = 'aijkpc'
 seq_or_div = 'div'
 
