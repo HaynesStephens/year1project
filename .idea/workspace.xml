@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/plots/4p/o_pot_dens_0_single.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/singlePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/singlePlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="189">
+              <caret line="176" column="5" selection-start-line="176" selection-end-line="176" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -94,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+            <state relative-caret-position="326">
+              <caret line="148" column="18" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="18" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -117,8 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>oij</find>
-      <find>contour</find>
       <find>rowma</find>
       <find>gridspec_kw</find>
       <find>prec</find>
@@ -147,6 +147,8 @@
       <find>meridians</find>
       <find>ylabel</find>
       <find>col_list</find>
+      <find>col['yl</find>
+      <find>row_w</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,11 +183,11 @@
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" />
         <option value="$PROJECT_DIR$/rocke_ss.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
         <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
         <option value="$PROJECT_DIR$/plot_scripts/singlePlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
       </list>
     </option>
   </component>
@@ -324,20 +326,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00949" summary="zonal average wind">
-      <created>1562948104814</created>
-      <option name="number" value="00949" />
-      <option name="presentableId" value="LOCAL-00949" />
-      <option name="project" value="LOCAL" />
-      <updated>1562948104814</updated>
-    </task>
-    <task id="LOCAL-00950" summary="zonal average wind">
-      <created>1562948392701</created>
-      <option name="number" value="00950" />
-      <option name="presentableId" value="LOCAL-00950" />
-      <option name="project" value="LOCAL" />
-      <updated>1562948392701</updated>
     </task>
     <task id="LOCAL-00951" summary="zonal average wind">
       <created>1562948448904</created>
@@ -668,11 +656,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562962741273</updated>
     </task>
-    <option name="localTasksCounter" value="998" />
+    <task id="LOCAL-00998" summary="zonal average wind">
+      <created>1562962864629</created>
+      <option name="number" value="00998" />
+      <option name="presentableId" value="LOCAL-00998" />
+      <option name="project" value="LOCAL" />
+      <updated>1562962864629</updated>
+    </task>
+    <task id="LOCAL-00999" summary="zonal average wind">
+      <created>1562962943509</created>
+      <option name="number" value="00999" />
+      <option name="presentableId" value="LOCAL-00999" />
+      <option name="project" value="LOCAL" />
+      <updated>1562962943509</updated>
+    </task>
+    <option name="localTasksCounter" value="1000" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181758000" />
+    <option name="totallyTimeSpent" value="182169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -877,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/slicePlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -921,16 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-699">
@@ -943,11 +928,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+        <state relative-caret-position="326">
+          <caret line="148" column="18" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="18" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/rowMatrixMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="176" column="5" selection-start-line="176" selection-end-line="176" selection-end-column="5" />
         </state>
       </provider>
     </entry>

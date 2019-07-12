@@ -174,6 +174,15 @@ row_ub =                 {'var':'ub',
                          'lon':lon2,
                           'z':plm}
 
+row_w =                  {'var':'w',
+                         'ylabel':'Omega \n [Pa/s]',
+                         'title':'Omega',
+                         'units':'[Pa/s]',
+                         'lat':lat,
+                         'lon':lon,
+                          'z':plm}
+
+
 #########
 # OCEAN
 #########
