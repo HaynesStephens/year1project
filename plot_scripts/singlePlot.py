@@ -158,7 +158,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.show()
     print('Plot saved.')
 
 

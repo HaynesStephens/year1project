@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+            <state relative-caret-position="89">
+              <caret line="159" column="20" lean-forward="true" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -324,13 +324,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00965" summary="zonal average wind">
-      <created>1562952465668</created>
-      <option name="number" value="00965" />
-      <option name="presentableId" value="LOCAL-00965" />
-      <option name="project" value="LOCAL" />
-      <updated>1562952465668</updated>
     </task>
     <task id="LOCAL-00966" summary="zonal average wind">
       <created>1562952543637</created>
@@ -668,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562966421519</updated>
     </task>
-    <option name="localTasksCounter" value="1014" />
+    <task id="LOCAL-01014" summary="upward vertical motion">
+      <created>1562966538852</created>
+      <option name="number" value="01014" />
+      <option name="presentableId" value="LOCAL-01014" />
+      <option name="project" value="LOCAL" />
+      <updated>1562966538852</updated>
+    </task>
+    <option name="localTasksCounter" value="1015" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184610000" />
+    <option name="totallyTimeSpent" value="184616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -943,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+        <state relative-caret-position="89">
+          <caret line="159" column="20" lean-forward="true" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
