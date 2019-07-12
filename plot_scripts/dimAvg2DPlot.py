@@ -67,9 +67,9 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     y = row['z']
 
     if rot_origin:
-        im = ax.contourf(x, y, data, cmap=cmap, norm=norm, levels=levels, origin ='lower')#, extent=extent, aspect = 0.1)
+        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm, origin ='lower')#, extent=extent, aspect = 0.1)
     else:
-        im = ax.contourf(x, y, data, cmap=cmap, norm=norm, levels=levels, origin='upper')#, extent=extent, aspect = 0.1)
+        im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm, origin='upper')#, extent=extent, aspect = 0.1)
 
     def plotContLatLine(ax, col):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
