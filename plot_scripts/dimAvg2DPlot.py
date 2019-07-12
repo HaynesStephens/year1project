@@ -49,7 +49,7 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
 
 
     def make_cmap(seq_or_div):
-        levels = [20]
+        levels = 20
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -60,26 +60,24 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     cmap, norm, levels = make_cmap(seq_or_div)
 
     extent = (-90, 90, row['z'][0], row['z'][-1])
+
+    if coord == 'lon':
+        x = row['lat']
+
+    y = row['z']
+
     if rot_origin:
-        im = ax.contourf(data, cmap=cmap, norm=norm, levels=levels, origin ='lower')#, extent=extent, aspect = 0.1)
+        im = ax.contourf(x, y, data, cmap=cmap, norm=norm, levels=levels, origin ='lower')#, extent=extent, aspect = 0.1)
     else:
-        im = ax.contourf(data, cmap=cmap, norm=norm, levels=levels, origin='upper')#, extent=extent, aspect = 0.1)
+        im = ax.contourf(x, y, data, cmap=cmap, norm=norm, levels=levels, origin='upper')#, extent=extent, aspect = 0.1)
 
     def plotContLatLine(ax, col):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
 
     if coord == 'lon':
-        xticks = np.arange(row['lat'].size)[::3]
-        xticklabels = row['lat'][::3]
-        ax.set_xticks(xticks)
-        ax.set_xticklabels(xticklabels)
         ax.set_xlabel('Latitude')
         # plotContLatLine(ax, col)
 
-    yticks = np.arange(row['z'].size)[::4]
-    yticklabels = row['z'][::4]
-    ax.set_yticks(yticks)
-    ax.set_yticklabels(yticklabels)
     ax.set_ylabel('Pressure [mb]')
 
     cbar = grid.cbar_axes[0].colorbar(im)
