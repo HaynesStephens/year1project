@@ -59,22 +59,19 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
-    extent = (-90, 90, row['z'][0], row['z'][-1])
+    y = row['z']
 
     if coord == 'lon':
         x = row['lat']
-
-    y = row['z']
+        ax.set_xlabel('Latitude')
+        ax.plot(col['parallels'], [y[0], y[0]], c='k')
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
     ax.set_aspect(0.1)
 
-    def plotContLatLine(ax, col):
-        ax.plot(col['parallels'], [-0.5, -0.5], c='k')
-
-    if coord == 'lon':
-        ax.set_xlabel('Latitude')
-        # plotContLatLine(ax, col)
+    # if coord == 'lon':
+    #     ax.set_xlabel('Latitude')
+    #     ax.plot(col['parallels'], [y[0], y[0]], c='k')
 
     if y[0] > y[-1]:
         ax.set_ylim(y[0], y[-1])
