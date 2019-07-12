@@ -163,7 +163,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
 
 row = row_w
-col = col_6
+# col = col_6
 filetype = 'aijkpc'
 seq_or_div = 'div'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
@@ -184,7 +184,7 @@ col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 ############# WHOLE SHABANG ################
 for col_i in col_list:
     for depth_i in range(row['z'].size):
-        singlePlot(row, col, filetype, depth_i, seq_or_div)
+        singlePlot(row, col_i, filetype, depth_i, seq_or_div)
     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
 
