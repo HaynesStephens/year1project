@@ -35,11 +35,13 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
     lons, lats = m.makegrid(nx, ny)
     x, y = m(lons, lats)
 
-    min_val = np.min(np.abs(data))
-    max_val = np.max(np.abs(data))
+    # min_val = np.min(np.abs(data))
+    # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        levels = 20
+        min_val = -0.35
+        max_val = 0.36
+        levels = np.arange(min_val,max_val,0.25)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -142,7 +144,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
-    # plt.show()
+    plt.show()
     print('Plot saved.')
 
 row = row_w
@@ -151,5 +153,7 @@ filetype = 'aijkpc'
 depth = 0
 seq_or_div = 'div'
 
-for depth_i in range(row['z'].size):
-    singlePlot(row, col, filetype, depth_i, seq_or_div)
+singlePlot(row, col, filetype, depth, seq_or_div)
+
+# for depth_i in range(row['z'].size):
+#     singlePlot(row, col, filetype, depth_i, seq_or_div)
