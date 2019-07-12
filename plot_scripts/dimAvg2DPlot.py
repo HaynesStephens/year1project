@@ -60,10 +60,10 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     extent = (-90, 90, row['z'][-1], row['z'][0])
     if rot_origin:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin ='lower',
-                       interpolation='none', extent=extent, aspect='equal')
+                       interpolation='none', extent=extent, aspect='auto')
     else:
         im = ax.imshow(data, cmap=cmap, norm=norm, origin='upper',
-                       interpolation='none', extent=extent, aspect='equal')
+                       interpolation='none', extent=extent, aspect='auto')
 
     def plotContLatLine(ax, col):
         ax.plot(col['parallels'], [-0.5, -0.5], c='k')
