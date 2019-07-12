@@ -48,7 +48,8 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div, rot_origin):
     min_val = np.min(data)
 
 
-    def make_cmap(seq_or_div, levels = 20):
+    def make_cmap(seq_or_div):
+        levels = 20
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
