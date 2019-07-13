@@ -174,6 +174,14 @@ row_ub =                 {'var':'ub',
                          'lon':lon2,
                           'z':plm}
 
+row_vb =                 {'var':'vb',
+                         'ylabel':'Meridional Wind \n [m/s]',
+                         'title':'Meridional Wind',
+                         'units':'[m/s]',
+                         'lat':lat2,
+                         'lon':lon2,
+                          'z':plm}
+
 row_w =                  {'var':'w',
                          'ylabel':'Omega \n [Pa/s]',
                          'title':'Omega',
