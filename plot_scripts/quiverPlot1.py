@@ -7,7 +7,7 @@ from matplotlib.patches import Polygon
 from matplotlib.colors import Normalize
 from cbar import MidPointNorm
 from files_n_vars import *
-from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
+from mpl_toolkits.axes_grid1 import ImageGrid
 
 def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
