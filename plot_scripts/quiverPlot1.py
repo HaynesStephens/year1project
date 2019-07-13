@@ -175,9 +175,13 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div):
     print('Plot saved.')
 
 
-col = col_4
 row_u = row_ub
 row_v = row_vb
-filetype = 'aijkpc'
 row_contour = None
+col = col_4
+filetype = 'aijkpc'
+depth = 0
+
 seq_or_div = 'seq'
+
+quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div)
