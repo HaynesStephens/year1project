@@ -70,16 +70,16 @@ def makeSubplot(grid, row_u, row_contour, u, v, col, title, seq_or_div):
         contour_data = depthOrVertAvg(contour_data, depth)
         x_contour = row_contour['lon']
         y_contour = row_contour['lat']
-        quiverUVX(x_u, y_u, u, v)
         contourOverlay(x_contour, y_contour, contour_data, row_contour['units'], levels, cmap, norm)
         if row_contour['var'] == 'tsurf':
             ax.contour(row_contour['lon'], row_contour['lat'], contour_data,
                        ax=ax, levels=[0], colors=('k',), linestyles=('-.',), linewidths=(1,))
+        quiverUVX(x_u, y_u, u, v)
     else:
         contour_data = np.sqrt((u * u) + (v * v))
         print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
-        quiverUVNone(x_u, y_u, u, v)
         contourOverlay(x_u, y_u, contour_data, row_u['units'], levels, cmap, norm)
+        quiverUVNone(x_u, y_u, u, v)
 
 
     parallels = col['parallels']
@@ -181,7 +181,7 @@ row_v = row_vb
 row_contour = None
 col = col_4
 filetype = 'aijkpc'
-depth = 0
+depth = 10
 
 seq_or_div = 'seq'
 
