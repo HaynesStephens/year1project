@@ -160,7 +160,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div):
     v = depthOrVertAvg(v, depth)
 
     makeSubplot(grid=grid1, row_u=row_u, row_contour=row_contour, u=u, v=v,
-                col=col, 'None yet', seq_or_div=seq_or_div)
+                col=col, title='None yet', seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
     """
