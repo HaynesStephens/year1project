@@ -94,31 +94,24 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     ax.set_title(title)
 
 
-# def getPlotName(row, col, filetype, depth):
-#     """
-#     If the plot is a single figure (one simulation),
-#     then generate the filename automatically.
-#     :param row:
-#     :param col:
-#     :param filetype:
-#     :param depth:
-#     :return:
-#     """
-#     if depth == None:
-#         depth_name = ''
-#     elif depth == 'vertAvg':
-#         depth_name = '_vertAvg'
-#     else:
-#         depth_name = '_' + str(depth)
-#
-#     var_name = row['var']
-#     if 'o' in filetype:
-#         var_name = 'o_' + var_name
-#
-#     p_name = str(col['SA'])+'p'
-#
-#     file_name = 'plots/{0}/{1}{2}'.format(p_name, var_name, depth_name)
-#     return file_name
+def getPlotName(row_contour, col, filetype_uv, depth):
+    if depth == None:
+        depth_name = ''
+    elif depth == 'vertAvg':
+        depth_name = '_vertAvg'
+    else:
+        depth_name = '_' + str(depth)
+    if row_contour != None:
+        var_name = row_contour['var']
+    else:
+        var_name = 'uv'
+    if 'o' in filetype_uv:
+        var_name = 'o_' + var_name
+
+    p_name = str(col['SA'])+'p'
+
+    file_name = 'plots/{0}/quiver_{1}{2}'.format(p_name, var_name, depth_name)
+    return file_name
 
 
 def depthOrVertAvg(data, depth):
@@ -194,11 +187,8 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
                 col=col, title=title, seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
-    """
-    file_name = getPlotName(row, col, filetype, depth)
+    file_name = getPlotName(row_contour, col, filetype_uv, depth)
     print('PLOT NAME:', file_name)
-    """
-
 
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
