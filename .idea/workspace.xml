@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+            <state relative-caret-position="288">
+              <caret line="189" column="83" selection-start-line="189" selection-start-column="83" selection-end-line="189" selection-end-column="83" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -349,20 +349,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-00987" summary="zonal average wind">
-      <created>1562955110684</created>
-      <option name="number" value="00987" />
-      <option name="presentableId" value="LOCAL-00987" />
-      <option name="project" value="LOCAL" />
-      <updated>1562955110684</updated>
-    </task>
-    <task id="LOCAL-00988" summary="zonal average wind">
-      <created>1562955171488</created>
-      <option name="number" value="00988" />
-      <option name="presentableId" value="LOCAL-00988" />
-      <option name="project" value="LOCAL" />
-      <updated>1562955171488</updated>
     </task>
     <task id="LOCAL-00989" summary="zonal average wind">
       <created>1562955220719</created>
@@ -693,11 +679,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563216279439</updated>
     </task>
-    <option name="localTasksCounter" value="1036" />
+    <task id="LOCAL-01036" summary="new quiver attempt">
+      <created>1563216416157</created>
+      <option name="number" value="01036" />
+      <option name="presentableId" value="LOCAL-01036" />
+      <option name="project" value="LOCAL" />
+      <updated>1563216416157</updated>
+    </task>
+    <task id="LOCAL-01037" summary="new quiver attempt">
+      <created>1563216682350</created>
+      <option name="number" value="01037" />
+      <option name="presentableId" value="LOCAL-01037" />
+      <option name="project" value="LOCAL" />
+      <updated>1563216682350</updated>
+    </task>
+    <option name="localTasksCounter" value="1038" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195287000" />
+    <option name="totallyTimeSpent" value="195598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -979,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+        <state relative-caret-position="288">
+          <caret line="189" column="83" selection-start-line="189" selection-start-column="83" selection-end-line="189" selection-end-column="83" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

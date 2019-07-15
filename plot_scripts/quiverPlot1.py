@@ -187,7 +187,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, de
         print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
 
 
-    title = getTitle(row_u, row_contour, col, depth, filetype_contour)
+    title = getTitle(row_u, row_contour, col, depth, filetype_uv, filetype_contour)
     makeSubplot(grid=grid1, row_u=row_u, u=u, v=v,
                 row_contour=row_contour, contour_data=contour_data,
                 col=col, title=title, seq_or_div=seq_or_div)
