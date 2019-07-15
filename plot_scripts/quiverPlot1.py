@@ -131,22 +131,25 @@ def depthOrVertAvg(data, depth):
     return data
 
 
-def getTitle(row_u, row_contour, col, depth, filetype_contour):
+def getTitle(row_u, row_contour, col, depth, filetype_uv, filetype_contour):
     title_row = 'Velocity'
     if depth == None:
         title_depth = ''
     elif depth == 'vertAvg':
         title_depth = ', Vert. Avg.'
     else:
-        if 'o' in filetype_contour:
-            ext = ' m'
-        elif 'a' in filetype_contour:
-            ext = ' mb'
         if row_contour != None:
-            title_depth = ', ' + str(row_contour['z'][depth]) + ext
+            row_ext = row_contour
+            filetype_ext = filetype_contour
             title_row = row_contour['title']
         else:
-            title_depth = ', ' + str(row_u['z'][depth]) + ext
+            row_ext = row_u
+            filetype_ext = filetype_uv
+        if 'o' in filetype_ext:
+            ext = ' m'
+        elif 'a' in filetype_ext:
+            ext = ' mb'
+        title_depth = ', ' + str(row_ext['z'][depth]) + ext
     title = col['title'] + title_depth + ', ' + title_row
     return title
 
