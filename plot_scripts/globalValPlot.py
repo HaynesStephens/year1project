@@ -37,9 +37,9 @@ def getSideMean(data, area_arr, side):
     cropped_data = data.copy()
     cropped_area = area_arr.copy()
     if side == 'Day Side':
-        lon_indices = np.where(np.abs(lon_grid) < 88)[0]
+        lon_indices = np.where(np.abs(lon_grid) < 90)[0]
     elif side == 'Night Side':
-        lon_indices = np.where(np.abs(lon_grid) > 88)[0]
+        lon_indices = np.where(np.abs(lon_grid) > 90)[0]
     elif side == 'Sub-stellar':
         lon_indices = np.where(np.abs(lon_grid) < 13)[0]
         lat_indices = np.where(np.abs(lat_grid) < 11)[0]

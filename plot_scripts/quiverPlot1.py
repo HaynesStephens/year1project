@@ -50,7 +50,8 @@ def makeSubplot(grid, row_u, row_contour, u, v, col, title, seq_or_div):
 
 
     def quiverUVNone(x_u, y_u, u, v):
-        q = ax.quiver(x_u, y_u, u/u, v/v)
+        uv_mag = np.sqrt((u * u) + (v * v))
+        q = ax.quiver(x_u, y_u, u/uv_mag, v/uv_mag)
 
     def quiverUVX(x_u, y_u, u, v):
         q = ax.quiver(x_u, y_u, u, v)
@@ -76,7 +77,7 @@ def makeSubplot(grid, row_u, row_contour, u, v, col, title, seq_or_div):
                        ax=ax, levels=[0], colors=('k',), linestyles=('-.',), linewidths=(1,))
         quiverUVX(x_u, y_u, u, v)
     else:
-        contour_data = np.sqrt((u * u) + (v * v))
+        contour_data = np.sqrt((u * u) + (v * v)) # Set contours as the horizontal velocity magnitudes
         print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
         contourOverlay(x_u, y_u, contour_data, row_u['units'], levels, cmap, norm)
         quiverUVNone(x_u, y_u, u, v)

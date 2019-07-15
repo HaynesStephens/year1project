@@ -44,6 +44,8 @@ for y in year_list:
 
     print(accfilename)
     ext_list = ['aijk', 'aijl', 'aij', 'icij', 'oijl', 'oij']
+    tot_list = ['aj', 'areg', 'consrv', 'ajl', 'agc', 'aij', 'aijmm', 'aijl', 'aijk', 'adiurn', 'hdiurn'
+                'ijhc', 'oij', 'oijmm', 'oijl', 'olnst', 'ojl', 'otj, icij']
     for ext in ext_list:
         subprocess.call(["scaleacc", accfilename, ext])
     # subprocess.call(["scaleacc", accfilename, 'aij'])  # convert atmospheric output
