@@ -89,6 +89,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
 
     ax.set_xlim(-180,180)
     ax.set_ylim(-90,90)
+    ax.set_xlabel('Latitude')
+    ax.set_ylabel('Longitude')
     ax.set_title(title)
 
 
