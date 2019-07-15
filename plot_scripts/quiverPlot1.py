@@ -209,10 +209,10 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
 row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
-depth = 10
+depth = 'vertAvg'
 row_contour = row_w
 filetype_contour = 'aijkpc'
-depth_contour = 10
+depth_contour = 'vertAvg'
 col = col_4
 
 seq_or_div = 'div'
