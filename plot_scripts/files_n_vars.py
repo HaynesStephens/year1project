@@ -166,6 +166,14 @@ row_plan_alb =           {'var':'plan_alb',
                          'lat':lat,
                          'lon':lon}
 
+row_temp =               {'var':'temp',
+                         'ylabel':'Temperature \n [C]',
+                         'title':'Temperature',
+                         'units':'[C]',
+                         'lat':lat,
+                         'lon':lon,
+                         'z':plm}
+
 row_tb =                 {'var':'tb',
                          'ylabel':'Temperature \n [C]',
                          'title':'Temperature',
