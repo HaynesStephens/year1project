@@ -161,10 +161,10 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, de
                       nrows_ncols=(1,1),
                       axes_pad=0.07,
                       share_all=True,
-                      cbar_location="right",
+                      cbar_location="bottom",
                       cbar_mode="single",
-                      cbar_size="7%",
-                      cbar_pad="7%",
+                      cbar_size="2%",
+                      cbar_pad="3%",
                       aspect=True)
     filedir = col['filedir']
 
