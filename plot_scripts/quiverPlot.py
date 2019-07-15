@@ -36,8 +36,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -200
-        max_val = 200
+        min_val = -110
+        max_val = 110
         levels = np.linspace(min_val, max_val, 44)
         if seq_or_div == 'seq':
             cmap = cm.Reds
@@ -191,8 +191,8 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
+    # plt.savefig(file_name+'.pdf')
+    plt.show()
     print('Plot saved.')
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
