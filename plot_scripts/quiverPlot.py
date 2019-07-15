@@ -215,7 +215,7 @@ filetype_contour = 'aijkpc'
 depth_contour = 10
 col = col_4
 
-seq_or_div = 'div'
+seq_or_div = 'seq'
 
 quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
            depth, depth_contour, seq_or_div)
