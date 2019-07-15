@@ -195,17 +195,22 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
     plt.show()
     print('Plot saved.')
 
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
-depth = 10
+depth = 'vertAvg'
 row_contour = row_temp
 filetype_contour = 'aijlpc'
-depth_contour = 10
+depth_contour = 'vertAvg'
 col = col_4
 
 seq_or_div = 'div'
 
-quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-           depth, depth_contour, seq_or_div)
+# quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+#            depth, depth_contour, seq_or_div)
+
+for col_i in col_list:
+    quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+               depth, depth_contour, seq_or_div)
