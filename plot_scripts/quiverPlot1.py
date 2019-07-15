@@ -129,25 +129,22 @@ def depthOrVertAvg(data, depth):
     return data
 
 
-def getTitle(row_u, row_contour, col, depth, filetype_uv, filetype_contour):
-    title_row = 'Velocity'
+def getTitle(row_u, row_contour, col, depth, filetype_uv):
+    if row_contour != None:
+        title_row = row_contour['title']
+    else:
+        title_row = 'Velocity'
+
     if depth == None:
         title_depth = ''
     elif depth == 'vertAvg':
         title_depth = ', Vert. Avg.'
     else:
-        if row_contour != None:
-            row_ext = row_contour
-            filetype_ext = filetype_contour
-            title_row = row_contour['title']
-        else:
-            row_ext = row_u
-            filetype_ext = filetype_uv
-        if 'o' in filetype_ext:
+        if 'o' in filetype_uv:
             ext = ' m'
-        elif 'a' in filetype_ext:
+        elif 'a' in filetype_uv:
             ext = ' mb'
-        title_depth = ', ' + str(row_ext['z'][depth]) + ext
+        title_depth = ', ' + str(row_u['z'][depth]) + ext
     title = col['title'] + title_depth + ', ' + title_row
     return title
 
@@ -186,7 +183,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
         print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
 
 
-    title = getTitle(row_u, row_contour, col, depth, filetype_uv, filetype_contour)
+    title = getTitle(row_u, row_contour, col, depth, filetype_uv)
     makeSubplot(grid=grid1, row_u=row_u, u=u, v=v,
                 row_contour=row_contour, contour_data=contour_data,
                 col=col, title=title, seq_or_div=seq_or_div)
