@@ -208,8 +208,8 @@ row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
 depth = 10
-row_contour = None
-filetype_contour = None
+row_contour = row_prec
+filetype_contour = 'aijpc'
 depth_contour = None
 col = col_4
 
