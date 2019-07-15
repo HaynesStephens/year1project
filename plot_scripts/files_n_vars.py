@@ -166,6 +166,14 @@ row_plan_alb =           {'var':'plan_alb',
                          'lat':lat,
                          'lon':lon}
 
+row_tb =                 {'var':'tb',
+                         'ylabel':'Temperature \n [C]',
+                         'title':'Temperature',
+                         'units':'[C]',
+                         'lat':lat2,
+                         'lon':lon2,
+                         'z':plm}
+
 row_ub =                 {'var':'ub',
                          'ylabel':'Zonal Wind \n [m/s]',
                          'title':'Zonal Wind',
