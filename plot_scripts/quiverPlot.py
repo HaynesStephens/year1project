@@ -36,9 +36,9 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -110
-        max_val = 110
-        levels = np.linspace(min_val, max_val, 40)
+        min_val = -85
+        max_val = 85
+        levels = np.linspace(min_val, max_val, 34)
         if seq_or_div == 'seq':
             cmap = cm.Reds
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -200,17 +200,17 @@ col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
-depth = 'vertAvg'
+depth = 10
 row_contour = row_temp
 filetype_contour = 'aijlpc'
-depth_contour = 'vertAvg'
-col = col_4
+depth_contour = 10
+col = col_39
 
 seq_or_div = 'div'
 
-# quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-#            depth, depth_contour, seq_or_div)
+quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+           depth, depth_contour, seq_or_div)
 
-for col_i in col_list:
-    quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
-               depth, depth_contour, seq_or_div)
+# for col_i in col_list:
+#     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                depth, depth_contour, seq_or_div)
