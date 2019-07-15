@@ -176,6 +176,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
         contour_data = avgDataFiles(filedir, filetype_contour, var_contour)
         print("{0} MIN: {1}, {0} MAX: {2}".format(var_contour, np.min(contour_data), np.max(contour_data)))
         contour_data = depthOrVertAvg(contour_data, depth_contour)
+        print(contour_data)
     else:
         contour_data = np.sqrt((u * u) + (v * v)) # Set contours as the horizontal velocity magnitudes
         print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
