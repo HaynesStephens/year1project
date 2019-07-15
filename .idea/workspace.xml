@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -74,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="168" selection-start-line="168" selection-end-line="168" selection-end-column="79" />
+            <state relative-caret-position="176">
+              <caret line="170" selection-start-line="170" selection-end-line="187" selection-end-column="59" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+            <state relative-caret-position="-320">
+              <caret line="193" column="24" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -337,20 +337,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01031" summary="new quiver attempt">
-      <created>1562976672375</created>
-      <option name="number" value="01031" />
-      <option name="presentableId" value="LOCAL-01031" />
-      <option name="project" value="LOCAL" />
-      <updated>1562976672375</updated>
-    </task>
-    <task id="LOCAL-01032" summary="new quiver attempt">
-      <created>1563212685048</created>
-      <option name="number" value="01032" />
-      <option name="presentableId" value="LOCAL-01032" />
-      <option name="project" value="LOCAL" />
-      <updated>1563212685048</updated>
     </task>
     <task id="LOCAL-01033" summary="new quiver attempt">
       <created>1563212878949</created>
@@ -681,11 +667,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563229316661</updated>
     </task>
-    <option name="localTasksCounter" value="1080" />
+    <task id="LOCAL-01080" summary="new quiver attempt">
+      <created>1563229376391</created>
+      <option name="number" value="01080" />
+      <option name="presentableId" value="LOCAL-01080" />
+      <option name="project" value="LOCAL" />
+      <updated>1563229376391</updated>
+    </task>
+    <task id="LOCAL-01081" summary="new quiver attempt">
+      <created>1563229768490</created>
+      <option name="number" value="01081" />
+      <option name="presentableId" value="LOCAL-01081" />
+      <option name="project" value="LOCAL" />
+      <updated>1563229768490</updated>
+    </task>
+    <option name="localTasksCounter" value="1082" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200219000" />
+    <option name="totallyTimeSpent" value="200668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -948,7 +948,7 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -966,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="168" selection-start-line="168" selection-end-line="168" selection-end-column="79" />
+        <state relative-caret-position="176">
+          <caret line="170" selection-start-line="170" selection-end-line="187" selection-end-column="59" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -976,8 +976,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        <state relative-caret-position="-320">
+          <caret line="193" column="24" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
