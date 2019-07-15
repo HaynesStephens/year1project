@@ -191,8 +191,8 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
-    plt.show()
+    plt.savefig(file_name+'.pdf')
+    # plt.show()
     print('Plot saved.')
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
@@ -200,17 +200,37 @@ col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
-depth = 10
+
 row_contour = row_temp
 filetype_contour = 'aijlpc'
-depth_contour = 10
+
 col = col_39
 
 seq_or_div = 'div'
 
-quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-           depth, depth_contour, seq_or_div)
 
+# ############# SINGLE DEPTH PLOT #################
+# depth = 0
+# depth_contour = 0
+# quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+#            depth, depth_contour, seq_or_div)
+
+############# ALL DEPTHS PLOT ###################
+for depth_i in range(row_u['z'].size):
+    quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+               depth_i, depth_i, seq_or_div)
+
+# ############# ALL VERT AVGS PLOT #################
+# depth = 'vertAvg'
+# depth_contour = 'vertAvg'
 # for col_i in col_list:
 #     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
 #                depth, depth_contour, seq_or_div)
+
+############# WHOLE SHABANG ################
+# for col_i in col_list:
+#     for depth_i in range(row['z'].size):
+#         quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                    depth_i, depth_i, seq_or_div)
+#     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                'vertAvg', 'vertAvg', seq_or_div)
