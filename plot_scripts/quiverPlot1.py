@@ -37,8 +37,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
 
     def make_cmap(seq_or_div):
         min_val = 0
-        max_val = 50
-        levels = np.linspace(min_val, max_val, 50)
+        max_val = 25
+        levels = np.linspace(min_val, max_val, 25)
         if seq_or_div == 'seq':
             cmap = cm.Reds
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -87,6 +87,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
 
+    ax.set_xlim(-180,180)
+    ax.set_ylim(-90,90)
     ax.set_title(title)
 
 
