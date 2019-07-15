@@ -209,9 +209,9 @@ row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
 depth = 10
-row_contour = row_prec
-filetype_contour = 'aijpc'
-depth_contour = None
+row_contour = row_w
+filetype_contour = 'aijkpc'
+depth_contour = 10
 col = col_4
 
 seq_or_div = 'seq'
