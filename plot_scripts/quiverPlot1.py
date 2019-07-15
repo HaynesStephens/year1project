@@ -89,8 +89,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
 
     ax.set_xlim(-180,180)
     ax.set_ylim(-90,90)
-    ax.set_xlabel('Latitude')
-    ax.set_ylabel('Longitude')
+    ax.set_xlabel('Longitude')
+    ax.set_ylabel('Latitude')
     ax.set_title(title)
 
 
@@ -164,7 +164,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
                       cbar_location="bottom",
                       cbar_mode="single",
                       cbar_size="4%",
-                      cbar_pad="7%",
+                      cbar_pad="8%",
                       aspect=True)
     filedir = col['filedir']
 
