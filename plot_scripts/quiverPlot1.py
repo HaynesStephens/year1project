@@ -36,9 +36,9 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = 0
-        max_val = 25
-        levels = np.linspace(min_val, max_val, 25)
+        min_val = -1
+        max_val = 1
+        levels = np.linspace(min_val, max_val, 20)
         if seq_or_div == 'seq':
             cmap = cm.Reds
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -215,7 +215,7 @@ filetype_contour = 'aijkpc'
 depth_contour = 10
 col = col_4
 
-seq_or_div = 'seq'
+seq_or_div = 'div'
 
 quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
            depth, depth_contour, seq_or_div)
