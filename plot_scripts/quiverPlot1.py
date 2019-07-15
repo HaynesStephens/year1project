@@ -120,15 +120,12 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
 def depthOrVertAvg(data, depth):
     if depth == None:
         data = data
-
     elif depth == 'vertAvg':
         data = np.mean(data, axis=0)
         print("AVG MIN: {0}, AVG MAX: {1}".format(np.min(data), np.max(data)))
-
     else:
         data = data[depth,:,:]
         print("DEPTH MIN: {0}, DEPTH MAX: {1}".format(np.min(data), np.max(data)))
-
     return data
 
 
@@ -156,7 +153,8 @@ def getTitle(row_u, row_contour, col, depth, filetype_uv, filetype_contour):
 
 
 
-def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, depth, seq_or_div):
+def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+               depth, depth_contour, seq_or_div):
     fig = plt.figure(figsize = (14,6))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(1,1),
@@ -209,11 +207,13 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, de
 row_u = row_ub
 row_v = row_vb
 filetype_uv = 'aijkpc'
+depth = 10
 row_contour = None
 filetype_contour = None
+depth_contour = None
 col = col_4
-depth = 10
 
 seq_or_div = 'seq'
 
-quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, depth, seq_or_div)
+quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+           depth, depth_contour, seq_or_div)
