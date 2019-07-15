@@ -209,16 +209,16 @@ col = col_39
 seq_or_div = 'div'
 
 
-# ############# SINGLE DEPTH PLOT #################
-# depth = 0
-# depth_contour = 0
-# quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-#            depth, depth_contour, seq_or_div)
+############# SINGLE DEPTH PLOT #################
+depth = 0
+depth_contour = 0
+quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+           depth, depth_contour, seq_or_div)
 
-############ ALL DEPTHS PLOT ###################
-for depth_i in range(row_u['z'].size):
-    quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-               depth_i, depth_i, seq_or_div)
+# ############ ALL DEPTHS PLOT ###################
+# for depth_i in range(row_u['z'].size):
+#     quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+#                depth_i, depth_i, seq_or_div)
 
 # ############# ALL VERT AVGS PLOT #################
 # depth = 'vertAvg'
