@@ -192,7 +192,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
 
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.show()
     print('Plot saved.')
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
