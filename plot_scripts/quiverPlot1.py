@@ -25,7 +25,7 @@ def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
     return arr_avg
 
 
-def makeSubplot(grid, row_u, row_contour, u, v, col, title, seq_or_div):
+def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or_div):
     ax = grid[0]
     ax.set_facecolor('.25')
 
@@ -48,40 +48,32 @@ def makeSubplot(grid, row_u, row_contour, u, v, col, title, seq_or_div):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
+    def quiverUV(x_u, y_u, u, v, quiv_norm=False):
+        if quiv_norm:
+            uv_mag = np.sqrt((u * u) + (v * v))
+            q = ax.quiver(x_u, y_u, u/uv_mag, v/uv_mag)
+        else:
+            q = ax.quiver(x_u, y_u, u, v)
+            U = 10
+            key_label = '{0} m/s'.format(U)
+            ax.quiverkey(q, X=0.93, Y=1.02, U=U, label=key_label, labelpos='E')
 
-    def quiverUVNone(x_u, y_u, u, v):
-        uv_mag = np.sqrt((u * u) + (v * v))
-        q = ax.quiver(x_u, y_u, u, v)
-
-    def quiverUVX(x_u, y_u, u, v):
-        q = ax.quiver(x_u, y_u, u, v)
-        U = 1
-        key_label = '{0} m/s'.format(U)
-        ax.quiverkey(q, X=0.93, Y=1.02, U=U, label=key_label, labelpos='E')
-
-    def contourOverlay(x, y, data, units, levels, cmap, norm):
+    def contourPlot(x, y, data, units, levels, cmap, norm):
         im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
         cbar = grid.cbar_axes[0].colorbar(im)
         cbar.set_label_text(units)
 
     if row_contour != None:
-        var_contour = row_contour['var']
-        contour_data = avgDataFiles(filedir, filetype, var_contour)
-        print("{0} MIN: {1}, {0} MAX: {2}".format(var_contour, np.min(contour_data), np.max(contour_data)))
-        contour_data = depthOrVertAvg(contour_data, depth)
         x_contour = row_contour['lon']
         y_contour = row_contour['lat']
-        contourOverlay(x_contour, y_contour, contour_data, row_contour['units'], levels, cmap, norm)
-        if row_contour['var'] == 'tsurf':
-            ax.contour(row_contour['lon'], row_contour['lat'], contour_data,
-                       ax=ax, levels=[0], colors=('k',), linestyles=('-.',), linewidths=(1,))
-        quiverUVX(x_u, y_u, u, v)
+        units_contour = row_contour['units']
     else:
-        contour_data = np.sqrt((u * u) + (v * v)) # Set contours as the horizontal velocity magnitudes
-        print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
-        contourOverlay(x_u, y_u, contour_data, row_u['units'], levels, cmap, norm)
-        quiverUVNone(x_u, y_u, u, v)
+        x_contour = x_u
+        y_contour = y_u
+        units_contour = row_u['units']
 
+    contourPlot(x_contour, y_contour, contour_data, units_contour, levels, cmap, norm)
+    quiverUV(x_u, y_u, u, v)
 
     parallels = col['parallels']
     meridians = col['meridians']
@@ -137,8 +129,23 @@ def depthOrVertAvg(data, depth):
     return data
 
 
+def getTitle(row_contour, col, depth, filetype_contour):
+    if row_contour != None:
+        if depth == None:
+            title = col['title']
+        elif depth == 'vertAvg':
+            title = col['title'] + ', Vert. Avg.'
+        else:
+            if 'o' in filetype_contour:
+                ext = ' m'
+            elif 'a' in filetype_contour:
+                ext = ' mb'
+            title = col['title'] + ', ' + str(row_contour['z'][depth]) + ext
+        title = title + row_contour['title']
 
-def quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div):
+
+
+def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, depth, seq_or_div):
     fig = plt.figure(figsize = (14,6))
     grid1 = ImageGrid(fig, 111,
                       nrows_ncols=(1,1),
@@ -152,16 +159,25 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div):
     filedir = col['filedir']
 
     var_u = row_u['var']
-    u = avgDataFiles(filedir, filetype, var_u)
+    u = avgDataFiles(filedir, filetype_uv, var_u)
     print("U MIN: {0}, U MAX: {1}".format(np.min(u), np.max(u)))
     u = depthOrVertAvg(u, depth)
 
     var_v = row_v['var']
-    v = avgDataFiles(filedir, filetype, var_v)
+    v = avgDataFiles(filedir, filetype_uv, var_v)
     print("V MIN: {0}, V MAX: {1}".format(np.min(v), np.max(v)))
     v = depthOrVertAvg(v, depth)
 
-    makeSubplot(grid=grid1, row_u=row_u, row_contour=row_contour, u=u, v=v,
+    if row_contour != None:
+        var_contour = row_contour['var']
+        contour_data = avgDataFiles(filedir, filetype_contour, var_contour)
+        print("{0} MIN: {1}, {0} MAX: {2}".format(var_contour, np.min(contour_data), np.max(contour_data)))
+    else:
+        contour_data = np.sqrt((u * u) + (v * v)) # Set contours as the horizontal velocity magnitudes
+        print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
+
+    makeSubplot(grid=grid1, row_u=row_u, u=u, v=v,
+                row_contour=row_contour, contour_data=contour_data,
                 col=col, title='None yet', seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
@@ -179,11 +195,12 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div):
 
 row_u = row_ub
 row_v = row_vb
+filetype_uv = 'aijkpc'
 row_contour = None
+filetype_contour = None
 col = col_4
-filetype = 'aijkpc'
 depth = 10
 
 seq_or_div = 'seq'
 
-quiverPlot(row_u, row_v, row_contour, col, filetype, depth, seq_or_div)
+quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, depth, seq_or_div)
