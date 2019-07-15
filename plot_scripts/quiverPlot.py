@@ -36,15 +36,15 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -110
-        max_val = 110
+        min_val = -200
+        max_val = 200
         levels = np.linspace(min_val, max_val, 44)
         if seq_or_div == 'seq':
             cmap = cm.Reds
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
-            norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
+            norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
