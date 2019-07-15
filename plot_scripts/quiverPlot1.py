@@ -86,6 +86,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
                                 edgecolor='black', linewidth=1)
         ax.add_patch(cont_boundary)
 
+    ax.set_title(title)
+
 
 # def getPlotName(row, col, filetype, depth):
 #     """
@@ -181,9 +183,11 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour, de
         contour_data = np.sqrt((u * u) + (v * v)) # Set contours as the horizontal velocity magnitudes
         print("{0} MIN: {1}, {0} MAX: {2}".format('Velocity', np.min(contour_data), np.max(contour_data)))
 
+
+    title = getTitle(row_u, row_contour, col, depth, filetype_contour)
     makeSubplot(grid=grid1, row_u=row_u, u=u, v=v,
                 row_contour=row_contour, contour_data=contour_data,
-                col=col, title='None yet', seq_or_div=seq_or_div)
+                col=col, title=title, seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
     """
