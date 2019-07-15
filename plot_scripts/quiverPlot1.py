@@ -51,7 +51,7 @@ def makeSubplot(grid, row_u, row_contour, u, v, col, title, seq_or_div):
 
     def quiverUVNone(x_u, y_u, u, v):
         uv_mag = np.sqrt((u * u) + (v * v))
-        q = ax.quiver(x_u, y_u, u/uv_mag, v/uv_mag)
+        q = ax.quiver(x_u, y_u, u, v)
 
     def quiverUVX(x_u, y_u, u, v):
         q = ax.quiver(x_u, y_u, u, v)
