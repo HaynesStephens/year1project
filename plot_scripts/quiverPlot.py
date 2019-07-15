@@ -53,9 +53,9 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
             uv_mag = np.sqrt((u * u) + (v * v))
             q = ax.quiver(x_u, y_u, u/uv_mag, v/uv_mag)
         else:
-            q = ax.quiver(x_u, y_u, u, v, scale_units='width', scale=1000,
+            q = ax.quiver(x_u, y_u, u, v, scale_units='width', scale=5000,
                  pivot='middle', width=0.001, headwidth=5, headlength=5)
-            U = 100
+            U = 10
             key_label = '{0} m/s'.format(U)
             ax.quiverkey(q, X=0.93, Y=1.02, U=U, label=key_label, labelpos='E')
 
