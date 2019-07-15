@@ -36,8 +36,8 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -20
-        max_val = 20
+        min_val = 200
+        max_val = 300
         levels = np.linspace(min_val, max_val, 20)
         if seq_or_div == 'seq':
             cmap = cm.Reds
