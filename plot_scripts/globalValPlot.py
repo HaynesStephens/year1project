@@ -22,6 +22,7 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
         elif filetype == 'oijlpc':
             area_arr = nc_i['oxyp3'][:][depth]
         area_arr[arr.mask] = 0
+        print(np.where(area_arr == 0))
 
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
@@ -78,13 +79,13 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
 
 def globalValPlot():
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-    row = row_plan_alb
+    row = row_srnf_toa
     fig, ax = plt.subplots()
 
     makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/global/global_plan_alb'
+    file_name = 'plots/global/global_'+row['var']
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()

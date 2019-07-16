@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
+            <state relative-caret-position="211">
+              <caret line="119" column="12" selection-start-line="119" selection-end-line="119" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -62,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+            <state relative-caret-position="207">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -106,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>avgDataFiles</find>
       <find>density</find>
       <find>zsi</find>
       <find>patch</find>
@@ -136,6 +136,7 @@
       <find>day</find>
       <find>lon_grid</find>
       <find>global</find>
+      <find>solar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,9 +173,10 @@
         <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
         <option value="$PROJECT_DIR$/rocke_ss.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot1.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/singlePlot.py" />
+        <option value="$PROJECT_DIR$/planAlb.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
       </list>
     </option>
@@ -337,20 +339,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01056" summary="new quiver attempt">
-      <created>1563219927783</created>
-      <option name="number" value="01056" />
-      <option name="presentableId" value="LOCAL-01056" />
-      <option name="project" value="LOCAL" />
-      <updated>1563219927783</updated>
-    </task>
-    <task id="LOCAL-01057" summary="new quiver attempt">
-      <created>1563220040716</created>
-      <option name="number" value="01057" />
-      <option name="presentableId" value="LOCAL-01057" />
-      <option name="project" value="LOCAL" />
-      <updated>1563220040716</updated>
     </task>
     <task id="LOCAL-01058" summary="new quiver attempt">
       <created>1563220321131</created>
@@ -681,11 +669,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563290568627</updated>
     </task>
-    <option name="localTasksCounter" value="1105" />
+    <task id="LOCAL-01105" summary="planetary albedo">
+      <created>1563290780529</created>
+      <option name="number" value="01105" />
+      <option name="presentableId" value="LOCAL-01105" />
+      <option name="project" value="LOCAL" />
+      <updated>1563290780529</updated>
+    </task>
+    <task id="LOCAL-01106" summary="planetary albedo">
+      <created>1563290945149</created>
+      <option name="number" value="01106" />
+      <option name="presentableId" value="LOCAL-01106" />
+      <option name="project" value="LOCAL" />
+      <updated>1563290945149</updated>
+    </task>
+    <option name="localTasksCounter" value="1107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204492000" />
+    <option name="totallyTimeSpent" value="205468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -957,13 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="173" column="34" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
@@ -974,10 +969,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/planAlb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="119" column="12" selection-start-line="119" selection-end-line="119" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        <state relative-caret-position="207">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
