@@ -60,18 +60,20 @@ def getDimAvg(data, avg_coord):
 def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
     ax = grid[0]
 
-    max_val = np.max(np.abs(data))
-    min_val = np.min(data)
+    # max_val = np.max(np.abs(data))
+    # min_val = np.min(data)
 
 
     def make_cmap(seq_or_div):
-        levels = np.arange(-45,46,5)
+        min_val = -45
+        max_val = 45
+        levels = np.linspace(min_val, max_val, 18)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
-            norm = MidPointNorm(midpoint=0, vmin=-max_val, vmax=max_val)
+            norm = MidPointNorm(midpoint=0, vmin=min_val, vmax=max_val)
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
@@ -120,8 +122,8 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       share_all=True,
                       cbar_location="bottom",
                       cbar_mode="single",
-                      cbar_size="4%",
-                      cbar_pad="8%",
+                      cbar_size="5%",
+                      cbar_pad="12%",
                       aspect=True)
     var = row['var']
     filedir = col['filedir']
