@@ -87,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
+              <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01108" summary="planetary albedo">
-      <created>1563292690062</created>
-      <option name="number" value="01108" />
-      <option name="presentableId" value="LOCAL-01108" />
-      <option name="project" value="LOCAL" />
-      <updated>1563292690062</updated>
-    </task>
-    <task id="LOCAL-01109" summary="planetary albedo">
-      <created>1563292857211</created>
-      <option name="number" value="01109" />
-      <option name="presentableId" value="LOCAL-01109" />
-      <option name="project" value="LOCAL" />
-      <updated>1563292857211</updated>
     </task>
     <task id="LOCAL-01110" summary="planetary albedo">
       <created>1563293285140</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563309784653</updated>
     </task>
-    <option name="localTasksCounter" value="1157" />
+    <task id="LOCAL-01157" summary="adding height to quiver plots">
+      <created>1563309943685</created>
+      <option name="number" value="01157" />
+      <option name="presentableId" value="LOCAL-01157" />
+      <option name="project" value="LOCAL" />
+      <updated>1563309943685</updated>
+    </task>
+    <task id="LOCAL-01158" summary="adding height to quiver plots">
+      <created>1563309992341</created>
+      <option name="number" value="01158" />
+      <option name="presentableId" value="LOCAL-01158" />
+      <option name="project" value="LOCAL" />
+      <updated>1563309992341</updated>
+    </task>
+    <option name="localTasksCounter" value="1159" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212039000" />
+    <option name="totallyTimeSpent" value="212148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -985,7 +985,7 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
+          <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
