@@ -95,7 +95,7 @@ def globalValPlot():
 
     fig.tight_layout(w_pad = 2.25)
     # file_name = 'plots/global/global_'+row['var']
-    file_name = 'plots/global/global_alb_sol
+    file_name = 'plots/global/global_alb_sol'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
