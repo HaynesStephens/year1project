@@ -38,7 +38,7 @@ def getHeightFile(filedir, filetype, num_files=10):
     if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
         z_avg = np.roll(z_avg, (z_avg.shape[2]) // 2, axis=2)
 
-    for i in z_avg.shape[0]:
+    for i in range(z_avg.shape[0]):
         print(np.mean(z_avg[i]))
     z_final = z_avg.reshape((z_avg.shape[0], -1)).mean(axis=1)
     print(z_final)
