@@ -157,7 +157,7 @@ def getTitle(row_u, row_contour, col, depth, filetype_uv):
             z_arr = row_u['z']
         elif 'a' in filetype_uv:
             z_arr = getHeightFile(col['filedir'], filetype_uv)
-        title_depth = ', {0:d} m'.format(str(z_arr[depth]))
+        title_depth = ', {0:d} m'.format(z_arr[depth])
     title = '{0}{1}, {2}'.format(col['title'], title_depth, title_row)
     return title
 
