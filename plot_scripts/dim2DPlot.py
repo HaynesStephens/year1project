@@ -183,4 +183,4 @@ seq_or_div = 'seq'
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 for col_i in col_list:
-    dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+    dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)fadlkj
