@@ -29,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="-405">
               <caret line="198" column="6" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="6" />
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
+            <state relative-caret-position="367">
+              <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01115" summary="planetary albedo">
-      <created>1563294110317</created>
-      <option name="number" value="01115" />
-      <option name="presentableId" value="LOCAL-01115" />
-      <option name="project" value="LOCAL" />
-      <updated>1563294110317</updated>
-    </task>
-    <task id="LOCAL-01116" summary="planetary albedo">
-      <created>1563294248087</created>
-      <option name="number" value="01116" />
-      <option name="presentableId" value="LOCAL-01116" />
-      <option name="project" value="LOCAL" />
-      <updated>1563294248087</updated>
     </task>
     <task id="LOCAL-01117" summary="planetary albedo">
       <created>1563294475749</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563313253190</updated>
     </task>
-    <option name="localTasksCounter" value="1164" />
+    <task id="LOCAL-01164" summary="slice plot change">
+      <created>1563313393070</created>
+      <option name="number" value="01164" />
+      <option name="presentableId" value="LOCAL-01164" />
+      <option name="project" value="LOCAL" />
+      <updated>1563313393070</updated>
+    </task>
+    <task id="LOCAL-01165" summary="slice plot change">
+      <created>1563313406574</created>
+      <option name="number" value="01165" />
+      <option name="presentableId" value="LOCAL-01165" />
+      <option name="project" value="LOCAL" />
+      <updated>1563313406574</updated>
+    </task>
+    <option name="localTasksCounter" value="1166" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213829000" />
+    <option name="totallyTimeSpent" value="214009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -958,13 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="198" column="6" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/lat_lon_grid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="973">
@@ -982,10 +975,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="198" column="6" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
+        <state relative-caret-position="367">
+          <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

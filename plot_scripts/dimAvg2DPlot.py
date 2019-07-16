@@ -104,6 +104,7 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
             ax.set_ylabel('Height [km]')
     else:
         y = row['z']
+        ax.set_ylim(y[0], y[-1])
         ax.set_ylabel('Depth [m]')
 
     if dim == 'lon':
@@ -163,7 +164,7 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     plt.show()
     print('Plot Saved.')
 
-row = row_o_pot_temp
+row = row_o_pot_dens
 col = col_4
 filetype = 'oijlpc'
 dim = 'lon'
