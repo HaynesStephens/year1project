@@ -25,12 +25,10 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
     arr_avg = (arr_tot * unit_conv) / num_files
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
-    if side == 'Global':
-        avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
-        return avg_val
-    else:
-        avg_val = getSideMean(arr_avg, area_arr, row, side)
-        return avg_val
+
+    print(arr_avg)
+    avg_val = getSideMean(arr_avg, area_arr, row, side)
+    return avg_val
 
 
 def getSideMean(data, area_arr, row, side):
@@ -38,7 +36,11 @@ def getSideMean(data, area_arr, row, side):
     lon_grid = row['lon']
     cropped_data = data.copy()
     cropped_area = area_arr.copy()
-    if side == 'Day Side':
+    if side == 'Global':
+        avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
+        return avg_val
+
+    elif side == 'Day Side':
         lon_indices = np.where(np.abs(lon_grid) < 90)[0]
     elif side == 'Night Side':
         lon_indices = np.where(np.abs(lon_grid) > 90)[0]
