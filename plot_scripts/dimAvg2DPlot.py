@@ -75,13 +75,13 @@ def getSlice(data, dim, coord, lat_grid, lon_grid):
 def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     ax = grid[0]
 
-    # max_val = np.max(np.abs(data))
-    # min_val = np.min(data)
+    max_val = np.max(np.abs(data))
+    min_val = np.min(data)
 
 
     def make_cmap(seq_or_div):
-        min_val = -48
-        max_val = 48
+        # min_val = -48
+        # max_val = 48
         levels = np.linspace(min_val, max_val, 25)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
@@ -171,7 +171,7 @@ dim = 'lon'
 avg_or_slice = 'slice'
 coord = 2.5
 
-seq_or_div = 'div'
+seq_or_div = 'seq'
 
 dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
 
