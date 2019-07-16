@@ -74,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dim2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="167" column="17" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="17" />
+            <state relative-caret-position="357">
+              <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -327,20 +327,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01154" summary="adding height to quiver plots">
-      <created>1563308787631</created>
-      <option name="number" value="01154" />
-      <option name="presentableId" value="LOCAL-01154" />
-      <option name="project" value="LOCAL" />
-      <updated>1563308787631</updated>
-    </task>
-    <task id="LOCAL-01155" summary="adding height to quiver plots">
-      <created>1563309696568</created>
-      <option name="number" value="01155" />
-      <option name="presentableId" value="LOCAL-01155" />
-      <option name="project" value="LOCAL" />
-      <updated>1563309696568</updated>
     </task>
     <task id="LOCAL-01156" summary="adding height to quiver plots">
       <created>1563309784653</created>
@@ -671,11 +657,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563320580135</updated>
     </task>
-    <option name="localTasksCounter" value="1203" />
+    <task id="LOCAL-01203" summary="slice plot change">
+      <created>1563320708624</created>
+      <option name="number" value="01203" />
+      <option name="presentableId" value="LOCAL-01203" />
+      <option name="project" value="LOCAL" />
+      <updated>1563320708624</updated>
+    </task>
+    <task id="LOCAL-01204" summary="slice plot change">
+      <created>1563320842229</created>
+      <option name="number" value="01204" />
+      <option name="presentableId" value="LOCAL-01204" />
+      <option name="project" value="LOCAL" />
+      <updated>1563320842229</updated>
+    </task>
+    <option name="localTasksCounter" value="1205" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217038000" />
+    <option name="totallyTimeSpent" value="217222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -983,8 +983,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dim2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="167" column="17" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="17" />
+        <state relative-caret-position="357">
+          <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

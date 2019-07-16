@@ -81,9 +81,9 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
 
 
     def make_cmap(seq_or_div):
-        min_val = -6 *(10**(-6))
+        min_val = -15 *(10**(-6))
         max_val = 15 *(10**(-6))
-        levels = np.linspace(min_val, max_val, 13)
+        levels = np.linspace(min_val, max_val, 31)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -177,7 +177,7 @@ dim = 'lon'
 avg_or_slice = 'slice'
 coord = 2.5
 
-seq_or_div = 'seq'
+seq_or_div = 'div'
 
 dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
 
