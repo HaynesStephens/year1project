@@ -74,6 +74,7 @@ def getSlice(data, dim, coord, lat_grid, lon_grid):
 
 def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     ax = grid[0]
+    ax.set_facecolor('.25')
 
     max_val = np.max(np.abs(data))
     min_val = np.min(data)
