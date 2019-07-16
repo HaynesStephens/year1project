@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+            <state relative-caret-position="314">
+              <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01117" summary="planetary albedo">
-      <created>1563294475749</created>
-      <option name="number" value="01117" />
-      <option name="presentableId" value="LOCAL-01117" />
-      <option name="project" value="LOCAL" />
-      <updated>1563294475749</updated>
-    </task>
-    <task id="LOCAL-01118" summary="planetary albedo">
-      <created>1563294725371</created>
-      <option name="number" value="01118" />
-      <option name="presentableId" value="LOCAL-01118" />
-      <option name="project" value="LOCAL" />
-      <updated>1563294725371</updated>
     </task>
     <task id="LOCAL-01119" summary="planetary albedo">
       <created>1563300853035</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563313406574</updated>
     </task>
-    <option name="localTasksCounter" value="1166" />
+    <task id="LOCAL-01166" summary="slice plot change">
+      <created>1563313683412</created>
+      <option name="number" value="01166" />
+      <option name="presentableId" value="LOCAL-01166" />
+      <option name="project" value="LOCAL" />
+      <updated>1563313683412</updated>
+    </task>
+    <task id="LOCAL-01167" summary="slice plot change">
+      <created>1563313767652</created>
+      <option name="number" value="01167" />
+      <option name="presentableId" value="LOCAL-01167" />
+      <option name="project" value="LOCAL" />
+      <updated>1563313767652</updated>
+    </task>
+    <option name="localTasksCounter" value="1168" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214009000" />
+    <option name="totallyTimeSpent" value="214171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -984,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+        <state relative-caret-position="314">
+          <caret line="84" column="49" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

@@ -82,7 +82,7 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     def make_cmap(seq_or_div):
         # min_val = -48
         # max_val = 48
-        levels = np.linspace(min_val, max_val, 25)
+        levels = np.linspace(min_val, max_val, 10)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -114,7 +114,10 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
             ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=2)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
-    ax.set_aspect(3)
+    if 'a' in filetype:
+        ax.set_aspect(3)
+    elif 'o' in filetype:
+        ax.set_aspect(5)
 
     cbar = grid.cbar_axes[0].colorbar(im)
     cbar.set_label_text(row['units'])
