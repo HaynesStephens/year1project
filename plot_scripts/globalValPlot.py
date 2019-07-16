@@ -6,9 +6,9 @@ from files_n_vars import *
 from lat_lon_grid import *
 
 
-def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side):
+def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
-    arr_tot = np.zeros((46,72))
+    arr_tot = 0
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
 
@@ -29,11 +29,13 @@ def avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side
         avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
         return avg_val
     else:
-        avg_val = getSideMean(arr_avg, area_arr, side)
+        avg_val = getSideMean(arr_avg, area_arr, row, side)
         return avg_val
 
 
-def getSideMean(data, area_arr, side):
+def getSideMean(data, area_arr, row, side):
+    lat_grid = row['lat']
+    lon_grid = row['lon']
     cropped_data = data.copy()
     cropped_area = area_arr.copy()
     if side == 'Day Side':
@@ -61,7 +63,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
-        val_arr.append(avgDataFilesGlobal(filedir, var, num_files, filetype, unit_conv, depth, side))
+        val_arr.append(avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
