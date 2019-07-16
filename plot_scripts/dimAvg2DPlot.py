@@ -42,22 +42,37 @@ def getHeightFile(filedir, filetype, num_files=10):
     return z_final
 
 
-def getDimAvg(data, avg_coord):
+def getDimAvg(data, dim):
     """
     get an average array over one dimension
     :param data: inputted 3D data (depth, lat, lon)
-    :param avg_coord: coordinate you want to average across, leaving the others to show
+    :param dim: dimension you want to average across, leaving the others to show
     Example: averaging across 'lon' leaves you with an array that is depth by latitude.
     :return:
     """
-    if avg_coord == 'lat':
+    if dim == 'lat':
         avg_axis = 1
-    elif avg_coord == 'lon':
+    elif dim == 'lon':
         avg_axis = 2
     return np.mean(data, axis=avg_axis)
 
+def getSlice(data, dim, coord, lat_grid, lon_grid):
+    """
+    :param data: the inputted 3D data array
+    :param slice_dim: the dimension that you want to cut along (depth, lat, lon)
+    :param slice_coord: the coordinate of dimensions that you want to cut along [degrees or m]
+    :return: the 2D array sliced out along slice_dim at the coordinate slice_coord
+    """
+    if dim == 'lat': # slice along a latitude
+        slice_index = np.where(lat_grid == coord)[0][0]
+        section = data[:,slice_index,:]
+    elif dim == 'lon': # slice along a longitude
+        slice_index = np.where(lon_grid == coord)[0][0]
+        section = data[:,:,slice_index]
+    return section
 
-def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
+
+def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     ax = grid[0]
 
     # max_val = np.max(np.abs(data))
@@ -91,7 +106,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
         y = row['z']
         ax.set_ylabel('Depth [m]')
 
-    if coord == 'lon':
+    if dim == 'lon':
         x = row['lat']
         ax.set_xlabel('Latitude')
         if col['title'] != 'Aqua':
@@ -105,16 +120,16 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
     ax.set_title(col['title'] + ', ' + row['title'])
 
 
-def getPlotName(row, col, filetype, avg_coord):
+def getPlotName(row, col, filetype, dim):
     var_name = row['var']
     if 'o' in filetype:
         var_name = 'o_' + var_name
     p_name = str(col['SA'])+'p'
-    file_name = 'plots/{0}/avg2D{1}_{2}'.format(p_name, avg_coord, var_name)
+    file_name = 'plots/{0}/avg2D{1}_{2}'.format(p_name, dim, var_name)
     return file_name
 
 
-def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
+def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     fig = plt.figure()
     grid = ImageGrid(fig, 111,
                       nrows_ncols=(1, 1),
@@ -126,29 +141,40 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       cbar_pad="40%",
                       aspect=True)
     var = row['var']
+    lat_grid = row['lat']
+    lon_grid = row['lon']
+
     filedir = col['filedir']
-    data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)
+    data3D = avgDataFiles(filedir, var, filetype)
+    if avg_or_slice == 'avg':
+        data = getDimAvg(data3D, dim)
+    elif avg_or_slice == 'slice':
+        data = getSlice(data3D, dim, coord, lat_grid, lon_grid)
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
 
     makeSubplot(data=data, filetype=filetype, grid=grid, row=row, col=col,
-                coord=avg_coord, seq_or_div=seq_or_div)
+                dim=dim, seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = getPlotName(row, col, filetype, avg_coord)
+    file_name = getPlotName(row, col, filetype, dim)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
+    # plt.savefig(file_name+'.pdf')
+    plt.show()
     print('Plot Saved.')
 
 row = row_ub
 # col = col_4
 filetype = 'aijkpc'
-avg_coord = 'lon'
+dim = 'lon'
+
+avg_or_slice = 'slice'
+coord = 0
+
 seq_or_div = 'div'
 
-# dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
+dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
 
-col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-for col_i in col_list:
-    dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
+# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+# for col_i in col_list:
+#     dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
