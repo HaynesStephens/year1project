@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="230" column="25" lean-forward="true" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="25" />
+            <state relative-caret-position="211">
+              <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01104" summary="planetary albedo">
-      <created>1563290568627</created>
-      <option name="number" value="01104" />
-      <option name="presentableId" value="LOCAL-01104" />
-      <option name="project" value="LOCAL" />
-      <updated>1563290568627</updated>
-    </task>
-    <task id="LOCAL-01105" summary="planetary albedo">
-      <created>1563290780529</created>
-      <option name="number" value="01105" />
-      <option name="presentableId" value="LOCAL-01105" />
-      <option name="project" value="LOCAL" />
-      <updated>1563290780529</updated>
     </task>
     <task id="LOCAL-01106" summary="planetary albedo">
       <created>1563290945149</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563307637151</updated>
     </task>
-    <option name="localTasksCounter" value="1153" />
+    <task id="LOCAL-01153" summary="adding height to quiver plots">
+      <created>1563308779337</created>
+      <option name="number" value="01153" />
+      <option name="presentableId" value="LOCAL-01153" />
+      <option name="project" value="LOCAL" />
+      <updated>1563308779338</updated>
+    </task>
+    <task id="LOCAL-01154" summary="adding height to quiver plots">
+      <created>1563308787631</created>
+      <option name="number" value="01154" />
+      <option name="presentableId" value="LOCAL-01154" />
+      <option name="project" value="LOCAL" />
+      <updated>1563308787631</updated>
+    </task>
+    <option name="localTasksCounter" value="1155" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211547000" />
+    <option name="totallyTimeSpent" value="211881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -743,7 +743,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="quiver plot" />
     <MESSAGE value="ZSI mask" />
     <MESSAGE value="new conts" />
     <MESSAGE value="new quivs" />
@@ -768,7 +767,8 @@
     <MESSAGE value="planetary albedo" />
     <MESSAGE value="putting height on zonal winds" />
     <MESSAGE value="adding height to zonal wind" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding height to zonal wind" />
+    <MESSAGE value="adding height to quiver plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding height to quiver plots" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -984,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="230" column="25" lean-forward="true" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="25" />
+        <state relative-caret-position="211">
+          <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
