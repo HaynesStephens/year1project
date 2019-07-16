@@ -26,6 +26,22 @@ def avgDataFiles(filedir, var, filetype, unit_conv=1, num_files=10):
     return arr_avg
 
 
+def getHeightFile(filedir, filetype, num_files=10):
+    results = glob('{0}/*{1}*'.format(filedir, filetype))
+    z_tot = 0
+    for filename in results:
+        nc_i = ds(filename, 'r+', format='NETCDF4')
+        z_i = nc_i['z'][:]
+        z_tot = z_tot + z_i
+    z_avg = z_tot / num_files
+
+    if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
+        z_avg = np.roll(z_avg, (z_avg.shape[2]) // 2, axis=2)
+
+    z_final = np.mean(z_avg, axis=0)
+    return z_final
+
+
 def getDimAvg(data, avg_coord):
     """
     get an average array over one dimension
@@ -41,7 +57,7 @@ def getDimAvg(data, avg_coord):
     return np.mean(data, axis=avg_axis)
 
 
-def makeSubplot(data, grid, row, col, coord, seq_or_div):
+def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
     ax = grid[0]
 
     max_val = np.max(np.abs(data))
@@ -59,7 +75,18 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div):
         return cmap, norm, levels
     cmap, norm, levels = make_cmap(seq_or_div)
 
-    y = row['z']
+    if filetype == 'aijkpc':
+        y = getHeightFile(filedir, filetype)
+        # If height array is shown in terms of pressure, reverse y-axis and set to logarithmic
+        if y[0] > y[-1]:
+            ax.set_ylim(y[0], y[-1])
+            ax.set_yscale('log')
+            ax.set_ylabel('Pressure [mb]')
+        else:
+            ax.set_ylabel('Height [m]')
+    else:
+        y = row['z']
+        ax.set_ylabel('Depth [m]')
 
     if coord == 'lon':
         x = row['lat']
@@ -69,16 +96,6 @@ def makeSubplot(data, grid, row, col, coord, seq_or_div):
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
     ax.set_aspect(0.1)
-
-    # if coord == 'lon':
-    #     ax.set_xlabel('Latitude')
-    #     ax.plot(col['parallels'], [y[0], y[0]], c='k')
-
-    if y[0] > y[-1]:
-        ax.set_ylim(y[0], y[-1])
-        ax.set_yscale('log')
-
-    ax.set_ylabel('Pressure [mb]')
 
     cbar = grid.cbar_axes[0].colorbar(im)
     cbar.set_label_text(row['units'])
@@ -109,14 +126,16 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     filedir = col['filedir']
     data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)
     print("MIN VAL: {0}, MAX VAL: {1}".format(np.min(data), np.max(data)))
-    makeSubplot(data=data, grid=grid, row=row, col=col, coord=avg_coord, seq_or_div=seq_or_div)
+
+    makeSubplot(data=data, filetype=filetype, grid=grid, row=row, col=col,
+                coord=avg_coord, seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
     file_name = getPlotName(row, col, filetype, avg_coord)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
+    # plt.savefig(file_name+'.pdf')
+    plt.show()
     print('Plot Saved.')
 
 row = row_ub
@@ -125,8 +144,8 @@ filetype = 'aijkpc'
 avg_coord = 'lon'
 seq_or_div = 'div'
 
-# dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
+dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
 
-col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-for col_i in col_list:
-    dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
+# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+# for col_i in col_list:
+#     dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)

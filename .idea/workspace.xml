@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="360">
+              <caret line="148" column="53" selection-start-line="148" selection-start-column="53" selection-end-line="150" selection-end-column="63" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+            <state relative-caret-position="601">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -106,10 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>density</find>
-      <find>zsi</find>
-      <find>patch</find>
-      <find>grey</find>
       <find>plt.gca().patch.set_color('.25')</find>
       <find>grid</find>
       <find>cs</find>
@@ -136,6 +132,10 @@
       <find>lon_grid</find>
       <find>global</find>
       <find>solar</find>
+      <find>xlabel</find>
+      <find>log</find>
+      <find>y =</find>
+      <find>y</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +167,6 @@
         <option value="$PROJECT_DIR$/plot_scripts/dimAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
         <option value="$PROJECT_DIR$/plot_scripts/rowMatrixMap.py" />
         <option value="$PROJECT_DIR$/rocke_ss.py" />
@@ -177,6 +176,7 @@
         <option value="$PROJECT_DIR$/planAlb.py" />
         <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" />
       </list>
     </option>
   </component>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01068" summary="new quiver attempt">
-      <created>1563227893149</created>
-      <option name="number" value="01068" />
-      <option name="presentableId" value="LOCAL-01068" />
-      <option name="project" value="LOCAL" />
-      <updated>1563227893149</updated>
-    </task>
-    <task id="LOCAL-01069" summary="new quiver attempt">
-      <created>1563228117063</created>
-      <option name="number" value="01069" />
-      <option name="presentableId" value="LOCAL-01069" />
-      <option name="project" value="LOCAL" />
-      <updated>1563228117063</updated>
     </task>
     <task id="LOCAL-01070" summary="new quiver attempt">
       <created>1563228125964</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563294248087</updated>
     </task>
-    <option name="localTasksCounter" value="1117" />
+    <task id="LOCAL-01117" summary="planetary albedo">
+      <created>1563294475749</created>
+      <option name="number" value="01117" />
+      <option name="presentableId" value="LOCAL-01117" />
+      <option name="project" value="LOCAL" />
+      <updated>1563294475749</updated>
+    </task>
+    <task id="LOCAL-01118" summary="planetary albedo">
+      <created>1563294725371</created>
+      <option name="number" value="01118" />
+      <option name="presentableId" value="LOCAL-01118" />
+      <option name="project" value="LOCAL" />
+      <updated>1563294725371</updated>
+    </task>
+    <option name="localTasksCounter" value="1119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207093000" />
+    <option name="totallyTimeSpent" value="208393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -919,16 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/old_quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1280">
@@ -972,6 +962,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
@@ -982,10 +982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+        <state relative-caret-position="360">
+          <caret line="148" column="53" selection-start-line="148" selection-start-column="53" selection-end-line="150" selection-end-column="63" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
