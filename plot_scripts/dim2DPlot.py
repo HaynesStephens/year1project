@@ -81,9 +81,9 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
 
 
     def make_cmap(seq_or_div):
-        min_val = -15 *(10**(-6))
-        max_val = 15 *(10**(-6))
-        levels = np.linspace(min_val, max_val, 15)
+        min_val = -16 *(10**(-6))
+        max_val = 16 *(10**(-6))
+        levels = np.linspace(min_val, max_val, 17)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
