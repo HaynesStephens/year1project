@@ -22,14 +22,13 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
         elif filetype == 'oijlpc':
             area_arr = nc_i['oxyp3'][:][depth]
         area_arr[arr.mask] = 0
-        print(area_arr)
 
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
+        area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
 
-    print(arr_avg)
     avg_val = getSideMean(arr_avg, area_arr, row, side)
     return avg_val
 
