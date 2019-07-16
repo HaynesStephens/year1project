@@ -166,7 +166,7 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.show()
     print('Plot Saved.')
 
 row = row_o_salt
@@ -179,8 +179,8 @@ coord = 2.5
 
 seq_or_div = 'seq'
 
-dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+# dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
 
-# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-# for col_i in col_list:
-#     dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+for col_i in col_list:
+    dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
