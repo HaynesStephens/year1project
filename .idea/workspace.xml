@@ -38,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="290">
+              <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01072" summary="new quiver attempt">
-      <created>1563228454030</created>
-      <option name="number" value="01072" />
-      <option name="presentableId" value="LOCAL-01072" />
-      <option name="project" value="LOCAL" />
-      <updated>1563228454030</updated>
-    </task>
-    <task id="LOCAL-01073" summary="new quiver attempt">
-      <created>1563228815283</created>
-      <option name="number" value="01073" />
-      <option name="presentableId" value="LOCAL-01073" />
-      <option name="project" value="LOCAL" />
-      <updated>1563228815283</updated>
     </task>
     <task id="LOCAL-01074" summary="new quiver attempt">
       <created>1563228916450</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563300948348</updated>
     </task>
-    <option name="localTasksCounter" value="1121" />
+    <task id="LOCAL-01121" summary="planetary albedo">
+      <created>1563301012422</created>
+      <option name="number" value="01121" />
+      <option name="presentableId" value="LOCAL-01121" />
+      <option name="project" value="LOCAL" />
+      <updated>1563301012422</updated>
+    </task>
+    <task id="LOCAL-01122" summary="putting height on zonal winds">
+      <created>1563301303078</created>
+      <option name="number" value="01122" />
+      <option name="presentableId" value="LOCAL-01122" />
+      <option name="project" value="LOCAL" />
+      <updated>1563301303078</updated>
+    </task>
+    <option name="localTasksCounter" value="1123" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208521000" />
+    <option name="totallyTimeSpent" value="208807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -743,7 +743,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0-22-26 plots" />
     <MESSAGE value="ice growth" />
     <MESSAGE value="quiver plot" />
     <MESSAGE value="ZSI mask" />
@@ -768,7 +767,8 @@
     <MESSAGE value="upward vertical motion" />
     <MESSAGE value="new quiver attempt" />
     <MESSAGE value="planetary albedo" />
-    <option name="LAST_COMMIT_MESSAGE" value="planetary albedo" />
+    <MESSAGE value="putting height on zonal winds" />
+    <option name="LAST_COMMIT_MESSAGE" value="putting height on zonal winds" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -984,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="290">
+          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
