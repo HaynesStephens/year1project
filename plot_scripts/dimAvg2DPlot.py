@@ -137,18 +137,18 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
     file_name = getPlotName(row, col, filetype, avg_coord)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
-    plt.show()
+    plt.savefig(file_name+'.pdf')
+    # plt.show()
     print('Plot Saved.')
 
 row = row_ub
-col = col_4
+# col = col_4
 filetype = 'aijkpc'
 avg_coord = 'lon'
 seq_or_div = 'div'
 
-dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
+# dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div)
 
-# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-# for col_i in col_list:
-#     dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+for col_i in col_list:
+    dimAvg2DPlot(row, col_i, filetype, avg_coord, seq_or_div)
