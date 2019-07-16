@@ -76,14 +76,14 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     ax = grid[0]
     ax.set_facecolor('.25')
 
-    max_val = np.max(np.abs(data))
-    min_val = np.min(data)
+    # max_val = np.max(np.abs(data))
+    # min_val = np.min(data)
 
 
     def make_cmap(seq_or_div):
-        # min_val = -48
-        # max_val = 48
-        levels = np.linspace(min_val, max_val, 10)
+        min_val = -48
+        max_val = 48
+        levels = np.linspace(min_val, max_val, 20)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -166,10 +166,10 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.show()
     print('Plot Saved.')
 
-row = row_o_pot_temp
+row = row_o_pot_dens
 col = col_4
 filetype = 'oijlpc'
 dim = 'lon'
@@ -179,8 +179,8 @@ coord = 2.5
 
 seq_or_div = 'seq'
 
-dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+# dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
 
-# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-# for col_i in col_list:
-#     dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+for col_i in col_list:
+    dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
