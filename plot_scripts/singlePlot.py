@@ -19,7 +19,9 @@ def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
     arr_avg = (arr_tot * unit_conv) / num_files
 
     if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
-        arr_avg = np.roll(arr_avg, (arr_avg.shape[2]) // 2, axis=2)
+        roll_size = arr_avg.shape[-1]
+        roll_axis = len(arr_avg.shape) - 1
+        arr_avg = np.roll(arr_avg, (roll_size) // 2, axis=roll_axis)
     if 'o' in filetype: #if it's ocean file, only take the top 5 levels
         arr_avg = arr_avg[:5, :, :]
     return arr_avg
