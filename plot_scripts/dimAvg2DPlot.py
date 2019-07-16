@@ -95,7 +95,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
             ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
-    ax.set_aspect(0.1)
+    # ax.set_aspect(0.1)
 
     cbar = grid.cbar_axes[0].colorbar(im)
     cbar.set_label_text(row['units'])
@@ -121,7 +121,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       cbar_mode="single",
                       cbar_size="1%",
                       cbar_pad="2%",
-                      aspect=True)
+                      aspect=False)
     var = row['var']
     filedir = col['filedir']
     data = getDimAvg(avgDataFiles(filedir, var, filetype), avg_coord)

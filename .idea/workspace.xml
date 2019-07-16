@@ -38,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+            <state relative-caret-position="283">
+              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="19" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -338,20 +338,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01087" summary="new quiver attempt">
-      <created>1563231119804</created>
-      <option name="number" value="01087" />
-      <option name="presentableId" value="LOCAL-01087" />
-      <option name="project" value="LOCAL" />
-      <updated>1563231119804</updated>
-    </task>
-    <task id="LOCAL-01088" summary="new quiver attempt">
-      <created>1563231197943</created>
-      <option name="number" value="01088" />
-      <option name="presentableId" value="LOCAL-01088" />
-      <option name="project" value="LOCAL" />
-      <updated>1563231197943</updated>
     </task>
     <task id="LOCAL-01089" summary="new quiver attempt">
       <created>1563231341741</created>
@@ -682,11 +668,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563302426276</updated>
     </task>
-    <option name="localTasksCounter" value="1136" />
+    <task id="LOCAL-01136" summary="putting height on zonal winds">
+      <created>1563302433551</created>
+      <option name="number" value="01136" />
+      <option name="presentableId" value="LOCAL-01136" />
+      <option name="project" value="LOCAL" />
+      <updated>1563302433551</updated>
+    </task>
+    <task id="LOCAL-01137" summary="adding height to zonal wind">
+      <created>1563302511812</created>
+      <option name="number" value="01137" />
+      <option name="presentableId" value="LOCAL-01137" />
+      <option name="project" value="LOCAL" />
+      <updated>1563302511812</updated>
+    </task>
+    <option name="localTasksCounter" value="1138" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209562000" />
+    <option name="totallyTimeSpent" value="209733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -743,7 +743,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ice growth" />
     <MESSAGE value="quiver plot" />
     <MESSAGE value="ZSI mask" />
     <MESSAGE value="new conts" />
@@ -768,7 +767,8 @@
     <MESSAGE value="new quiver attempt" />
     <MESSAGE value="planetary albedo" />
     <MESSAGE value="putting height on zonal winds" />
-    <option name="LAST_COMMIT_MESSAGE" value="putting height on zonal winds" />
+    <MESSAGE value="adding height to zonal wind" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding height to zonal wind" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -984,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+        <state relative-caret-position="283">
+          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="19" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
