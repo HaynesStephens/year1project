@@ -83,7 +83,8 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
             ax.set_yscale('log')
             ax.set_ylabel('Pressure [mb]')
         else:
-            ax.set_ylabel('Height [m]')
+            y = y / 1000
+            ax.set_ylabel('Height [km]')
     else:
         y = row['z']
         ax.set_ylabel('Depth [m]')
@@ -119,8 +120,8 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       share_all=True,
                       cbar_location="bottom",
                       cbar_mode="single",
-                      cbar_size="3%",
-                      cbar_pad="5%",
+                      cbar_size="4%",
+                      cbar_pad="8%",
                       aspect=False)
     var = row['var']
     filedir = col['filedir']
