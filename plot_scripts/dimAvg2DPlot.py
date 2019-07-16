@@ -104,7 +104,7 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
             ax.set_ylabel('Height [km]')
     else:
         y = row['z']
-        ax.set_ylim(y[0], y[-1])
+        ax.set_ylim(y[-1], y[0])
         ax.set_ylabel('Depth [m]')
 
     if dim == 'lon':
