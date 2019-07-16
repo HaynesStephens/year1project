@@ -227,10 +227,10 @@ seq_or_div = 'div'
 #     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
 #                depth, depth_contour, seq_or_div)
 
-############ WHOLE SHABANG ################
-for col_i in col_list:
-    for depth_i in range(row_u['z'].size):
-        quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
-                   depth_i, depth_i, seq_or_div)
-    quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
-               'vertAvg', 'vertAvg', seq_or_div)
+# ############ WHOLE SHABANG ################
+# for col_i in col_list:
+#     for depth_i in range(row_u['z'].size):
+#         quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                    depth_i, depth_i, seq_or_div)
+#     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                'vertAvg', 'vertAvg', seq_or_div)
