@@ -76,7 +76,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
     cmap, norm, levels = make_cmap(seq_or_div)
 
     if filetype == 'aijkpc':
-        y = getHeightFile(filedir, filetype)
+        y = getHeightFile(col['filedir'], filetype)
         # If height array is shown in terms of pressure, reverse y-axis and set to logarithmic
         if y[0] > y[-1]:
             ax.set_ylim(y[0], y[-1])
