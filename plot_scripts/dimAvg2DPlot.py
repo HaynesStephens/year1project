@@ -39,6 +39,7 @@ def getHeightFile(filedir, filetype, num_files=10):
         z_avg = np.roll(z_avg, (z_avg.shape[2]) // 2, axis=2)
 
     z_final = np.mean(z_avg, axis=0)
+    print(z_final)
     return z_final
 
 
