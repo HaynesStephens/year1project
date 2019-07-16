@@ -81,8 +81,8 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
 
 
     def make_cmap(seq_or_div):
-        min_val = 29
-        max_val = 41
+        min_val = -6 *(10**(-6))
+        max_val = 15 *(10**(-6))
         levels = np.linspace(min_val, max_val, 13)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
@@ -166,7 +166,7 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    # plt.show()
+    plt.show()
     print('Plot Saved.')
 
 row = row_o_w
@@ -179,8 +179,8 @@ coord = 2.5
 
 seq_or_div = 'seq'
 
-# dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
 
-col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-for col_i in col_list:
-    dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
+# col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
+# for col_i in col_list:
+#     dim2DPlot(row, col_i, filetype, dim, avg_or_slice, seq_or_div, coord = coord)
