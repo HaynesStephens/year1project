@@ -75,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
-              <caret line="185" column="82" selection-start-line="185" selection-start-column="82" selection-end-line="185" selection-end-column="82" />
+              <caret line="185" column="81" selection-start-line="185" selection-start-column="81" selection-end-line="185" selection-end-column="81" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -326,13 +326,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01129" summary="putting height on zonal winds">
-      <created>1563301858022</created>
-      <option name="number" value="01129" />
-      <option name="presentableId" value="LOCAL-01129" />
-      <option name="project" value="LOCAL" />
-      <updated>1563301858022</updated>
     </task>
     <task id="LOCAL-01130" summary="putting height on zonal winds">
       <created>1563302034459</created>
@@ -670,11 +663,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563317956097</updated>
     </task>
-    <option name="localTasksCounter" value="1178" />
+    <task id="LOCAL-01178" summary="slice plot change">
+      <created>1563318087439</created>
+      <option name="number" value="01178" />
+      <option name="presentableId" value="LOCAL-01178" />
+      <option name="project" value="LOCAL" />
+      <updated>1563318087439</updated>
+    </task>
+    <option name="localTasksCounter" value="1179" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215378000" />
+    <option name="totallyTimeSpent" value="215382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -973,7 +973,7 @@
     <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
-          <caret line="185" column="82" selection-start-line="185" selection-start-column="82" selection-end-line="185" selection-end-column="82" />
+          <caret line="185" column="81" selection-start-line="185" selection-start-column="81" selection-end-line="185" selection-end-column="81" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
