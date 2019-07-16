@@ -12,15 +12,18 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
     for filename in results:
         nc_i = ds(filename, 'r+', format='NETCDF4')
 
-        if filetype == 'aijpc':
-            area_arr = nc_i['axyp'][:]
-        elif filetype == 'oijlpc':
-            area_arr = nc_i['oxyp3'][:][depth]
-
         if depth == None:
             arr = nc_i[var][:]
         else:
             arr = nc_i[var][:][depth]
+
+        if filetype == 'aijpc':
+            area_arr = nc_i['axyp'][:]
+        elif filetype == 'oijlpc':
+            area_arr = nc_i['oxyp3'][:][depth]
+        area_arr[arr.mask] = 0
+        print(area_arr)
+
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
     if 'aqua' in filedir:
@@ -79,10 +82,10 @@ def globalValPlot():
     row = row_plan_alb
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', side='Day Side')
+    makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/side_day_plan_alb'
+    file_name = 'plots/global/global_plan_alb'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
