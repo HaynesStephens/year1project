@@ -80,7 +80,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
 
 def globalValPlot():
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-    row = row_srnf_toa
+    row = row_incsw_toa
     fig, ax = plt.subplots()
 
     makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
