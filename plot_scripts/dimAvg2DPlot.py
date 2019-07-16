@@ -38,7 +38,8 @@ def getHeightFile(filedir, filetype, num_files=10):
     if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
         z_avg = np.roll(z_avg, (z_avg.shape[2]) // 2, axis=2)
 
-    print(np.mean(z_avg[0]))
+    for i in z_avg.shape[0]:
+        print(np.mean(z_avg[i]))
     z_final = z_avg.reshape((z_avg.shape[0], -1)).mean(axis=1)
     print(z_final)
     return z_final
@@ -97,7 +98,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
             ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
-    ax.set_aspect(0.01)
+    ax.set_aspect(1)
 
     cbar = grid.cbar_axes[0].colorbar(im)
     cbar.set_label_text(row['units'])
