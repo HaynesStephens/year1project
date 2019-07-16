@@ -120,12 +120,12 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     ax.set_title(col['title'] + ', ' + row['title'])
 
 
-def getPlotName(row, col, filetype, dim):
+def getPlotName(row, col, filetype, dim, avg_or_slice):
     var_name = row['var']
     if 'o' in filetype:
         var_name = 'o_' + var_name
     p_name = str(col['SA'])+'p'
-    file_name = 'plots/{0}/avg2D{1}_{2}'.format(p_name, dim, var_name)
+    file_name = 'plots/{0}/avg2D_{1}_{2}_{3}'.format(p_name, dim, var_name, avg_or_slice)
     return file_name
 
 
@@ -156,20 +156,20 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
                 dim=dim, seq_or_div=seq_or_div)
 
     # fig.tight_layout(w_pad = 2.25)
-    file_name = getPlotName(row, col, filetype, dim)
+    file_name = getPlotName(row, col, filetype, dim, avg_or_slice)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
     plt.show()
     print('Plot Saved.')
 
-row = row_ub
+row = row_o_pot_temp
 col = col_4
-filetype = 'aijkpc'
+filetype = 'oijlpc'
 dim = 'lon'
 
 avg_or_slice = 'slice'
-coord = 0
+coord = 2.5
 
 seq_or_div = 'div'
 
