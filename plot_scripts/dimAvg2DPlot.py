@@ -164,7 +164,7 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     print('Plot Saved.')
 
 row = row_ub
-# col = col_4
+col = col_4
 filetype = 'aijkpc'
 dim = 'lon'
 
