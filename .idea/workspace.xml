@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/dim2DPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/dim2DPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/dim2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="171" column="20" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -326,27 +327,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01137" summary="adding height to zonal wind">
-      <created>1563302511812</created>
-      <option name="number" value="01137" />
-      <option name="presentableId" value="LOCAL-01137" />
-      <option name="project" value="LOCAL" />
-      <updated>1563302511812</updated>
-    </task>
-    <task id="LOCAL-01138" summary="adding height to zonal wind">
-      <created>1563302723618</created>
-      <option name="number" value="01138" />
-      <option name="presentableId" value="LOCAL-01138" />
-      <option name="project" value="LOCAL" />
-      <updated>1563302723618</updated>
-    </task>
-    <task id="LOCAL-01139" summary="adding height to zonal wind">
-      <created>1563302803377</created>
-      <option name="number" value="01139" />
-      <option name="presentableId" value="LOCAL-01139" />
-      <option name="project" value="LOCAL" />
-      <updated>1563302803377</updated>
     </task>
     <task id="LOCAL-01140" summary="adding height to zonal wind">
       <created>1563302903726</created>
@@ -670,11 +650,32 @@
       <option name="project" value="LOCAL" />
       <updated>1563318292055</updated>
     </task>
-    <option name="localTasksCounter" value="1186" />
+    <task id="LOCAL-01186" summary="slice plot change">
+      <created>1563319005963</created>
+      <option name="number" value="01186" />
+      <option name="presentableId" value="LOCAL-01186" />
+      <option name="project" value="LOCAL" />
+      <updated>1563319005963</updated>
+    </task>
+    <task id="LOCAL-01187" summary="slice plot change">
+      <created>1563319024236</created>
+      <option name="number" value="01187" />
+      <option name="presentableId" value="LOCAL-01187" />
+      <option name="project" value="LOCAL" />
+      <updated>1563319024236</updated>
+    </task>
+    <task id="LOCAL-01188" summary="slice plot change">
+      <created>1563319364582</created>
+      <option name="number" value="01188" />
+      <option name="presentableId" value="LOCAL-01188" />
+      <option name="project" value="LOCAL" />
+      <updated>1563319364582</updated>
+    </task>
+    <option name="localTasksCounter" value="1189" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215774000" />
+    <option name="totallyTimeSpent" value="215977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -982,8 +983,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/dim2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="171" column="20" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
+        <state relative-caret-position="240">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
