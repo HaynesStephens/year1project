@@ -126,6 +126,22 @@ def depthOrVertAvg(data, depth):
     return data
 
 
+def getHeightFile(filedir, filetype, num_files=10):
+    results = glob('{0}/*{1}*'.format(filedir, filetype))
+    z_tot = 0
+    for filename in results:
+        nc_i = ds(filename, 'r+', format='NETCDF4')
+        z_i = nc_i['z'][:]
+        z_tot = z_tot + z_i
+    z_avg = z_tot / num_files
+
+    if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
+        z_avg = np.roll(z_avg, (z_avg.shape[2]) // 2, axis=2)
+
+    z_final = z_avg.reshape((z_avg.shape[0], -1)).mean(axis=1)
+    return z_final
+
+
 def getTitle(row_u, row_contour, col, depth, filetype_uv):
     if row_contour != None:
         title_row = row_contour['title']
@@ -138,10 +154,10 @@ def getTitle(row_u, row_contour, col, depth, filetype_uv):
         title_depth = ', Vert. Avg.'
     else:
         if 'o' in filetype_uv:
-            ext = ' m'
+            z_arr = row_u['z']
         elif 'a' in filetype_uv:
-            ext = ' mb'
-        title_depth = ', ' + str(row_u['z'][depth]) + ext
+            z_arr = getHeightFile(col['filedir'], filetype_uv) // 1
+        title_depth = ', ' + str(z_arr[depth]) + ' m'
     title = col['title'] + title_depth + ', ' + title_row
     return title
 
@@ -209,11 +225,11 @@ col = col_39
 seq_or_div = 'div'
 
 
-# ############# SINGLE DEPTH PLOT #################
-# depth = 0
-# depth_contour = 0
-# quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-#            depth, depth_contour, seq_or_div)
+############# SINGLE DEPTH PLOT #################
+depth = 10
+depth_contour = 10
+quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+           depth, depth_contour, seq_or_div)
 
 # ############ ALL DEPTHS PLOT ###################
 # for depth_i in range(row_u['z'].size):
