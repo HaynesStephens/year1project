@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,10 +71,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/dim2DPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
-              <caret line="185" column="81" selection-start-line="185" selection-start-column="81" selection-end-line="185" selection-end-column="81" />
+              <caret line="185" column="82" selection-start-line="185" selection-start-column="82" selection-end-line="185" selection-end-column="82" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -165,6 +164,7 @@
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/slicePlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/dim2DPlot.py" />
       </list>
     </option>
   </component>
@@ -326,20 +326,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01130" summary="putting height on zonal winds">
-      <created>1563302034459</created>
-      <option name="number" value="01130" />
-      <option name="presentableId" value="LOCAL-01130" />
-      <option name="project" value="LOCAL" />
-      <updated>1563302034459</updated>
-    </task>
-    <task id="LOCAL-01131" summary="putting height on zonal winds">
-      <created>1563302162666</created>
-      <option name="number" value="01131" />
-      <option name="presentableId" value="LOCAL-01131" />
-      <option name="project" value="LOCAL" />
-      <updated>1563302162666</updated>
     </task>
     <task id="LOCAL-01132" summary="putting height on zonal winds">
       <created>1563302203166</created>
@@ -670,17 +656,31 @@
       <option name="project" value="LOCAL" />
       <updated>1563318087439</updated>
     </task>
-    <option name="localTasksCounter" value="1179" />
+    <task id="LOCAL-01179" summary="slice plot change">
+      <created>1563318095328</created>
+      <option name="number" value="01179" />
+      <option name="presentableId" value="LOCAL-01179" />
+      <option name="project" value="LOCAL" />
+      <updated>1563318095328</updated>
+    </task>
+    <task id="LOCAL-01180" summary="slice plot change">
+      <created>1563318226710</created>
+      <option name="number" value="01180" />
+      <option name="presentableId" value="LOCAL-01180" />
+      <option name="project" value="LOCAL" />
+      <updated>1563318226710</updated>
+    </task>
+    <option name="localTasksCounter" value="1181" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215382000" />
+    <option name="totallyTimeSpent" value="215537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17124394" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17124394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32956153" />
@@ -695,7 +695,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.509693" side_tool="true" weight="0.23196605" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" visible="true" weight="0.20792079" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49030694" visible="true" weight="0.20792079" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32956153" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -960,6 +960,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -970,10 +980,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/dimAvg2DPlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/dim2DPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
-          <caret line="185" column="81" selection-start-line="185" selection-start-column="81" selection-end-line="185" selection-end-column="81" />
+          <caret line="185" column="82" selection-start-line="185" selection-start-column="82" selection-end-line="185" selection-end-column="82" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
