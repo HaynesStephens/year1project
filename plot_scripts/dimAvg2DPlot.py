@@ -67,7 +67,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
     def make_cmap(seq_or_div):
         min_val = -45
         max_val = 45
-        levels = np.linspace(min_val, max_val, 18)
+        levels = np.linspace(min_val, max_val, 30)
         if seq_or_div == 'seq':
             cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -123,7 +123,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       cbar_location="bottom",
                       cbar_mode="single",
                       cbar_size="10%",
-                      cbar_pad="30%",
+                      cbar_pad="40%",
                       aspect=True)
     var = row['var']
     filedir = col['filedir']
