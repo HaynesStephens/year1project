@@ -95,7 +95,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
         x = row['lat']
         ax.set_xlabel('Latitude')
         if col['title'] != 'Aqua':
-            ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
+            ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=2)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
     ax.set_aspect(3)
@@ -122,7 +122,7 @@ def dimAvg2DPlot(row, col, filetype, avg_coord, seq_or_div = 'div'):
                       share_all=True,
                       cbar_location="bottom",
                       cbar_mode="single",
-                      cbar_size="10%",
+                      cbar_size="15%",
                       cbar_pad="40%",
                       aspect=True)
     var = row['var']
