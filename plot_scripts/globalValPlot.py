@@ -40,7 +40,7 @@ def getSideMean(data, area_arr, row, side):
     cropped_data = data.copy()
     cropped_area = area_arr.copy()
     if side == 'Global':
-        avg_val = np.sum(arr_avg * area_arr) / np.sum(area_arr)
+        avg_val = np.sum(data * area_arr) / np.sum(area_arr)
         return avg_val
 
     elif side == 'Day Side':
