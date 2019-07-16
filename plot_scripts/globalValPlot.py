@@ -21,15 +21,16 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
             area_arr = nc_i['axyp'][:]
         elif filetype == 'oijlpc':
             area_arr = nc_i['oxyp3'][:][depth]
-        # area_arr[arr.mask] = 0
-        # print(np.where(area_arr == 0))
+        # Set area to zero in cells that have no value, excluding them from the average
+        area_arr[arr.mask] = 0
+        print(np.where(area_arr == 0)[0].size)
 
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    #
-    area_arr[np.where(arr_avg==0)] = 0
-    print(np.where(area_arr == 0)[0].size)
-    #
+    # # Used for planetary albedo, masking area wherever there's no sunlight
+    # area_arr[np.where(arr_avg==0)] = 0
+    # print(np.where(area_arr == 0)[0].size)
+    # #
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
         area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
@@ -65,22 +66,22 @@ def getSideMean(data, area_arr, row, side):
 
 def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side='Global'):
     var = row['var']
-    # title = row['title']
-    title = 'Planetary Albedo from Solar'
+    title = row['title']
+    # title = 'Planetary Albedo from Solar'
     units = row['units']
     SA_arr = []
     val_arr = []
-    #
-    sol_net = np.array([355.74286, 354.37723, 349.65115, 344.47293, 339.15497,
-                        341.57346, 344.95715, 343.11496, 346.6729])
-    sol_inc = np.ones(sol_net.size) * 441.63113
-    sol_ref = sol_inc - sol_net
-    val_arr = sol_ref / sol_inc
-    #
+    # # Values used in determining planetary albedo from solar fluxes
+    # sol_net = np.array([355.74286, 354.37723, 349.65115, 344.47293, 339.15497,
+    #                     341.57346, 344.95715, 343.11496, 346.6729])
+    # sol_inc = np.ones(sol_net.size) * 441.63113
+    # sol_ref = sol_inc - sol_net
+    # val_arr = sol_ref / sol_inc
+    # #
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
-        # val_arr.append(avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side))
+        val_arr.append(avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     print('Values: ', val_arr)
@@ -92,14 +93,15 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
 
 def globalValPlot():
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-    row = row_incsw_toa
+    row = row_plan_alb
     fig, ax = plt.subplots()
 
     makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
 
     fig.tight_layout(w_pad = 2.25)
-    # file_name = 'plots/global/global_'+row['var']
-    file_name = 'plots/global/global_plan_alb_sol_cut'
+    file_name = 'plots/global/global_'+row['var']
+    # file_name = 'plots/global/global_plan_alb_sol_cut'
+
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
