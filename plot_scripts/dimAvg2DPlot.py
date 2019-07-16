@@ -164,8 +164,8 @@ def dim2DPlot(row, col, filetype, dim, avg_or_slice, seq_or_div, coord = None):
     file_name = getPlotName(row, col, filetype, dim, avg_or_slice)
     print('Filename:', file_name)
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
-    plt.show()
+    plt.savefig(file_name+'.pdf')
+    # plt.show()
     print('Plot Saved.')
 
 row = row_o_pot_dens
