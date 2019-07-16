@@ -117,7 +117,7 @@ def makeSubplot(data, filetype, grid, row, col, dim, seq_or_div):
     if 'a' in filetype:
         ax.set_aspect(3)
     elif 'o' in filetype:
-        ax.set_aspect(5)
+        ax.set_aspect(0.5)
 
     cbar = grid.cbar_axes[0].colorbar(im)
     cbar.set_label_text(row['units'])
