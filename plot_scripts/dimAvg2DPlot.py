@@ -95,7 +95,7 @@ def makeSubplot(data, filetype, grid, row, col, coord, seq_or_div):
             ax.plot(col['parallels'], [y[0], y[0]], c='k', linewidth=3)
 
     im = ax.contourf(x, y, data, levels, cmap=cmap, norm=norm)
-    ax.set_aspect('tight')
+    ax.set_aspect(10)
 
     cbar = grid.cbar_axes[0].colorbar(im)
     cbar.set_label_text(row['units'])
