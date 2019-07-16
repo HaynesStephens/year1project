@@ -61,14 +61,22 @@ def getSideMean(data, area_arr, row, side):
 
 def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side='Global'):
     var = row['var']
-    title = row['title']
+    # title = row['title']
+    title = 'Planetary Albedo from Solar'
     units = row['units']
     SA_arr = []
     val_arr = []
+    #
+    sol_net = np.array([177.64417, 176.96222, 174.6022, 172.0164, 169.36081,
+                        170.56851, 172.2582, 171.33827, 173.11499])
+    sol_inc = np.ones(sol_net.size) * 220.5334
+    sol_ref = sol_inc - sol_net
+    val_arr = sol_ref / sol_inc
+    #
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
-        val_arr.append(avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side))
+        # val_arr.append(avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side))
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     print('Values: ', val_arr)
@@ -86,7 +94,8 @@ def globalValPlot():
     makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/global/global_'+row['var']
+    # file_name = 'plots/global/global_'+row['var']
+    file_name = 'plots/global/global_alb_sol
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name+'.pdf')
     plt.show()
