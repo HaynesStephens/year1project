@@ -72,17 +72,17 @@ def plotGlobalVal(var, side):
     if var =='tsurf':
         row = row_tsurf
         if side == 'Global':
-            data = loadCSV('lewis_data/LewisGlobalTsurf.csv')
+            data = loadCSV('LewisGlobalTsurf.csv')
             data[:,1] = data[:,1] - 273.15
         elif side == 'Day Side':
-            data = loadCSV('lewis_data/LewisSideDayTsurf.csv')
+            data = loadCSV('LewisSideDayTsurf.csv')
         elif side == 'Night Side':
-            data = loadCSV('lewis_data/LewisSideNightTsurf.csv')
+            data = loadCSV('LewisSideNightTsurf.csv')
         elif side == 'Sub-stellar':
-            data = loadCSV('lewis_data/LewisSideSubstelTsurf.csv')
+            data = loadCSV('LewisSideSubstelTsurf.csv')
     elif var =='evap':
         row = row_evap
-        data = loadCSV('lewis_data/LewisGlobalEvap.csv')
+        data = loadCSV('LewisGlobalEvap.csv')
     label = 'Lewis'
 
     fig, ax = plt.subplots()
