@@ -67,9 +67,6 @@ def getSideMean(data, area_arr, row, side):
 
 def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side='Global'):
     var = row['var']
-    title = row['title']
-    # title = 'Planetary Albedo from Solar'
-    units = row['units']
     SA_arr = []
     val_arr = []
     # # Values used in determining planetary albedo from solar fluxes
@@ -90,6 +87,11 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     val_arr = np.array(val_arr)
     print('Values: ', val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
+
+    title = row['title']
+    # title = 'Planetary Albedo from Solar'
+    units = row['units']
+
     ax.set_title(side + ' Mean ' + title)
     ax.set_xlabel('Continent size (% of total surface)')
     ax.set_ylabel(units)

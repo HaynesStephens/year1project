@@ -8,6 +8,7 @@ from matplotlib.colors import Normalize
 from cbar import MidPointNorm
 from files_n_vars import *
 from mpl_toolkits.axes_grid1 import make_axes_locatable, ImageGrid
+import calculatedQuantities as calcQuant
 
 def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
@@ -144,11 +145,18 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
                       cbar_pad="7%",
                       aspect=True)
 
-    var = row['var']
-    filedir = col['filedir']
-    data = avgDataFiles(filedir, filetype, var)
+    # var = row['var']
+    # filedir = col['filedir']
+    # data = avgDataFiles(filedir, filetype, var)
+    # print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
+    # data, title = depthOrVertAvg(data, col, depth)
+
+    # Calculated Planetary Albedo Scenario
+    arr_avg, area_arr, plot_row, title = calcQuant.getPlanAlbFromSol(col)
+    data = arr_avg
     print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
-    data, title = depthOrVertAvg(data, col, depth)
+    row = plot_row
+    #
 
     makeSubplot(grid=grid1, data=data, row=row, col=col, title=title, seq_or_div=seq_or_div)
 
@@ -162,7 +170,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('Plot saved.')
 
 
-row = row_plan_alb
+row = None
 col = col_1
 filetype = 'aijpc'
 seq_or_div = 'seq'
@@ -171,7 +179,7 @@ depth = None
 
 # ############# SINGLE DEPTH PLOT #################
 # depth = 0
-# singlePlot(row, col, filetype, depth, seq_or_div)
+singlePlot(row, col, filetype, depth, seq_or_div)
 
 # ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
@@ -188,7 +196,9 @@ depth = None
 #         singlePlot(row, col_i, filetype, depth_i, seq_or_div)
 #     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
-for col_i in col_list:
-    singlePlot(row, col_i, filetype, depth, seq_or_div)
+# ############# ALL CALLS OF SAME DEPTH ################
+# depth = None
+# for col_i in col_list:
+#     singlePlot(row, col_i, filetype, depth, seq_or_div)
 
 

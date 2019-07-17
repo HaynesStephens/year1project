@@ -1,5 +1,7 @@
 from files_n_vars import *
 from lat_lon_grid import *
+import numpy as np
+from netCDF4 import Dataset as ds
 
 def getPlanAlbFromSol(col, filetype = 'aijpc', num_files = 10):
     filedir = col['filedir']
@@ -12,19 +14,24 @@ def getPlanAlbFromSol(col, filetype = 'aijpc', num_files = 10):
         out_i = inc_i - net_i
         albedo_i = (out_i / inc_i) * 100
         arr_tot = arr_tot + albedo_i
+
+        area_arr = nc_i['axyp'][:]
+        area_arr[albedo_i.mask] = 0
+        print(np.where(area_arr == 0)[0].size)
     arr_avg = arr_tot / num_files
-    if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
-        roll_size = arr_avg.shape[-1]
-        roll_axis = len(arr_avg.shape) - 1
-        arr_avg = np.roll(arr_avg, (roll_size) // 2, axis=roll_axis)
-    data = arr_avg
-    plot_row = {'var':'None',
+    if 'aqua' in filedir:
+        arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
+        area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
+        # Rolling the area so that masked values (i.e. for albedo) are rolled according to their coordinate
+        # Rollling is necessary for determining side and substell averages
+
+    plot_row = {'var':'plan_alb_calc',
                 'ylabel':'Calculated \n Planetary \n Albedo \n [%]',
                 'title':'Calculated Planetary Albedo',
                 'units':'[%]',
                 'lat':lat,
                 'lon':lon}
     title = col['title']
-    return data, plot_row, title
+    return arr_avg, area_arr, plot_row, title
 
 
