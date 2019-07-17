@@ -53,6 +53,19 @@ def plotLonTsurf():
     plt.show()
 
 
+def getPlotName(var, side):
+    if side == 'Global':
+        side_ext = 'global'
+    elif side == 'Day Side':
+        side_ext = 'side_day'
+    elif side == 'Night Side':
+        side_ext = 'side_night'
+    elif side == 'Sub-stellar':
+        side_ext = 'substel'
+    file_name = 'plots/lewis/lewis_{0}_{1}'.format(var, side_ext)
+    return file_name
+
+
 def plotGlobalVal(var, side):
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
@@ -79,9 +92,9 @@ def plotGlobalVal(var, side):
 
     ax.legend()
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/lewis_side_substel_'+var
+    file_name = getPlotName(var, side)
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     plt.show()
 
 plotLonTsurf()
