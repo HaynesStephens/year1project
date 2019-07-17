@@ -2,6 +2,7 @@ from files_n_vars import *
 from lat_lon_grid import *
 import numpy as np
 from netCDF4 import Dataset as ds
+from glob import glob
 
 def getPlanAlbFromSol(col, filetype = 'aijpc', num_files = 10):
     filedir = col['filedir']
