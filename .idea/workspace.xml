@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="309">
+              <caret line="121" column="15" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="15" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -351,20 +351,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01167" summary="slice plot change">
-      <created>1563313767652</created>
-      <option name="number" value="01167" />
-      <option name="presentableId" value="LOCAL-01167" />
-      <option name="project" value="LOCAL" />
-      <updated>1563313767652</updated>
-    </task>
-    <task id="LOCAL-01168" summary="slice plot change">
-      <created>1563313852447</created>
-      <option name="number" value="01168" />
-      <option name="presentableId" value="LOCAL-01168" />
-      <option name="project" value="LOCAL" />
-      <updated>1563313852447</updated>
     </task>
     <task id="LOCAL-01169" summary="slice plot change">
       <created>1563313912303</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563383137113</updated>
     </task>
-    <option name="localTasksCounter" value="1216" />
+    <task id="LOCAL-01216" summary="slice plot change">
+      <created>1563383208102</created>
+      <option name="number" value="01216" />
+      <option name="presentableId" value="LOCAL-01216" />
+      <option name="project" value="LOCAL" />
+      <updated>1563383208102</updated>
+    </task>
+    <task id="LOCAL-01217" summary="slice plot change">
+      <created>1563383528883</created>
+      <option name="number" value="01217" />
+      <option name="presentableId" value="LOCAL-01217" />
+      <option name="project" value="LOCAL" />
+      <updated>1563383528884</updated>
+    </task>
+    <option name="localTasksCounter" value="1218" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220157000" />
+    <option name="totallyTimeSpent" value="220509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1007,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="309">
+          <caret line="121" column="15" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="15" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
