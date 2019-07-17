@@ -91,21 +91,36 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     ax.set_ylabel(units)
 
 
-def globalValPlot():
+def getPlotName(row, side):
+    if side == 'Global':
+        side_ext = 'global'
+    elif side == 'Day Side':
+        side_ext = 'side_day'
+    elif side == 'Night Side':
+        side_ext = 'side_night'
+    elif side == 'Sub-stellar':
+        side_ext = 'substel'
+    file_name = 'plots/global/new_{0}_{1}'.format(row['var'], side_ext)
+    return file_name
+
+
+def globalValPlot(row, side):
     col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-    row = row_plan_alb
     fig, ax = plt.subplots()
 
-    makeSubplot(col_list, ax, row, filetype='aijpc', side='Global')
+    makeSubplot(col_list, ax, row, filetype='aijpc', side=side)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = 'plots/global/global_'+row['var']
+    file_name = getPlotName(row, side)
     # file_name = 'plots/global/global_plan_alb_sol_cut'
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     plt.show()
 
-globalValPlot()
+row = row_evap
+side = 'Global'
+
+globalValPlot(row, side)
 
 

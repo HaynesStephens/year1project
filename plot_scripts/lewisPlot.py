@@ -7,7 +7,7 @@ import globalValPlot as gvp
 
 
 def loadCSV(filename):
-    df = pd.read_csv(filename, header=None)
+    df = pd.read_csv('/lewis_data/'+filename, header=None)
     return np.array(df)
 
 
@@ -47,7 +47,7 @@ def plotLonTsurf():
     correctAndPlot(tsurf_b7, ax, label='34% L')
     ax.legend()
     fig.tight_layout(w_pad=2.25)
-    file_name = 'plots/lewis_tsurf'
+    file_name = 'plots/lewis_lon_tsurf'
     # plt.savefig(file_name+'.svg')
     plt.savefig(file_name + '.pdf')
     plt.show()
@@ -84,4 +84,5 @@ def plotGlobalVal(var, side):
     plt.savefig(file_name+'.pdf')
     plt.show()
 
-plotGlobalVal('tsurf', 'Sub-stellar')
+plotLonTsurf()
+# plotGlobalVal('tsurf', 'Sub-stellar')
