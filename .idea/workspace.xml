@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_scripts/lewisPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/lewisPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +22,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
               <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="96" column="27" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="27" />
+            <state relative-caret-position="477">
+              <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -172,7 +184,6 @@
         <option value="$PROJECT_DIR$/pltSeries.py" />
         <option value="$PROJECT_DIR$/stat_check.py" />
         <option value="$PROJECT_DIR$/plot_scripts/matrixMaps.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/dimAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/vertAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lat_lon_grid.py" />
@@ -189,6 +200,7 @@
         <option value="$PROJECT_DIR$/plot_scripts/singlePlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
       </list>
     </option>
   </component>
@@ -350,20 +362,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01182" summary="slice plot change">
-      <created>1563318270600</created>
-      <option name="number" value="01182" />
-      <option name="presentableId" value="LOCAL-01182" />
-      <option name="project" value="LOCAL" />
-      <updated>1563318270600</updated>
-    </task>
-    <task id="LOCAL-01183" summary="slice plot change">
-      <created>1563318276631</created>
-      <option name="number" value="01183" />
-      <option name="presentableId" value="LOCAL-01183" />
-      <option name="project" value="LOCAL" />
-      <updated>1563318276631</updated>
     </task>
     <task id="LOCAL-01184" summary="slice plot change">
       <created>1563318284018</created>
@@ -694,11 +692,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563392507678</updated>
     </task>
-    <option name="localTasksCounter" value="1231" />
+    <task id="LOCAL-01231" summary="calculated albedo plot">
+      <created>1563404752242</created>
+      <option name="number" value="01231" />
+      <option name="presentableId" value="LOCAL-01231" />
+      <option name="project" value="LOCAL" />
+      <updated>1563404752242</updated>
+    </task>
+    <task id="LOCAL-01232" summary="calculated albedo plot">
+      <created>1563404810490</created>
+      <option name="number" value="01232" />
+      <option name="presentableId" value="LOCAL-01232" />
+      <option name="project" value="LOCAL" />
+      <updated>1563404810490</updated>
+    </task>
+    <option name="localTasksCounter" value="1233" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225239000" />
+    <option name="totallyTimeSpent" value="225463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -920,16 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/quiverPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2951">
@@ -1014,10 +1016,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/lewisPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="96" column="27" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="27" />
+        <state relative-caret-position="477">
+          <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

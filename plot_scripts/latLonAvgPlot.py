@@ -24,7 +24,7 @@ def avgDataFilesLatLon(filedir, var, num_files, filetype, unit_conv, depth, avg_
 
     arr_avg = (arr_tot * unit_conv) / num_files
     if len(arr_avg.shape) == 3:
-        raise ValueError, "This array is 3D, so the axes you are averaging over are invalid."
+        raise(ValueError, "This array is 3D, so the axes you are averaging over are invalid.")
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
     if avg_coord == 'lat':
