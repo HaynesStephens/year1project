@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="126" column="13" selection-start-line="126" selection-end-line="126" selection-end-column="13" />
+            <state relative-caret-position="161">
+              <caret line="84" column="5" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -118,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>row_num</find>
       <find>cs_cbar</find>
       <find>levels</find>
       <find>meridians</find>
@@ -148,6 +147,7 @@
       <find>o_pot</find>
       <find>ub</find>
       <find>solar</find>
+      <find>q</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -351,20 +351,6 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-    </task>
-    <task id="LOCAL-01169" summary="slice plot change">
-      <created>1563313912303</created>
-      <option name="number" value="01169" />
-      <option name="presentableId" value="LOCAL-01169" />
-      <option name="project" value="LOCAL" />
-      <updated>1563313912303</updated>
-    </task>
-    <task id="LOCAL-01170" summary="slice plot change">
-      <created>1563314039932</created>
-      <option name="number" value="01170" />
-      <option name="presentableId" value="LOCAL-01170" />
-      <option name="project" value="LOCAL" />
-      <updated>1563314039932</updated>
     </task>
     <task id="LOCAL-01171" summary="slice plot change">
       <created>1563317174797</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563383528884</updated>
     </task>
-    <option name="localTasksCounter" value="1218" />
+    <task id="LOCAL-01218" summary="slice plot change">
+      <created>1563383594915</created>
+      <option name="number" value="01218" />
+      <option name="presentableId" value="LOCAL-01218" />
+      <option name="project" value="LOCAL" />
+      <updated>1563383594915</updated>
+    </task>
+    <task id="LOCAL-01219" summary="slice plot change">
+      <created>1563383618609</created>
+      <option name="number" value="01219" />
+      <option name="presentableId" value="LOCAL-01219" />
+      <option name="project" value="LOCAL" />
+      <updated>1563383618609</updated>
+    </task>
+    <option name="localTasksCounter" value="1220" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220509000" />
+    <option name="totallyTimeSpent" value="220591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -968,13 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="126" column="13" selection-start-line="126" selection-end-line="126" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
@@ -1002,6 +995,13 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
         </state>
       </provider>
     </entry>
