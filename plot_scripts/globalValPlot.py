@@ -67,7 +67,7 @@ def getSideMean(data, area_arr, row, side):
 
 
 def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=None, side='Global'):
-    # var = row['var']
+    var = row['var']
     SA_arr = []
     val_arr = []
     # # Values used in determining planetary albedo from solar fluxes
@@ -80,14 +80,15 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
-        # arr_avg_i, area_arr_i = avgDataFilesGlobal(filedir, row, var, num_files,
-        #                                            filetype, unit_conv, depth, side)
 
-        # Calculated Planetary Albedo Scenario
-        arr_avg_i, area_arr_i, plot_row, title = calcQuant.getPlanAlbFromSol(col)
-        print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(arr_avg_i), np.max(arr_avg_i)))
-        row = plot_row
-        #
+        arr_avg_i, area_arr_i = avgDataFilesGlobal(filedir, row, var, num_files,
+                                                   filetype, unit_conv, depth, side)
+
+        # # Calculated Planetary Albedo Scenario
+        # arr_avg_i, area_arr_i, plot_row, title = calcQuant.getPlanAlbFromSol(col)
+        # print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(arr_avg_i), np.max(arr_avg_i)))
+        # row = plot_row
+        # #
 
         val_i = getSideMean(arr_avg_i, area_arr_i, row, side)
         val_arr.append(val_i)
