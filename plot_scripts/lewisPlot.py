@@ -7,7 +7,7 @@ import globalValPlot as gvp
 
 
 def loadCSV(filename):
-    df = pd.read_csv('/lewis_data/'+filename, header=None)
+    df = pd.read_csv('lewis_data/'+filename, header=None)
     return np.array(df)
 
 
