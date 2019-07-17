@@ -33,7 +33,8 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
     # #
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
-        # area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
+        # No need to roll the area array since the area is the same along a given latitude.
+        # Probably no need to roll the data array itself either, but pretty sure it doesn't matter.
 
     avg_val = getSideMean(arr_avg, area_arr, row, side)
     return avg_val
@@ -118,7 +119,7 @@ def globalValPlot(row, side):
     # plt.savefig(file_name+'.pdf')
     plt.show()
 
-row = row_tsurf
+row = row_prec
 side = 'Global'
 
 globalValPlot(row, side)
