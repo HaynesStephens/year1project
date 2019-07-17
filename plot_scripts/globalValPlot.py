@@ -85,7 +85,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
 
         # Calculated Planetary Albedo Scenario
         arr_avg_i, area_arr_i, plot_row, title = calcQuant.getPlanAlbFromSol(col)
-        print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
+        print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(arr_avg_i), np.max(arr_avg_i)))
         row = plot_row
         #
 
