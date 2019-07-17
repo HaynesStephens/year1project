@@ -33,11 +33,11 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
     # #
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
-        # No need to roll the area array since the area is the same along a given latitude.
-        # Probably no need to roll the data array itself either, but pretty sure it doesn't matter.
+        area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
+        # Rolling the area so that masked values (i.e. for albedo) are rolled according to their coordinate
+        # Rollling is necessary for determining side and substell averages
 
-    avg_val = getSideMean(arr_avg, area_arr, row, side)
-    return avg_val
+    return arr_avg, area_arr
 
 
 def getSideMean(data, area_arr, row, side):
@@ -82,7 +82,10 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
-        val_arr.append(avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side))
+        arr_avg_i, area_arr_i = avgDataFilesGlobal(filedir, row, var, num_files,
+                                                   filetype, unit_conv, depth, side)
+        val_i = getSideMean(arr_avg_i, area_arr_i, row, side)
+        val_arr.append(val_i)
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
     print('Values: ', val_arr)

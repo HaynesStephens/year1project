@@ -132,45 +132,6 @@ def depthOrVertAvg(data, col, depth):
     return data, title
 
 
-def planAlbSol1(row, col, filetype, depth, seq_or_div):
-    fig = plt.figure(figsize = (14,6))
-    grid1 = ImageGrid(fig, 111,
-                      nrows_ncols=(1,1),
-                      axes_pad=0.07,
-                      share_all=True,
-                      cbar_location="right",
-                      cbar_mode="single",
-                      cbar_size="7%",
-                      cbar_pad="7%",
-                      aspect=True)
-
-    filedir = col['filedir']
-    row1 = row_srnf_toa
-    var1 = row1['var']
-    net_rad = avgDataFiles(filedir, filetype, var1)
-
-    row2 = row_incsw_toa
-    var2 = row2['var']
-    inc_rad = avgDataFiles(filedir, filetype, var2)
-
-    albedo = (inc_rad - net_rad) / inc_rad
-    albedo = albedo * 100
-    title = col['title'] + ', Albedo '
-
-    makeSubplot(grid=grid1, data=albedo, row=row, col=col, title=title, seq_or_div=seq_or_div)
-
-
-    # fig.tight_layout(w_pad = 2.25)
-    file_name = getPlotName(row, col, filetype, depth)
-    print('PLOT NAME:', file_name)
-
-    # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
-    print('Plot saved.')
-
-
-
 def singlePlot(row, col, filetype, depth, seq_or_div):
     fig = plt.figure(figsize = (14,6))
     grid1 = ImageGrid(fig, 111,
@@ -190,7 +151,6 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     data, title = depthOrVertAvg(data, col, depth)
 
     makeSubplot(grid=grid1, data=data, row=row, col=col, title=title, seq_or_div=seq_or_div)
-
 
     # fig.tight_layout(w_pad = 2.25)
     file_name = getPlotName(row, col, filetype, depth)
