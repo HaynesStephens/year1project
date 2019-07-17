@@ -98,4 +98,4 @@ def plotGlobalVal(var, side):
     plt.show()
 
 # plotLonTsurf()
-plotGlobalVal('tsurf', 'Day Side')
+plotGlobalVal('tsurf', 'Sub-stellar')
