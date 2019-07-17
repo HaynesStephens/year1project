@@ -132,7 +132,7 @@ def globalValPlot(row, side):
     # plt.savefig(file_name+'.pdf')
     plt.show()
 
-row = None
+row = {'var':'plan_alb_calc'}
 side = 'Global'
 
 globalValPlot(row, side)
