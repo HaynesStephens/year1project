@@ -119,7 +119,7 @@ def globalValPlot(row, side):
     # plt.savefig(file_name+'.pdf')
     plt.show()
 
-row = row_q_atm
+row = row_qatm
 side = 'Global'
 
 globalValPlot(row, side)
