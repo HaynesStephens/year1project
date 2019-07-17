@@ -159,8 +159,8 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
-    plt.show()
+    plt.savefig(file_name+'.pdf')
+    # plt.show()
     print('Plot saved.')
 
 
@@ -173,7 +173,7 @@ depth = None
 
 # ############# SINGLE DEPTH PLOT #################
 # depth = 0
-singlePlot(row, col, filetype, depth, seq_or_div)
+# singlePlot(row, col, filetype, depth, seq_or_div)
 
 # ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
@@ -190,7 +190,7 @@ singlePlot(row, col, filetype, depth, seq_or_div)
 #         singlePlot(row, col_i, filetype, depth_i, seq_or_div)
 #     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
-# for col_i in col_list:
-#     singlePlot(row, col_i, filetype, depth, seq_or_div)
+for col_i in col_list:
+    singlePlot(row, col_i, filetype, depth, seq_or_div)
 
 
