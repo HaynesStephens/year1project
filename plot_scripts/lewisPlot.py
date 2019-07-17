@@ -97,5 +97,5 @@ def plotGlobalVal(var, side):
     # plt.savefig(file_name+'.pdf')
     plt.show()
 
-plotLonTsurf()
-# plotGlobalVal('tsurf', 'Sub-stellar')
+# plotLonTsurf()
+plotGlobalVal('tsurf', 'Day Side')
