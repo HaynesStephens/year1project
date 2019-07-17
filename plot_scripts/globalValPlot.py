@@ -118,7 +118,7 @@ def globalValPlot(row, side):
     # plt.savefig(file_name+'.pdf')
     plt.show()
 
-row = row_plan_alb
+row = row_tsurf
 side = 'Global'
 
 globalValPlot(row, side)
