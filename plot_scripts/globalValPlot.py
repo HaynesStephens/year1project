@@ -33,7 +33,7 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
     # #
     if 'aqua' in filedir:
         arr_avg = np.roll(arr_avg, (arr_avg.shape[1]) // 2, axis=1)
-        area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
+        # area_arr = np.roll(area_arr, (area_arr.shape[1]) // 2, axis=1)
 
     avg_val = getSideMean(arr_avg, area_arr, row, side)
     return avg_val
