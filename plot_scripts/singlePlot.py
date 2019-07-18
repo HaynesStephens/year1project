@@ -42,11 +42,11 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = 0.1
-        max_val = 700
-        levels = np.linspace(min_val, max_val, 15)
+        min_val = 22
+        max_val = 37
+        levels = np.linspace(min_val, max_val, 16)
         if seq_or_div == 'seq':
-            cmap = cm.Reds
+            cmap = cm.Blues
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
