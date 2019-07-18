@@ -83,11 +83,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="169" column="10" lean-forward="true" selection-start-line="169" selection-start-column="10" selection-end-line="169" selection-end-column="10" />
+            <state relative-caret-position="215">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563474947947" expanded="true" signature="5550:5554" ph="..." />
+                <marker date="1563474968400" expanded="true" signature="5547:5551" ph="..." />
               </folding>
             </state>
           </provider>
@@ -350,14 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="6025000" />
-    </task>
-    <task id="LOCAL-01255" summary="cloudiness plots">
-      <created>1563463681713</created>
-      <option name="number" value="01255" />
-      <option name="presentableId" value="LOCAL-01255" />
-      <option name="project" value="LOCAL" />
-      <updated>1563463681713</updated>
+      <workItem from="1563460737603" duration="6046000" />
     </task>
     <task id="LOCAL-01256" summary="cloudiness plots">
       <created>1563463736056</created>
@@ -695,11 +688,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563474708165</updated>
     </task>
-    <option name="localTasksCounter" value="1304" />
+    <task id="LOCAL-01304" summary="cloudiness plots">
+      <created>1563474949864</created>
+      <option name="number" value="01304" />
+      <option name="presentableId" value="LOCAL-01304" />
+      <option name="project" value="LOCAL" />
+      <updated>1563474949864</updated>
+    </task>
+    <option name="localTasksCounter" value="1305" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232299000" />
+    <option name="totallyTimeSpent" value="232320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -990,11 +990,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="169" column="10" lean-forward="true" selection-start-line="169" selection-start-column="10" selection-end-line="169" selection-end-column="10" />
+        <state relative-caret-position="215">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563474947947" expanded="true" signature="5550:5554" ph="..." />
+            <marker date="1563474968400" expanded="true" signature="5547:5551" ph="..." />
           </folding>
         </state>
       </provider>
