@@ -222,7 +222,7 @@ filetype_contour = 'oijlpc'
 
 col = col_39
 
-seq_or_div = 'seq'
+seq_or_div = 'seq'sa
 
 
 ############# SINGLE DEPTH PLOT #################
