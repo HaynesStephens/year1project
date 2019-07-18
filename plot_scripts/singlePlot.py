@@ -166,20 +166,20 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    # plt.show()
+    plt.show()
     print('Plot saved.')
 
 
 row = row_o_pot_dens
-# col = col_39
+col = col_39
 filetype = 'oijlpc'
 seq_or_div = 'seq'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 
-# ############# SINGLE DEPTH PLOT #################
-# depth = None
-# singlePlot(row, col, filetype, depth, seq_or_div)
+############# SINGLE DEPTH PLOT #################
+depth = 0
+singlePlot(row, col, filetype, depth, seq_or_div)
 
 # ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
@@ -196,9 +196,9 @@ col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 #         singlePlot(row, col_i, filetype, depth_i, seq_or_div)
 #     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
-############# ALL CALLS OF SAME DEPTH ################
-depth = 0
-for col_i in col_list:
-    singlePlot(row, col_i, filetype, depth, seq_or_div)
+# ############# ALL CALLS OF SAME DEPTH ################
+# depth = 0
+# for col_i in col_list:
+#     singlePlot(row, col_i, filetype, depth, seq_or_div)
 
 
