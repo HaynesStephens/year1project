@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/globalValPlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="70" column="8" selection-start-line="70" selection-end-line="70" selection-end-column="8" />
+            <state relative-caret-position="295">
+              <caret line="84" column="8" selection-start-line="84" selection-end-line="84" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -349,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="4717000" />
-    </task>
-    <task id="LOCAL-01237" summary="calculated albedo plot">
-      <created>1563405586473</created>
-      <option name="number" value="01237" />
-      <option name="presentableId" value="LOCAL-01237" />
-      <option name="project" value="LOCAL" />
-      <updated>1563405586473</updated>
-    </task>
-    <task id="LOCAL-01238" summary="calculated albedo plot">
-      <created>1563405746797</created>
-      <option name="number" value="01238" />
-      <option name="presentableId" value="LOCAL-01238" />
-      <option name="project" value="LOCAL" />
-      <updated>1563405746797</updated>
+      <workItem from="1563460737603" duration="4782000" />
     </task>
     <task id="LOCAL-01239" summary="calculated albedo plot">
       <created>1563460939208</created>
@@ -694,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563467268257</updated>
     </task>
-    <option name="localTasksCounter" value="1286" />
+    <task id="LOCAL-01286" summary="cloudiness plots">
+      <created>1563467320957</created>
+      <option name="number" value="01286" />
+      <option name="presentableId" value="LOCAL-01286" />
+      <option name="project" value="LOCAL" />
+      <updated>1563467320957</updated>
+    </task>
+    <task id="LOCAL-01287" summary="cloudiness plots">
+      <created>1563467348179</created>
+      <option name="number" value="01287" />
+      <option name="presentableId" value="LOCAL-01287" />
+      <option name="project" value="LOCAL" />
+      <updated>1563467348179</updated>
+    </task>
+    <option name="localTasksCounter" value="1288" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230991000" />
+    <option name="totallyTimeSpent" value="231056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -983,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="70" column="8" selection-start-line="70" selection-end-line="70" selection-end-column="8" />
+        <state relative-caret-position="295">
+          <caret line="84" column="8" selection-start-line="84" selection-end-line="84" selection-end-column="8" />
         </state>
       </provider>
     </entry>
