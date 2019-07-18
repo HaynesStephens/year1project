@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="calculated albedo plot">
+    <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/singlePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/singlePlot.py" afterDir="false" />
     </list>
@@ -83,11 +83,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="181" column="10" selection-start-line="181" selection-end-line="181" selection-end-column="10" />
+            <state relative-caret-position="131">
+              <caret line="168" column="12" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="12" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563461326793" expanded="true" signature="5549:5553" ph="..." />
+                <marker date="1563461382535" expanded="true" signature="5547:5551" ph="..." />
               </folding>
             </state>
           </provider>
@@ -350,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="444000" />
-    </task>
-    <task id="LOCAL-01192" summary="slice plot change">
-      <created>1563319692308</created>
-      <option name="number" value="01192" />
-      <option name="presentableId" value="LOCAL-01192" />
-      <option name="project" value="LOCAL" />
-      <updated>1563319692308</updated>
-    </task>
-    <task id="LOCAL-01193" summary="slice plot change">
-      <created>1563319706125</created>
-      <option name="number" value="01193" />
-      <option name="presentableId" value="LOCAL-01193" />
-      <option name="project" value="LOCAL" />
-      <updated>1563319706125</updated>
+      <workItem from="1563460737603" duration="500000" />
     </task>
     <task id="LOCAL-01194" summary="slice plot change">
       <created>1563319806280</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563461230005</updated>
     </task>
-    <option name="localTasksCounter" value="1241" />
+    <task id="LOCAL-01241" summary="calculated albedo plot">
+      <created>1563461329480</created>
+      <option name="number" value="01241" />
+      <option name="presentableId" value="LOCAL-01241" />
+      <option name="project" value="LOCAL" />
+      <updated>1563461329481</updated>
+    </task>
+    <task id="LOCAL-01242" summary="calculated albedo plot">
+      <created>1563461342397</created>
+      <option name="number" value="01242" />
+      <option name="presentableId" value="LOCAL-01242" />
+      <option name="project" value="LOCAL" />
+      <updated>1563461342397</updated>
+    </task>
+    <option name="localTasksCounter" value="1243" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226718000" />
+    <option name="totallyTimeSpent" value="226774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -990,11 +990,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="181" column="10" selection-start-line="181" selection-end-line="181" selection-end-column="10" />
+        <state relative-caret-position="131">
+          <caret line="168" column="12" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563461326793" expanded="true" signature="5549:5553" ph="..." />
+            <marker date="1563461382535" expanded="true" signature="5547:5551" ph="..." />
           </folding>
         </state>
       </provider>
