@@ -165,15 +165,15 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     # plt.show()
     print('Plot saved.')
 
 
-row = row_snowicefr
+row = row_incsw_grnd
 col = col_39
 filetype = 'aijpc'
-seq_or_div = 'seq'
+seq_or_div = 'div'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 
