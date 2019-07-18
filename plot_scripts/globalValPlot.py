@@ -25,9 +25,10 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
         # Set area to zero in cells that have no value, excluding them from the average
         area_arr[arr.mask] = 0
         print(np.where(area_arr == 0)[0].size)
-    print('HEY')
 
         arr_tot = arr_tot + arr
+
+    print('Hey')
     arr_avg = (arr_tot * unit_conv) / num_files
     # # Used primarily for planetary albedo, masking area wherever there's no value (i.e. no sunlight)
     # area_arr[np.where(arr_avg==0)] = 0
