@@ -208,7 +208,7 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
+    plt.savefig(file_name+'.pdf')
     # plt.show()
     print('Plot saved.')
 
