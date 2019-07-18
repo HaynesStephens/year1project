@@ -28,7 +28,7 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
 
         arr_tot = arr_tot + arr
     arr_avg = (arr_tot * unit_conv) / num_files
-    # # Used for planetary albedo, masking area wherever there's no sunlight
+    # # Used primarily for planetary albedo, masking area wherever there's no value (i.e. no sunlight)
     # area_arr[np.where(arr_avg==0)] = 0
     # print(np.where(area_arr == 0)[0].size)
     # #
@@ -135,8 +135,9 @@ def globalValPlot(row, side):
     # plt.show()
 
 # row = {'var':'plan_alb_calc'}
-# side = 'Global'
+side = 'Global'
+row = row_swcrf_toa
 
-# globalValPlot(row, side)
+globalValPlot(row, side)
 
 
