@@ -170,7 +170,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('Plot saved.')
 
 
-row = row_pcldl
+row = row_pcldm
 # col = col_39
 filetype = 'aijpc'
 seq_or_div = 'seq'
