@@ -37,9 +37,9 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = 22
-        max_val = 37
-        levels = np.linspace(min_val, max_val, 16)
+        min_val = -100
+        max_val = 100
+        levels = np.linspace(min_val, max_val, 20)
         if seq_or_div == 'seq':
             cmap = cm.Blues
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -208,22 +208,22 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     # plt.show()
     print('Plot saved.')
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
-row_u = row_o_u
-row_v = row_o_v
-filetype_uv = 'oijlpc'
+row_u = row_ub
+row_v = row_vb
+filetype_uv = 'aijkpc'
 
-row_contour = row_o_pot_dens
-filetype_contour = 'oijlpc'
+row_contour = row_temp
+filetype_contour = 'aijlpc'
 
 # col = col_39
 
-seq_or_div = 'seq'
+seq_or_div = 'div'
 
 
 # ############# SINGLE DEPTH PLOT #################
