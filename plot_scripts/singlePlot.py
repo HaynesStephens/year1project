@@ -166,7 +166,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.show()
     print('Plot saved.')
 
 
@@ -175,11 +175,11 @@ col = col_1
 filetype = 'aijpc'
 seq_or_div = 'seq'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-depth = None
+# depth = None
 
 # ############# SINGLE DEPTH PLOT #################
 # depth = 0
-singlePlot(row, col, filetype, depth, seq_or_div)
+# singlePlot(row, col, filetype, depth, seq_or_div)
 
 # ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
@@ -196,9 +196,9 @@ singlePlot(row, col, filetype, depth, seq_or_div)
 #         singlePlot(row, col_i, filetype, depth_i, seq_or_div)
 #     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
-# ############# ALL CALLS OF SAME DEPTH ################
-# depth = None
-# for col_i in col_list:
-#     singlePlot(row, col_i, filetype, depth, seq_or_div)
+############# ALL CALLS OF SAME DEPTH ################
+depth = None
+for col_i in col_list:
+    singlePlot(row, col_i, filetype, depth, seq_or_div)
 
 
