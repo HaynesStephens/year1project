@@ -83,11 +83,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+            <state relative-caret-position="309">
+              <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="201" selection-end-column="14" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563475391090" expanded="true" signature="5549:5553" ph="..." />
+                <marker date="1563475821249" expanded="true" signature="5547:5551" ph="..." />
               </folding>
             </state>
           </provider>
@@ -350,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="6367000" />
-    </task>
-    <task id="LOCAL-01260" summary="cloudiness plots">
-      <created>1563464085758</created>
-      <option name="number" value="01260" />
-      <option name="presentableId" value="LOCAL-01260" />
-      <option name="project" value="LOCAL" />
-      <updated>1563464085758</updated>
-    </task>
-    <task id="LOCAL-01261" summary="cloudiness plots">
-      <created>1563464281507</created>
-      <option name="number" value="01261" />
-      <option name="presentableId" value="LOCAL-01261" />
-      <option name="project" value="LOCAL" />
-      <updated>1563464281507</updated>
+      <workItem from="1563460737603" duration="6653000" />
     </task>
     <task id="LOCAL-01262" summary="cloudiness plots">
       <created>1563464413060</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563475257223</updated>
     </task>
-    <option name="localTasksCounter" value="1309" />
+    <task id="LOCAL-01309" summary="cloudiness plots">
+      <created>1563475394649</created>
+      <option name="number" value="01309" />
+      <option name="presentableId" value="LOCAL-01309" />
+      <option name="project" value="LOCAL" />
+      <updated>1563475394649</updated>
+    </task>
+    <task id="LOCAL-01310" summary="cloudiness plots">
+      <created>1563475650739</created>
+      <option name="number" value="01310" />
+      <option name="presentableId" value="LOCAL-01310" />
+      <option name="project" value="LOCAL" />
+      <updated>1563475650739</updated>
+    </task>
+    <option name="localTasksCounter" value="1311" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232641000" />
+    <option name="totallyTimeSpent" value="232927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -990,11 +990,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+        <state relative-caret-position="309">
+          <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="201" selection-end-column="14" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563475391090" expanded="true" signature="5549:5553" ph="..." />
+            <marker date="1563475821249" expanded="true" signature="5547:5551" ph="..." />
           </folding>
         </state>
       </provider>
