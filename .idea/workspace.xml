@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="112" column="13" selection-start-line="112" selection-end-line="112" selection-end-column="13" />
+            <state relative-caret-position="219">
+              <caret line="119" column="13" selection-start-line="119" selection-end-line="119" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -95,11 +95,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
+            <state relative-caret-position="309">
+              <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="201" selection-end-column="14" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563462262831" expanded="true" signature="5549:5553" ph="..." />
+                <marker date="1563462700903" expanded="true" signature="5549:5553" ph="..." />
               </folding>
             </state>
           </provider>
@@ -350,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="1089000" />
-    </task>
-    <task id="LOCAL-01200" summary="slice plot change">
-      <created>1563320419816</created>
-      <option name="number" value="01200" />
-      <option name="presentableId" value="LOCAL-01200" />
-      <option name="project" value="LOCAL" />
-      <updated>1563320419816</updated>
-    </task>
-    <task id="LOCAL-01201" summary="slice plot change">
-      <created>1563320490941</created>
-      <option name="number" value="01201" />
-      <option name="presentableId" value="LOCAL-01201" />
-      <option name="project" value="LOCAL" />
-      <updated>1563320490941</updated>
+      <workItem from="1563460737603" duration="1333000" />
     </task>
     <task id="LOCAL-01202" summary="slice plot change">
       <created>1563320580135</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563462132368</updated>
     </task>
-    <option name="localTasksCounter" value="1249" />
+    <task id="LOCAL-01249" summary="cloudiness plots">
+      <created>1563462268618</created>
+      <option name="number" value="01249" />
+      <option name="presentableId" value="LOCAL-01249" />
+      <option name="project" value="LOCAL" />
+      <updated>1563462268618</updated>
+    </task>
+    <task id="LOCAL-01250" summary="cloudiness plots">
+      <created>1563462507807</created>
+      <option name="number" value="01250" />
+      <option name="presentableId" value="LOCAL-01250" />
+      <option name="project" value="LOCAL" />
+      <updated>1563462507807</updated>
+    </task>
+    <option name="localTasksCounter" value="1251" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227363000" />
+    <option name="totallyTimeSpent" value="227607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -756,7 +756,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new quivs" />
     <MESSAGE value="new global" />
     <MESSAGE value="new contour" />
     <MESSAGE value="precip" />
@@ -781,7 +780,8 @@
     <MESSAGE value="adding height to quiver plots" />
     <MESSAGE value="slice plot change" />
     <MESSAGE value="calculated albedo plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="calculated albedo plot" />
+    <MESSAGE value="cloudiness plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="cloudiness plots" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -971,13 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="112" column="13" selection-start-line="112" selection-end-line="112" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/calculatedQuantities.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -988,13 +981,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="119" column="13" selection-start-line="119" selection-end-line="119" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
+        <state relative-caret-position="309">
+          <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="201" selection-end-column="14" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563462262831" expanded="true" signature="5549:5553" ph="..." />
+            <marker date="1563462700903" expanded="true" signature="5549:5553" ph="..." />
           </folding>
         </state>
       </provider>
