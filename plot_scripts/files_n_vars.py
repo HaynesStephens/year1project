@@ -145,6 +145,27 @@ row_pcldt =             {'var':'pcldt',
                          'lat':lat,
                          'lon':lon}
 
+row_pcldl =             {'var':'pcldl',
+                         'ylabel':'Low \n Level \n Clouds \n [%]',
+                         'title':'Low Level Clouds',
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
+
+row_pcldm =             {'var':'pcldm',
+                         'ylabel':'Middle \n Level \n Clouds \n [%]',
+                         'title':'Middle Level Clouds',
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
+
+row_pcldh =             {'var':'pcldh',
+                         'ylabel':'High \n Level \n Clouds \n [%]',
+                         'title':'High Level Clouds',
+                         'units':'[%]',
+                         'lat':lat,
+                         'lon':lon}
+
 row_pscld =             {'var':'pscld',
                          'ylabel':'Shallow \n Convective \n Cloud \n Cover \n [%]',
                          'title':'Shallow Convective Cloud Cover',

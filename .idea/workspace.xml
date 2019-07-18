@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a3f5685-aa8d-44ff-9822-6d455fe093b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/files_n_vars.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot_scripts/singlePlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_scripts/singlePlot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="119" column="13" selection-start-line="119" selection-end-line="119" selection-end-column="13" />
+            <state relative-caret-position="344">
+              <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -92,14 +93,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+            <state relative-caret-position="231">
+              <caret line="168" column="14" lean-forward="true" selection-start-line="168" selection-start-column="14" selection-end-line="168" selection-end-column="14" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563462893510" expanded="true" signature="5549:5553" ph="..." />
+                <marker date="1563463533149" expanded="true" signature="5549:5553" ph="..." />
               </folding>
             </state>
           </provider>
@@ -116,7 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>row_w</find>
       <find>depth</find>
       <find>getScale</find>
       <find>col</find>
@@ -146,6 +146,7 @@
       <find>print('V</find>
       <find>swcrf_toa</find>
       <find>LW</find>
+      <find>cloudin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,8 +188,8 @@
         <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/singlePlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
       </list>
     </option>
   </component>
@@ -350,21 +351,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="1463000" />
-    </task>
-    <task id="LOCAL-01204" summary="slice plot change">
-      <created>1563320842229</created>
-      <option name="number" value="01204" />
-      <option name="presentableId" value="LOCAL-01204" />
-      <option name="project" value="LOCAL" />
-      <updated>1563320842229</updated>
-    </task>
-    <task id="LOCAL-01205" summary="slice plot change">
-      <created>1563320939890</created>
-      <option name="number" value="01205" />
-      <option name="presentableId" value="LOCAL-01205" />
-      <option name="project" value="LOCAL" />
-      <updated>1563320939890</updated>
+      <workItem from="1563460737603" duration="1817000" />
     </task>
     <task id="LOCAL-01206" summary="slice plot change">
       <created>1563320972030</created>
@@ -695,11 +682,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563462777337</updated>
     </task>
-    <option name="localTasksCounter" value="1253" />
+    <task id="LOCAL-01253" summary="cloudiness plots">
+      <created>1563462896110</created>
+      <option name="number" value="01253" />
+      <option name="presentableId" value="LOCAL-01253" />
+      <option name="project" value="LOCAL" />
+      <updated>1563462896110</updated>
+    </task>
+    <task id="LOCAL-01254" summary="cloudiness plots">
+      <created>1563462962614</created>
+      <option name="number" value="01254" />
+      <option name="presentableId" value="LOCAL-01254" />
+      <option name="project" value="LOCAL" />
+      <updated>1563462962614</updated>
+    </task>
+    <option name="localTasksCounter" value="1255" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227737000" />
+    <option name="totallyTimeSpent" value="228091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -981,21 +982,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="119" column="13" selection-start-line="119" selection-end-line="119" selection-end-column="13" />
+        <state relative-caret-position="231">
+          <caret line="168" column="14" lean-forward="true" selection-start-line="168" selection-start-column="14" selection-end-line="168" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1563463533149" expanded="true" signature="5549:5553" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
+    <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563462893510" expanded="true" signature="5549:5553" ph="..." />
-          </folding>
+        <state relative-caret-position="344">
+          <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
         </state>
       </provider>
     </entry>
