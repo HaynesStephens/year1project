@@ -131,12 +131,12 @@ def globalValPlot(row, side):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     plt.show()
 
 # row = {'var':'plan_alb_calc'}
 side = 'Global'
-row = row_swcrf_toa
+row = row_lwcrf_toa
 
 globalValPlot(row, side)
 
