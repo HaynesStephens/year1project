@@ -42,7 +42,7 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -600
+        min_val = -250
         max_val = 600
         levels = np.linspace(min_val, max_val, 25)
         if seq_or_div == 'seq':
@@ -165,8 +165,8 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
+    # plt.savefig(file_name+'.pdf')
+    plt.show()
     print('Plot saved.')
 
 
@@ -177,9 +177,9 @@ seq_or_div = 'div'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 
-# ############# SINGLE DEPTH PLOT #################
-# depth = None
-# singlePlot(row, col, filetype, depth, seq_or_div)
+############# SINGLE DEPTH PLOT #################
+depth = None
+singlePlot(row, col, filetype, depth, seq_or_div)
 
 # ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
@@ -196,9 +196,9 @@ col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 #         singlePlot(row, col_i, filetype, depth_i, seq_or_div)
 #     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
-############# ALL CALLS OF SAME DEPTH ################
-depth = None
-for col_i in col_list:
-    singlePlot(row, col_i, filetype, depth, seq_or_div)
+# ############# ALL CALLS OF SAME DEPTH ################
+# depth = None
+# for col_i in col_list:
+#     singlePlot(row, col_i, filetype, depth, seq_or_div)
 
 
