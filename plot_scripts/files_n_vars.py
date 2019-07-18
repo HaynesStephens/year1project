@@ -291,6 +291,22 @@ row_o_salt =               {'var':'salt',
                          'lon':lono,
                          'z':zoc}
 
+row_o_u =                {'var':'u',
+                         'ylabel':'East-West \n Velocity \n [cm/s]',
+                         'title':'East-West Velocity',
+                         'units':'[cm/s]',
+                         'lat':lato,
+                         'lon':lono2,
+                         'z':zoc}
+
+row_o_v =                {'var':'v',
+                         'ylabel':'North-South \n Velocity \n [cm/s]',
+                         'title':'North-South Velocity',
+                         'units':'[cm/s]',
+                         'lat':lato2,
+                         'lon':lono,
+                         'z':zoc}
+
 row_o_w =                {'var':'w',
                          'ylabel':'Downward \n Velocity \n [cm/s]',
                          'title':'Downward Velocity',

@@ -36,11 +36,11 @@ def makeSubplot(grid, row_u, u, v, row_contour, contour_data, col, title, seq_or
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -110
-        max_val = 110
-        levels = np.linspace(min_val, max_val, 44)
+        min_val = 22
+        max_val = 37
+        levels = np.linspace(min_val, max_val, 16)
         if seq_or_div == 'seq':
-            cmap = cm.Reds
+            cmap = cm.Blues
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
@@ -207,29 +207,29 @@ def quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
+    # plt.savefig(file_name+'.pdf')
+    plt.show()
     print('Plot saved.')
 
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
-row_u = row_ub
-row_v = row_vb
-filetype_uv = 'aijkpc'
+row_u = row_o_u
+row_v = row_o_v
+filetype_uv = 'oijlpc'
 
-row_contour = row_temp
-filetype_contour = 'aijlpc'
+row_contour = row_o_pot_dens
+filetype_contour = 'oijlpc'
 
-# col = col_39
+col = col_39
 
-seq_or_div = 'div'
+seq_or_div = 'seq'
 
 
-# ############# SINGLE DEPTH PLOT #################
-# depth = 10
-# depth_contour = 10
-# quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
-#            depth, depth_contour, seq_or_div)
+############# SINGLE DEPTH PLOT #################
+depth = 0
+depth_contour = 0
+quiverPlot(row_u, row_v, row_contour, col, filetype_uv, filetype_contour,
+           depth, depth_contour, seq_or_div)
 
 # ############ ALL DEPTHS PLOT ###################
 # for depth_i in range(row_u['z'].size):
@@ -243,10 +243,10 @@ seq_or_div = 'div'
 #     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
 #                depth, depth_contour, seq_or_div)
 
-############ WHOLE SHABANG ################
-for col_i in col_list:
-    for depth_i in range(row_u['z'].size):
-        quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
-                   depth_i, depth_i, seq_or_div)
-    quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
-               'vertAvg', 'vertAvg', seq_or_div)
+# ############ WHOLE SHABANG ################
+# for col_i in col_list:
+#     for depth_i in range(row_u['z'].size):
+#         quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                    depth_i, depth_i, seq_or_div)
+#     quiverPlot(row_u, row_v, row_contour, col_i, filetype_uv, filetype_contour,
+#                'vertAvg', 'vertAvg', seq_or_div)
