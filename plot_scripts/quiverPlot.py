@@ -16,10 +16,6 @@ def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
         nc_i = ds(filename, 'r+', format='NETCDF4')
         arr = nc_i[var][:]
         arr_tot = arr_tot + arr
-        if var=='pot_dens':
-            print(arr[0, -1, 0])
-            print(arr.mask[0, -1, 0])
-            print(np.where(arr.mask == True))
     arr_avg = (arr_tot * unit_conv) / num_files
 
     if 'aqua' in filedir: #if it's aquaplanet simulation you need to roll so that substell point is in middle
