@@ -173,7 +173,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 row = row_snowicefr
 col = col_39
 filetype = 'aijpc'
-seq_or_div = 'div'
+seq_or_div = 'seq'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 

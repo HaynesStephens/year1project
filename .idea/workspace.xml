@@ -83,11 +83,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="169" column="14" lean-forward="true" selection-start-line="169" selection-start-column="14" selection-end-line="169" selection-end-column="14" />
+            <state relative-caret-position="196">
+              <caret line="175" column="17" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563471009496" expanded="true" signature="5551:5555" ph="..." />
+                <marker date="1563471213168" expanded="true" signature="5548:5552" ph="..." />
               </folding>
             </state>
           </provider>
@@ -350,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="5279000" />
-    </task>
-    <task id="LOCAL-01247" summary="calculated albedo plot">
-      <created>1563461963463</created>
-      <option name="number" value="01247" />
-      <option name="presentableId" value="LOCAL-01247" />
-      <option name="project" value="LOCAL" />
-      <updated>1563461963463</updated>
-    </task>
-    <task id="LOCAL-01248" summary="calculated albedo plot">
-      <created>1563462132368</created>
-      <option name="number" value="01248" />
-      <option name="presentableId" value="LOCAL-01248" />
-      <option name="project" value="LOCAL" />
-      <updated>1563462132368</updated>
+      <workItem from="1563460737603" duration="5390000" />
     </task>
     <task id="LOCAL-01249" summary="cloudiness plots">
       <created>1563462268618</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563467779946</updated>
     </task>
-    <option name="localTasksCounter" value="1296" />
+    <task id="LOCAL-01296" summary="cloudiness plots">
+      <created>1563471013455</created>
+      <option name="number" value="01296" />
+      <option name="presentableId" value="LOCAL-01296" />
+      <option name="project" value="LOCAL" />
+      <updated>1563471013455</updated>
+    </task>
+    <task id="LOCAL-01297" summary="cloudiness plots">
+      <created>1563471057674</created>
+      <option name="number" value="01297" />
+      <option name="presentableId" value="LOCAL-01297" />
+      <option name="project" value="LOCAL" />
+      <updated>1563471057674</updated>
+    </task>
+    <option name="localTasksCounter" value="1298" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231553000" />
+    <option name="totallyTimeSpent" value="231664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -990,11 +990,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="169" column="14" lean-forward="true" selection-start-line="169" selection-start-column="14" selection-end-line="169" selection-end-column="14" />
+        <state relative-caret-position="196">
+          <caret line="175" column="17" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563471009496" expanded="true" signature="5551:5555" ph="..." />
+            <marker date="1563471213168" expanded="true" signature="5548:5552" ph="..." />
           </folding>
         </state>
       </provider>
