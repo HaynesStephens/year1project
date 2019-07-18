@@ -145,18 +145,18 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
                       cbar_pad="7%",
                       aspect=True)
 
-    # var = row['var']
-    # filedir = col['filedir']
-    # data = avgDataFiles(filedir, filetype, var)
-    # print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
-    # data, title = depthOrVertAvg(data, col, depth)
-
-    # Calculated Planetary Albedo Scenario
-    arr_avg, area_arr, plot_row, title = calcQuant.getPlanAlbFromSol(col)
-    data = arr_avg
+    var = row['var']
+    filedir = col['filedir']
+    data = avgDataFiles(filedir, filetype, var)
     print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
-    row = plot_row
-    #
+    data, title = depthOrVertAvg(data, col, depth)
+
+    # # Calculated Planetary Albedo Scenario
+    # arr_avg, area_arr, plot_row, title = calcQuant.getPlanAlbFromSol(col)
+    # data = arr_avg
+    # print("TOT MIN: {0}, TOT MAX: {1}".format(np.min(data), np.max(data)))
+    # row = plot_row
+    # #
 
     makeSubplot(grid=grid1, data=data, row=row, col=col, title=title, seq_or_div=seq_or_div)
 
@@ -165,21 +165,21 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    # plt.show()
+    # plt.savefig(file_name+'.pdf')
+    plt.show()
     print('Plot saved.')
 
 
-row = None
-# col = col_1
+row = row_qatm
+col = col_1
 filetype = 'aijpc'
 seq_or_div = 'seq'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
-# depth = None
+depth = None
 
 # ############# SINGLE DEPTH PLOT #################
 # depth = 0
-# singlePlot(row, col, filetype, depth, seq_or_div)
+singlePlot(row, col, filetype, depth, seq_or_div)
 
 # ############# ALL DEPTHS PLOT ###################
 # for depth_i in range(row['z'].size):
@@ -196,9 +196,9 @@ col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 #         singlePlot(row, col_i, filetype, depth_i, seq_or_div)
 #     singlePlot(row, col_i, filetype, 'vertAvg', seq_or_div)
 
-############# ALL CALLS OF SAME DEPTH ################
-depth = None
-for col_i in col_list:
-    singlePlot(row, col_i, filetype, depth, seq_or_div)
+# ############# ALL CALLS OF SAME DEPTH ################
+# depth = None
+# for col_i in col_list:
+#     singlePlot(row, col_i, filetype, depth, seq_or_div)
 
 
