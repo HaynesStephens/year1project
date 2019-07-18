@@ -18,6 +18,7 @@ def avgDataFiles(filedir, filetype, var, unit_conv = 1, num_files=10):
         arr_tot = arr_tot + arr
         if var=='pot_dens':
             print(arr[0, -1, 0])
+            print(arr.mask[0, -1, 0])
             print(np.where(arr.mask == True))
     arr_avg = (arr_tot * unit_conv) / num_files
 
