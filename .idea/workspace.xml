@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="112" column="13" selection-start-line="112" selection-end-line="112" selection-end-column="13" />
+            <state relative-caret-position="227">
+              <caret line="140" column="9" selection-start-line="140" selection-end-line="140" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="134" column="10" lean-forward="true" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+            <state relative-caret-position="309">
+              <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -350,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="3644000" />
-    </task>
-    <task id="LOCAL-01227" summary="calculated albedo plot">
-      <created>1563392229710</created>
-      <option name="number" value="01227" />
-      <option name="presentableId" value="LOCAL-01227" />
-      <option name="project" value="LOCAL" />
-      <updated>1563392229710</updated>
-    </task>
-    <task id="LOCAL-01228" summary="calculated albedo plot">
-      <created>1563392346937</created>
-      <option name="number" value="01228" />
-      <option name="presentableId" value="LOCAL-01228" />
-      <option name="project" value="LOCAL" />
-      <updated>1563392346937</updated>
+      <workItem from="1563460737603" duration="3985000" />
     </task>
     <task id="LOCAL-01229" summary="calculated albedo plot">
       <created>1563392428119</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563465809111</updated>
     </task>
-    <option name="localTasksCounter" value="1276" />
+    <task id="LOCAL-01276" summary="cloudiness plots">
+      <created>1563466140037</created>
+      <option name="number" value="01276" />
+      <option name="presentableId" value="LOCAL-01276" />
+      <option name="project" value="LOCAL" />
+      <updated>1563466140038</updated>
+    </task>
+    <task id="LOCAL-01277" summary="cloudiness plots">
+      <created>1563466271144</created>
+      <option name="number" value="01277" />
+      <option name="presentableId" value="LOCAL-01277" />
+      <option name="project" value="LOCAL" />
+      <updated>1563466271145</updated>
+    </task>
+    <option name="localTasksCounter" value="1278" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229918000" />
+    <option name="totallyTimeSpent" value="230259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -984,15 +984,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="112" column="13" selection-start-line="112" selection-end-line="112" selection-end-column="13" />
+        <state relative-caret-position="227">
+          <caret line="140" column="9" selection-start-line="140" selection-end-line="140" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="134" column="10" lean-forward="true" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+        <state relative-caret-position="309">
+          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
