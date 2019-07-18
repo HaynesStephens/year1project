@@ -42,11 +42,11 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = -150
-        max_val = 150
-        levels = np.linspace(min_val, max_val, 21)
+        min_val = 0
+        max_val = 100
+        levels = np.linspace(min_val, max_val, 11)
         if seq_or_div == 'seq':
-            cmap = cm.Blues
+            cmap = cm.Blues_r
             norm = Normalize(vmin = min_val, vmax = max_val)
         elif seq_or_div == 'div':
             cmap = cm.seismic
@@ -170,10 +170,10 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
     print('Plot saved.')
 
 
-row = row_lwcrf_toa
+row = row_pcldt
 col = col_39
 filetype = 'aijpc'
-seq_or_div = 'div'
+seq_or_div = 'seq'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 
