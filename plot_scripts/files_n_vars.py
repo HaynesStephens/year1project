@@ -138,6 +138,20 @@ row_incsw_toa =         {'var':'incsw_toa',
                          'lat':lat,
                          'lon':lon}
 
+row_srnf_grnd =         {'var':'srnf_grnd',
+                         'ylabel':'Net Solar \n Surf \n [Wm$^{-2}$]',
+                         'title':'Net Solar Surf',
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
+
+row_incsw_grnd =         {'var':'incsw_grnd',
+                         'ylabel':'Incident Solar \n Surf \n [Wm$^{-2}$]',
+                         'title':'Incident Solar Surf',
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
+
 row_pcldt =             {'var':'pcldt',
                          'ylabel':'Total Cloud \n Cover \n [%]',
                          'title':'Total Cloud Cover',
