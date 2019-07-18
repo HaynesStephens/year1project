@@ -59,7 +59,6 @@ def getSideMean(data, area_arr, row, side):
         lat_indices = np.where(np.abs(lat_grid) < 11)[0]
         cropped_data = cropped_data[lat_indices, :]
         cropped_area = cropped_area[lat_indices, :]
-    print(lat_indices)
 
     cropped_data = cropped_data[:, lon_indices]
     cropped_area = cropped_area[:, lon_indices]
@@ -132,13 +131,14 @@ def globalValPlot(row, side):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
-    plt.show()
+    plt.savefig(file_name+'.pdf')
+    # plt.show()
 
 # row = {'var':'plan_alb_calc'}
-side = 'Sub-stellar'
-row = row_pcldt
+side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
+row = row_net_rad_planet
 
-globalValPlot(row, side)
+for side_i in side_list:
+    globalValPlot(row, side_i)
 
 
