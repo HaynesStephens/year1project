@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="112" column="13" selection-start-line="112" selection-end-line="112" selection-end-column="13" />
+            <state relative-caret-position="307">
+              <caret line="140" column="9" selection-start-line="140" selection-end-line="140" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -97,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
-              <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
+              <caret line="140" column="15" selection-start-line="140" selection-start-column="15" selection-end-line="140" selection-end-column="15" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -350,21 +350,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="4904000" />
-    </task>
-    <task id="LOCAL-01241" summary="calculated albedo plot">
-      <created>1563461329480</created>
-      <option name="number" value="01241" />
-      <option name="presentableId" value="LOCAL-01241" />
-      <option name="project" value="LOCAL" />
-      <updated>1563461329481</updated>
-    </task>
-    <task id="LOCAL-01242" summary="calculated albedo plot">
-      <created>1563461342397</created>
-      <option name="number" value="01242" />
-      <option name="presentableId" value="LOCAL-01242" />
-      <option name="project" value="LOCAL" />
-      <updated>1563461342397</updated>
+      <workItem from="1563460737603" duration="5020000" />
     </task>
     <task id="LOCAL-01243" summary="calculated albedo plot">
       <created>1563461384638</created>
@@ -695,11 +681,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563467511067</updated>
     </task>
-    <option name="localTasksCounter" value="1290" />
+    <task id="LOCAL-01290" summary="cloudiness plots">
+      <created>1563467549603</created>
+      <option name="number" value="01290" />
+      <option name="presentableId" value="LOCAL-01290" />
+      <option name="project" value="LOCAL" />
+      <updated>1563467549603</updated>
+    </task>
+    <task id="LOCAL-01291" summary="cloudiness plots">
+      <created>1563467646991</created>
+      <option name="number" value="01291" />
+      <option name="presentableId" value="LOCAL-01291" />
+      <option name="project" value="LOCAL" />
+      <updated>1563467646991</updated>
+    </task>
+    <option name="localTasksCounter" value="1292" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231178000" />
+    <option name="totallyTimeSpent" value="231294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -984,15 +984,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="112" column="13" selection-start-line="112" selection-end-line="112" selection-end-column="13" />
+        <state relative-caret-position="307">
+          <caret line="140" column="9" selection-start-line="140" selection-end-line="140" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
-          <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
+          <caret line="140" column="15" selection-start-line="140" selection-start-column="15" selection-end-line="140" selection-end-column="15" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

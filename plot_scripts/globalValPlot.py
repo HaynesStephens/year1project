@@ -138,7 +138,7 @@ def globalValPlot(row, side):
 
 # row = {'var':'plan_alb_calc'}
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
-row = row_lwcrf_toa
+row = row_pcldt
 
 for side_i in side_list:
     globalValPlot(row, side_i)
