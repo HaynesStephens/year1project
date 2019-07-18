@@ -117,6 +117,13 @@ row_swcrf_toa =         {'var':'swcrf_toa',
                          'lat':lat,
                          'lon':lon}
 
+row_lwcrf_toa =         {'var':'lwcrf_toa',
+                         'ylabel':'LW \n Cloud \n Rad \n Forcing \n [Wm$^{-2}$]',
+                         'title':'LW Cloud Rad Forcing',
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
+
 row_srnf_toa =          {'var':'srnf_toa',
                          'ylabel':'Net Solar \n TOA \n [Wm$^{-2}$]',
                          'title':'Net Solar TOA',
@@ -127,13 +134,6 @@ row_srnf_toa =          {'var':'srnf_toa',
 row_incsw_toa =         {'var':'incsw_toa',
                          'ylabel':'Incident Solar \n TOA \n [Wm$^{-2}$]',
                          'title':'Incident Solar TOA',
-                         'units':'[Wm$^{-2}$]',
-                         'lat':lat,
-                         'lon':lon}
-
-row_lwcrf_toa =         {'var':'lwcrf_toa',
-                         'ylabel':'LW \n Cloud \n Rad \n Forcing \n [Wm$^{-2}$]',
-                         'title':'LW Cloud Rad Forcing',
                          'units':'[Wm$^{-2}$]',
                          'lat':lat,
                          'lon':lon}
