@@ -115,9 +115,9 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     print('Values: ', val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
 
-    # title = row['title']
+    title = row['title']
     # title = 'Planetary Albedo from Solar'
-    title = 'Longwave Absorption'
+    # title = 'Longwave Absorption'
     units = row['units']
 
     ax.set_title(side + ' Mean ' + title)
@@ -145,12 +145,12 @@ def globalValPlot(row, side):
     makeSubplot(col_list, ax, row, filetype='aijpc', side=side)
 
     fig.tight_layout(w_pad = 2.25)
-    # file_name = getPlotName(row, side)
-    file_name = 'plots/global/global_lw_abs'
+    file_name = getPlotName(row, side)
+    # file_name = 'plots/global/global_lw_abs'
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     plt.show()
 
 # row = {'var':'plan_alb_calc'}
