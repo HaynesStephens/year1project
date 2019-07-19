@@ -91,21 +91,21 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
 
-    print('1', np.mean(val_arr))
-    # Values used in determining planetary albedo from solar fluxes
-    sol_net = np.array([177.64417, 176.96222, 174.6022, 172.0164, 169.36081,
-                        170.56851, 172.2582, 171.33827, 173.11499])
-    sol_inc = np.ones(9) * 220.53342
-    sol_ref = sol_inc - sol_net
-    val_arr = (sol_ref / sol_inc) * 100
-    print('2', np.mean(val_arr))
-    #
+    # print('before', np.mean(val_arr))
+    # # Values used in determining planetary albedo from solar fluxes
+    # sol_net = np.array([177.64417, 176.96222, 174.6022, 172.0164, 169.36081,
+    #                     170.56851, 172.2582, 171.33827, 173.11499])
+    # sol_inc = np.ones(9) * 220.53342
+    # sol_ref = sol_inc - sol_net
+    # val_arr = (sol_ref / sol_inc) * 100
+    # print('after', np.mean(val_arr))
+    # #
 
     print('Values: ', val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
 
-    # title = row['title']
-    title = 'Planetary Albedo from Solar'
+    title = row['title']
+    # title = 'Planetary Albedo from Solar'
     units = row['units']
 
     ax.set_title(side + ' Mean ' + title)
@@ -133,13 +133,13 @@ def globalValPlot(row, side):
     makeSubplot(col_list, ax, row, filetype='aijpc', side=side)
 
     fig.tight_layout(w_pad = 2.25)
-    # file_name = getPlotName(row, side)
-    file_name = 'plots/global/global_plan_alb_sol'
+    file_name = getPlotName(row, side)
+    # file_name = 'plots/global/global_plan_alb_sol'
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
-    plt.show()
+    # plt.savefig(file_name+'.pdf')
+    # plt.show()
 
 # row = {'var':'plan_alb_calc'}
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
