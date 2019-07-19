@@ -133,7 +133,8 @@ def makeSubplot(col_list, ax, row, filetype, side, depth=None):
     # units = row['units']
     units = 'Redistribution Efficiency [$\eta$]'
 
-    ax.set_title(side + ' Mean ' + title)
+    # ax.set_title(side + ' Mean ' + title)
+    ax.set_title(title)
     ax.set_xlabel('Continent size (% of total surface)')
     ax.set_ylabel(units)
 
@@ -159,11 +160,11 @@ def globalValPlot(row, side):
 
     fig.tight_layout(w_pad = 2.25)
     # file_name = getPlotName(row, side)
-    file_name = 'plots/global/global_heat_redistribution'
+    file_name = 'plots/global/heat_redistribution'
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
+    plt.savefig(file_name+'.pdf')
     plt.show()
 
 # row = {'var':'plan_alb_calc'}
