@@ -133,12 +133,12 @@ def globalValPlot(row, side):
     makeSubplot(col_list, ax, row, filetype='aijpc', side=side)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = getPlotName(row, side)
-    # file_name = 'plots/global/global_plan_alb_sol_cut'
+    # file_name = getPlotName(row, side)
+    file_name = 'plots/global/global_plan_alb_sol'
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    # plt.savefig(file_name+'.pdf')
+    plt.savefig(file_name+'.pdf')
     plt.show()
 
 # row = {'var':'plan_alb_calc'}
