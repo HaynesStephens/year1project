@@ -41,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="133" column="13" selection-start-line="133" selection-end-line="133" selection-end-column="13" />
+            <state relative-caret-position="394">
+              <caret line="161" column="12" selection-start-line="161" selection-end-line="161" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+            <state relative-caret-position="327">
+              <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -186,9 +186,9 @@
         <option value="$PROJECT_DIR$/plot_scripts/latLonAvgPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/lewisPlot.py" />
         <option value="$PROJECT_DIR$/rossbyCheck.py" />
-        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/quiverPlot.py" />
         <option value="$PROJECT_DIR$/plot_scripts/singlePlot.py" />
+        <option value="$PROJECT_DIR$/plot_scripts/files_n_vars.py" />
         <option value="$PROJECT_DIR$/plot_scripts/globalValPlot.py" />
       </list>
     </option>
@@ -351,21 +351,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="12555000" />
-    </task>
-    <task id="LOCAL-01301" summary="cloudiness plots">
-      <created>1563474344473</created>
-      <option name="number" value="01301" />
-      <option name="presentableId" value="LOCAL-01301" />
-      <option name="project" value="LOCAL" />
-      <updated>1563474344473</updated>
-    </task>
-    <task id="LOCAL-01302" summary="cloudiness plots">
-      <created>1563474500329</created>
-      <option name="number" value="01302" />
-      <option name="presentableId" value="LOCAL-01302" />
-      <option name="project" value="LOCAL" />
-      <updated>1563474500329</updated>
+      <workItem from="1563460737603" duration="13010000" />
     </task>
     <task id="LOCAL-01303" summary="cloudiness plots">
       <created>1563474708165</created>
@@ -696,11 +682,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563566946439</updated>
     </task>
-    <option name="localTasksCounter" value="1350" />
+    <task id="LOCAL-01350" summary="evap and prec">
+      <created>1563567273699</created>
+      <option name="number" value="01350" />
+      <option name="presentableId" value="LOCAL-01350" />
+      <option name="project" value="LOCAL" />
+      <updated>1563567273699</updated>
+    </task>
+    <task id="LOCAL-01351" summary="evap and prec">
+      <created>1563569286678</created>
+      <option name="number" value="01351" />
+      <option name="presentableId" value="LOCAL-01351" />
+      <option name="project" value="LOCAL" />
+      <updated>1563569286678</updated>
+    </task>
+    <option name="localTasksCounter" value="1352" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238829000" />
+    <option name="totallyTimeSpent" value="239284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -988,15 +988,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/files_n_vars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="133" column="13" selection-start-line="133" selection-end-line="133" selection-end-column="13" />
+        <state relative-caret-position="394">
+          <caret line="161" column="12" selection-start-line="161" selection-end-line="161" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
+        <state relative-caret-position="327">
+          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
