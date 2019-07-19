@@ -7,7 +7,7 @@ from lat_lon_grid import *
 import calculatedQuantities as calcQuant
 
 
-def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth, side):
+def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv = -1, depth, side):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = 0
     for filename in results:
