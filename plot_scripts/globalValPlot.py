@@ -7,7 +7,7 @@ from lat_lon_grid import *
 import calculatedQuantities as calcQuant
 
 
-def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv = -1, depth, side):
+def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv = -1, depth):
     results = glob('{0}/*{1}*'.format(filedir, filetype))
     arr_tot = 0
     for filename in results:
@@ -78,7 +78,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
         SA_arr.append(col['SA'])
 
         arr_avg_i, area_arr_i = avgDataFilesGlobal(filedir, row, var, num_files,
-                                                   filetype, unit_conv, depth, side)
+                                                   filetype, unit_conv, depth)
 
         # # Calculated Planetary Albedo Scenario
         # arr_avg_i, area_arr_i, plot_row, title = calcQuant.getPlanAlbFromSol(col)
