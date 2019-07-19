@@ -111,27 +111,27 @@ def makeSubplot(col_list, ax, row, filetype, side, depth=None):
     # print('after', np.mean(val_arr))
     # #
 
-    # print('before', np.mean(val_arr))
-    # # Values used in determining LW Absorption according to Lewis's method
-    # night_lw = np.array([200.4674, 194.17012, 197.26746, 197.1325, 201.08948,
-    #                      210.14731, 214.41014, 216.5942, 221.02673])
-    # day_lw = np.array([154.48427, 160.05635, 152.10452, 146.97388, 136.12547,
-    #                    130.70493, 130.3918, 130.04128, 130.6909])
-    # heat_redistribution = night_lw / day_lw
-    # val_arr = heat_redistribution
-    # print('after', np.mean(val_arr))
-    # #
+    print('before', np.mean(val_arr))
+    # Values used in determining LW Absorption according to Lewis's method
+    day_lw = np.array([200.4674, 194.17012, 197.26746, 197.1325, 201.08948,
+                         210.14731, 214.41014, 216.5942, 221.02673])
+    night_lw = np.array([154.48427, 160.05635, 152.10452, 146.97388, 136.12547,
+                       130.70493, 130.3918, 130.04128, 130.6909])
+    heat_redistribution = night_lw / day_lw
+    val_arr = heat_redistribution
+    print('after', np.mean(val_arr))
+    #
 
     print('Values: ', val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
 
-    title = row['title']
+    # title = row['title']
     # title = 'Planetary Albedo from Solar'
     # title = 'Longwave Absorption'
-    # title = 'Heat Redistribution'
+    title = 'Heat Redistribution'
 
-    units = row['units']
-    # units = 'Redistribution Efficiency [$\eta$]'
+    # units = row['units']
+    units = 'Redistribution Efficiency [$\eta$]'
 
     ax.set_title(side + ' Mean ' + title)
     ax.set_xlabel('Continent size (% of total surface)')
@@ -158,9 +158,9 @@ def globalValPlot(row, side):
     makeSubplot(col_list, ax, row, filetype='aijpc', side=side)
 
     fig.tight_layout(w_pad = 2.25)
-    file_name = getPlotName(row, side)
+    # file_name = getPlotName(row, side)
     file_name = 'plots/global/global_heat_redistribution'
-    # print('PLOT NAME:', file_name)
+    print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
@@ -170,6 +170,6 @@ def globalValPlot(row, side):
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
 row = row_trnf_toa
 
-globalValPlot(row, 'Night Side')
+globalValPlot(row, 'Global')
 
 
