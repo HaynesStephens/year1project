@@ -103,7 +103,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
 
     print('before', np.mean(val_arr))
     # Values used in determining LW Absorption according to Lewis's method
-    therm_up_surf = np.array([234.78496, 227.99066, 220.1106, 214.61176 208.5697,
+    therm_up_surf = np.array([234.78496, 227.99066, 220.1106, 214.61176, 208.5697,
                          212.37679, 215.53433, 217.7208, 221.0594 ])
     therm_up_toa = -1 * np.array([-177.47583, -177.11324, -174.68597, -172.05318, -168.60745,
                              -170.4261, -172.40097, -173.3177, -175.85881])

@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+            <state relative-caret-position="110">
+              <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -351,21 +351,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="13010000" />
-    </task>
-    <task id="LOCAL-01303" summary="cloudiness plots">
-      <created>1563474708165</created>
-      <option name="number" value="01303" />
-      <option name="presentableId" value="LOCAL-01303" />
-      <option name="project" value="LOCAL" />
-      <updated>1563474708165</updated>
-    </task>
-    <task id="LOCAL-01304" summary="cloudiness plots">
-      <created>1563474949864</created>
-      <option name="number" value="01304" />
-      <option name="presentableId" value="LOCAL-01304" />
-      <option name="project" value="LOCAL" />
-      <updated>1563474949864</updated>
+      <workItem from="1563460737603" duration="13393000" />
     </task>
     <task id="LOCAL-01305" summary="cloudiness plots">
       <created>1563474970707</created>
@@ -696,11 +682,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563569286678</updated>
     </task>
-    <option name="localTasksCounter" value="1352" />
+    <task id="LOCAL-01352" summary="evap and prec">
+      <created>1563569421693</created>
+      <option name="number" value="01352" />
+      <option name="presentableId" value="LOCAL-01352" />
+      <option name="project" value="LOCAL" />
+      <updated>1563569421693</updated>
+    </task>
+    <task id="LOCAL-01353" summary="evap and prec">
+      <created>1563569769640</created>
+      <option name="number" value="01353" />
+      <option name="presentableId" value="LOCAL-01353" />
+      <option name="project" value="LOCAL" />
+      <updated>1563569769640</updated>
+    </task>
+    <option name="localTasksCounter" value="1354" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239284000" />
+    <option name="totallyTimeSpent" value="239667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -995,8 +995,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/globalValPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+        <state relative-caret-position="110">
+          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
