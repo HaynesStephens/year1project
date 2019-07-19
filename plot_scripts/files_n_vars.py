@@ -152,6 +152,20 @@ row_incsw_grnd =         {'var':'incsw_grnd',
                          'lat':lat,
                          'lon':lon}
 
+row_trup_surf =         {'var':'trup_surf',
+                         'ylabel':'Thermal Up \n Surf \n [Wm$^{-2}$]',
+                         'title':'Thermal Up Surf',
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
+
+row_trnf_toa =         {'var':'trnf_toa',
+                         'ylabel':'Thermal Net \n TOA \n [Wm$^{-2}$]',
+                         'title':'Thermal Net TOA',
+                         'units':'[Wm$^{-2}$]',
+                         'lat':lat,
+                         'lon':lon}
+
 row_pcldt =             {'var':'pcldt',
                          'ylabel':'Total Cloud \n Cover \n [%]',
                          'title':'Total Cloud Cover',

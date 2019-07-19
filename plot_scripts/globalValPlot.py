@@ -143,7 +143,7 @@ def globalValPlot(row, side):
 
 # row = {'var':'plan_alb_calc'}
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
-row = row_plan_alb
+row = row_trup_surf
 
 globalValPlot(row, 'Global')
 
