@@ -42,9 +42,9 @@ def makeSubplot(grid, data, row, col, title, seq_or_div):
     # max_val = np.max(np.abs(data))
 
     def make_cmap(seq_or_div):
-        min_val = 0
-        max_val = 30
-        levels = np.linspace(min_val, max_val, 16)
+        min_val = -11
+        max_val = 11
+        levels = np.linspace(min_val, max_val, 23)
         if seq_or_div == 'seq':
             cmap = cm.Blues
             norm = Normalize(vmin = min_val, vmax = max_val)
@@ -173,7 +173,7 @@ def singlePlot(row, col, filetype, depth, seq_or_div):
 row = row_evap
 col = col_39
 filetype = 'aijpc'
-seq_or_div = 'seq'
+seq_or_div = 'div'
 col_list = [col_0, col_1, col_4, col_6, col_11, col_22, col_26, col_34, col_39]
 
 
