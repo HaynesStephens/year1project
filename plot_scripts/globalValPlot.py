@@ -72,13 +72,7 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
     var = row['var']
     SA_arr = []
     val_arr = []
-    # # Values used in determining planetary albedo from solar fluxes
-    # sol_net = np.array([355.74286, 354.37723, 349.65115, 344.47293, 339.15497,
-    #                     341.57346, 344.95715, 343.11496, 346.6729])
-    # sol_inc = np.ones(sol_net.size) * 441.63113
-    # sol_ref = sol_inc - sol_net
-    # val_arr = sol_ref / sol_inc
-    # #
+
     for col in col_list:
         filedir = col['filedir']
         SA_arr.append(col['SA'])
@@ -96,11 +90,22 @@ def makeSubplot(col_list, ax, row, filetype, num_files=10, unit_conv=1, depth=No
         val_arr.append(val_i)
     SA_arr = np.array(SA_arr)
     val_arr = np.array(val_arr)
+
+    print('1', np.mean(val_arr))
+    # Values used in determining planetary albedo from solar fluxes
+    sol_net = np.array([177.64417, 176.96222, 174.6022, 172.0164, 169.36081,
+                        170.56851, 172.2582, 171.33827, 173.11499])
+    sol_inc = np.ones(9) * 220.53342
+    sol_ref = sol_inc - sol_net
+    val_arr = (sol_ref / sol_inc) * 100
+    print('2', np.mean(val_arr))
+    #
+
     print('Values: ', val_arr)
     ax.plot(SA_arr, val_arr, color='k', marker='o', markersize=10, label = 'ROCKE-3D')
 
-    title = row['title']
-    # title = 'Planetary Albedo from Solar'
+    # title = row['title']
+    title = 'Planetary Albedo from Solar'
     units = row['units']
 
     ax.set_title(side + ' Mean ' + title)
@@ -134,11 +139,11 @@ def globalValPlot(row, side):
 
     # plt.savefig(file_name+'.svg')
     # plt.savefig(file_name+'.pdf')
-    # plt.show()
+    plt.show()
 
 # row = {'var':'plan_alb_calc'}
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
-row = row_incsw_toa
+row = row_plan_alb
 
 globalValPlot(row, 'Global')
 
