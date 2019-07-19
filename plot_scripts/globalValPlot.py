@@ -25,7 +25,7 @@ def avgDataFilesGlobal(filedir, row, var, num_files, filetype, unit_conv, depth,
         # Set area to zero in cells that have no value, excluding them from the average
         area_arr[arr.mask] = 0
         if np.where(area_arr == 0)[0].size != 0:
-            print('MASK CHECK') # If an array has a mask, check to make sure area array is masked as well.
+            print('MASK CHECK', np.where(area_arr == 0)[0].size) # If an array has a mask, check to make sure area array is masked as well.
 
         arr_tot = arr_tot + arr
 
@@ -133,14 +133,13 @@ def globalValPlot(row, side):
     print('PLOT NAME:', file_name)
 
     # plt.savefig(file_name+'.svg')
-    plt.savefig(file_name+'.pdf')
+    # plt.savefig(file_name+'.pdf')
     # plt.show()
 
 # row = {'var':'plan_alb_calc'}
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
-row = row_srnf_grnd
+row = row_srnf_toa
 
-for side_i in side_list:
-    globalValPlot(row, side_i)
+globalValPlot(row, 'Global')
 
 
