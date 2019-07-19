@@ -170,6 +170,6 @@ def globalValPlot(row, side):
 side_list = ['Global', 'Day Side', 'Night Side', 'Sub-stellar']
 row = row_trnf_toa
 
-globalValPlot(row, 'Day Side')
+globalValPlot(row, 'Night Side')
 
 
