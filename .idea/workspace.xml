@@ -83,11 +83,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="175">
               <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1563565322720" expanded="true" signature="5548:5552" ph="..." />
+                <marker date="1563565495565" expanded="true" signature="5545:5549" ph="..." />
               </folding>
             </state>
           </provider>
@@ -351,21 +351,7 @@
       <workItem from="1560785402783" duration="19353000" />
       <workItem from="1562602194668" duration="14516000" />
       <workItem from="1562860540029" duration="4680000" />
-      <workItem from="1563460737603" duration="11225000" />
-    </task>
-    <task id="LOCAL-01292" summary="cloudiness plots">
-      <created>1563467667346</created>
-      <option name="number" value="01292" />
-      <option name="presentableId" value="LOCAL-01292" />
-      <option name="project" value="LOCAL" />
-      <updated>1563467667346</updated>
-    </task>
-    <task id="LOCAL-01293" summary="cloudiness plots">
-      <created>1563467699284</created>
-      <option name="number" value="01293" />
-      <option name="presentableId" value="LOCAL-01293" />
-      <option name="project" value="LOCAL" />
-      <updated>1563467699284</updated>
+      <workItem from="1563460737603" duration="11374000" />
     </task>
     <task id="LOCAL-01294" summary="cloudiness plots">
       <created>1563467745247</created>
@@ -696,11 +682,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563547708785</updated>
     </task>
-    <option name="localTasksCounter" value="1341" />
+    <task id="LOCAL-01341" summary="ocean quiver">
+      <created>1563565324632</created>
+      <option name="number" value="01341" />
+      <option name="presentableId" value="LOCAL-01341" />
+      <option name="project" value="LOCAL" />
+      <updated>1563565324632</updated>
+    </task>
+    <task id="LOCAL-01342" summary="evap and prec">
+      <created>1563565488445</created>
+      <option name="number" value="01342" />
+      <option name="presentableId" value="LOCAL-01342" />
+      <option name="project" value="LOCAL" />
+      <updated>1563565488445</updated>
+    </task>
+    <option name="localTasksCounter" value="1343" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237499000" />
+    <option name="totallyTimeSpent" value="237648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -757,7 +757,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new contour" />
     <MESSAGE value="precip" />
     <MESSAGE value="clouds" />
     <MESSAGE value="lewis comp plots" />
@@ -782,7 +781,8 @@
     <MESSAGE value="calculated albedo plot" />
     <MESSAGE value="cloudiness plots" />
     <MESSAGE value="ocean quiver" />
-    <option name="LAST_COMMIT_MESSAGE" value="ocean quiver" />
+    <MESSAGE value="evap and prec" />
+    <option name="LAST_COMMIT_MESSAGE" value="evap and prec" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matrix_plot/eq_check.py" />
@@ -994,11 +994,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_scripts/singlePlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="175">
           <caret line="168" column="16" lean-forward="true" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1563565322720" expanded="true" signature="5548:5552" ph="..." />
+            <marker date="1563565495565" expanded="true" signature="5545:5549" ph="..." />
           </folding>
         </state>
       </provider>
